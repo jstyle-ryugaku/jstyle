@@ -178,7 +178,7 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
 </footer>
 
 <!------- phpタグ抜いたもの ------>
-<!-- 
+<!--
 <footer class="l-footer<?php if ($is_footer_border) {
     echo ' l-footer--border';
 } ?>" style="background: <?php echo esc_attr($footer_bg_lower); ?>;">

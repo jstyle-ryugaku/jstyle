@@ -29,8 +29,10 @@ setcookie( 'tcd_referrer', $current_url, 0, '/' );
 ?>
 <!DOCTYPE html>
 
-<!------- ここから上はソースコード ------>
-<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<!------- ここから下はソースのパクリ ------>
+
+
+
 <!-- <header id="js-header" class="l-header l-header--fixed is-active">
 	<div class="l-header__inner">
 				<h1 class="l-header__logo c-logo c-logo--retina">
@@ -84,6 +86,8 @@ setcookie( 'tcd_referrer', $current_url, 0, '/' );
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="description" content="<?php seo_description(); ?>">
 <meta name="viewport" content="width=device-width">
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" type="text/css" />
 <?php if ( $options['use_ogp'] ) { ogp(); } ?>
 <?php wp_head(); ?>
 </head>
