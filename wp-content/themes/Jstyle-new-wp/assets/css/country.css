@@ -1,7 +1,7 @@
 /* pc */
 @media screen and (min-width: 961px) {
     /*ここにpc用スタイルを記述*/
-    svg{
+    svg {
         max-width: 100%;
     }
 }
@@ -9,19 +9,16 @@
 /* tablet  */
 @media only screen and (min-width: 641px) and (max-width: 960px) {
     /*ここにtablet用スタイルを記述*/
-    svg{
+    svg {
         max-width: 100%;
     }
-    .btn {
-        max-width: 50%;
-        max-height: 30%;
-    }
+
 }
 
 /* smartPhone */
 @media screen and (max-width: 640px) {
     /*ここにスマホ用スタイルを記述*/
-    svg{
+    svg {
         max-width: 100%;
     }
 }
@@ -41,7 +38,7 @@
     letter-spacing: 1.4px;
     text-align: left;
     color: #4a4a4a;
-    margin: auto auto 0 auto ;
+    margin: 7% 15% 5% 10%;
 
 }
 
@@ -53,95 +50,96 @@
 }
 
 .btn {
-    width: 23%;
-    height: 12%;
+    width: 30%;
+    height: auto;
     background-color: #003d9c;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-    color: #ffffff;
     display: inline-block;
 }
 
-.CA {
-    width: 50%;
-    height: 25%;
-    font-size: 18px;
+.btn img {
+    border: 1px solid white;
+    float: left;
+    width: 35%;
+    height: 3%;
+    margin: 7% 0 7% 7%;
+
+}
+
+.btn h1 {
+    font-size: 2.5vh;
+    float: right;
+    text-align: center;
+    font-family: HiraginoSans-W6;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: 1.4px;
-    text-align: center;
-    color: #ffffff;
-    float: right;
-
+    color: white;
+    margin: 10% 12%;
 }
 
-.US {
-    width: 50%;
-    height: 30%;
-    font-size: 16px;
+.btn h2 {
+    font-size: 2.5vh;
+    float: right;
+    text-align: center;
+    font-family: HiraginoSans-W6;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: 1.4px;
-    text-align: center;
-    color: #ffffff;
-    float: right;
+    color: white;
+    margin: 9.1% 12%;
 }
 
-.GB {
-    width: 50%;
-    height: 30%;
-    font-size: 16px;
+.btn h3 {
+    font-size: 2.5vh;
+    float: right;
+    text-align: center;
+    font-family: HiraginoSans-W6;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: 1.4px;
-    text-align: center;
-    color: #ffffff;
-    float: right;
+    color: white;
+    margin: 9.1% 7%;
 }
 
-.AU {
-    width: 50%;
-    height: 30%;
-    font-size: 13px;
+.btn h4 {
+    font-size: 2vh;
+    float: right;
+    text-align: center;
+    font-family: HiraginoSans-W6;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
-    letter-spacing: 1.1px;
-    text-align: center;
-    color: #ffffff;
-    float: right;
+    letter-spacing: 1.4px;
+    color: white;
+    margin: 9.1% 12%;
 }
 
-.NZ {
-    width: 50%;
-    height: 30%;
-    font-size: 13px;
+.btn h5 {
+    font-size: 2vh;
+    float: right;
+    text-align: center;
+    font-family: HiraginoSans-W6;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
-    letter-spacing: 1px;
-    text-align: center;
-    color: #ffffff;
-    float: right;
-}
-
-.flag {
-    height:100%;
-    display:block;
-
+    letter-spacing: 1.4px;
+    color: white;
+    margin: 9.1% 12%;
 }
 
 .caplace {
     position: absolute;
-    top: 0;
     right: -1%;
+    top: 12%;
     z-index: 1;
 }
 
@@ -179,27 +177,4 @@
 }
 
 
-.unti {
-    width: 15%;
-    height: 7%;
-    background-color: #003d9c;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-    display: inline-block;
-    position: absolute;
-    z-index: 1;
-}
 
-.unti img {
-    width:35%;
-    height:65%;
-    margin:6% 0 6% 7%;
-
-
-}
-
-.unti h1{
-    float: right;
-    text-align: center;
-    color:white;
-    margin: 30% auto 30% auto;
-}
