@@ -1,8 +1,8 @@
-<?php 
+<?php
 /*
-Template Name: No side
+template name: no side
 */
-__( 'No side', 'tcd-w' );
+__( 'no side', 'tcd-w' );
 get_header(); 
 ?>
 <main class="l-main">	
