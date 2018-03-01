@@ -177,6 +177,11 @@ function vogue_scripts() {
         wp_enqueue_script( 'vogue-country', get_template_directory_uri() . '/assets/js/country.js', array( 'jquery' ), version_num(), true );
 
     }
+
+    if(is_page('contact form')) {
+        wp_enqueue_style( 'vogue-contact-form', get_template_directory_uri() . '/assets/css/contact-form.css', false, version_num() );
+        wp_enqueue_script( 'vogue-contact-form', get_template_directory_uri() . '/assets/js/contact-form.js', array( 'jquery' ), version_num(), true );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'vogue_scripts' );
 
