@@ -15,7 +15,7 @@ get_header();
         </p>
     </div>
     <div class="map">
-        <div class="wplace">
+        <div>
             <svg width="881px" height="auto" viewBox="0 0 881 500" version="1.1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink">
                 <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
@@ -417,15 +417,15 @@ get_header();
             </svg>
         </div>
         <div class="caplace btn">
-            <a href="#">
+            <a class="frame" href="#">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/ca.svg">
                 <h1>
                     カナダ
                 </h1>
             </a>
         </div>
-        <div class="btn usplac">
-            <a href="#">
+        <div class="usplace btn">
+            <a class="frame" href="#">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/us.svg">
                 <h2>
                     アメリカ
@@ -433,23 +433,23 @@ get_header();
             </a>
         </div>
         <div class="gbplace btn">
-            <a href="#">
+            <a class="frame" href="#">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/gb.svg">
                 <h3>
                     イギリス
                 </h3>
             </a>
         </div>
-        <div class="btn auplace ">
-            <a href="#">
+        <div class="auplace btn">
+            <a class="frame" href="#">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/au.svg">
                 <h4>
                     オーストラリア
                 </h4>
             </a>
         </div>
-        <div class="btn nzplac">
-            <a href="#">
+        <div class="nzplace btn">
+            <a class="frame" href="#">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/nz.svg">
                 <h5>
                     ニュージーランド

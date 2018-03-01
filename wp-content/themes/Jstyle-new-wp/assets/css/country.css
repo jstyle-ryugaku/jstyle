@@ -1,27 +1,4 @@
-/* pc */
-@media screen and (min-width: 961px) {
-    /*ここにpc用スタイルを記述*/
-    svg {
-        max-width: 100%;
-    }
-}
 
-/* tablet  */
-@media only screen and (min-width: 641px) and (max-width: 960px) {
-    /*ここにtablet用スタイルを記述*/
-    svg {
-        max-width: 100%;
-    }
-
-}
-
-/* smartPhone */
-@media screen and (max-width: 640px) {
-    /*ここにスマホ用スタイルを記述*/
-    svg {
-        max-width: 100%;
-    }
-}
 
 * {
     box-sizing: border-box;
@@ -50,7 +27,7 @@
 }
 
 .btn {
-    width: 30%;
+    width: 29%;
     height: auto;
     background-color: #003d9c;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
@@ -62,8 +39,15 @@
     float: left;
     width: 35%;
     height: 3%;
-    margin: 7% 0 7% 7%;
+    margin: 6% 0 6% 6%;
 
+}
+
+.frame {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 .btn h1 {
@@ -77,7 +61,7 @@
     line-height: normal;
     letter-spacing: 1.4px;
     color: white;
-    margin: 10% 12%;
+    margin: 9.1% 15% 9.1% 0;
 }
 
 .btn h2 {
@@ -91,7 +75,7 @@
     line-height: normal;
     letter-spacing: 1.4px;
     color: white;
-    margin: 9.1% 12%;
+    margin: 9.1% 12% 9.1% 0;
 }
 
 .btn h3 {
@@ -105,7 +89,7 @@
     line-height: normal;
     letter-spacing: 1.4px;
     color: white;
-    margin: 9.1% 7%;
+    margin: 9.1% 12% 9.1% 0;
 }
 
 .btn h4 {
@@ -117,13 +101,13 @@
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
-    letter-spacing: 1.4px;
+    letter-spacing: 1.1px;
     color: white;
-    margin: 9.1% 12%;
+    margin: 10.5% 5% 10.5% 0;
 }
 
 .btn h5 {
-    font-size: 2vh;
+    font-size: 1.5vh;
     float: right;
     text-align: center;
     font-family: HiraginoSans-W6;
@@ -133,42 +117,42 @@
     line-height: normal;
     letter-spacing: 1.4px;
     color: white;
-    margin: 9.1% 12%;
+    margin: 10.5% 5% 10.5% 0;
 }
 
 .caplace {
     position: absolute;
     right: -1%;
-    top: 12%;
+    top: 10%;
     z-index: 1;
 }
 
 .usplace {
     position: absolute;
-    top: 350%;
-    right: -7%;
+    top: 37%;
+    right: -10%;
     z-index: 1;
 }
 
 .gbplace {
     position: absolute;
-    top: 150%;
-    left: 8%;
+    top: 12%;
+    left: 6%;
     z-index: 1;
 
 }
 
 .auplace {
     position: absolute;
-    top: 400%;
-    left: 18%;
+    top: 50%;
+    left: 15%;
     z-index: 1;
 }
 
 .nzplace {
     position: absolute;
-    top: 500%;
-    right: 20%;
+    top: 65%;
+    right: 15%;
     z-index: 1;
 }
 
@@ -176,5 +160,241 @@
 
 }
 
+.btn:hover {
+    transition: all 0.2s;
+    background-color: #003378;
+}
 
+.btn:active {
+    transform: scale(0.92);
+}
+
+
+
+/* pc */
+@media screen and (min-width: 961px) {
+    /*ここにpc用スタイルを記述*/
+    svg {
+        max-width: 100%;
+    }
+
+}
+
+/* tablet  */
+@media only screen and (min-width: 641px) and (max-width: 960px) {
+    /*ここにtablet用スタイルを記述*/
+    .foreword {
+        width: 80%;
+        height: 50%;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.20;
+        letter-spacing: 1.0px;
+        text-align: left;
+        color: #4a4a4a;
+        margin: 7% 15% 5% 10%;
+    }
+    svg {
+        max-width: 100%;
+    }
+    .frame {
+        width: 155px;
+        height: 45px;
+    }
+    .btn {
+        width: 155px;
+        height: 45px;
+        background-color: #003d9c;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        display: inline-block;
+
+
+    }
+    .btn img {
+        width: 51.5px;
+        height: 28px;
+        margin: 5.2% 0 5.2% 5.2%;
+    }
+
+    .btn h1{
+        font-size: 13px;
+        float: right;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 1.1px;
+        color: white;
+        margin: 8% 15% 8% 0;
+    }
+
+    .btn h2{
+        font-size: 12px;
+        float: right;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 1.1px;
+        color: white;
+        margin: 9% 13% 9% 0;
+    }
+
+    .btn h3{
+        font-size:  12px;
+        float: right;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 1.1px;
+        color: white;
+        margin: 9% 13% 9% 0;
+    }
+
+    .btn h4{
+        font-size: 8px;
+        float: right;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        color: white;
+        margin: 10.5% 3% 10.5% 0;
+    }
+
+    .btn h5{
+        font-size: 8px;
+        float: right;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        color: white;
+        margin: 10.5% 1% 10.5% 0;
+    }
+}
+
+/* smartPhone */
+@media screen and (max-width: 640px) {
+    /*ここにスマホ用スタイルを記述*/
+    .foreword {
+        width: 80%;
+        height: 50%;
+        font-size: 6px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.20;
+        letter-spacing: 1.0px;
+        text-align: left;
+        color: #4a4a4a;
+        margin: 7% 15% 5% 10%;
+    }
+    svg {
+        max-width: 100%;
+    }
+    .frame {
+        width:80px;
+        height:20px;
+    }
+    .btn {
+        width: 80px;
+        height: 20px;
+        background-color: #003d9c;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        display: inline-block;
+
+
+    }
+    .btn img {
+        width: 18px;
+        height: 10px;
+        margin: 6% 0 6% 6%;
+    }
+
+    .btn h1{
+        font-size: 3px;
+        float: right;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        color: white;
+        margin: 3% 8% 3% 0;
+    }
+
+    .btn h2{
+        font-size: 3px;
+        float: right;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        color: white;
+        margin: 3% 8% 3% 0;
+    }
+
+    .btn h3{
+        font-size:  3px;
+        float: right;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        color: white;
+        margin: 3% 8% 3% 0;
+    }
+
+    .btn h4{
+        font-size: 4px;
+        float: right;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.1px;
+        color: white;
+        margin: 4% 3% 4% 0;
+    }
+
+    .btn h5{
+        font-size: 10px;
+        float: right;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.1px;
+        color: white;
+        margin: 1% 1% 1% 0;
+    }
+}
 
