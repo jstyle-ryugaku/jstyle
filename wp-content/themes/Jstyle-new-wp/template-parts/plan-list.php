@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 $options = get_design_plus_option();
 $plan_list_num = $options['plan_list_num'];
 // $plan_list_num が 1 or 2 であれば、横長画像、3 or 4 であれば縦長画像
@@ -45,3 +45,4 @@ if ( $the_query->have_posts() ) :
 		?>
 	</div>
 <?php endif; ?>
+ -->

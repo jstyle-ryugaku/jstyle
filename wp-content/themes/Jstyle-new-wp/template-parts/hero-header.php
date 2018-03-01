@@ -1,5 +1,6 @@
 <?php $options = get_design_plus_option(); ?>
 
+
 <!------- phpタグ取り外したのここから ------>
 
 		<div id="js-hero-header" class="p-hero-header">
@@ -45,6 +46,7 @@
 </div>
 
 <style>
+
 .p-hero-header{
 	height: 60vh;
 }
@@ -55,27 +57,48 @@
 	top: 30vh;
 	position: relative;
 	z-index: 100;
-	width: 500px;
+	width: 100%;
 	margin: auto;
 }
 .js-hero-header__leftbutton,.js-hero-header__rightbutton{
 	display: inline-block;
 	cursor: pointer;
-	border:2px solid black;
+	border:1px solid black;
 	border-radius: 5px;
 	color: white;
-	background: #014099;
-	height: 50px;
-	line-height: 50px;
+	background: rgba(77,77,77,0.8);
+	/*height: 50px;*/
+	line-height: 60px;
 	width: 200px;
 	text-align: center;
-	margin: 10px 0; /*やや隙間をあける*/
+	font-weight: bold;
+	font-size: 18px;
 }
 .js-hero-header__leftbutton{
 	float: left;
+	color: rgb(230,165,40);
+	margin-left: 400px;
 }
 .js-hero-header__rightbutton{
 	float: right;
+	color: rgb(230,135,145);
+	margin-right: 400px;
+}
+@media only screen and (max-width: 1024px) {
+.js-hero-header__leftbutton{
+	margin-left: 100px;
+	width: 30%;
+}
+.js-hero-header__rightbutton{
+	margin-right: 100px;
+	width: 30%;
+}
+}
+@media only screen and (max-width: 768px) {
+.js-hero-header__leftbutton,.js-hero-header__rightbutton{
+	margin: 0px 30px 0px;
+	width: 30%;
+}	
 }
 </style>
 	
