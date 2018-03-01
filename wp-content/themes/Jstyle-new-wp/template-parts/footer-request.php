@@ -1,4 +1,16 @@
 <?php $options = get_design_plus_option(); ?>
+
+<!------- phpのタグを抜いたもの ------>
+
+	<div id="js-request" class="p-request" style="background:">
+		<div class="p-request__inner">
+			<p class="p-request__text" style="color:"></p>
+		</div>
+		<button id="js-request__close" class="p-request__close"></button>
+	</div>
+
+<!------- phpのタグを抜いたものここまで ------>
+
 	<div id="js-request" class="p-request" style="background: <?php echo esc_attr( $options['request_bg'] ); ?>;">
 		<?php if ( is_mobile() ) : ?><a href="<?php echo esc_url( $options['request_btn_url'] ); ?>"><?php endif; ?>
 		<div class="p-request__inner">

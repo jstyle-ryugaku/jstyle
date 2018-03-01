@@ -1,14 +1,15 @@
 <?php $options = get_design_plus_option(); ?>
 
-
 		<!------- phpのタグを外したもの ------>
 <div id="js-contents-builder">
 <!------- Jstyle5つの理由 ------>
 
 		<section id="cb_1" class="p-content01 l-inner">
-			<h2 class="p-content01__catch" style="font-size: px;"><span style="font-family: 明朝;">Jstyle</span>が選ばれる<span style="font-size: 60px; color: #014099;">5</span>つの理由</h2>
+			<div class="p-content01-title">
+				<h2 class="p-content01__catch" style="font-size: px;"><span style="font-family: 明朝;">Jstyle</span>が選ばれる<span style="font-size: 60px; color: #014099;">5</span>つの理由</h2>
+			</div>
 			<div class="p-content01__desc" style="font-size: ">
-				<ul class="contents_builder_container">
+				<ul class="content01_builder_container">
 					<li>
 						<i class="fas fa-heart"></i>
 						<p>あなたの夢をスタッフ一同が<br>全力で応援</p>
@@ -39,48 +40,68 @@
 
 				<div id="cb_1">
 				<div class="p-content02" style="background-color: #004353;">
-				<article class="p-content02__item">
-			<a href="http://tcdwp.info/tcd051/plan/modern/" class="p-hover-effect--type1">
-				<img class="p-content02__item-img p-content02__item-img--vertical" src="http://tcdwp.info/tcd051/wp-content/uploads/2017/09/t_1.jpg" alt="">
-				<div class="p-content02__item-content p-content02__item-content--t">
-					<h2 class="p-content02__item-title">国で探す</h2>
-					<!-- <p class="p-content02__item-sub">モダン</p> -->
-				</div>
-			</a>
-		</article>
-				<article class="p-content02__item">
-			<a href="http://tcdwp.info/tcd051/plan/superior/" class="p-hover-effect--type1">
-				<img class="p-content02__item-img p-content02__item-img--vertical" src="http://tcdwp.info/tcd051/wp-content/uploads/2017/09/t_2.jpg" alt="">
-				<div class="p-content02__item-content p-content02__item-content--t">
-					<h2 class="p-content02__item-title">目的で探す</h2>
-					<!-- <p class="p-content02__item-sub">スーペリア</p> -->
-				</div>
-			</a>
-		</article>
-				<article class="p-content02__item">
-			<a href="http://tcdwp.info/tcd051/plan/infinity/" class="p-hover-effect--type1">
-				<img class="p-content02__item-img p-content02__item-img--vertical" src="http://tcdwp.info/tcd051/wp-content/uploads/2017/09/t_3.jpg" alt="">
-				<div class="p-content02__item-content p-content02__item-content--t">
-					<h2 class="p-content02__item-title">種類で探す</h2>
-					<!-- <p class="p-content02__item-sub">インフィニティ</p> -->
-				</div>
-			</a>
-		</article>
-			</div>
-		</div>
 
+				<article class="p-content02__item">
+					<a href="http://tcdwp.info/tcd051/plan/modern/" class="p-hover-effect--type1">
+						<img class="p-content02__item-img p-content02__item-img--vertical" src="<?php bloginfo('template_url'); ?>/images/country.jpg" alt="">
+						<div class="p-content02__item-content p-content02__item-content--t">
+							<h2 class="p-content02__item-title">国で探す</h2>
+							<!-- <p class="p-content02__item-sub">モダン</p> -->
+						</div>
+					</a>
+				</article>
+		
+				<article class="p-content02__item">
+					<a href="http://tcdwp.info/tcd051/plan/superior/" class="p-hover-effect--type1">
+						<img class="p-content02__item-img p-content02__item-img--vertical" src="<?php bloginfo('template_url'); ?>/images/type.jpg" alt="">
+						<div class="p-content02__item-content p-content02__item-content--t">
+							<h2 class="p-content02__item-title">種類で探す</h2>
+							<!-- <p class="p-content02__item-sub">スーペリア</p> -->
+						</div>
+					</a>
+				</article>
+		
+				<article class="p-content02__item">
+					<a href="http://tcdwp.info/tcd051/plan/infinity/" class="p-hover-effect--type1">
+						<img class="p-content02__item-img p-content02__item-img--vertical" src="<?php bloginfo('template_url'); ?>/images/age.jpg" alt="">
+						<div class="p-content02__item-content p-content02__item-content--t">
+							<h2 class="p-content02__item-title">年代で探す</h2>
+							<!-- <p class="p-content02__item-sub">インフィニティ</p> -->
+						</div>
+					</a>
+				</article>
+			
+				</div>
+		</div>
+<style>
+.p-content01-title:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    background-image: url('<?php bloginfo("template_directory");?>/images/jstyle.png'); 
+    width: 60%;
+    height: 100%;
+    opacity : 0.2;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-size: 150px;
+}
+
+</style>
 <!------- 検索する三つのフォーム ------>
 
 <!------- 留学の準備 ------>
 
 		<div id="cb_2" class="p-main-image">
-			<div class="p-main-image__img" style="background-image: url()""></div>
+			<div class="p-main-image__img" style="background-image: url(http://jstylenewwp.local/wp-content/themes/Jstyle-new-wp/images/prepare.jpg)"></div>
 			<div class="p-main-image__content" style="background: rgba();  color: ">
 				<h2 class="p-main-image__title" style="">
 					留学の準備
 				</h2>
 				<p class="p-main-image__desc" style="font-size: ">
-					テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+					テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
 				</p>
 				<a class="p-main-image__btn p-button" href="">
 					詳細 >
@@ -152,7 +173,7 @@
 <!------- 留学体験インタビュー ------>
 
 		<div id="cb_4" class="p-main-image">
-			<div class="p-main-image__img" style="background-image: url();"></div>
+			<div class="p-main-image__img" style="background-image: url(http://jstylenewwp.local/wp-content/themes/Jstyle-new-wp/images/interview.jpg);"></div>
 			<div class="p-main-image__content" style="background: rgba();  color: ; ">
 				<h2 class="p-main-image__title">
 					留学日記などその他のコンテンツ（？）
@@ -168,52 +189,7 @@
 </div>
 
 <style>
-.p-content01{
-	padding:20px 0 20px;
-}
-.p-content01 h2{
-	background-image: url('<?php bloginfo("template_directory");?>/images/jstyle.png');
-	width: 100%;
-	height:100%;
-  background-position:absolute;
-	background-size: cover;
-}
-ul.contents_builder_container{
-	display: flex;
-}
-ul.contents_builder_container li{
-	display: inline-block;
-	margin: 0 auto;
-	list-style: none;
-	width: 100%;
-	}	
-ul.contents_builder_container li i{
-	font-size: 50px;
-	color: #50505a;
-	padding-bottom: 20px;
-}
 
-.p-main-image__title{
-	font-size:30px;
-	display: inline-block;
-	position: relative;
-}
-.p-main-image__title::before{
-		content: "";
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 2px;
-	border-bottom: 1px solid #014099;
-}
-.p-main-image__title::after{
-	content: "";
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	border-bottom: 1px solid #ff017f;
-}
 </style>
 
 <!------- 留学体験インタビュー ------>
