@@ -42,7 +42,6 @@
 				</video>
 			</div>
 					</div>
-						<a id="js-hero-header__link" href="#js-contents-builder" class="p-hero-header__link">VOGUEの魅力を知る</a>
 </div>
 
 <style>
