@@ -23,52 +23,50 @@ get_header();
             </p>
         </section>
 
-        <!-- 代表挨拶, 事業紹介 -->
+        <!-- 画像リンク -->
         <section class="image-link">
-            <ul class="column-2">
-                <li class="i-01">
+            <ul>
+                <li class="pc-2c sp-1c i-01">
                     <a href="javascript:void(0);">
                         <div class="wrap">
                             <h1 class="title">代表挨拶</h1>
-                            <span class="text">テキストテキストテキストテキストテキス</span>
+                            <span class="text">テキストテキストテキストテキストテキスト</span>
                         </div>
                         <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-01.jpg')"></div>
                     </a>
                 </li>
-                <li class="i-02">
+                <li class="pc-2c sp-2c i-02">
                     <a href="javascript:void(0);">
                         <div class="wrap">
                             <h1 class="title">事業紹介</h1>
-                            <span class="text">テキストテキストテキストテキストテキス</span>
+                            <span class="text">テキストテキストテキストテキストテキスト</span>
                         </div>
                         <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-02.jpg')"></div>
                     </a>
                 </li>
-            </ul>
-            <ul class="column-3">
-                <li class="i-01">
+                <li class="pc-3c sp-2c i-03">
                     <a href="javascript:void(0);">
                         <div class="wrap">
                             <h1 class="title">タイトル</h1>
-                            <span class="text">テキストテキストテキストテキストテキス</span>
+                            <span class="text">テキストテキストテキストテキストテキスト</span>
                         </div>
                         <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-02.jpg')"></div>
                     </a>
                 </li>
-                <li class="i-02">
+                <li class="pc-3c sp-2c i-04">
                     <a href="javascript:void(0);">
                         <div class="wrap">
                             <h1 class="title">タイトル</h1>
-                            <span class="text">テキストテキストテキストテキストテキス</span>
+                            <span class="text">テキストテキストテキストテキストテキスト</span>
                         </div>
                         <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-02.jpg')"></div>
                     </a>
                 </li>
-                <li class="i-03">
+                <li class="pc-3c sp-2c i-05">
                     <a href="javascript:void(0);">
                         <div class="wrap">
                             <h1 class="title">タイトル</h1>
-                            <span class="text">テキストテキストテキストテキストテキス</span>
+                            <span class="text">テキストテキストテキストテキストテキスト</span>
                         </div>
                         <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-02.jpg')"></div>
                     </a>

@@ -45,7 +45,7 @@
     color: #00399f;
 }
 .about-wrapper .philosophy h1 {
-    margin-bottom: 62px;
+    margin-bottom: 40px;
     font-weight: bold;
 }
 .about-wrapper .philosophy h2 {
@@ -67,41 +67,52 @@
         display: none;
     }
 }
-
+@media screen and (max-width:500px) {
+    .about-wrapper .philosophy h1 {
+        font-size: 26px;
+    }
+    .about-wrapper .philosophy h2 {
+        font-size: 22px;
+    }
+    .about-wrapper .philosophy .text {
+        font-size: 15px;
+    }
+}
 
 /* ----------------------------------------------------------------------
- 代表挨拶, 事業紹介
+ 画像リンク
 ---------------------------------------------------------------------- */
 /* 共通スタイル */
 .about-wrapper .image-link ul {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    font-size: 36px;
 }
 .about-wrapper .image-link ul li {
+    margin-right: 16px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     overflow: hidden;
 }
+.about-wrapper .image-link ul li.i-02,
+.about-wrapper .image-link ul li.i-05 {
+    margin-right: 0px;
+}
 
-/* 2カラム */
-.about-wrapper .image-link ul.column-2 li {
+/* 上2カラム */
+.about-wrapper .image-link ul li.pc-2c {
     width: calc((100% - 16px) / 2);
     margin-bottom: 16px;
     height: 339px;
 }
-.about-wrapper .image-link ul.column-2 li:nth-child(odd) {
-    margin-right: 16px;
-}
 
-/* 3カラム */
-.about-wrapper .image-link ul.column-3 li {
+/* 下3カラム */
+.about-wrapper .image-link ul li.pc-3c {
     width: calc((100% - 16px * 2) / 3);
     height: 220px;
-}
-.about-wrapper .image-link ul.column-3 li:not(:last-child) {
-    margin-right: 16px;
+    font-size: 0.76em;
 }
 
-/* 共通スタイル */
 .about-wrapper .image-link ul li a {
     width: 100%;
     height: 100%;
@@ -114,24 +125,25 @@
 }
 .about-wrapper .image-link ul li a .wrap {
     width: 100%;
-    padding: 38px;
+    padding: 34px;
     position: absolute;
     bottom: 0;
     left: 0;
     color: #FFFFFF;
 }
 .about-wrapper .image-link ul li a .wrap * {
+    display: block;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 1.4px;
 }
 .about-wrapper .image-link ul li a .wrap .title {
     font-family: HiraginoSans-W7;
-    font-size: 36px;
-    margin-bottom: 24px;
+    font-size: 1em;
+    margin-bottom: 20px;
 }
 .about-wrapper .image-link ul li a .wrap .text {
     font-family: HiraginoSans-W6;
-    font-size: 20px;
+    font-size: 0.55em;
 }
 .about-wrapper .image-link ul li a .bg-image {
     width: 100%;
@@ -151,29 +163,54 @@
     transform: scale(1.1);
 }
 
-@media screen and (max-width:1106px) {
-    .about-wrapper .image-link ul.column-2 li {
+@media screen and (max-width:1065px) {
+    .about-wrapper .image-link ul li {
+        margin-right: 10px;
+    }
+
+    /* 上2カラム */
+    .about-wrapper .image-link ul li.pc-2c {
         width: calc((100% - 10px) / 2);
         margin-bottom: 10px;
     }
-    .about-wrapper .image-link ul.column-2 li:nth-child(odd) {
-        margin-right: 10px;
-    }
-    .about-wrapper .image-link ul.column-3 li {
+
+    /* 下3カラム */
+    .about-wrapper .image-link ul li.pc-3c {
         width: calc((100% - 10px * 2) / 3);
-        margin-bottom: 10px;
-    }
-    .about-wrapper .image-link ul.column-3 li:not(:last-child) {
-        margin-right: 10px;
     }
 }
 @media screen and (max-width:750px) {
-    .about-wrapper .image-link ul {
-        display: block;
-    }
-    .about-wrapper .image-link ul.column-2 li,
-    .about-wrapper .image-link ul.column-3 li {
+    /* 上1カラム */
+    .about-wrapper .image-link ul li.sp-1c {
         width: 100%;
+        margin-right: 0px;
+    }
+
+    /* 中2カラム, 下2カラム */
+    .about-wrapper .image-link ul li.sp-2c {
+        width: calc((100% - 10px) / 2);
+        height: 220px;
+        margin-right: 10px;
+        font-size: 0.76em;
+    }
+
+    .about-wrapper .image-link ul li.i-03,
+    .about-wrapper .image-link ul li.i-05 {
+        margin-right: 0px;
+    }
+}
+@media screen and (max-width:500px) {
+    .about-wrapper .image-link ul {
+        font-size: 32px;
+    }
+    .about-wrapper .image-link ul li.sp-1c {
+        height: 280px;
+    }
+    .about-wrapper .image-link ul li.sp-2c {
+        height: 190px;
+    }
+    .about-wrapper .image-link ul li a .wrap {
+        padding: 18px;
     }
 }
 
@@ -286,8 +323,10 @@
 .about-wrapper .five-reason .button span {
     vertical-align: 0.02em;
 }
+
 @media screen and (max-width:500px) {
     .about-wrapper .five-reason h1 {
+        font-size: 20px;
         font-size: 6vw;
     }
 }
@@ -315,9 +354,8 @@
 .about-wrapper .overview {
     margin-top: 200px;
 }
-
 .about-wrapper .overview h1 {
-    margin-bottom: 62px;
+    margin-bottom: 40px;
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 2.3px;
@@ -326,19 +364,20 @@
 
 .about-wrapper .overview table {
     width: 100%;
-    max-width: 900px;
-    margin: 0px auto;
+    border-spacing: 0;
+    font-size: 16px;
     text-align: left;
     letter-spacing: 1.2px;
     color: #4a4a4a;
 }
-.about-wrapper .overview table tr {
-    border-top: 1px solid #E0E0E0;
-}
 .about-wrapper .overview table tr th,
 .about-wrapper .overview table tr td  {
-    padding: 20px 0px;
+    padding: 24px;
     line-height: 1.6;
+}
+.about-wrapper .overview table tr:not(:last-child) th,
+.about-wrapper .overview table tr:not(:last-child) td {
+    border-bottom: 1px solid #EEEEEE;
 }
 .about-wrapper .overview table tr th {
     vertical-align: top;
@@ -354,14 +393,26 @@
 @media screen and (max-width:800px) {
     .about-wrapper .overview table tr th,
     .about-wrapper .overview table tr td {
+        padding: 14px;
         display: block;
     }
+    .about-wrapper .overview table tr:not(:last-child) th,
+    .about-wrapper .overview table tr:not(:last-child) td {
+        border: none;
+    }
     .about-wrapper .overview table tr th {
-        padding: 14px;
         background-color: #E0E0E0;
     }
     .about-wrapper .overview table tr td {
-        padding-left: 14px;
-        padding-right: 14px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+@media screen and (max-width:500px) {
+    .about-wrapper .overview h1 {
+        font-size: 26px;
+    }
+    .about-wrapper .overview table {
+        font-size: 14px;
     }
 }
