@@ -61,7 +61,7 @@ function vogue_init() {
 	if ( $options['news_slug'] ) {
 		$news_args['rewrite'] = array( 'slug' => $options['news_slug'] );
 	}
-	register_post_type( 'news', $news_args );
+//	register_post_type( 'news', $news_args );
 
 	// Plan
 	$plan_labels = array(
@@ -78,9 +78,92 @@ function vogue_init() {
 		$plan_args['rewrite'] = array( 'slug' => $options['plan_slug'] );
 	}
 	register_post_type( 'plan', $plan_args );
+
+    register_post_type(
+        '目的から探す',
+        array(
+            'label' => 'Purpose',
+            'public' => true,
+            'hierarchical' => false,
+            'has_archive' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                'thumbnail'),
+            'menu_position' => 5
+        )
+    );
+
+    register_post_type(
+        '国から探す',
+        array(
+            'label' => 'Country',
+            'public' => true,
+            'hierarchical' => false,
+            'has_archive' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                'thumbnail'),
+            'menu_position' => 5
+        )
+    );
+
+    register_post_type(
+        '留学の準備',
+        array(
+            'label' => 'Prepare',
+            'public' => true,
+            'hierarchical' => false,
+            'has_archive' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                'thumbnail'),
+            'menu_position' => 5
+        )
+    );
+
+    register_post_type(
+        '留学体験記',
+        array(
+            'label' => 'Studying_Abroad_Interview',
+            'public' => true,
+            'hierarchical' => false,
+            'has_archive' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                'thumbnail'),
+            'menu_position' => 5
+        )
+    );
 }
 add_action( 'init', 'vogue_init' );
 
+function format_init()
+{
+    // 新規分類を作成
+
+    $labels = array(
+        'name' => _x('国', 'country'),
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'country'),
+    );
+
+    register_taxonomy(
+        'format',
+        'Studying_Abroad_Interview',
+        $args);
+}
+add_action('init', 'format_init');
 /**
  * カスタム投稿タイプのラベルを取得する
  *
@@ -626,3 +709,9 @@ require get_template_directory() . '/inc/widget/archive_list.php';
 require get_template_directory() . '/inc/widget/category_list.php';
 require get_template_directory() . '/inc/widget/google_search.php';
 require get_template_directory() . '/inc/widget/styled_post_list.php';
+
+/**
+ * Interview Page func
+ */
+// 更新通知 --------------------------------------------------------------------------------
+require get_template_directory() . '/functions/init.php';

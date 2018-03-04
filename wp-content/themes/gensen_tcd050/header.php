@@ -11,8 +11,8 @@ if (! $dp_options) $dp_options = get_desing_plus_option();
 <?php } ?>
 <meta charset="<?php bloginfo('charset'); ?>">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-<meta name="viewport" content="width=device-width">
-<title><?php wp_title('|', true, 'right'); ?></title>
+    <title><?php wp_title('|', true, 'right'); ?></title>
+    <meta name="viewport" content="width=device-width">
 <meta name="description" content="<?php seo_description(); ?>">
 <?php if ($dp_options['use_ogp']) { ogp(); }; ?>
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">

@@ -1,3 +1,4 @@
+<p>テストてすと</p>
 <?php
 global $dp_options;
 if (!$dp_options) $dp_options = get_desing_plus_option();
@@ -80,8 +81,8 @@ if ($dp_options['searcn_post_type'] == 'post') {
     }
 }
 
-if (!empty($search_forms['form_action']) && !empty($search_forms['columns'])) :
-?>
+//if (!empty($search_forms['form_action']) && !empty($search_forms['columns'])) :
+//?>
 <form action="<?php echo esc_attr($search_forms['form_action']); ?>" method="get"
       class="columns-<?php echo esc_attr($search_forms['columns'] + 1); ?>">
     <?php
@@ -95,7 +96,7 @@ if (!empty($search_forms['form_action']) && !empty($search_forms['columns'])) :
         }
     }
 
-    	if (!empty($search_forms['search_keywords'])) :
+    //	if (!empty($search_forms['search_keywords'])) :
     ?>
     <div class="header_search_inputs header_search_keywords">
         <input type="text" id="header_search_keywords" name="search_keywords"
@@ -117,10 +118,10 @@ if (!empty($search_forms['form_action']) && !empty($search_forms['columns'])) :
         </ul>
     </div>
     <?php
-    	endif;
+    //	endif;
 
-    for ($i = 1; $i <= 2; $i++) :
-		if (!empty($search_forms['search_cat'.$i]['slug'])) :
+    for ($i = 1; $i <= 3; $i++) :
+//		if (!empty($search_forms['search_cat'.$i]['slug'])) :
         ?>
         <div class="header_search_inputs">
             <?php
@@ -138,7 +139,7 @@ if (!empty($search_forms['form_action']) && !empty($search_forms['columns'])) :
             ?>
         </div>
     <?php
-		endif;
+//		endif;
     endfor;
     ?>
     <div class="header_search_inputs header_search_button">
@@ -147,5 +148,5 @@ if (!empty($search_forms['form_action']) && !empty($search_forms['columns'])) :
     </div>
 </form>
 <?php
-endif;
-?>
+//endif;
+//?>
