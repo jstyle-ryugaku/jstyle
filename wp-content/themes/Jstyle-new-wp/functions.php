@@ -187,6 +187,11 @@ function vogue_scripts() {
         wp_enqueue_style( 'vogue-purpose', get_template_directory_uri() . '/assets/css/purpose.css', false, version_num() );
         wp_enqueue_script( 'vogue-purpose', get_template_directory_uri() . '/assets/js/purpose.js', array( 'jquery' ), version_num(), true );
     }
+
+    if(is_page('about')) {
+        wp_enqueue_style( 'vogue-about', get_template_directory_uri() . '/assets/css/about.css', false, version_num() );
+        wp_enqueue_script( 'vogue-about', get_template_directory_uri() . '/assets/js/about.js', array( 'jquery' ), version_num(), true );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'vogue_scripts' );
 
