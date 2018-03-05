@@ -1,5 +1,4 @@
 
-
 * {
     box-sizing: border-box;
 }
@@ -20,7 +19,7 @@
 }
 
 .map {
-    margin: 0 15% 0 15%;
+    margin: 0 15% 10px 15%;
     height: auto;
     position: relative;
     max-width: 1200px;
@@ -50,7 +49,7 @@
     height: 100%;
 }
 
-.btn h1 {
+.ca {
     font-size: 2.5vh;
     float: right;
     text-align: center;
@@ -64,7 +63,7 @@
     margin: 9.1% 15% 9.1% 0;
 }
 
-.btn h2 {
+.us {
     font-size: 2.5vh;
     float: right;
     text-align: center;
@@ -78,7 +77,7 @@
     margin: 9.1% 12% 9.1% 0;
 }
 
-.btn h3 {
+.gb {
     font-size: 2.5vh;
     float: right;
     text-align: center;
@@ -92,7 +91,7 @@
     margin: 9.1% 12% 9.1% 0;
 }
 
-.btn h4 {
+.au {
     font-size: 2vh;
     float: right;
     text-align: center;
@@ -106,7 +105,7 @@
     margin: 10.5% 5% 10.5% 0;
 }
 
-.btn h5 {
+.nz {
     font-size: 1.5vh;
     float: right;
     text-align: center;
@@ -160,6 +159,14 @@
 
 }
 
+.btn2 {
+    display: none;
+}
+
+.btn3 {
+    display: none;
+}
+
 .btn:hover {
     transition: all 0.2s;
     background-color: #003378;
@@ -169,7 +176,13 @@
     transform: scale(0.92);
 }
 
+.btn2:active {
+    transform: scale(0.92);
+}
 
+.btn3:active {
+    transform: scale(0.92);
+}
 
 /* pc */
 @media screen and (min-width: 961px) {
@@ -196,13 +209,16 @@
         color: #4a4a4a;
         margin: 7% 15% 5% 10%;
     }
+
     svg {
         max-width: 100%;
     }
+
     .frame {
         width: 155px;
         height: 45px;
     }
+
     .btn {
         width: 155px;
         height: 45px;
@@ -210,15 +226,15 @@
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
         display: inline-block;
 
-
     }
+
     .btn img {
         width: 51.5px;
         height: 28px;
         margin: 5.2% 0 5.2% 5.2%;
     }
 
-    .btn h1{
+    .ca {
         font-size: 13px;
         float: right;
         text-align: center;
@@ -232,7 +248,7 @@
         margin: 8% 15% 8% 0;
     }
 
-    .btn h2{
+    .us {
         font-size: 12px;
         float: right;
         text-align: center;
@@ -246,8 +262,8 @@
         margin: 9% 13% 9% 0;
     }
 
-    .btn h3{
-        font-size:  12px;
+    .gb {
+        font-size: 12px;
         float: right;
         text-align: center;
         font-family: HiraginoSans-W6;
@@ -260,7 +276,7 @@
         margin: 9% 13% 9% 0;
     }
 
-    .btn h4{
+    .au {
         font-size: 8px;
         float: right;
         text-align: center;
@@ -274,7 +290,7 @@
         margin: 10.5% 3% 10.5% 0;
     }
 
-    .btn h5{
+    .nz {
         font-size: 8px;
         float: right;
         text-align: center;
@@ -291,44 +307,126 @@
 
 /* smartPhone */
 @media screen and (max-width: 640px) {
+
     /*ここにスマホ用スタイルを記述*/
     .foreword {
-        width: 80%;
-        height: 50%;
         font-size: 6px;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
         line-height: 1.20;
-        letter-spacing: 1.0px;
-        text-align: left;
-        color: #4a4a4a;
-        margin: 7% 15% 5% 10%;
+
     }
+
     svg {
         max-width: 100%;
     }
+
     .frame {
-        width:80px;
-        height:20px;
-    }
-    .btn {
-        width: 80px;
+        width: 32px;
         height: 20px;
+    }
+
+    .btn {
+        width: 32px;
+        height: 20px;
+
+    }
+
+    .btn img {
+        width: 28px;
+        height: 16px;
+        margin: 2px;
+    }
+
+    .ca {
+        display: none;
+    }
+
+    .us {
+        display: none;
+    }
+
+    .gb {
+        display: none;
+    }
+
+    .au {
+        display: none;
+    }
+
+    .nz {
+        display: none;
+    }
+
+    .caplace {
+        right: 10%;
+    }
+
+    .usplace {
+        top: 43%;
+        right: 0;
+    }
+
+    .gbplace {
+        top: 20%;
+    }
+
+    .auplace {
+        top: 60%;
+        left: 30%;
+    }
+
+    .nzplace {
+        top: 80%;
+        right: 30%;
+    }
+
+    .frame2 {
+        width: 120px;
+        height: 34px;
+        display: block;
+        overflow: hidden;
+    }
+
+    .container {
+        max-width: 250px;
+        margin: 10px auto 20px;
+    }
+
+    .btn2 {
+        width: 120px;
+        height: 34px;
         background-color: #003d9c;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
         display: inline-block;
-
-
-    }
-    .btn img {
-        width: 18px;
-        height: 10px;
-        margin: 6% 0 6% 6%;
+        margin: 0 10px 10px 0;
     }
 
-    .btn h1{
-        font-size: 3px;
+    .btn3 {
+        width: 120px;
+        height: 34px;
+        background-color: #003d9c;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        display: inline-block;
+        float: right;
+        margin: 0 0 10px 0;
+    }
+
+    .btn2 img {
+        border: 1px solid white;
+        width: 48px;
+        height: 26px;
+        margin: 4px 0 4px 4px;
+    }
+
+    .btn3 img {
+        border: 1px solid white;
+        width: 48px;
+        height: 26px;
+        margin: 4px 0 4px 4px;
+    }
+
+    .ca2 {
+        font-size: 16px;
+        margin: 5px 10px;
         float: right;
         text-align: center;
         font-family: HiraginoSans-W6;
@@ -336,13 +434,12 @@
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
-        letter-spacing: 0.8px;
         color: white;
-        margin: 3% 8% 3% 0;
     }
 
-    .btn h2{
-        font-size: 3px;
+    .us2 {
+        font-size: 15px;
+        margin: 5.5px 4px;
         float: right;
         text-align: center;
         font-family: HiraginoSans-W6;
@@ -350,13 +447,12 @@
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
-        letter-spacing: 0.8px;
         color: white;
-        margin: 3% 8% 3% 0;
     }
 
-    .btn h3{
-        font-size:  3px;
+    .gb2 {
+        font-size: 15px;
+        margin: 5.5px 4px;
         float: right;
         text-align: center;
         font-family: HiraginoSans-W6;
@@ -364,13 +460,14 @@
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
-        letter-spacing: 0.8px;
         color: white;
-        margin: 3% 8% 3% 0;
     }
 
-    .btn h4{
-        font-size: 4px;
+    .au2 {
+        font-size: 11px;
+        text-align: center;
+        width: 50px;
+        margin: 0 9px;
         float: right;
         text-align: center;
         font-family: HiraginoSans-W6;
@@ -378,13 +475,13 @@
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
-        letter-spacing: 0.1px;
         color: white;
-        margin: 4% 3% 4% 0;
     }
 
-    .btn h5{
-        font-size: 10px;
+    .nz2 {
+        font-size: 11px;
+        text-align: center;
+        width: 60px;
         float: right;
         text-align: center;
         font-family: HiraginoSans-W6;
@@ -392,9 +489,9 @@
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
-        letter-spacing: 0.1px;
         color: white;
-        margin: 1% 1% 1% 0;
+        margin: 0 4px;
     }
+
 }
 
