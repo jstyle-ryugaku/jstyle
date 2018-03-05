@@ -15,7 +15,7 @@ get_header();
         </p>
     </div>
     <div class="map">
-        <div class="wplace">
+        <div>
             <svg width="881px" height="auto" viewBox="0 0 881 500" version="1.1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink">
                 <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
@@ -416,58 +416,44 @@ get_header();
                 </g>
             </svg>
         </div>
-        <div class="unti">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/ca.svg">
-            <h1>焼き鳥</h1>
-        </div>
-        <div class="btn caplace">
-            <a href="#">
-                <div class="flag">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/ca.svg">
-                </div>
-                <p class="CA">
+        <div class="caplace btn">
+            <a class="frame" href="#">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/ca.svg">
+                <h1>
                     カナダ
-                </p>
+                </h1>
             </a>
         </div>
-        <div class="btn usplac">
-            <a href="#">
-                <div class="flag">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/us.svg">
-                </div>
-                <p class="US">
+        <div class="usplace btn">
+            <a class="frame" href="#">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/us.svg">
+                <h2>
                     アメリカ
-                </p>
+                </h2>
             </a>
         </div>
         <div class="gbplace btn">
-            <a href="#">
-                <div class="flag">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/gb.svg">
-                </div>
-                <p class="GB">
+            <a class="frame" href="#">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/gb.svg">
+                <h3>
                     イギリス
-                </p>
+                </h3>
             </a>
         </div>
-        <div class="btn auplace ">
-            <a href="#">
-                <div class="flag">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/au.svg">
-                </div>
-                <p class="AU">
+        <div class="auplace btn">
+            <a class="frame" href="#">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/au.svg">
+                <h4>
                     オーストラリア
-                </p>
+                </h4>
             </a>
         </div>
-        <div class="btn nzplac">
-            <a href="#">
-                <div class="flag">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/nz.svg">
-                </div>
-                <p class="NZ">
+        <div class="nzplace btn">
+            <a class="frame" href="#">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/nz.svg">
+                <h5>
                     ニュージーランド
-                </p>
+                </h5>
             </a>
         </div>
 
