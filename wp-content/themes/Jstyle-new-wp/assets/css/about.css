@@ -1,0 +1,418 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------------------
+ 全体
+---------------------------------------------------------------------- */
+.about-wrapper {
+    width: 100%;
+    max-width: 1033px;
+    margin: 62px auto;
+    box-sizing: border-box;
+}
+.about-wrapper * {
+    box-sizing: inherit;
+}
+.about-wrapper section {
+    width: 100%;
+    margin-bottom: 72px;
+}
+.about-wrapper h1,
+.about-wrapper h2 {
+    margin: 0;
+    padding: 0;
+}
+.about-wrapper ul,
+.about-wrapper li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media screen and (max-width:1032px) {
+    .about-wrapper {
+        padding: 0px 10px;
+    }
+}
+
+
+/* ----------------------------------------------------------------------
+ 企業理念
+---------------------------------------------------------------------- */
+.about-wrapper .philosophy h1,
+.about-wrapper .philosophy h2 {
+    font-size: 30px;
+    letter-spacing: 2.3px;
+    color: #00399f;
+}
+.about-wrapper .philosophy h1 {
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+.about-wrapper .philosophy h2 {
+    margin-bottom: 40px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: center;
+}
+.about-wrapper .philosophy .text {
+    font-size: 18px;
+    line-height: 1.61;
+    letter-spacing: 1.4px;
+    text-align: justify;
+    color: #4a4a4a;
+}
+
+@media screen and (max-width:880px) {
+    .about-wrapper .philosophy h2 br {
+        display: none;
+    }
+}
+@media screen and (max-width:500px) {
+    .about-wrapper .philosophy h1 {
+        font-size: 26px;
+    }
+    .about-wrapper .philosophy h2 {
+        font-size: 22px;
+    }
+    .about-wrapper .philosophy .text {
+        font-size: 15px;
+    }
+}
+
+/* ----------------------------------------------------------------------
+ 画像リンク
+---------------------------------------------------------------------- */
+/* 共通スタイル */
+.about-wrapper .image-link ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 36px;
+}
+.about-wrapper .image-link ul li {
+    margin-right: 16px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+.about-wrapper .image-link ul li.i-02,
+.about-wrapper .image-link ul li.i-05 {
+    margin-right: 0px;
+}
+
+/* 上2カラム */
+.about-wrapper .image-link ul li.pc-2c {
+    width: calc((100% - 16px) / 2);
+    margin-bottom: 16px;
+    height: 339px;
+}
+
+/* 下3カラム */
+.about-wrapper .image-link ul li.pc-3c {
+    width: calc((100% - 16px * 2) / 3);
+    height: 220px;
+    font-size: 0.76em;
+}
+
+.about-wrapper .image-link ul li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.about-wrapper .image-link ul li:hover a {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.about-wrapper .image-link ul li a .wrap {
+    width: 100%;
+    padding: 34px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #FFFFFF;
+}
+.about-wrapper .image-link ul li a .wrap * {
+    display: block;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1.4px;
+}
+.about-wrapper .image-link ul li a .wrap .title {
+    font-family: HiraginoSans-W7;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+.about-wrapper .image-link ul li a .wrap .text {
+    font-family: HiraginoSans-W6;
+    font-size: 0.55em;
+}
+.about-wrapper .image-link ul li a .bg-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    z-index: -100;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.about-wrapper .image-link ul li:hover a .bg-image {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:1065px) {
+    .about-wrapper .image-link ul li {
+        margin-right: 10px;
+    }
+
+    /* 上2カラム */
+    .about-wrapper .image-link ul li.pc-2c {
+        width: calc((100% - 10px) / 2);
+        margin-bottom: 10px;
+    }
+
+    /* 下3カラム */
+    .about-wrapper .image-link ul li.pc-3c {
+        width: calc((100% - 10px * 2) / 3);
+    }
+}
+@media screen and (max-width:750px) {
+    /* 上1カラム */
+    .about-wrapper .image-link ul li.sp-1c {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    /* 中2カラム, 下2カラム */
+    .about-wrapper .image-link ul li.sp-2c {
+        width: calc((100% - 10px) / 2);
+        height: 220px;
+        margin-right: 10px;
+        font-size: 0.76em;
+    }
+
+    .about-wrapper .image-link ul li.i-03,
+    .about-wrapper .image-link ul li.i-05 {
+        margin-right: 0px;
+    }
+}
+@media screen and (max-width:500px) {
+    .about-wrapper .image-link ul {
+        font-size: 32px;
+    }
+    .about-wrapper .image-link ul li.sp-1c {
+        height: 280px;
+    }
+    .about-wrapper .image-link ul li.sp-2c {
+        height: 190px;
+    }
+    .about-wrapper .image-link ul li a .wrap {
+        padding: 18px;
+    }
+}
+
+
+/* ----------------------------------------------------------------------
+ 5つの理由
+---------------------------------------------------------------------- */
+.about-wrapper .five-reason {
+    text-align: center;
+}
+
+/* タイトル */
+.about-wrapper .five-reason h1 {
+    margin-bottom: 36px;
+    font-family: HiraginoSans-W7;
+    font-size: 30px;
+    letter-spacing: 1.4px;
+}
+.about-wrapper .five-reason h1 span {
+    margin: 0px 4px;
+    font-size: 1.4em;
+    color: #00399f;
+}
+
+/* アイコン, テキスト */
+.about-wrapper .five-reason ul {
+    width: 100%;
+    margin-bottom: 34px;
+    display: flex;
+}
+.about-wrapper .five-reason ul li {
+    width: calc((100% - 16px * 4) / 2);
+}
+.about-wrapper .five-reason ul li:not(:last-child) {
+    margin-right: 16px;
+}
+.about-wrapper .five-reason ul li i {
+    margin-bottom: 36px;
+    position: relative;
+    font-size: 50px;
+    color: #4a4a4a;
+
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+}
+.about-wrapper .five-reason ul li i:hover {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+.about-wrapper .five-reason ul li i:after {
+    width: 96%;
+    height: 24px;
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    background-color: rgba(0, 0, 0, .04);
+    border-radius: 50%;
+    z-index: -1;
+    content: '';
+
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+}
+.about-wrapper .five-reason ul li i:hover::after {
+    bottom: -34px;
+    -webkit-transform: translateX(-50%) scale(0.8);
+    transform: translateX(-50%) scale(0.8);
+}
+.about-wrapper .five-reason ul li .text {
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 1.2px;
+    color: #4a4a4a;
+}
+
+/* 詳細ボタン */
+.about-wrapper .five-reason .button {
+    padding: 16px 72px 16px 86px;
+    border: 1px solid #000000;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1.4px;
+    color: #FFFFFF;
+
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.about-wrapper .five-reason .button:hover {
+    color: #000000;
+}
+.about-wrapper .five-reason .button:after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: #000000;
+    z-index: -100;
+    content: '';
+
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+}
+.about-wrapper .five-reason .button:hover:after {
+    width: 0%;
+}
+.about-wrapper .five-reason .button span {
+    vertical-align: 0.02em;
+}
+
+@media screen and (max-width:500px) {
+    .about-wrapper .five-reason h1 {
+        font-size: 20px;
+        font-size: 6vw;
+    }
+}
+@media screen and (max-width:650px) {
+    .about-wrapper .five-reason ul {
+        flex-wrap: wrap;
+    }
+    .about-wrapper .five-reason ul li {
+        width: calc((100% - 20px) / 2);
+        margin-bottom: 26px;
+    }
+
+    .about-wrapper .five-reason ul li:not(:last-child) {
+        margin-right: 0px;
+    }
+    .about-wrapper .five-reason ul li:nth-child(odd) {
+        margin-right: 20px;
+    }
+}
+
+
+/* ----------------------------------------------------------------------
+ 会社概要
+---------------------------------------------------------------------- */
+.about-wrapper .overview {
+    margin-top: 200px;
+}
+.about-wrapper .overview h1 {
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2.3px;
+    color: #00399f;
+}
+
+.about-wrapper .overview table {
+    width: 100%;
+    border-spacing: 0;
+    font-size: 16px;
+    text-align: left;
+    letter-spacing: 1.2px;
+    color: #4a4a4a;
+}
+.about-wrapper .overview table tr th,
+.about-wrapper .overview table tr td  {
+    padding: 24px;
+    line-height: 1.6;
+}
+.about-wrapper .overview table tr:not(:last-child) th,
+.about-wrapper .overview table tr:not(:last-child) td {
+    border-bottom: 1px solid #EEEEEE;
+}
+.about-wrapper .overview table tr th {
+    vertical-align: top;
+}
+.about-wrapper .overview table tr td {
+
+}
+.about-wrapper .overview table tr td .b-01 {
+    margin-bottom: 24px;
+    display: block;
+}
+
+@media screen and (max-width:800px) {
+    .about-wrapper .overview table tr th,
+    .about-wrapper .overview table tr td {
+        padding: 14px;
+        display: block;
+    }
+    .about-wrapper .overview table tr:not(:last-child) th,
+    .about-wrapper .overview table tr:not(:last-child) td {
+        border: none;
+    }
+    .about-wrapper .overview table tr th {
+        background-color: #E0E0E0;
+    }
+    .about-wrapper .overview table tr td {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+@media screen and (max-width:500px) {
+    .about-wrapper .overview h1 {
+        font-size: 26px;
+    }
+    .about-wrapper .overview table {
+        font-size: 14px;
+    }
+}
