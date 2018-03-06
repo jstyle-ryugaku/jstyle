@@ -3,8 +3,19 @@
     box-sizing: border-box;
 }
 
+.country-wrapper {
+    padding: 0 10px;
+    margin: 32px auto;
+}
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #003d9c;
+    margin-bottom: 40px;
+}
+
 .foreword {
-    width: 80%;
+    width: 100%;
     height: 50%;
     font-size: 17px;
     font-weight: normal;
@@ -14,15 +25,15 @@
     letter-spacing: 1.4px;
     text-align: left;
     color: #4a4a4a;
-    margin: 7% 15% 5% 10%;
-
+    max-width: 1032px;
+    margin: 0 auto 5%;
 }
 
-.map {
-    margin: 0 15% 10px 15%;
+.map{
     height: auto;
     position: relative;
-    max-width: 1200px;
+    max-width: 980px;
+    margin: 0 auto;
 }
 
 .btn {
@@ -31,6 +42,8 @@
     background-color: #003d9c;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     display: inline-block;
+    max-width: 220px;
+    max-height: 67px;
 }
 
 .btn img {
@@ -38,8 +51,9 @@
     float: left;
     width: 35%;
     height: 3%;
-    margin: 6% 0 6% 6%;
-
+    margin-top:calc(12%/2);
+    margin-bottom: calc(12%/2);
+    margin-left: calc(12%/2);
 }
 
 .frame {
@@ -47,6 +61,7 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
+    max-height: 67px;
 }
 
 .ca {
@@ -60,7 +75,10 @@
     line-height: normal;
     letter-spacing: 1.4px;
     color: white;
-    margin: 9.1% 15% 9.1% 0;
+    margin-top: calc(16%/2);
+    margin-right: calc(28.5%/2);
+    margin-bottom: calc(16%/2);
+    margin-left: calc(28.5%/2);
 }
 
 .us {
@@ -74,7 +92,10 @@
     line-height: normal;
     letter-spacing: 1.4px;
     color: white;
-    margin: 9.1% 12% 9.1% 0;
+    margin-top: calc(16.5%/2);
+    margin-right: calc(19%/2);
+    margin-bottom: calc(16.5%/2);
+    margin-left: calc(19%/2);
 }
 
 .gb {
@@ -88,11 +109,14 @@
     line-height: normal;
     letter-spacing: 1.4px;
     color: white;
-    margin: 9.1% 12% 9.1% 0;
+    margin-top: calc(16.5%/2);
+    margin-right: calc(19%/2);
+    margin-bottom: calc(16.5%/2);
+    margin-left: calc(19%/2);
 }
 
 .au {
-    font-size: 2vh;
+    font-size: 1.5vh;
     float: right;
     text-align: center;
     font-family: HiraginoSans-W6;
@@ -102,7 +126,10 @@
     line-height: normal;
     letter-spacing: 1.1px;
     color: white;
-    margin: 10.5% 5% 10.5% 0;
+    margin-top: calc(22.5%/2);
+    margin-right: calc(16%/2);
+    margin-bottom: calc(22.5%/2);
+    margin-left: calc(16%/2)
 }
 
 .nz {
@@ -116,26 +143,29 @@
     line-height: normal;
     letter-spacing: 1.4px;
     color: white;
-    margin: 10.5% 5% 10.5% 0;
+    margin-top: calc(22%/2);
+    margin-right: calc(9%/2);
+    margin-bottom: calc(22%/2);
+    margin-left: calc(9%/2)
 }
 
 .caplace {
     position: absolute;
-    right: -1%;
+    right: 3%;
     top: 10%;
     z-index: 1;
 }
 
 .usplace {
     position: absolute;
-    top: 37%;
-    right: -10%;
+    top: 30%;
+    right: -1%;
     z-index: 1;
 }
 
 .gbplace {
     position: absolute;
-    top: 12%;
+    top: 25%;
     left: 6%;
     z-index: 1;
 
@@ -143,15 +173,15 @@
 
 .auplace {
     position: absolute;
-    top: 50%;
+    top: 63%;
     left: 15%;
     z-index: 1;
 }
 
 .nzplace {
     position: absolute;
-    top: 65%;
-    right: 15%;
+    top: 70%;
+    right: 25%;
     z-index: 1;
 }
 
@@ -194,20 +224,11 @@
 }
 
 /* tablet  */
-@media only screen and (min-width: 641px) and (max-width: 960px) {
+@media only screen and (min-width: 541px) and (max-width: 960px) {
     /*ここにtablet用スタイルを記述*/
     .foreword {
-        width: 80%;
-        height: 50%;
-        font-size: 12px;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1.20;
-        letter-spacing: 1.0px;
-        text-align: left;
-        color: #4a4a4a;
-        margin: 7% 15% 5% 10%;
+        font-size: 15px;
+        line-height: 1.61;
     }
 
     svg {
@@ -305,13 +326,122 @@
     }
 }
 
+@media only screen and (min-width: 416px) and (max-width: 540px) {
+    .foreword {
+        font-size: 15px;
+        line-height: 1.61;
+
+    }
+
+    svg {
+        max-width: 100%;
+    }
+
+    .frame {
+        width: 110px;
+        height: 34px;
+    }
+
+    .btn {
+        width: 110px;
+        height: 34px;
+        background-color: #003d9c;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        display: inline-block;
+
+    }
+
+    .btn img {
+        width: 42px;
+        height: auto;
+        margin: 5.2% 0 5.2% 5.2%;
+    }
+
+    .ca {
+        font-size: 13px;
+        float: right;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 1.1px;
+        color: white;
+        margin:7px 9.5px;
+    }
+
+    .us {
+        font-size: 12px;
+        float: right;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 1.1px;
+        color: white;
+        margin:8px 4.5px;
+    }
+
+    .gb {
+        font-size: 12px;
+        float: right;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 1.1px;
+        color: white;
+        margin:8px 4.5px;
+    }
+
+    .au {
+        font-size: 10px;
+        float: right;
+        width: 45px;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        color: white;
+        margin:2px 8px;
+
+    }
+
+    .nz {
+        font-size: 10px;
+        float: right;
+        width: 58px;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        color:white;
+        margin:2px 2px;
+    }
+
+}
+
 /* smartPhone */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 415px) {
 
     /*ここにスマホ用スタイルを記述*/
+    .title {
+        font-size: 26px;
+    }
     .foreword {
-        font-size: 6px;
-        line-height: 1.20;
+        font-size: 15px;
+        line-height: 1.61;
 
     }
 
@@ -361,8 +491,8 @@
     }
 
     .usplace {
-        top: 43%;
-        right: 0;
+        top: 35%;
+        right: 5%;
     }
 
     .gbplace {
@@ -370,7 +500,7 @@
     }
 
     .auplace {
-        top: 60%;
+        top: 70%;
         left: 30%;
     }
 
@@ -380,53 +510,60 @@
     }
 
     .frame2 {
-        width: 120px;
-        height: 34px;
+
         display: block;
         overflow: hidden;
     }
 
     .container {
-        max-width: 250px;
-        margin: 10px auto 20px;
+        max-width: calc(100% - 12px);
+        margin: 0 6px;
+
     }
 
     .btn2 {
-        width: 120px;
-        height: 34px;
+        width: calc(50% - 8px);
+        height: auto;
         background-color: #003d9c;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
         display: inline-block;
-        margin: 0 10px 10px 0;
+        margin: 0 8px 16px 0;
     }
 
     .btn3 {
-        width: 120px;
-        height: 34px;
+        width: calc(50% - 8px);
+        height: auto;
         background-color: #003d9c;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
         display: inline-block;
         float: right;
-        margin: 0 0 10px 0;
+        margin: 0 0 16px 8px;
     }
 
     .btn2 img {
-        border: 1px solid white;
-        width: 48px;
-        height: 26px;
-        margin: 4px 0 4px 4px;
+        border: 2px solid white;
+        width: 37%;
+        height: 19%;
+        margin-top: calc(9% / 2);
+        margin-left: calc(9% / 2);
+        margin-bottom: calc(9% / 2);
     }
 
     .btn3 img {
-        border: 1px solid white;
-        width: 48px;
-        height: 26px;
-        margin: 4px 0 4px 4px;
+        border: 2px solid white;
+        width: 37%;
+        height: 19%;
+        margin-top: calc(9% / 2);
+        margin-left: calc(9% / 2);
+        margin-bottom: calc(9% / 2);
     }
 
     .ca2 {
         font-size: 16px;
-        margin: 5px 10px;
+        margin-top: 7.5%;
+        margin-right: calc(29% - 48px / 2);
+        margin-bottom: 7.5%;
+        margin-left: calc(29% - 48px / 2);
         float: right;
         text-align: center;
         font-family: HiraginoSans-W6;
@@ -438,8 +575,11 @@
     }
 
     .us2 {
-        font-size: 15px;
-        margin: 5.5px 4px;
+        font-size: 16px;
+        margin-top: 7.5%;
+        margin-right: calc(29% - 64px / 2);
+        margin-left: calc(29% - 64px / 2);
+        margin-bottom: 7.5%;
         float: right;
         text-align: center;
         font-family: HiraginoSans-W6;
@@ -451,8 +591,11 @@
     }
 
     .gb2 {
-        font-size: 15px;
-        margin: 5.5px 4px;
+        font-size: 16px;
+        margin-top: 7.5%;
+        margin-right: calc(29% - 64px / 2);
+        margin-left: calc(29% - 64px / 2);
+        margin-bottom: 7.5%;
         float: right;
         text-align: center;
         font-family: HiraginoSans-W6;
@@ -464,33 +607,38 @@
     }
 
     .au2 {
-        font-size: 11px;
+        font-size: 12px;
         text-align: center;
-        width: 50px;
-        margin: 0 9px;
+        width: 58px;
         float: right;
-        text-align: center;
         font-family: HiraginoSans-W6;
         font-weight: normal;
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
         color: white;
+        margin-top: 3.5%;
+        margin-right: calc(29% - 58px / 2);
+        margin-bottom: 3.5%;
+        margin-left: calc(29% - 58px / 2);
     }
 
     .nz2 {
-        font-size: 11px;
+        font-size: 12px;
         text-align: center;
-        width: 60px;
         float: right;
         text-align: center;
+        width: 60px;
         font-family: HiraginoSans-W6;
         font-weight: normal;
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
         color: white;
-        margin: 0 4px;
+        margin-top: 3.5%;
+        margin-right: calc(29% - 60px / 2);
+        margin-bottom: 3.5%;
+        margin-left: calc(29% - 60px / 2);
     }
 
 }
