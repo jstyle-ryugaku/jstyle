@@ -168,8 +168,8 @@
     display: flex;
 }
 .reason-sec .wrap p {
-    width: 57%;
-    margin-right: 3%;
+    width: 54%;
+    margin-right: 5%;
     font-size: 1.6em;
     text-align: justify;
     line-height: 1.8;
@@ -178,7 +178,7 @@
     color: #4a4a4a;
 }
 .reason-sec .wrap .image {
-    width: 40%;
+    width: 41%;
     margin: 6px 0px;
     background-position: center;
     background-size: cover;
