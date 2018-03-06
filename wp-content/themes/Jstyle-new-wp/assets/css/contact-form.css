@@ -1,0 +1,104 @@
+.contact-form-editor-box-mail {
+    font-family: HiraginoSans-W3;
+}
+
+h2 {
+    width: 900px;
+    height: 18px;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.4px;
+    text-align: center;
+    color: #4a494a;
+}
+
+.require {
+    float: left;
+    width: 88px;
+    height: 39px;
+    border-radius: 25.5px;
+    background-color: #e66a46;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 2.1px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option {
+    float: left;
+    width: 88px;
+    height: 39px;
+    border-radius: 25.5px;
+    border: solid 1px #e66a46;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 2.1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e66a46;
+}
+
+
+.name2 {
+    float: left;
+}
+
+.sex2 {
+    clear: left;
+}
+
+.sex3 {
+    float: left;
+}
+
+.age {
+    clear: left;
+}
+
+.mail {
+    clear: both;
+}
+
+.date {
+    float: left;
+}
+
+
+.wpcf7-list-item {
+    float: left;
+    padding-left: 60px;
+}
+
+.place {
+    clear: left;
+}
+
+.period {
+    clear: left;
+}
+
+.content {
+    clear: left;
+}
+
+.wpcf7 {
+    background: #fff;
+    border: 0;
+    font-size: 14px;
+    margin: 0 0 2.5em !important;
+    padding: 0;
+    width: 100%;
+}
