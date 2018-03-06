@@ -48,24 +48,24 @@ function vogue_init() {
 	}
 
 	// News
-	$news_labels = array(
-		'name' => get_custom_post_label( 'news' )
-	);
-	$news_args = array(
-		'has_archive' => true,
-		'labels' => $news_labels,
-		'menu_position' => 5,
-		'public' => true,
-		'supports' => array( 'editor', 'revisions', 'thumbnail', 'title' )
-	);
-	if ( $options['news_slug'] ) {
-		$news_args['rewrite'] = array( 'slug' => $options['news_slug'] );
-	}
+//	$news_labels = array(
+//		'name' => get_custom_post_label( 'news' )
+//	);
+//	$news_args = array(
+//		'has_archive' => true,
+//		'labels' => $news_labels,
+//		'menu_position' => 5,
+//		'public' => true,
+//		'supports' => array( 'editor', 'revisions', 'thumbnail', 'title' )
+//	);
+//	if ( $options['news_slug'] ) {
+//		$news_args['rewrite'] = array( 'slug' => $options['news_slug'] );
+//	}
 //	register_post_type( 'news', $news_args );
 
-	// Plan
+//	 Plan
 	$plan_labels = array(
-		'name' => get_custom_post_label( 'plan' )
+		'name' => get_custom_post_label( 'interview' )
 	);
 	$plan_args = array(
 		'has_archive' => true,
@@ -75,9 +75,9 @@ function vogue_init() {
 		'supports' => array( 'editor', 'revisions', 'title' )
 	);
 	if ( $options['plan_slug'] ) {
-		$plan_args['rewrite'] = array( 'slug' => $options['plan_slug'] );
+		$plan_args['rewrite'] = array( 'slug' => 'interview' );
 	}
-	register_post_type( 'plan', $plan_args );
+	register_post_type( 'interview', $plan_args );
 
     register_post_type(
         '目的から探す',

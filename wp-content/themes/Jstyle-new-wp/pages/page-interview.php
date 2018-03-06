@@ -42,27 +42,7 @@ $sort_base_url = preg_replace('#/page/\d+#', '', $sort_base_url);
 
 <div class="archive_header">
     <div class="inner">
-        <?php
-        if (is_category() || is_tax()) {
-            $queried_object = get_queried_object();
-            ?>
-            <h2 class="headline rich_font"><?php echo esc_html($queried_object->name); ?></h2>
-            <?php
-            if ($queried_object->description) {
-                ?>
-                <p class="desc"><?php echo str_replace(array("\r\n", "\r", "\n"), '<br>', esc_html($queried_object->description)); ?></h2>
-                <?php
-            }
-        } elseif ($dp_options['search_results_headline']) {
-            ?>
-            <h2 class="headline rich_font"><?php echo esc_html($dp_options['search_results_headline']); ?></h2>
-            <?php
-        } else {
-            ?>
-            <h2 class="headline rich_font"><?php _e('Search Results', 'tcd-w'); ?></h2>
-            <?php
-        }
-        ?>
+            <h2 class="headline rich_font">検索結果</h2>
     </div>
 </div>
 
@@ -96,7 +76,7 @@ $sort_base_url = preg_replace('#/page/\d+#', '', $sort_base_url);
                             } else {
                                 $checked = '';
                             }
-                            echo '   <label><input type="checkbox" name="filter_tag[]" value="' . esc_attr($tag->term_id) . '"' . $checked . '><span>' . esc_html($tag->name) . '</span></label>' . "\n";
+                            echo '<label><input type="checkbox" name="filter_tag[]" value="' . esc_attr($tag->term_id) . '"' . $checked . '><span>' . esc_html($tag->name) . '</span></label>' . "\n";
                         }
                         ?>
                     </div>
@@ -111,19 +91,19 @@ $sort_base_url = preg_replace('#/page/\d+#', '', $sort_base_url);
 
         <?php if (have_posts()) : ?>
             <dl class="archive_sort clearfix">
-                <dt><?php _e('Sort condition', 'tcd-w'); ?></dt>
+                <dt>並べ替え条件</dt>
                 <dd>
-                    <a href="<?php echo esc_attr(add_query_arg('sort', 'date_desc', $sort_base_url)); ?>"<?php if ($sort == 'date_desc') echo ' class="active"'; ?>><?php _e('Newest first', 'tcd-w'); ?></a>
+                    <a href="<?php echo esc_attr(add_query_arg('sort', 'date_desc', $sort_base_url)); ?>"<?php if ($sort == 'date_desc') echo ' class="active"'; ?>>新しい順</a>
                 </dd>
                 <dd>
-                    <a href="<?php echo esc_attr(add_query_arg('sort', 'date_asc', $sort_base_url)); ?>"<?php if ($sort == 'date_asc') echo ' class="active"'; ?>><?php _e('Oldest first', 'tcd-w'); ?></a>
+                    <a href="<?php echo esc_attr(add_query_arg('sort', 'date_asc', $sort_base_url)); ?>"<?php if ($sort == 'date_asc') echo ' class="active"'; ?>>古い順</a>
                 </dd>
                 <dd>
-                    <a href="<?php echo esc_attr(add_query_arg('sort', 'views', $sort_base_url)); ?>"<?php if ($sort == 'views') echo ' class="active"'; ?>><?php _e('Large number of views', 'tcd-w'); ?></a>
+                    <a href="<?php echo esc_attr(add_query_arg('sort', 'views', $sort_base_url)); ?>"<?php if ($sort == 'views') echo ' class="active"'; ?>>閲覧数順</a>
                 </dd>
             </dl>
 
-            <?php get_template_part('navigation2'); ?>
+            <?php get_template_part('template-parts/navigation2'); ?>
 
             <ol id="post_list2">
 

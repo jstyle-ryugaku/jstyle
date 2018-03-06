@@ -1,4 +1,3 @@
-<p>テストてすと</p>
 <?php
 global $dp_options;
 if (!$dp_options) $dp_options = get_desing_plus_option();
@@ -52,7 +51,7 @@ if ($dp_options['searcn_post_type'] == 'post') {
     }
 
     // category
-    for ($i = 1; $i <= 3; $i++) {
+    for ($i = 1; $i <= 2; $i++) {
         if (!empty($dp_options['show_search_form_category' . $i . '_introduce'])) {
             $tax_slug = '';
             $placeholder = '';
@@ -100,7 +99,7 @@ if ($dp_options['searcn_post_type'] == 'post') {
     ?>
     <div class="header_search_inputs header_search_keywords">
         <input type="text" id="header_search_keywords" name="search_keywords"
-               placeholder="<?php echo esc_attr($search_forms['search_keywords']['placeholder']); ?>"
+               placeholder="キーワード"
                value="<?php if (!empty($_REQUEST['search_keywords'])) echo esc_attr(stripslashes($_REQUEST['search_keywords'])); ?>"/>
         <input type="hidden" name="search_keywords_operator"
                value="<?php if (!empty($_REQUEST['search_keywords_operator']) && $_REQUEST['search_keywords_operator'] == 'or') {
@@ -120,7 +119,7 @@ if ($dp_options['searcn_post_type'] == 'post') {
     <?php
     //	endif;
 
-    for ($i = 1; $i <= 3; $i++) :
+    for ($i = 1; $i <= 2; $i++) :
 //		if (!empty($search_forms['search_cat'.$i]['slug'])) :
         ?>
         <div class="header_search_inputs">
@@ -144,7 +143,7 @@ if ($dp_options['searcn_post_type'] == 'post') {
     ?>
     <div class="header_search_inputs header_search_button">
         <input type="submit" id="header_search_submit"
-               value="<?php echo esc_attr($dp_options['search_form_button_text']); ?>"/>
+               value="検索する"/>
     </div>
 </form>
 <?php
