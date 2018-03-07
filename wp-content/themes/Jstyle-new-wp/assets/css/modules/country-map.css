@@ -1,0 +1,28 @@
+.country-map__container {
+    position: relative;
+}
+
+.country-map__infobox {
+    position: absolute;
+}
+
+.country-map__land{
+    fill: #CCCCCC;
+    stroke: #FFFFFF;
+    stroke-width: 0.5;
+}
+
+.country-map__available-land {
+    fill: #003d9c;
+}
+
+.country-map__available-land:hover {
+    cursor: pointer;
+    fill: #e66a46;
+}
+
+.country-map__spot-pointer {
+    fill: #003d9c;
+    stroke: #003d9c;
+    stroke-width: 0.5;
+}

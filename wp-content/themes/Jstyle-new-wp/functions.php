@@ -163,7 +163,7 @@ function vogue_scripts() {
 	}
 
 	// 共通CSS
-    wp_enqueue_style( 'vogue-country', get_template_directory_uri() . '/assets/css/common.css', false, version_num() );
+    wp_enqueue_style( 'vogue-common', get_template_directory_uri() . '/assets/css/common.css', false, version_num() );
 
 	if(is_page('interview')) {
 	    wp_enqueue_style( 'vogue-interview', get_template_directory_uri() . '/assets/css/interview.css', false, version_num() );
@@ -176,7 +176,8 @@ function vogue_scripts() {
     }
 
     if(is_page('country-usa')) {
-        wp_enqueue_style( 'vogue-country-usa', get_template_directory_uri() . '/assets/css/modules/image-link-list.css', false, version_num() );
+        wp_enqueue_style( 'vogue-image-link-list', get_template_directory_uri() . '/assets/css/modules/image-link-list.css', false, version_num() );
+        wp_enqueue_style( 'vogue-country-map', get_template_directory_uri() . '/assets/css/modules/country-map.css', false, version_num() );
         wp_enqueue_style( 'vogue-country-usa', get_template_directory_uri() . '/assets/css/country-page-common.css', false, version_num() );
     }
 
