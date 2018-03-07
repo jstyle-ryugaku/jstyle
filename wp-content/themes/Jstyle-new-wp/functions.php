@@ -192,6 +192,16 @@ function vogue_scripts() {
         wp_enqueue_style( 'vogue-about', get_template_directory_uri() . '/assets/css/about.css', false, version_num() );
         wp_enqueue_script( 'vogue-about', get_template_directory_uri() . '/assets/js/about.js', array( 'jquery' ), version_num(), true );
     }
+
+    if(is_page('reason')) {
+        wp_enqueue_style( 'vogue-reason', get_template_directory_uri() . '/assets/css/reason.css', false, version_num() );
+        wp_enqueue_script( 'vogue-reason', get_template_directory_uri() . '/assets/js/reason.js', array( 'jquery' ), version_num(), true );
+    }
+
+    if(is_page('new-style')) {
+        wp_enqueue_style( 'vogue-new-style', get_template_directory_uri() . '/assets/css/new-style.css', false, version_num() );
+        wp_enqueue_script( 'vogue-new-style', get_template_directory_uri() . '/assets/js/new-style.js', array( 'jquery' ), version_num(), true );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'vogue_scripts' );
 
