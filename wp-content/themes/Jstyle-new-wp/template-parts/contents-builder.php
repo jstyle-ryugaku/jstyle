@@ -6,7 +6,7 @@
 
     <section id="cb_1" class="p-content01 l-inner">
         <div class="p-content01-title">
-            <h2 class="p-content01__catch" style="font-size: px;"><span style="font-family: 明朝;">Jstyle</span>が選ばれる<span
+            <h2 class="p-content01__catch">Jstyleが選ばれる<span
                         style="font-size: 60px; color: #014099;">5</span>つの理由</h2>
         </div>
         <div class="p-content01__desc" style="font-size: ">
@@ -45,10 +45,10 @@
             <article class="p-content02__item">
                 <a href="http://tcdwp.info/tcd051/plan/modern/" class="p-hover-effect--type1">
                     <img class="p-content02__item-img p-content02__item-img--vertical"
-                         src="<?php bloginfo('template_url'); ?>/assets/images/top/country.jpg" alt="">
+                         src="<?php bloginfo('template_url'); ?>/assets/images/top/country.png" alt="">
                     <div class="p-content02__item-content p-content02__item-content--t">
                         <h2 class="p-content02__item-title">国で探す</h2>
-                        <!-- <p class="p-content02__item-sub">モダン</p> -->
+                        <p class="p-content02__item-sub">Country</p>
                     </div>
                 </a>
             </article>
@@ -58,8 +58,8 @@
                     <img class="p-content02__item-img p-content02__item-img--vertical"
                          src="<?php bloginfo('template_url'); ?>/assets/images/top/type_upper.png" alt="">
                     <div class="p-content02__item-content p-content02__item-content--t">
-                        <h2 class="p-content02__item-title">種類で探す</h2>
-                        <!-- <p class="p-content02__item-sub">スーペリア</p> -->
+                        <h2 class="p-content02__item-title">目的で探す</h2>
+                        <p class="p-content02__item-sub">Purpose</p>
                     </div>
                 </a>
             </article>
@@ -67,10 +67,10 @@
             <article class="p-content02__item">
                 <a href="http://tcdwp.info/tcd051/plan/infinity/" class="p-hover-effect--type1">
                     <img class="p-content02__item-img p-content02__item-img--vertical"
-                         src="<?php bloginfo('template_url'); ?>/assets/images/top/age.jpg" alt="">
+                         src="<?php bloginfo('template_url'); ?>/assets/images/top/age.png" alt="">
                     <div class="p-content02__item-content p-content02__item-content--t">
                         <h2 class="p-content02__item-title">年代で探す</h2>
-                        <!-- <p class="p-content02__item-sub">インフィニティ</p> -->
+                        <p class="p-content02__item-sub">Age</p>
                     </div>
                 </a>
             </article>
@@ -89,7 +89,7 @@
             position: absolute;
             top: 0;
             left: 40%;
-            background-image: url('<?php bloginfo("template_directory");?>/images/jstyle.png');
+            background-image: url('<?php bloginfo("template_directory");?>/assets/images/jstyle.png');
             width: 60%;
             height: 100%;
             opacity: 0.2;
@@ -103,8 +103,9 @@
 
     <!------- 留学の準備 ------>
 
-    <div id="cb_2" class="p-main-image">
-        <div class="p-main-image__content" style="background: rgba();  color: ">
+    <div id="cb_2" class="p-main-image"
+         style="background-image: url('<?php bloginfo("template_directory"); ?>/assets/images/top/prepare@1920*1080.jpg');">
+        <div class="p-main-image__content"">
             <div class="title-container">
                 <span class="p-title--english">Preparation</span>
                 <h2 class="p-title" style="">
@@ -120,8 +121,6 @@
                 <a class="p-main-image__btn p-button" href="">持ち物リスト</a>
             </div>
         </div>
-        <div class="p-main-image__img"
-             style="background-image: url('<?php bloginfo("template_directory"); ?>/assets/images/top/prepare.jpg')"></div>
     </div>
 
     <!------- 留学の準備 ------>
@@ -148,7 +147,7 @@
             <div class="p-content03__blog-header">
                 <div class="title-container">
                     <span class="p-title--english p-content03__title--english">Interview</span>
-                    <h2 class="p-title p-content03__title" style="">
+                    <h2 class="p-title p-content03__title">
                         留学体験記
                     </h2>
                 </div>
@@ -176,7 +175,7 @@
                                 <h3 class="p-article04__title"><a
                                             href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 25, '...'); ?></a>
                                 </h3>
-                                <p class="p-article04__excerpt"><?php echo is_mobile() ? wp_trim_words(get_the_excerpt(), 25, '...') : wp_trim_words(get_the_excerpt(), 40, '...'); ?></p>
+                                <p class="p-article04__excerpt"><?php echo is_mobile() ? wp_trim_words(get_the_excerpt(), 40, '...') : wp_trim_words(get_the_excerpt(), 40, '...'); ?></p>
                                 <?php if ($options['show_date'] || $options['show_category']) : ?>
                                     <p class="p-article04__meta"><?php if ($options['show_date']) : ?>
                                             <time class="p-article04__date"
@@ -286,21 +285,21 @@
 
     <!------- 留学体験インタビュー ------>
 
-<!--    <div id="cb_4" class="p-main-image">-->
-<!--        <div class="p-main-image__img"-->
-<!--             style="background-image: url(http://jstylenewwp.local/wp-content/themes/Jstyle-new-wp/images/interview.jpg);"></div>-->
-<!--        <div class="p-main-image__content" style="background: rgba();  color: ; ">-->
-<!--            <h2 class="p-main-image__title">-->
-<!--                留学日記などその他のコンテンツ（？）-->
-<!--            </h2>-->
-<!--            <p class="p-main-image__desc" style="font-size: px;">-->
-<!--                私は高校1年生の時に1年間アメリカのオハイオ州に留学していました。帰国後、進路を考えた際に海外進学という選択肢が一番に上がりました。1年間で身についた英語力をもっと上達させたい、将来に役立てたいと思ったのと同時に、アメリカ人の学習に対する姿勢に惹かれことが大きな理由だと思います。...-->
-<!--            </p>-->
-<!--            <a class="p-main-image__btn p-button" href="" style="color: #fff;">-->
-<!--                詳細　>-->
-<!--            </a>-->
-<!--        </div>-->
-<!--    </div>-->
+    <!--    <div id="cb_4" class="p-main-image">-->
+    <!--        <div class="p-main-image__img"-->
+    <!--             style="background-image: url(http://jstylenewwp.local/wp-content/themes/Jstyle-new-wp/images/interview.jpg);"></div>-->
+    <!--        <div class="p-main-image__content" style="background: rgba();  color: ; ">-->
+    <!--            <h2 class="p-main-image__title">-->
+    <!--                留学日記などその他のコンテンツ（？）-->
+    <!--            </h2>-->
+    <!--            <p class="p-main-image__desc" style="font-size: px;">-->
+    <!--                私は高校1年生の時に1年間アメリカのオハイオ州に留学していました。帰国後、進路を考えた際に海外進学という選択肢が一番に上がりました。1年間で身についた英語力をもっと上達させたい、将来に役立てたいと思ったのと同時に、アメリカ人の学習に対する姿勢に惹かれことが大きな理由だと思います。...-->
+    <!--            </p>-->
+    <!--            <a class="p-main-image__btn p-button" href="" style="color: #fff;">-->
+    <!--                詳細　>-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--    </div>-->
 
 </div>
 
