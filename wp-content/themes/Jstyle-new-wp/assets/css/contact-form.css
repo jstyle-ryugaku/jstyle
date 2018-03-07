@@ -320,6 +320,10 @@ input.wpcf7-form-control.wpcf7-submit {
         margin-top: 60px;
     }
 
+    input.wpcf7-form-control.wpcf7-number.wpcf7-validates-as-required.wpcf7-validates-as-number {
+        margin-left: 148px;
+    }
+
     .mail2 {
         float: none;
     }
@@ -397,13 +401,4 @@ input.wpcf7-form-control.wpcf7-submit {
         margin-top: 100px;
         margin-left: 43px;
     }
-
-
-
-
-
-
-
-
-
 }
