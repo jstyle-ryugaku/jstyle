@@ -176,8 +176,10 @@ function vogue_scripts() {
     }
 
     if(is_page('country-usa')) {
-        wp_enqueue_style( 'vogue-purpose', get_template_directory_uri() . '/assets/css/country-page-common.css', false, version_num() );
+        wp_enqueue_style( 'vogue-country-usa', get_template_directory_uri() . '/assets/css/modules/image-link-list.css', false, version_num() );
+        wp_enqueue_style( 'vogue-country-usa', get_template_directory_uri() . '/assets/css/country-page-common.css', false, version_num() );
     }
+
 
     if(is_page('contact form')) {
         wp_enqueue_style( 'vogue-contact-form', get_template_directory_uri() . '/assets/css/contact-form.css', false, version_num() );

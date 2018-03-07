@@ -1,0 +1,58 @@
+* {
+    font-family: HiraginoSans, YuGothic, "游ゴシック", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+.main-content-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+/* 一番大きな見出し */
+.main-content-title {
+    color: #003d9c;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2.3px;
+    margin: 20px 0 30px 0;
+}
+
+/*一番大きな見出しの下の説明*/
+.main-content-description {
+    font-size: 18px;
+    line-height: 1.83;
+    letter-spacing: 2.4px;
+    color: #4d4d4d;
+}
+
+.content-block {
+    margin: 60px 0;
+}
+
+.bottom-line-heading {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 50px;
+    color: #003d9c;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2.3px;
+}
+
+.bottom-line-heading:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    display: inline-block;
+    width: 100px;
+    height: 5px;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #003d9c;
+    border-radius: 2px;
+}
