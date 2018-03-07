@@ -22,6 +22,10 @@ get_header();
         </div>
 
         <div class="content-block">
+            <h2 class="bottom-line-heading">地域から探す</h2>
+        </div>
+
+        <div class="content-block">
             <h2 class="bottom-line-heading">アメリカ留学の種類</h2>
 
             <ul class="image-link-list__container">

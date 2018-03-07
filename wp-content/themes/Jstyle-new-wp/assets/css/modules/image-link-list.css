@@ -34,6 +34,7 @@
 
 .image-link-list__text-container {
     width: 100%;
+    box-sizing: border-box;
     padding: 38px;
     position: absolute;
     bottom: 0;
@@ -70,4 +71,22 @@
 
 .image-link-list__listed-link:hover a .bg-image {
     transform: scale(1.1);
+}
+
+@media screen and (max-width:1106px) {
+    .image-link-list__listed-link {
+        width: calc((100% - 10px) / 2);
+        margin-bottom: 10px;
+    }
+    .image-link-list__listed-link:nth-child(odd) {
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width:650px) {
+    .image-link-list__container {
+        display: block;
+    }
+    .image-link-list__listed-link {
+        width: 100%;
+    }
 }
