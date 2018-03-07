@@ -2217,7 +2217,7 @@ ul {
 }
 
 .p-article05__date {
-    color: #999;
+    color: #fff;
     display: block;
     font-size: 14px;
     margin-bottom: 5.8px;
@@ -2332,19 +2332,32 @@ ul {
 }
 
 .p-button {
+    /*background: #fff !important;*/
+    /*border: 2px solid rgb(230, 106, 70) !important;*/
+    /*margin-top: 36px;*/
+    /*box-sizing: border-box;*/
+    /*color: rgb(230, 106, 70) !important;*/
+    /*display: inline-block;*/
+    /*font-size: 14px;*/
+    /*line-height: 40px;*/
+    /*text-align: center;*/
+    /*min-width: 200px;*/
+    /*height: 50px;*/
+    /*padding: 0 15px;*/
+
     background: #fff !important;
     border: 2px solid rgb(230, 106, 70) !important;
     margin-top: 36px;
-    /*border-radius: 20px !important;*/
     box-sizing: border-box;
     color: rgb(230, 106, 70) !important;
     display: inline-block;
     font-size: 14px;
     line-height: 40px;
     text-align: center;
-    min-width: 200px;
+    min-width: 180px;
     height: 50px;
     padding: 0 15px;
+    margin-right: 20px;
 }
 
 .p-button:hover {
@@ -2737,6 +2750,10 @@ ul.content01_builder_container li i:hover::after {
     height: 600px;
 }
 
+.p-content03__blog-header .title-container {
+    margin-bottom: 20px;
+}
+
 .p-content03--rev {
     flex-direction: row-reverse;
 }
@@ -2840,11 +2857,13 @@ ul.content01_builder_container li i:hover::after {
 }
 
 .p-content03__news {
+    background: #f67d23;
     padding: 100px 0 0;
     width: 33.33333%;
 }
 
 .p-content03__news-catch {
+    border: 0 !important;
     font-size: 40px;
     color: #fff;
     margin-bottom: 30px;
@@ -2864,7 +2883,7 @@ ul.content01_builder_container li i:hover::after {
 }
 
 .p-content03__news-archive-link {
-    color: #999;
+    color: #fff;
     font-size: 14px;
     padding: 0 16.52893%;
 }
@@ -2898,7 +2917,7 @@ ul.content01_builder_container li i:hover::after {
     }
 
     .p-content03__blog {
-        padding: 43.5px 20px 0;
+        padding: 43.5px 20px 20px;
         width: 100%;
     }
 
@@ -2929,20 +2948,17 @@ ul.content01_builder_container li i:hover::after {
     }
 
     .p-content03__news {
-        background: transparent !important;
         position: relative;
         width: 100%;
     }
 
     .p-content03__news-catch {
-        color: #000;
         font-size: 30px !important;
         padding: 0 20px;
         margin-bottom: 16px;
     }
 
     .p-content03__news-archive-link {
-        color: #000;
         padding: 0;
         position: absolute;
         top: 48px;
@@ -4085,10 +4101,27 @@ ul.content01_builder_container li i:hover::after {
 /**
 	* main image
 	*/
-.p-entry__body .p-main-image__title {
+.p-title {
     margin-bottom: 16px;
     line-height: 1.5;
     font-weight: 500;
+    font-family: HiraginoSans-W6;
+    font-size: 24px;
+    letter-spacing: 3.1px;
+    text-align: center;
+}
+
+.title-container {
+    border-bottom: solid 1px #003d9c;
+}
+
+.title-container .p-title--english {
+    text-align: left;
+    display: block;
+    font-family: Avenir;
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 3.1px;
 }
 
 .p-entry__body .p-main-image__desc {
@@ -4124,7 +4157,8 @@ ul.content01_builder_container li i:hover::after {
 }
 
 .p-main-image__content {
-    background: #f6f6f6;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
     box-sizing: border-box;
     display: -webkit-box;
     display: -webkit-flex;
@@ -4136,21 +4170,27 @@ ul.content01_builder_container li i:hover::after {
     -ms-flex-direction: column;
     flex-direction: column;
     justify-content: center;
-    padding: 0 7.5%;
-    width: 50%;
+    padding: 0 5.5%;
+    width: 550px;
     height: 100%;
     position: absolute;
     top: 0;
     right: 0;
 }
 
-.p-main-image__title {
-    font-size: 30px;
-    margin-bottom: 16px;
-    line-height: 1.5;
-    text-align: center;
-    display: inline-block;
-    position: relative;
+.title-container .p-title {
+    /*font-size: 30px;*/
+    /*margin-bottom: 16px;*/
+    /*line-height: 1.5;*/
+    /*text-align: center;*/
+    /*display: inline-block;*/
+    /*position: relative;*/
+    margin-top: 10px;
+    font-family: "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    font-size: 24px;
+    font-weight: bold !important;
+    letter-spacing: 3.1px;
+    text-align: left;
 }
 
 .p-main-image__title::after {
