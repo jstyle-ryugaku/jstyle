@@ -1,6 +1,22 @@
 <div class="country-map__container">
-    <div class="country-map__infobox">
-        コンテンツ
+    <div class="country-map__infobox" id="US-WA__info">
+        <p class="country-map__country-name">シアトル</p>
+    </div>
+
+    <div class="country-map__infobox" id="US-OR__info">
+        <p class="country-map__country-name">オレゴン</p>
+    </div>
+
+    <div class="country-map__infobox" id="US-CA__info">
+        <p class="country-map__country-name">ロサンゼルス</p>
+    </div>
+
+    <div class="country-map__infobox" id="US-NY__info">
+        <p class="country-map__country-name">ニューヨーク</p>
+    </div>
+
+    <div class="country-map__infobox" id="US-DC__info">
+        <p class="country-map__country-name">ワシントンDC</p>
     </div>
 
     <svg version="1.1" id="レイヤー_1" xmlns:amcharts="http://amcharts.com/ammap"
@@ -8,6 +24,32 @@
 
     <defs>
         <amcharts:ammap  bottomLatitude="14.052495" leftLongitude="-124.541947" projection="mercator" rightLongitude="-67.118615" topLatitude="49.390806">
+            <style>
+                #US-WA__info {
+                    top: 5%;
+                    left: 27%;
+                }
+
+                #US-OR__info {
+                    left: 14%;
+                    top: 33%;
+                }
+
+                #US-CA__info {
+                    bottom: 22.5%;
+                    left: 25%;
+                }
+
+                #US-NY__info {
+                    right: 30%;
+                    top: 22%;
+                }
+
+                #US-DC__info {
+                    right: 30%;
+                    bottom: 40%;
+                }
+            </style>
         </amcharts:ammap>
     </defs>
         <g>
@@ -27,7 +69,6 @@
 		h18.5l0,11.6V126.2z"/>
             <path id="US-CT" class="country-map__land" d="M493.8,102l0.1,6.6l-0.6,1.8l-4.1,0.6l-5.4,0.6l-7.2,2.8l-0.3-1.5l2-1.2l-0.7-1l0.5-9.3l7.1,0.2
 		L493.8,102z"/>
-            <path id="US-DC" class="country-map__land country-map__available-land" d="M445.2,140.5l0-0.7l-0.8-1l0.8-0.6l1.2,1.2L445.2,140.5z"/>
             <path id="US-DE" class="country-map__land" d="M460.4,128.7l-1.4,1.2l0.2,2.3l1.9,6.3l2.5,5.9h-6.2l-0.7-14.9l0.7-0.9l0.8-0.5L460.4,128.7z"/>
             <path id="US-FL" class="country-map__land" d="M403.9,229.6l1.2,7.7l3.5,8.6l4.2,7.8v4l4,10.5l0.4,9.1l-1.9,8.7l-3.9,1.8l-4.6-1.2l-1.5-4.4
 		l-3.5-2.3L397,271l-4.5-7.4l-0.8-4.9l1.6-6.3l-2.1-5.8l-6-6.2l-5.3-4l-10.4,4.4l-2.1-2.9l-8.8-4.7l-10.5,1.3l0.7-1.4l0.5-2.1
@@ -176,20 +217,34 @@
             <path id="US-DC" class="country-map__land country-map__available-land" d="M443.2,144.8l0.3-4.1l-4.6-5.9l4.5-3.3l6.9,7.1L443.2,144.8z"/>
         </g>
 
-        <circle class="country-map__spot-pointer" cx="444.6" cy="137.1" r="2.8"/>
-        <line class="country-map__spot-pointer" x1="88.4" y1="238.8" x2="88.1" y2="238.8"/>
-
+        <!-- ワシントンDC -->
+        <line class="country-map__spot-pointer-bg" x1="444.6" y1="137.1" x2="342.7" y2="161.6"/>
+        <circle class="country-map__spot-pointer-bg" cx="444.6" cy="137.1" r="2.8"/>
         <line class="country-map__spot-pointer" x1="444.6" y1="137.1" x2="342.7" y2="161.6"/>
-        <line class="country-map__spot-pointer" x1="156" y1="208.9" x2="57.1" y2="188.8"/>
+        <circle class="country-map__spot-pointer" cx="444.6" cy="137.1" r="2.8"/>
+
+        <!-- ロサンゼルス -->
+        <line class="country-map__spot-pointer-bg" x1="156" y1="212" x2="57.1" y2="188.8"/>
+        <circle class="country-map__spot-pointer-bg" cx="57.1" cy="188.8" r="2.8"/>
+        <line class="country-map__spot-pointer" x1="156" y1="212" x2="57.1" y2="188.8"/>
         <circle class="country-map__spot-pointer" cx="57.1" cy="188.8" r="2.8"/>
 
-        <line class="country-map__spot-pointer" x1="158.2" y1="36.1" x2="28.1" y2="39.9"/>
+        <!-- シアトル -->
+        <line class="country-map__spot-pointer-bg" x1="158.2" y1="30" x2="28.1" y2="39.9"/>
+        <circle class="country-map__spot-pointer-bg" cx="28.1" cy="39.9" r="2.8"/>
+        <line class="country-map__spot-pointer" x1="158.2" y1="30" x2="28.1" y2="39.9"/>
         <circle class="country-map__spot-pointer" cx="28.1" cy="39.9" r="2.8"/>
 
-        <line class="country-map__spot-pointer" x1="139.1" y1="108" x2="19.7" y2="84.9"/>
+        <!-- オレゴン -->
+        <line class="country-map__spot-pointer-bg" x1="100" y1="105" x2="19.7" y2="84.9"/>
+        <circle class="country-map__spot-pointer-bg" cx="19.7" cy="84.9" r="2.8"/>
+        <line class="country-map__spot-pointer" x1="100" y1="105" x2="19.7" y2="84.9"/>
         <circle class="country-map__spot-pointer" cx="19.7" cy="84.9" r="2.8"/>
 
-        <circle class="country-map__spot-pointer" cx="475.5" cy="116.1" r="2.8"/>
+        <!-- ニューヨーク -->
+        <line class="country-map__spot-pointer-bg" x1="475.5" y1="116.1" x2="333.3" y2="77.1"/>
+        <circle class="country-map__spot-pointer-bg" cx="475.5" cy="116.1" r="2.8"/>
         <line class="country-map__spot-pointer" x1="475.5" y1="116.1" x2="333.3" y2="77.1"/>
+        <circle class="country-map__spot-pointer" cx="475.5" cy="116.1" r="2.8"/>
 </svg>
 </div>

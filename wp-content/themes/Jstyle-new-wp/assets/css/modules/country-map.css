@@ -4,8 +4,22 @@
 
 .country-map__infobox {
     position: absolute;
+    background-color: white;
+    padding: 8px;
+    border: solid 2px #003d9c;
 }
 
+.country-map__infobox:hover {
+    cursor: pointer;
+}
+
+.country-map__country-name {
+    color: #003d9c;
+}
+
+/* -------------
+  以下 svg描画用
+--------------- */
 .country-map__land{
     fill: #CCCCCC;
     stroke: #FFFFFF;
@@ -22,7 +36,14 @@
 }
 
 .country-map__spot-pointer {
+    fill: white;
+    stroke: white;
+    stroke-width: 0.5;
+}
+
+.country-map__spot-pointer-bg {
     fill: #003d9c;
     stroke: #003d9c;
-    stroke-width: 0.5;
+    stroke-linecap: square;
+    stroke-width: 3;
 }
