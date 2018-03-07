@@ -2,7 +2,7 @@
 /*
 template name: interview
 */
-// カスタム検索用グローバル変数
+
 global $custom_search_vars;
 
 get_header();
@@ -31,18 +31,18 @@ $sort_base_url = remove_query_arg('sort');
 $sort_base_url = preg_replace('#/page/\d+#', '', $sort_base_url);
 ?>
 
-<?php get_template_part( 'template-parts/page-header' ); ?>
-<?php get_template_part( 'template-parts/breadcrumb' ); ?>
+<?php get_template_part('template-parts/page-header'); ?>
+<?php get_template_part('template-parts/breadcrumb'); ?>
 
 <div id="header_search">
     <div class="inner">
-        <?php get_template_part( 'template-parts/custom_search_form' ); ?>
+        <?php get_template_part('template-parts/custom_search_form'); ?>
     </div>
 </div>
 
 <div class="archive_header">
     <div class="inner">
-            <h2 class="headline rich_font">検索結果</h2>
+        <h2 class="headline rich_font">検索結果</h2>
     </div>
 </div>
 

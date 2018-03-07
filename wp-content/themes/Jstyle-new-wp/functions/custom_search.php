@@ -330,7 +330,7 @@ function custom_search_template_include( $template ) {
 	// カスタム検索の場合に、テンプレートファイル差し替え
 	if ( $custom_search_vars ) {
 		// カスタム検索表示用テンプレートファイル名
-		$template_name = 'custom_search_results.php';
+		$template_name = 'page-interview.php';
 
 		if ( file_exists( STYLESHEETPATH . '/' . $template_name ) ) {
 			return STYLESHEETPATH . '/' . $template_name;

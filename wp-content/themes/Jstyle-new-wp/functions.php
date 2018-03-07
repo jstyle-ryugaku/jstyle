@@ -720,3 +720,45 @@ require get_template_directory() . '/inc/widget/styled_post_list.php';
  */
 // 更新通知 --------------------------------------------------------------------------------
 require get_template_directory() . '/functions/init.php';
+require get_template_directory() . '/functions/custom_search.php';
+
+// テンプレートファイル差し替え
+function custom_post_type_template_include( $template ) {
+    // カスタム検索用グローバル変数
+    global $custom_search_vars;
+
+    global $dp_options;
+    if ( ! $dp_options ) $dp_options = get_desing_plus_option();
+
+    $template_name = null;
+
+    if ( is_singular( $dp_options['news_slug'] ) ) {
+        $template_name = 'single-news.php';
+    } elseif ( is_singular( $dp_options['introduce_slug'] ) ) {
+        $template_name = 'single-introduce.php';
+    } elseif ( $custom_search_vars ) {
+        // カスタム検索の場合はcustom_search.phpで処理されるため何もしない
+    } elseif ( is_post_type_archive( $dp_options['news_slug'] ) ) {
+        $template_name = 'archive-news.php';
+    } elseif (
+        is_post_type_archive( $dp_options['introduce_slug'] ) ||
+        ( is_tax( $dp_options['introduce_category1_slug'] ) && $dp_options['use_introduce_category1'] && $dp_options['use_introduce_category1_introduce_archive'] ) ||
+        ( is_tax( $dp_options['introduce_category2_slug'] ) && $dp_options['use_introduce_category2'] && $dp_options['use_introduce_category2_introduce_archive'] ) ||
+        ( is_tax( $dp_options['introduce_category3_slug'] ) && $dp_options['use_introduce_category3'] && $dp_options['use_introduce_category3_introduce_archive'] )
+    ) {
+        $template_name = 'archive-introduce.php';
+    } elseif ( is_category() || is_tax( array( $dp_options['category2_slug'], $dp_options['category3_slug'], $dp_options['introduce_category1_slug'], $dp_options['introduce_category2_slug'], $dp_options['introduce_category3_slug'] ) ) ) {
+        $template_name = 'custom_search_results.php';
+    }
+
+    if ( $template_name ) {
+        if ( file_exists( STYLESHEETPATH . '/' . $template_name ) ) {
+            return STYLESHEETPATH . '/' . $template_name;
+        } elseif ( file_exists( TEMPLATEPATH . '/' . $template_name ) ) {
+            return TEMPLATEPATH . '/' . $template_name;
+        }
+    }
+
+    return $template;
+}
+add_filter( 'template_include', 'custom_post_type_template_include' );
