@@ -2364,11 +2364,10 @@ ul {
     color: rgb(230, 106, 70) !important;
     display: inline-block;
     font-size: 14px;
-    line-height: 40px;
     text-align: center;
     min-width: 180px;
-    height: 50px;
-    padding: 0 15px;
+    height: auto;
+    padding: 20px 15px;
     margin-right: 20px;
 }
 
@@ -2385,8 +2384,7 @@ ul {
 @media only screen and (max-width: 767px) {
     .p-button {
         min-width: 150px;
-        height: 40px;
-        line-height: 40px;
+        height: auto;
     }
 }
 
