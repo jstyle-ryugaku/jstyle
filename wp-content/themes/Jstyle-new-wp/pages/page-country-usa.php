@@ -23,6 +23,7 @@ get_header();
 
         <div class="content-block">
             <h2 class="bottom-line-heading">地域から探す</h2>
+            <?php get_template_part( 'components/usa-map' ); ?>
         </div>
 
         <div class="content-block">
