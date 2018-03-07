@@ -168,10 +168,28 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
             <small>Copyright © 2017 Jstyle. All rights reserved.</small>
         </p>
     </div>
-    <div id="js-request" class="p-request" style="background: #000000;">
-        <div class="p-request__inner">
-            <p class="p-request__text" style="color: #ffffff;">相談無料！元留学経験者が親身に相談に乗ります！</p>
-            <a class="p-request__btn" href="http://tcdwp.info/tcd051/blog/" style="color: #ffffff;">お問い合わせはこちら</a>
+    <div id="js-request" class="p-request">
+        <div>
+
+        </div>
+        <div class="frame">
+            <div class="footer-btn-container">
+                <div class="call footer-btn">
+                    <a class="tbtn" href="#">
+                        <i class="fas fa-phone"></i>
+                        <p class="number">03-5848-5432</p>
+                    </a>
+                </div>
+                <div class="contact footer-btn">
+                    <a class="mbtn" href="#">
+                        <i class="fas fa-envelope"></i>
+                        <p class="massage">お問い合わせ</p>
+                    </a>
+                </div>
+            </div>
+            <div class="p-request__inner">
+                <p class="p-request__text" style="color: #ffffff;">相談無料！元留学経験者が親身に相談に乗ります！</p>
+            </div>
         </div>
         <button id="js-request__close" class="p-request__close"></button>
     </div>
