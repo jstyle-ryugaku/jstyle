@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------------------
+ 全体
+---------------------------------------------------------------------- */
+.reason-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 120px auto;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+.reason-wrapper * {
+    box-sizing: inherit;
+}
+.reason-wrapper h1,
+.reason-wrapper h2 {
+    margin: 0;
+    padding: 0;
+}
+.reason-wrapper ul,
+.reason-wrapper li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media screen and (max-width:1110px) {
+    .reason-wrapper {
+        padding: 0px 10px;
+    }
+}
+@media screen and (max-width:600px) {
+    .reason-wrapper {
+        font-size: 9px;
+    }
+}
+
+
+/* ----------------------------------------------------------------------
+ Jstyleが選ばれる5つの理由(アイコン,テキスト)
+---------------------------------------------------------------------- */
+.reason-five {
+    text-align: center;
+    margin-bottom: 120px;
+}
+
+/* タイトル */
+.reason-five h1 {
+    margin-bottom: 36px;
+    font-family: HiraginoSans-W7;
+    font-size: 3em;
+    letter-spacing: 1.4px;
+}
+.reason-five h1 .blue {
+    margin: 0px 4px;
+    font-size: 1.4em;
+    color: #00399f;
+}
+
+/* アイコン,テキスト */
+.reason-five ul {
+    width: 100%;
+    max-width: 960px;
+    margin: 0px auto;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.reason-five ul li {
+    width: calc((100% - 16px * 4) / 2);
+}
+.reason-five ul li:not(:last-child) {
+    margin-right: 16px;
+}
+.reason-five ul li i {
+    margin-bottom: 36px;
+    position: relative;
+    font-size: 50px;
+    color: #4a4a4a;
+
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+}
+.reason-five ul li i:hover {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+.reason-five ul li i:after {
+    width: 96%;
+    height: 24px;
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    background-color: rgba(0, 0, 0, .04);
+    border-radius: 50%;
+    z-index: -1;
+    content: '';
+
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+}
+.reason-five ul li i:hover::after {
+    bottom: -34px;
+    -webkit-transform: translateX(-50%) scale(0.8);
+    transform: translateX(-50%) scale(0.8);
+}
+.reason-five ul li .text {
+    font-size: 1.4em;
+    line-height: 1.4;
+    letter-spacing: 1.2px;
+    color: #4a4a4a;
+}
+
+@media screen and (max-width:500px) {
+    .reason-five h1 {
+        font-size: 20px;
+        font-size: 6vw;
+    }
+}
+@media screen and (max-width:650px) {
+    .reason-five ul {
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .reason-five ul li {
+        width: calc((100% - 20px) / 2);
+        margin-right: 0px;
+        margin-bottom: 26px;
+    }
+    .reason-five ul li:not(:last-child) {
+        margin-right: 0px;
+    }
+    .reason-five ul li:nth-child(odd) {
+        margin-right: 12px;
+    }
+}
+
+
+/* ----------------------------------------------------------------------
+ 5つの理由セクション 共通スタイル
+---------------------------------------------------------------------- */
+.reason-sec:not(:last-child) {
+    margin-bottom: 140px;
+}
+.reason-sec h1 {
+    margin-bottom: 30px;
+    font-size: 2.6em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4;
+    letter-spacing: 2.2px;
+    color: #00399f;
+}
+.reason-sec h1:after {
+    width: 117px;
+    margin: 26px auto 0px;
+    border-bottom: 3px solid #00399f;
+    display: block;
+    content: '';
+}
+.reason-sec .wrap {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.reason-sec .wrap p {
+    width: 54%;
+    margin-right: 5%;
+    font-size: 1.6em;
+    text-align: justify;
+    line-height: 1.8;
+    letter-spacing: 2px;
+    text-indent: 1em;
+    color: #4a4a4a;
+}
+.reason-sec .wrap .image {
+    width: 41%;
+    margin: 6px 0px;
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width:800px) {
+    .reason-sec .wrap {
+        display: block;
+    }
+    .reason-sec .wrap p {
+        width: 100%;
+        margin-right: 0px;
+    }
+    .reason-sec .wrap .image {
+        width: 100%;
+        height: 240px;
+        margin-top: 12px;
+        margin-bottom: 0px;
+    }
+}
