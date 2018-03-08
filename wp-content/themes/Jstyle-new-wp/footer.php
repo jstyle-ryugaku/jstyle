@@ -144,7 +144,7 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
             </div>
         </div>
     </section>
-    <div class="l-inner">
+    <div class="l-inner nav-footer-container">
         <div class="p-company-nav__container">
             <p class="p-address">提携先</p>
             <p class="p-university">慶應義塾大学</p>
