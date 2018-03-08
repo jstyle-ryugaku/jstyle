@@ -514,7 +514,7 @@ ul {
 
 /* Header ----------------------------------------------------------------- */
 .l-header {
-    background: rgba(0, 67, 83, 0.8);
+    background: #fff;
     height: 70px;
     line-height: 70px;
     width: 100%;
@@ -539,7 +539,7 @@ ul {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin-left: auto;
+    margin-left: 30px;
     margin-right: auto;
     position: relative;
     width: 89.84375%;
@@ -569,6 +569,39 @@ ul {
     width: 200px;
 }
 
+
+.l-header__inner ul.l-header__menu {
+    flex-grow: 2;
+    display: flex;
+    -webkit-margin-after: 0;
+    justify-content: center;
+}
+
+.l-header__inner ul.l-header__menu a {
+    display: block;
+    box-sizing: border-box;
+    height: 70px;
+}
+.l-header__inner ul.l-header__menu li {
+    font-family: Avenir;
+    list-style-type: none;
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #003D9C;
+}
+
+.l-header__inner ul.l-header__menu li span {
+    font-family: HiraginoSans;
+    font-size: 12px;
+    color: #999999;
+    letter-spacing: 1px;
+    text-align: center;
+    display: block;
+    height: 12px;
+    margin-bottom: 5px;
+}
 @media only screen and (max-width: 1024px) {
     .l-header {
         height: 60px;
@@ -605,6 +638,9 @@ ul {
 }
 
 /* Main ----------------------------------------------------------------- */
+.l-main {
+    padding-top: 70px;
+}
 @media only screen and (max-width: 767px) {
     .l-main {
         padding-top: 60px;
@@ -2889,14 +2925,24 @@ ul.content01_builder_container li i:hover::after {
     padding: 20px 16.52893% 15.8px;
 }
 
-.p-content03__news-list-item a:hover {
-    background: #333;
+.p-content03__news-list-item a:hover,
+a.p-content03__news-archive-link:hover {
+    background: #fff;
+    color: #f67d23 !important;
+}
+
+.p-content03__news-list-item a:hover time,
+.p-content03__news-list-item a:hover h3 {
+    color: #f67d23;
 }
 
 .p-content03__news-archive-link {
     color: #fff;
     font-size: 14px;
-    padding: 0 16.52893%;
+    padding: 10px 16.52893%;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
 }
 
 .p-content03__news-archive-link::after {
