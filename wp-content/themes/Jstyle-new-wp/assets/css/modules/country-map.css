@@ -7,7 +7,7 @@
     background-color: white;
     padding: 8px;
     border: solid 2px #003d9c;
-    transition: all .18s ease-out;
+    transition: .18s ease-out;
 }
 
 .country-map__infobox img {
@@ -48,14 +48,12 @@
 .country-map__infobox.act .country-map__country-name,
 .country-map__infobox:hover .country-map__country-name {
     margin-bottom: 12px;
-    /*color: #e66a46;*/
 }
 
 .country-map__infobox.act .country-map__country-name::before,
 .country-map__infobox:hover .country-map__country-name::before {
     width: 80%;
     left: 40%;
-    /*background-color: #e66a46;*/
 }
 
 .country-map__infobox.act img,
@@ -63,6 +61,21 @@
     display: block;
     width: 30vh;
     height: auto;
+}
+
+@media screen and (max-width: 650px) {
+    .country-map__infobox {
+        padding: 5px;
+    }
+
+    .country-map__country-name {
+        font-size: 14px;
+    }
+
+    .country-map__infobox.act img,
+    .country-map__infobox:hover img {
+        width: 20vh;
+    }
 }
 
 /* -------------
@@ -77,11 +90,6 @@
 
 .country-map__available-land {
     fill: #003d9c;
-}
-
-.country-map__available-land:hover {
-    cursor: pointer;
-    fill: #e66a46;
 }
 
 .country-map__spot-pointer {

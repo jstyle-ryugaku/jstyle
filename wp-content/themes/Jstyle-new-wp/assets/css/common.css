@@ -8,12 +8,6 @@
     padding: 60px 30px;
 }
 
-@media screen and (max-width:650px) {
-    .main-content-container {
-        padding: 30px 10px;
-    }
-}
-
 /* 一番大きな見出し */
 .main-content-title {
     color: #003d9c;
@@ -61,4 +55,18 @@
     transform: translateX(-50%);
     background-color: #003d9c;
     border-radius: 2px;
+}
+
+@media screen and (max-width:650px) {
+    .main-content-container {
+        padding: 30px 10px;
+    }
+
+    .main-content-description {
+        font-size: 14px;
+    }
+
+    .bottom-line-heading {
+        font-size: 20px;
+    }
 }
