@@ -2,18 +2,32 @@
     font-family: HiraginoSans-W3;
 }
 
-.body {
-    margin-left: 70px;
+h1.p-entry__title {
+    display: none;
+}
+
+h2.contact-form__heading {
+    width: 900px;
+    height: 18px;
+    font-size: 18px;
+    letter-spacing: 1.4px;
+    color: #4a494a;
+    font-weight: normal;
+    padding-bottom: 18px;
+    border-bottom: 56px;
 }
 
 .l-primary {
     background: #fff;
     box-sizing: border-box;
     padding-bottom: 115px;
-    padding-right: 100px;
-    padding-left: 100px;
-    width: 1500px;
+    width: 900px;
+    margin: 0 auto;
     padding-top: 92px;
+}
+
+.contact-form .body {
+    width: 100%;
 }
 
 .p-entry__body h6 {
@@ -25,39 +39,40 @@
 .p-entry__body,
 .p-entry__body .wpcf7 p {
     margin-bottom: 38px;
-    font-size: 17px;
+    font-size: 14px;
+    line-height: 25px;
 }
 
 input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
     height: 40px;
 }
 
-h6 {
-    width: 900px;
-    height: 18px;
-    font-size: 18px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 1.4px;
-    text-align: center;
-    color: #4a494a;
-    border-bottom: 56px;
-    border-bottom: solid 1px #ff5252
+.form-label p:first-child {
+    width: 40%;
+    margin: 0;
+}
+
+.form-label {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.form-label input {
+    width: 55%;
+}
+
+.form-label br {
+    display: none;
 }
 
 .require {
     float: left;
-    width: 88px;
-    height: 39px;
+    width: 60px;
+    height: 25px;
     border-radius: 25.5px;
     background-color: #e66a46;
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
+    font-size: 12px;
     letter-spacing: 2.1px;
     color: #ffffff;
     display: flex;
@@ -68,24 +83,20 @@ h6 {
 
 .option {
     float: left;
-    width: 88px;
-    height: 39px;
+    width: 60px;
+    height: 25px;
     border-radius: 25.5px;
-    border: solid 1px #e66a46;
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
+    background-color: #ffff;
+    font-size: 12px;
     letter-spacing: 2.1px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #e66a46;
     margin-right: 60px;
+    border: solid 1px #e66a46;
+    color: #e66a46;
+    box-sizing: border-box;
 }
-
-
 
 .name2 {
     float: left;
@@ -94,13 +105,16 @@ h6 {
     color: #4d4d4d;
 }
 
+.sex2  {
+    margin-bottom: 50px;
+}
+
 .sex {
     float: left;
     margin-right: 210px;
     letter-spacing: 2.1px;
     color: #4d4d4d;
 }
-
 
 .age {
     clear: left;
@@ -111,6 +125,18 @@ h6 {
     margin-right: 180px;
     letter-spacing: 2.1px;
     color: #4d4d4d;
+
+}
+
+.age p:nth-child(2) {
+    overflow: hidden;
+    margin-right: 0;
+    float: left;
+    width: 60%;
+}
+
+.age p:last-child {
+    line-height: 40px;
 }
 
 input.wpcf7-form-control.wpcf7-number.wpcf7-validates-as-required.wpcf7-validates-as-number {
@@ -139,8 +165,23 @@ input.wpcf7-form-control.wpcf7-number.wpcf7-validates-as-required.wpcf7-validate
 }
 
 .date {
+    width: 40%;
     float: left;
-    margin-right: 64px;
+    margin-right: 0;
+}
+
+.date p:first-child {
+    width: 100%;
+}
+
+p.date3 {
+    margin-top: 40px;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+p.date3 br {
+    display: block;
 }
 
 .date2 {
@@ -149,19 +190,11 @@ input.wpcf7-form-control.wpcf7-number.wpcf7-validates-as-required.wpcf7-validate
 }
 
 .date3 {
-    width: 180px;
-    height: 117px;
-    font-size: 20px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.95;
     letter-spacing: 2.1px;
     text-align: center;
     color: #e66a46;
-    padding: 45px 60px 17px 60px;
+    padding: 40px 60px;
     border: solid 1px #e66a46;
-    margin-bottom: 221px;
 }
 
 .date4 {
@@ -191,9 +224,14 @@ span.wpcf7-list-item {
 }
 
 .place {
+    width: 40%;
     clear: left;
     float: left;
     margin-bottom: 100px;
+}
+
+.place p:first-child {
+    width: 100%;
 }
 
 .place2 {
@@ -207,14 +245,13 @@ span.wpcf7-list-item {
     color: #4d4d4d;
 }
 
-
 span.wpcf7-list-item.last {
     margin-right: 40px;
 }
 
 .period {
     clear: left;
-    width: 900px;
+
 }
 
 .period2 {
@@ -260,10 +297,10 @@ span.wpcf7-list-item.first.last {
 }
 
 input.wpcf7-form-control.wpcf7-submit {
-    width: 200px;
-    height: 70px;
+    width: 170px;
+    height: 60px;
     background-color: #e66a46;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -271,8 +308,13 @@ input.wpcf7-form-control.wpcf7-submit {
     letter-spacing: 2.3px;
     text-align: center;
     color: #ffffff;
-    margin-top: 100px;
-    margin-left: 250px;
+    margin: 20px auto 0;
+}
+
+.wpcf7 .wpcf7-submit:hover {
+    background-color: #fff;
+    color: #e66a46;
+    border: 1px solid #e66a46 !important;
 }
 
 .wpcf7 {
@@ -283,9 +325,7 @@ input.wpcf7-form-control.wpcf7-submit {
     width: 100%;
 }
 
-
-
-@media screen and (max-width: 420px){
+@media screen and (max-width: 856px) {
     h6 {
         width: 280px;
         height: 65px;
@@ -295,16 +335,41 @@ input.wpcf7-form-control.wpcf7-submit {
         margin-left: 0px;
     }
 
+    .l-primary {
+        margin: 0 auto;
+        width: 90%;
+        padding: 0 !important;
+    }
+
+    h2.contact-form__heading {
+        width: 100%;
+        height: auto;
+    }
+
     .name2 {
         float: none;
     }
 
-    input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
-        width: 280px;
+    .form-label {
+        width: 100%;
     }
-    
+
+    .form-label input {
+        width: 100%;
+    }
+
+    .form-label p:last-child {
+        width: 100%;
+    }
+
+    input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
+        width: 100%;
+        margin-top:20px;
+    }
+
     .sex {
         float: none;
+        padding-bottom: 20px;
     }
 
     .wpcf7 .wpcf7-list-item {
@@ -319,10 +384,7 @@ input.wpcf7-form-control.wpcf7-submit {
         float: none;
         margin-right: 50px;
         margin-top: 60px;
-    }
-
-    input.wpcf7-form-control.wpcf7-number.wpcf7-validates-as-required.wpcf7-validates-as-number {
-        margin-left: 148px;
+        padding-bottom: 30px;
     }
 
     .mail2 {
@@ -402,4 +464,12 @@ input.wpcf7-form-control.wpcf7-submit {
         margin-top: 100px;
         margin-left: 43px;
     }
+}
+
+.l-secondary {
+    display: none;
+}
+
+.l-contents {
+    background: #fff !important;
 }
