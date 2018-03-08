@@ -47,7 +47,7 @@ $ph_fields = array(
 		'id' => 'ph_bg_color',
 		'title' => __( 'Background color of catchphrase', 'tcd-w' ),
 		'type' => 'color',
-		'default' => '#222222',
+		'default' => '#003d9c',
 		'before_field' => '<dl class="ml_custom_fields">',
 		'after_field' => '</dd></dl>',
 		'before_title' => '<dt class="label">',

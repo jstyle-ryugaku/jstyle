@@ -158,25 +158,33 @@ function vogue_scripts() {
 	wp_localize_script( 'vogue-load', 'load', array( 'loadTime' => $options['load_time'] * 1000 ) ); // ミリ秒で渡す
 
 	if ( is_mobile() && 'type3' !== $options['footer_bar_display'] && ! $options['display_request'] ) {
-
 		wp_enqueue_style( 'vogue-footer-bar', get_template_directory_uri() . '/assets/css/footer-bar.css', false, version_num() );
 		wp_enqueue_script( 'vogue-footer-bar', get_template_directory_uri() . '/assets/js/footer-bar.min.js', array( 'jquery' ), version_num(), true );
-
 	}
 
-	if(is_page('interview')) {
+	// 共通CSS
+    wp_enqueue_style( 'vogue-common', get_template_directory_uri() . '/assets/css/common.css', false, version_num() );
 
+	if(is_page('interview')) {
 	    wp_enqueue_style( 'vogue-interview', get_template_directory_uri() . '/assets/css/interview.css', false, version_num() );
         wp_enqueue_script( 'vogue-interview', get_template_directory_uri() . '/assets/js/interview.js', array( 'jquery' ), version_num(), true );
-
     }
 
     if(is_page('country')) {
-
         wp_enqueue_style( 'vogue-country', get_template_directory_uri() . '/assets/css/country.css', false, version_num() );
         wp_enqueue_script( 'vogue-country', get_template_directory_uri() . '/assets/js/country.js', array( 'jquery' ), version_num(), true );
-
     }
+
+    if(is_page('country-usa')) {
+        wp_enqueue_style( 'vogue-image-link-list', get_template_directory_uri() . '/assets/css/modules/image-link-list.css', false, version_num() );
+        wp_enqueue_style( 'vogue-country-map', get_template_directory_uri() . '/assets/css/modules/country-map.css', false, version_num() );
+        wp_enqueue_style( 'vogue-country-usa', get_template_directory_uri() . '/assets/css/country-page-common.css', false, version_num() );
+        wp_enqueue_script( 'vogue-front-script', get_template_directory_uri() . '/assets/js/front-page.min.js', array( 'jquery', 'vogue-script' ), version_num(), true );
+        wp_enqueue_style( 'vogue-slick', get_template_directory_uri() . '/assets/css/slick.min.css' );
+        wp_enqueue_style( 'vogue-slick-theme', get_template_directory_uri() . '/assets/css/slick-theme.min.css' );
+        wp_enqueue_script( 'vogue-slick', get_template_directory_uri() . '/assets/js/slick.min.js', array( 'jquery' ), version_num(), true );
+    }
+
 
     if(is_page('contact form')) {
         wp_enqueue_style( 'vogue-contact-form', get_template_directory_uri() . '/assets/css/contact-form.css', false, version_num() );
