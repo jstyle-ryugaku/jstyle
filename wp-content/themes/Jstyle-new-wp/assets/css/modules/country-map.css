@@ -1,5 +1,7 @@
 .country-map__container {
     position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .country-map__infobox {
@@ -65,7 +67,7 @@
 
 @media screen and (max-width: 650px) {
     .country-map__infobox {
-        padding: 5px;
+        padding: 3px;
     }
 
     .country-map__country-name {

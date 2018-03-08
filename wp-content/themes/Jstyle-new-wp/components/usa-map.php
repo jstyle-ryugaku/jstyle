@@ -1,5 +1,4 @@
 <div class="country-map__container">
-<!--    <div class="country-map__infobox act" id="US-WA__info">-->
     <div class="country-map__infobox" id="US-WA__info">
         <p class="country-map__country-name">シアトル</p>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/wa/gallery_1.jpg">
@@ -297,3 +296,4 @@
         <line class="country-map__spot-pointer" x1="475.5" y1="116.1" x2="333.3" y2="77.1"/>
         <circle class="country-map__spot-pointer" cx="475.5" cy="116.1" r="2.8"/>
 </svg>
+</div>
