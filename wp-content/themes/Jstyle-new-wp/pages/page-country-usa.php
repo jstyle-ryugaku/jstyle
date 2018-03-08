@@ -31,89 +31,79 @@ $news_query = new WP_Query($news_args);
 
         <div class="content-block">
             <h2 class="bottom-line-heading">Jstyleでアメリカ留学しました！</h2>
-        </div>
-        <div id="cb_3" class="p-content03<?php if ($value['cb_blog_and_news_layout']) {
-            echo ' p-content03--rev';
-        } ?>">
-            <section class="p-content03__blog u-clearfix">
-                <div class="p-content03__blog-header">
-                    <div class="title-container">
-                        <span class="p-title--english p-content03__title--english">Interview</span>
-                        <h2 class="p-title p-content03__title">
-                            留学体験記
+            <div id="cb_3" class="p-content03<?php if ($value['cb_blog_and_news_layout']) {
+                echo ' p-content03--rev';
+            } ?>">
+                <section class="p-content03__blog u-clearfix">
+                    <?php if ($blog_query->have_posts()) : ?>
+                        <div class="p-content03__blog-list">
+                            <div class="p-content03__blog-list-inner">
+                                <?php
+                                while ($blog_query->have_posts()) :
+                                    $blog_query->the_post();
+                                    ?>
+                                    <article class="p-content03__blog-list-item p-article04">
+                                        <a class="p-article04__thumbnail p-hover-effect--<?php echo esc_attr($options['hover_type']); ?>"
+                                           href="<?php the_permalink(); ?>">
+                                            <?php
+                                            if (has_post_thumbnail()) {
+                                                the_post_thumbnail('size1');
+                                            } else {
+                                                echo '<img src="' . get_template_directory_uri() . '/assets/images/no-image-480x320.gif" alt="">';
+                                            }
+                                            ?>
+                                        </a>
+                                        <h3 class="p-article04__title"><a
+                                                    href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 25, '...'); ?></a>
+                                        </h3>
+                                        <p class="p-article04__excerpt"><?php echo is_mobile() ? wp_trim_words(get_the_excerpt(), 40, '...') : wp_trim_words(get_the_excerpt(), 40, '...'); ?></p>
+                                        <?php if ($options['show_date'] || $options['show_category']) : ?>
+                                            <p class="p-article04__meta"><?php if ($options['show_date']) : ?>
+                                                    <time class="p-article04__date"
+                                                          datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time><?php endif; ?><?php if ($options['show_category']) : ?>
+                                                    <span class="p-article04__category"><?php the_category(', '); ?></span><?php endif; ?>
+                                            </p>
+                                        <?php endif; ?>
+                                    </article>
+                                <?php endwhile;
+                                wp_reset_postdata(); ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                    <div class="p-content03__blog-arrows">
+                    </div>
+                </section>
+                <section class="p-content03__news"
+                         style="background: <?php echo esc_attr($value['cb_blog_and_news_news_bg']); ?>">
+                    <div class="p-content03__news-catch title-container">
+                        <span class="p-title--english">News</span>
+                        <h2 class="p-title" style="">
+                            留学ニュース
                         </h2>
                     </div>
-                    <a class="p-content03__blog-archive-link"
-                       href="<?php echo esc_url(get_post_type_archive_link('interview')); ?>">体験記一覧</a>
-                </div>
-                <?php if ($blog_query->have_posts()) : ?>
-                    <div class="p-content03__blog-list">
-                        <div class="p-content03__blog-list-inner">
+                    <?php if ($news_query->have_posts()) : ?>
+                        <div class="p-content03__news-list">
                             <?php
-                            while ($blog_query->have_posts()) :
-                                $blog_query->the_post();
+                            while ($news_query->have_posts()) :
+                                $news_query->the_post();
                                 ?>
-                                <article class="p-content03__blog-list-item p-article04">
-                                    <a class="p-article04__thumbnail p-hover-effect--<?php echo esc_attr($options['hover_type']); ?>"
-                                       href="<?php the_permalink(); ?>">
-                                        <?php
-                                        if (has_post_thumbnail()) {
-                                            the_post_thumbnail('size1');
-                                        } else {
-                                            echo '<img src="' . get_template_directory_uri() . '/assets/images/no-image-480x320.gif" alt="">';
-                                        }
-                                        ?>
+                                <article class="p-content03__news-list-item p-article05">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php if ($options['show_date_news']) : ?>
+                                            <time class="p-article05__date"
+                                                  datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+                                        <?php endif; ?>
+                                        <h3 class="p-article05__title"><?php echo wp_trim_words(get_the_title(), 30, '...'); ?></h3>
                                     </a>
-                                    <h3 class="p-article04__title"><a
-                                                href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 25, '...'); ?></a>
-                                    </h3>
-                                    <p class="p-article04__excerpt"><?php echo is_mobile() ? wp_trim_words(get_the_excerpt(), 40, '...') : wp_trim_words(get_the_excerpt(), 40, '...'); ?></p>
-                                    <?php if ($options['show_date'] || $options['show_category']) : ?>
-                                        <p class="p-article04__meta"><?php if ($options['show_date']) : ?>
-                                                <time class="p-article04__date"
-                                                      datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time><?php endif; ?><?php if ($options['show_category']) : ?>
-                                                <span class="p-article04__category"><?php the_category(', '); ?></span><?php endif; ?>
-                                        </p>
-                                    <?php endif; ?>
                                 </article>
                             <?php endwhile;
                             wp_reset_postdata(); ?>
                         </div>
-                    </div>
-                <?php endif; ?>
-                <div class="p-content03__blog-arrows">
-                </div>
-            </section>
-            <section class="p-content03__news"
-                     style="background: <?php echo esc_attr($value['cb_blog_and_news_news_bg']); ?>">
-                <div class="p-content03__news-catch title-container">
-                    <span class="p-title--english">News</span>
-                    <h2 class="p-title" style="">
-                        留学ニュース
-                    </h2>
-                </div>
-                <?php if ($news_query->have_posts()) : ?>
-                    <div class="p-content03__news-list">
-                        <?php
-                        while ($news_query->have_posts()) :
-                            $news_query->the_post();
-                            ?>
-                            <article class="p-content03__news-list-item p-article05">
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php if ($options['show_date_news']) : ?>
-                                        <time class="p-article05__date"
-                                              datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-                                    <?php endif; ?>
-                                    <h3 class="p-article05__title"><?php echo wp_trim_words(get_the_title(), 30, '...'); ?></h3>
-                                </a>
-                            </article>
-                        <?php endwhile;
-                        wp_reset_postdata(); ?>
-                    </div>
-                <?php endif; ?>
-                <a class="p-content03__news-archive-link"
-                   href="<?php echo esc_url(get_post_type_archive_link('news')); ?>">ニュース一覧</a>
-            </section>
+                    <?php endif; ?>
+                    <a class="p-content03__news-archive-link"
+                       href="<?php echo esc_url(get_post_type_archive_link('news')); ?>">ニュース一覧</a>
+                </section>
+            </div>
         </div>
 
         <div class="content-block">
