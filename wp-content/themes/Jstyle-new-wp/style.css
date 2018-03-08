@@ -653,6 +653,11 @@ ul {
     height: 90%;
 }
 
+.l-header__inner ul.l-header__menu a:hover span.menu-button--en {
+    color: #334;
+    transition: 0.2s;
+}
+
 .l-header__inner .p-request__inner {
     display: -webkit-box;
     display: -webkit-flex;
@@ -693,6 +698,15 @@ ul {
     color: #003D9C;
     border-radius: 20px;
     border: 0;
+    width: inherit;
+}
+
+.tel-btn-container .tel-btn a:hover {
+    background: #003D9C;
+    color: #fff !important;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    border-radius: 20px;
     width: inherit;
 }
 
@@ -2029,7 +2043,8 @@ ul {
 	*/
 .p-address {
     color: #666;
-    font-size: 14px;
+    font-size: 22px;
+    font-weight: bold;
     line-height: 1.8;
     margin-bottom: 25px;
     text-align: center;
@@ -2513,7 +2528,6 @@ ul {
     padding: 20px 15px;
     margin-right: 20px;
 }
-
 
 .p-button:hover {
     background: rgb(230, 106, 70) !important;
@@ -3128,6 +3142,7 @@ a.p-content03__news-archive-link:hover {
         position: absolute;
         top: 48px;
         right: 20px;
+        text-align: right;
     }
 
     .p-content03__news-list {
@@ -4999,9 +5014,31 @@ a.p-content03__news-archive-link:hover {
 }
 
 /**
+    company nav
+ */
+
+p.p-university {
+    text-align: center;
+    color: #4A4A4A;
+}
+
+.p-company-nav {
+    margin-top: 30px;
+    text-align: center;
+}
+
+li.p-company-nav__item {
+    color: ##4A4A4A;
+    list-style-type: none;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+/**
 	* social nav
 	*/
 .p-social-nav {
+    margin-top: 40px;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -5497,7 +5534,7 @@ a.p-content03__news-archive-link:hover {
 	* widget area
 	*/
 .p-widget-area {
-    background: #f6f6f6;
+    background: #fff;
     margin-bottom: 80px;
     padding: 78px 0 61px;
 }
