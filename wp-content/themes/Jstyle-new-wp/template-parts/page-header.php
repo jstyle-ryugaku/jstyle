@@ -49,9 +49,13 @@ if ( is_404() ) {
 	<header class="p-page-header" style="background-image: url(<?php echo esc_attr( $image ); ?>);">
 		<div class="p-page-header__inner l-inner">
 			<?php if ( $is_h1 ) : ?>
-			<h1 class="p-page-header__title" style="background: rgba(<?php echo implode( ', ', $bg_color ); ?>, <?php echo esc_attr( $bg_opacity ); ?>); color: <?php echo esc_attr( $color ); ?>; font-size: <?php echo esc_attr( $font_size ); ?>px;"><?php echo nl2br( esc_html( $catchphrase ) ); ?></h1>
+			<h1 class="p-page-header__title" style="background: rgba(<?php echo implode( ', ', $bg_color ); ?>, <?php echo esc_attr( $bg_opacity ); ?>); color: <?php echo esc_attr( $color ); ?>; font-size: <?php echo esc_attr( $font_size ); ?>px;">
+                <?php echo nl2br( esc_html( $catchphrase ) ); ?>
+            </h1>
 			<?php else : ?>
-			<div class="p-page-header__title" style="background: rgba(<?php echo implode( ', ', $bg_color ); ?>, <?php echo esc_attr( $bg_opacity ); ?>); color: <?php echo esc_attr( $color ); ?>; font-size: <?php echo esc_attr( $font_size ); ?>px;"><?php echo nl2br( esc_html( $catchphrase ) ); ?></div>
+			<div class="p-page-header__title" style="background: rgba(<?php echo implode( ', ', $bg_color ); ?>, <?php echo esc_attr( $bg_opacity ); ?>); color: <?php echo esc_attr( $color ); ?>; font-size: <?php echo esc_attr( $font_size ); ?>px;">
+                <?php echo nl2br( esc_html( $catchphrase ) ); ?>
+            </div>
 			<?php endif; ?>
 		</div>
 	</header>
