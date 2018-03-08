@@ -115,7 +115,8 @@ $args['order'] = $sort;
                 setup_postdata( $post );
             ?>
 
-                <a class="interview__article">
+
+                <div class="interview__article">
                     <div class="interview__article-image">
                         <?php
                         if (has_post_thumbnail()) {
@@ -127,8 +128,25 @@ $args['order'] = $sort;
                     </div>
 
                     <div class="interview__article-info">
+
+                        <div class="interview__article-category-container">
+                            <?php
+                            $categories = get_the_category();
+                            $separator = ' ';
+                            $output = '';
+                            if ( $categories ) {
+                                foreach( $categories as $category ) {
+                                    $output .= '<a href="' . get_category_link( $category->term_id ) . '" title="'
+                                        . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) )
+                                        . '">' . $category->cat_name . '</a>' . $separator;
+                                }
+                                echo trim( $output, $separator );
+                            }
+                            ?>
+                        </div>
+
                         <div class="interview__article-date">
-                            <?php the_date(); ?>
+                            <?php the_time('Y.m.d'); ?>
                         </div>
 
                         <div class="interview__article-title">
@@ -139,7 +157,7 @@ $args['order'] = $sort;
                             <?php the_excerpt(); ?>
                         </div>
                     </div>
-                </a>
+                </div>
             <br>
 
             <?php

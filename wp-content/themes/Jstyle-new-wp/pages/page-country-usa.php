@@ -58,10 +58,19 @@ $news_query = new WP_Query($news_args);
                                         </h3>
                                         <p class="p-article04__excerpt"><?php echo is_mobile() ? wp_trim_words(get_the_excerpt(), 40, '...') : wp_trim_words(get_the_excerpt(), 40, '...'); ?></p>
                                         <?php if ($options['show_date'] || $options['show_category']) : ?>
-                                            <p class="p-article04__meta"><?php if ($options['show_date']) : ?>
+                                            <p class="p-article04__meta">
+                                                <?php if ($options['show_date']) : ?>
                                                     <time class="p-article04__date"
-                                                          datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time><?php endif; ?><?php if ($options['show_category']) : ?>
-                                                    <span class="p-article04__category"><?php the_category(', '); ?></span><?php endif; ?>
+                                                          datetime="<?php the_time('Y-m-d'); ?>">
+                                                        <?php the_time('Y.m.d'); ?>
+                                                    </time>
+                                                <?php endif; ?>
+
+                                                <?php if ($options['show_category']) : ?>
+                                                    <span class="p-article04__category">
+                                                        <?php the_category(', '); ?>
+                                                    </span>
+                                                <?php endif; ?>
                                             </p>
                                         <?php endif; ?>
                                     </article>
