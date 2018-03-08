@@ -1,22 +1,27 @@
 <div class="country-map__container">
-    <div class="country-map__infobox" id="US-WA__info">
+    <div class="country-map__infobox act" id="US-WA__info">
         <p class="country-map__country-name">シアトル</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/wa/gallery_1.jpg">
     </div>
 
     <div class="country-map__infobox" id="US-OR__info">
         <p class="country-map__country-name">オレゴン</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/or/gallery_1.jpg">
     </div>
 
     <div class="country-map__infobox" id="US-CA__info">
         <p class="country-map__country-name">ロサンゼルス</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/ca/gallery_1.jpg">
     </div>
 
     <div class="country-map__infobox" id="US-NY__info">
         <p class="country-map__country-name">ニューヨーク</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/ny/gallery_1.png">
     </div>
 
     <div class="country-map__infobox" id="US-DC__info">
         <p class="country-map__country-name">ワシントンDC</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/dc/gallery_1.jpg">
     </div>
 
     <svg version="1.1" id="レイヤー_1" xmlns:amcharts="http://amcharts.com/ammap"

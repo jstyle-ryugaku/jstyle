@@ -7,14 +7,59 @@
     background-color: white;
     padding: 8px;
     border: solid 2px #003d9c;
+    transition: all .18s ease-out;
+}
+
+.country-map__infobox img {
+    width: 0;
+    height: 0;
+    display: inherit;
+    transition: all .18s ease-out;
 }
 
 .country-map__infobox:hover {
     cursor: pointer;
+    z-index: 10;
 }
 
 .country-map__country-name {
     color: #003d9c;
+    position: relative;
+}
+
+.country-map__country-name::before,
+.country-map__country-name::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    display: inline-block;
+    width: 0;
+    height: 1.2px;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #003d9c;
+    transition: all .3s ease-out;
+}
+
+.country-map__infobox.act .country-map__country-name,
+.country-map__infobox:hover .country-map__country-name {
+    margin-bottom: 12px;
+}
+
+.country-map__infobox.act .country-map__country-name::before,
+.country-map__infobox:hover .country-map__country-name::before {
+    width: 80%;
+    left: 40%;
+}
+
+.country-map__infobox.act img,
+.country-map__infobox:hover img {
+    display: block;
+    width: 30vh;
+    height: auto;
 }
 
 /* -------------
