@@ -432,7 +432,7 @@ get_header();
                 </a>
             </div>
             <div class="usplace btn">
-                <a class="frame" href="#">
+                <a class="frame2" href="http://jstyleweb.local/country/usa">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/us.svg">
                     <h class="us">
                         アメリカ
@@ -466,7 +466,7 @@ get_header();
         </div>
         <div class="container">
             <div class="btn2">
-                <a class="frame2" href="#">
+                <a class="frame2" href="http://jstyleweb.local/country/usa">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/us.svg">
                     <h class="us2">
                         アメリカ

@@ -1,0 +1,411 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------------------
+ 全体
+---------------------------------------------------------------------- */
+.point-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 120px auto;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+.point-wrapper * {
+    box-sizing: inherit;
+}
+.point-wrapper h1,
+.point-wrapper h2 {
+    margin: 0;
+    padding: 0;
+}
+.point-wrapper ul,
+.point-wrapper li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media screen and (max-width:1110px) {
+    .point-wrapper {
+        padding: 0px 10px;
+    }
+}
+@media screen and (max-width:600px) {
+    .point-wrapper {
+        font-size: 9px;
+    }
+}
+
+
+/* ----------------------------------------------------------------------
+ 各セクション共通スタイル
+---------------------------------------------------------------------- */
+.point-wrapper section:not(:last-child) {
+    margin-bottom: 120px;
+}
+.point-wrapper section {
+    width: 100%;
+}
+.point-wrapper section h1.title {
+    margin-bottom: 30px;
+    font-size: 2.6em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4;
+    letter-spacing: 2.2px;
+    color: #00399f;
+}
+.point-wrapper section h1.title:after {
+    width: 117px;
+    margin: 26px auto 0px;
+    border-bottom: 3px solid #00399f;
+    display: block;
+    content: '';
+}
+
+
+/* ----------------------------------------------------------------------
+ 先輩たちに聞いた、Jstyleはココがスゴい！
+---------------------------------------------------------------------- */
+.point-great svg.graph {
+    width: 100%;
+    max-width: 900px;
+    margin: 0px auto;
+    display: block;
+}
+.point-great .cls-1{
+    fill: #70c0f9;
+    border-left-color: #70c0f9;
+}
+.point-great .cls-2{
+    fill: #41a1f8;
+    border-left-color: #41a1f8;
+}
+.point-great .cls-3{
+    fill: #2c76b5;
+    border-left-color: #2c76b5;
+}
+.point-great .cls-4{
+    fill: #1b4d7c;
+    border-left-color: #1b4d7c;
+}
+.point-great .cls-5{
+    fill: #0f355f;
+    border-left-color: #0f355f;
+}
+.point-great svg.graph .cls-6 {
+    font-size: 1.7em;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    fill: #4a4a4a;
+}
+.point-great svg.graph-sp {
+    width: 70%;
+    margin-bottom: 30px;
+    display: none;
+}
+.point-great .sp-text {
+    width: 100%;
+    max-width: 420px;
+    margin: 0px auto;
+    display: none;
+}
+.point-great .sp-text ul li {
+    padding: 10px 0px 10px 12px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    font-size: 1.6em;
+    text-align: justify;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+}
+.point-great .sp-text ul li:not(:last-child) {
+    margin-bottom: 18px;
+}
+
+@media screen and (max-width:600px) {
+    .point-great svg.graph-sp,
+    .point-great .sp-text {
+        display: block;
+    }
+    .point-great svg.graph-pc {
+        display: none;
+    }
+}
+
+
+/* ----------------------------------------------------------------------
+ こだわり × IT = 理想のプラン
+---------------------------------------------------------------------- */
+/* 概要文 */
+.point-it p.text {
+    margin-bottom: 30px;
+    font-size: 1.6em;
+    text-align: center;
+    line-height: 1.8;
+    letter-spacing: 2px;
+    color: #4a4a4a;
+}
+
+/* Jstyle */
+.point-it .img-jstyle {
+    width: 100%;
+    max-width: 900px;
+    margin: 0px auto 30px;
+    display: block;
+}
+
+/* 矢印, DB */
+.point-it .wrap {
+    width: 100%;
+    height: 186px;
+    margin-bottom: 60px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.point-it .wrap .img-db,
+.point-it .wrap .text-db {
+    width: 45%;
+    height: 100%;
+    position: relative;
+}
+.point-it .wrap .img-arrow {
+    width: 10%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.point-it .wrap .img-db img {
+    width: 86%;
+    max-width: 158px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.point-it .wrap .text-db p {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: justify;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    color: #353464;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* 円形の情報 */
+.point-it .circle-top,
+.point-it .circle-bottom {
+    width: 100%;
+    height: 300px;
+    max-width: 900px;
+    margin: 0px auto;
+    position: relative;
+}
+
+.point-it .circle-top h2.title,
+.point-it .circle-bottom h2.title {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #003d9c;
+    border-radius: 50%;
+    display: block;
+    font-size: 2.2em;
+    font-weight: bold;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    z-index: 10;
+}
+.point-it .circle-top h2.title {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.point-it .circle-bottom .circle-left h2.title {
+    right: 24px;
+}
+.point-it .circle-bottom .circle-right h2.title {
+    left: 24px;
+}
+.point-it .circle-top h2.title span,
+.point-it .circle-bottom h2.title span {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.point-it .circle-top .border {
+    width: 64%;
+    height: 1px;
+    margin: 0px auto;
+    border-top: 1px solid #003d9c;
+    display: block;
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+}
+.point-it .circle-top .border:before,
+.point-it .circle-top .border:after {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -5px;
+    background-color: #003d9c;
+    border-radius: 50%;
+    display: block;
+    content: "";
+}
+.point-it .circle-top .border:before {
+    left: -5px;
+}
+.point-it .circle-top .border:after {
+    right: -5px;
+}
+.point-it .circle-top ul {
+    margin-top: 10px;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+}
+.point-it .circle-top .text-left {
+    left: 0;
+}
+.point-it .circle-top .text-right {
+    right: 0;
+}
+.point-it .circle-top ul li,
+.point-it .circle-bottom ul li {
+    margin-bottom: 10px;
+    font-size: 1.6em;
+    letter-spacing: 0.06em;
+    color: #003d9c;
+}
+
+.point-it .circle-bottom {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.point-it .circle-bottom > div {
+    width: 50%;
+    position: relative;
+}
+.point-it .circle-bottom .circle-left ul.text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.point-it .circle-bottom .circle-left .border {
+    width: 70%;
+    height: 1px;
+    margin: 0px auto;
+    border-top: 1px solid #003d9c;
+    display: block;
+    -webkit-transform: translateY(240px);
+    transform: translateY(240px);
+}
+.point-it .circle-bottom .circle-left .border:before {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    background-color: #003d9c;
+    border-radius: 50%;
+    display: block;
+    content: "";
+}
+.point-it .circle-bottom .circle-right .img-map {
+    width: 38%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 11;
+}
+
+/* SPの際の表示 */
+.point-it .circle-sp {
+    display: none;
+}
+.point-it .circle-sp > div {
+    width: 100%;
+    padding: 14px;
+    background-color: #003d9c;
+    border-radius: 14px;
+    color: #FFFFFF;
+}
+.point-it .circle-sp > div:not(:last-child) {
+    margin-bottom: 10px;
+}
+.point-it .circle-sp > div h2.title {
+    padding: 10px 0px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 2.0em;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+}
+
+.point-it .circle-sp .c01 ul.text {
+    margin: 26px 0px 18px;
+    text-align: center;
+}
+.point-it .circle-sp .c01 ul.text li {
+    margin-right: 20px;
+    display: inline-block;
+    font-size: 1.6em;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+}
+
+.point-it .circle-sp .c02 p.text {
+    margin: 26px 0px 18px;
+    color: #FFFFFF;
+}
+
+.point-it .circle-sp .c03 .img-map {
+    width: 60%;
+    max-width: 360px;
+    display: block;
+    margin: 26px auto 18px;
+}
+
+@media screen and (max-width:770px) {
+    .point-it .circle-top,
+    .point-it .circle-bottom {
+        display: none;
+    }
+    .point-it .circle-sp {
+        display: block;
+    }
+}
+@media screen and (max-width:650px) {
+    .point-it p.text br.pc-br {
+        display: none;
+    }
+}
+@media screen and (max-width:550px) {
+    .point-it .wrap {
+        height: 100px;
+    }
+}
+@media screen and (max-width:440px) {
+    .point-it .wrap .text-db p br.pc-br {
+        display: none;
+    }
+}
