@@ -137,6 +137,10 @@
     .reason-five ul li:nth-child(odd) {
         margin-right: 12px;
     }
+    .reason-five ul li:last-child {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 
