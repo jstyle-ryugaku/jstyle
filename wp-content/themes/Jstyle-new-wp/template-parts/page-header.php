@@ -35,6 +35,7 @@ if ( is_404() ) {
 	$color = $post->ph_color;
 	$font_size = $post->ph_catch_font_size;
 	$catchphrase = $post->ph_catch;
+    $sub_catchphrase = $post->ph_sub_catch;
 	$is_h1 = is_page() && ! get_page_template_slug( $post->ID ) ? false : true;
 } else {
 	$image = wp_get_attachment_url( $options['ph_image'], 'full' );
@@ -50,6 +51,7 @@ if ( is_404() ) {
 		<div class="p-page-header__inner l-inner">
 			<?php if ( $is_h1 ) : ?>
 			<h1 class="p-page-header__title" style="background: rgba(<?php echo implode( ', ', $bg_color ); ?>, <?php echo esc_attr( $bg_opacity ); ?>); color: <?php echo esc_attr( $color ); ?>; font-size: <?php echo esc_attr( $font_size ); ?>px;">
+                <span><?php echo nl2br( esc_html( $sub_catchphrase ) ); ?></span>
                 <?php echo nl2br( esc_html( $catchphrase ) ); ?>
             </h1>
 			<?php else : ?>

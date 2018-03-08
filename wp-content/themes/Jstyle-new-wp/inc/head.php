@@ -175,7 +175,7 @@ if ( is_front_page() && $options['display_splash'] ) {
 	$animation_delay = 0;
 }
 ?>
-.l-header { -webkit-animation: slideDown 1.5s ease-in-out <?php echo esc_html( $animation_delay ); ?>s forwards; animation: slideDown 1.5s ease-in-out <?php echo esc_html( $animation_delay ); ?>s forwards;
+/*.l-header { -webkit-animation: slideDown 1.5s ease-in-out */<?php //echo esc_html( $animation_delay ); ?>/*s forwards; animation: slideDown 1.5s ease-in-out */<?php //echo esc_html( $animation_delay ); ?>/*s forwards;*/
 }
 .p-hero-header__link { -webkit-animation: slideUp 1.5s ease-in-out <?php echo esc_html( $animation_delay ); ?>s forwards; animation: slideUp 1.5s ease-in-out <?php echo esc_html( $animation_delay ); ?>s forwards; }
 
