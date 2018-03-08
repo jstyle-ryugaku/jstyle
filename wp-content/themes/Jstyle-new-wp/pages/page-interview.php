@@ -20,6 +20,24 @@ if ($custom_search_vars) {
     }
 }
 
+// category
+if (isset($_GET['search_cat1'])) {
+    $search_category1 = $_GET['search_cat1'];
+}
+if (isset($_GET['search_cat2'])) {
+    $search_category2 = $_GET['search_cat2'];
+}
+
+if ( $search_category1 == 1 && $search_category2 == 1) {
+
+} else {
+    $category_ids_str = '';
+    $category_ids_str .= $search_category1;
+    $category_ids_str .= ',';
+    $category_ids_str .= $search_category2;
+    $args['category'] = $category_ids_str;
+}
+
 // sort
 if (isset($_GET['sort'])) {
     $sort = $_GET['sort'];
@@ -109,11 +127,22 @@ $args['order'] = $sort;
         <?php get_template_part('template-parts/navigation2'); ?>
 
         <ol id="post_list2">
+<!--            --><?php
+//            $posts_list = get_posts($args);
+//            foreach ( $posts_list as $post ) :
+//                setup_postdata( $post );
+//            ?>
+
+
             <?php
-            $posts_list = get_posts($args);
-            foreach ( $posts_list as $post ) :
-                setup_postdata( $post );
-            ?>
+            $the_query = new WP_Query( $args ); ?>
+
+            <?php if ( $the_query->have_posts() ) : ?>
+
+            <!-- pagination here -->
+
+            <!-- the loop -->
+            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 
                 <div class="interview__article">
@@ -158,12 +187,23 @@ $args['order'] = $sort;
                         </div>
                     </div>
                 </div>
-            <br>
 
-            <?php
-            endforeach;
-            wp_reset_postdata();
-            ?>
+
+            <?php endwhile; ?>
+            <!-- end of the loop -->
+
+            <!-- pagination here -->
+
+            <?php wp_reset_postdata(); ?>
+
+            <?php else : ?>
+            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+            <?php endif; ?>
+
+<!--            --><?php
+//            endforeach;
+//            wp_reset_postdata();
+//            ?>
         </ol>
 
         <?php get_template_part('navigation2'); ?>
