@@ -100,8 +100,8 @@ $args['order'] = $sort;
                 古い順</a>
             </dd>
             <dd>
-                <a href="<?php echo esc_attr(add_query_arg('sort', 'views', $sort_base_url)); ?>"
-                    <?php if ($sort == 'views') echo ' class="active"'; ?>>
+                <a href="<?php echo esc_attr(add_query_arg('sort', 'view-count', $sort_base_url)); ?>"
+                    <?php if ($sort == 'view-count') echo ' class="active"'; ?>>
                 閲覧数順</a>
             </dd>
         </dl>
@@ -115,11 +115,22 @@ $args['order'] = $sort;
                 setup_postdata( $post );
             ?>
 
-                <div>
-                    <?php the_date(); ?>
-                    <br />
-                    <?php the_title(); ?>
-                    <?php the_excerpt(); ?>
+                <div class="interview__article">
+                    <div class="interview__article-image">
+                        <?php
+                        if (has_post_thumbnail()) {
+                            the_post_thumbnail('size1');
+                        } else {
+                            echo '<img src="' . get_template_directory_uri() . '/assets/images/no-image-480x320.gif" alt="">';
+                        }
+                        ?>
+                    </div>
+
+                    <div class="interview__article-info">
+                        <?php the_date(); ?>
+                        <?php the_title(); ?>
+                        <?php the_excerpt(); ?>
+                    </div>
                 </div>
             <br>
 
