@@ -160,7 +160,7 @@ endforeach;
 .p-content02__item a:hover .p-content02__item-img { opacity: 1; }
 
 /* header */
-.l-header { background: rgba(<?php echo esc_html( implode( ', ', hex2rgb( $options['header_bg'] ) ) ); ?>, <?php echo esc_html( $options['header_opacity'] ); ?>); }
+/*.l-header { background: rgba(*/<?php //echo esc_html( implode( ', ', hex2rgb( $options['header_bg'] ) ) ); ?>/*, */<?php //echo esc_html( $options['header_opacity'] ); ?>/*); }*/
 .l-header__logo a, .p-global-nav > li > a, .c-menu-button { color: <?php echo esc_html( $options['header_font_color'] ); ?>; }
 .l-header__logo a:hover, .p-global-nav > li > a:hover { color: <?php echo esc_html( $options['header_font_color_hover'] ); ?>; }
 <?php
