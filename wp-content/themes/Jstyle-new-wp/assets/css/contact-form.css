@@ -2,7 +2,37 @@
     font-family: HiraginoSans-W3;
 }
 
-h2 {
+.body {
+    margin-left: 70px;
+}
+
+.l-primary {
+    background: #fff;
+    box-sizing: border-box;
+    padding-bottom: 115px;
+    padding-right: 100px;
+    padding-left: 100px;
+    width: 1500px;
+    padding-top: 92px;
+}
+
+.p-entry__body h6 {
+    font-size: 17px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+}
+
+.p-entry__body,
+.p-entry__body .wpcf7 p {
+    margin-bottom: 38px;
+    font-size: 17px;
+}
+
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
+    height: 40px;
+}
+
+h6 {
     width: 900px;
     height: 18px;
     font-size: 18px;
@@ -13,6 +43,8 @@ h2 {
     letter-spacing: 1.4px;
     text-align: center;
     color: #4a494a;
+    border-bottom: 56px;
+    border-bottom: solid 1px #ff5252
 }
 
 .require {
@@ -31,6 +63,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 60px;
 }
 
 .option {
@@ -49,56 +82,324 @@ h2 {
     align-items: center;
     justify-content: center;
     color: #e66a46;
+    margin-right: 60px;
 }
+
 
 
 .name2 {
     float: left;
+    margin-right: 162px;
+    letter-spacing: 2.1px;
+    color: #4d4d4d;
 }
 
-.sex2 {
-    clear: left;
-}
-
-.sex3 {
+.sex {
     float: left;
+    margin-right: 210px;
+    letter-spacing: 2.1px;
+    color: #4d4d4d;
 }
+
 
 .age {
     clear: left;
 }
 
+.age2 {
+    float: left;
+    margin-right: 180px;
+    letter-spacing: 2.1px;
+    color: #4d4d4d;
+}
+
+input.wpcf7-form-control.wpcf7-number.wpcf7-validates-as-required.wpcf7-validates-as-number {
+    width: 70px;
+    height: 40px;
+    margin-right: 10px;
+    float: left;
+}
+
 .mail {
-    clear: both;
+    clear: left;
+}
+
+.mail2 {
+    margin-right: 85px;
+    float: left;
+    letter-spacing: 2.1px;
+    color: #4d4d4d;
+}
+
+.tell2 {
+    margin-right: 142px;
+    float: left;
+    letter-spacing: 2.1px;
+    color: #4d4d4d;
 }
 
 .date {
     float: left;
+    margin-right: 64px;
 }
 
-
-.wpcf7-list-item {
+.date2 {
+    width: 350px;
     float: left;
-    padding-left: 60px;
+}
+
+.date3 {
+    width: 180px;
+    height: 117px;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.95;
+    letter-spacing: 2.1px;
+    text-align: center;
+    color: #e66a46;
+    padding: 45px 60px 17px 60px;
+    border: solid 1px #e66a46;
+    margin-bottom: 221px;
+}
+
+.date4 {
+    margin-right: 20px;
+    letter-spacing: 2.1px;
+    color: #4d4d4d;
+}
+
+.time {
+    margin-bottom: 0px !important;
+}
+
+.hope {
+    color: #e66a46;
+    margin-bottom: 0px !important;
+}
+
+select.wpcf7-form-control.wpcf7-select.time {
+    height: 40px;
+    width: 150px;
+}
+
+span.wpcf7-list-item {
+    float: left;
+    margin-right: 60px;
+    margin-left: 0px;
 }
 
 .place {
     clear: left;
+    float: left;
+    margin-bottom: 100px;
+}
+
+.place2 {
+    width: 750px;
+}
+
+.place3 {
+    margin-right: 100px;
+    float: left;
+    letter-spacing: 2.1px;
+    color: #4d4d4d;
+}
+
+
+span.wpcf7-list-item.last {
+    margin-right: 40px;
 }
 
 .period {
     clear: left;
+    width: 900px;
+}
+
+.period2 {
+    margin-right: 175px;
+    margin-bottom: 200px;
+    float: left;
+    letter-spacing: 2.1px;
+    color: #4d4d4d;
+}
+
+.period3 {
+    width: 890px;
+}
+
+.wpcf7 .wpcf7-list-item {
+    display: block;
+    height: 35px;
+}
+
+select.wpcf7-form-control.wpcf7-select.period4 {
+    height: 40px;
+    width: 150px;
 }
 
 .content {
     clear: left;
 }
 
+.content2 {
+    margin-right: 117px;
+    float: left;
+    letter-spacing: 2.1px;
+    color: #4d4d4d;
+}
+
+textarea.wpcf7-form-control.wpcf7-textarea.text {
+    width: 380px;
+    height: 200px;
+}
+
+span.wpcf7-list-item.first.last {
+    margin-left: 280px;
+}
+
+input.wpcf7-form-control.wpcf7-submit {
+    width: 200px;
+    height: 70px;
+    background-color: #e66a46;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 2.3px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 100px;
+    margin-left: 250px;
+}
+
 .wpcf7 {
     background: #fff;
     border: 0;
-    font-size: 14px;
     margin: 0 0 2.5em !important;
     padding: 0;
     width: 100%;
+}
+
+
+
+@media screen and (max-width: 420px){
+    h6 {
+        width: 280px;
+        height: 65px;
+    }
+
+    .body {
+        margin-left: 0px;
+    }
+
+    .name2 {
+        float: none;
+    }
+
+    input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
+        width: 280px;
+    }
+    
+    .sex {
+        float: none;
+    }
+
+    .wpcf7 .wpcf7-list-item {
+        display: block;
+        height: 35px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 30px;
+    }
+
+    .age2 {
+        float: none;
+        margin-right: 50px;
+        margin-top: 60px;
+    }
+
+    input.wpcf7-form-control.wpcf7-number.wpcf7-validates-as-required.wpcf7-validates-as-number {
+        margin-left: 148px;
+    }
+
+    .mail2 {
+        float: none;
+    }
+
+    .tell2 {
+        float: none;
+    }
+
+    .date {
+        float: none;
+    }
+
+    .date3 {
+        width: 180px;
+        height: 117px;
+        font-size: 20px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.95;
+        letter-spacing: 2.1px;
+        text-align: center;
+        color: #e66a46;
+        padding: 45px 50px 17px 50px;
+        border: solid 1px #e66a46;
+        margin-bottom: 221px;
+    }
+
+    .wpcf7-form-control.wpcf7-date.date.hasDatepicker {
+        width: 280px;
+    }
+
+    input.wpcf7-form-control.wpcf7-text {
+        margin-bottom: 41px;
+        width: 280px;
+    }
+
+    .place {
+        float: none;
+    }
+
+    .place2 {
+        width: 350px;
+    }
+
+    .period2 {
+        float: none;
+    }
+
+    .content2 {
+        float: none;
+    }
+
+    textarea.wpcf7-form-control.wpcf7-textarea.text {
+        width: 280px;
+        height: 300px;
+    }
+
+    span.wpcf7-list-item.first.last {
+        margin-left: 55px;
+    }
+
+    input.wpcf7-form-control.wpcf7-submit {
+        width: 200px;
+        height: 70px;
+        background-color: #e66a46;
+        font-size: 24px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 2.3px;
+        text-align: center;
+        color: #ffffff;
+        margin-top: 100px;
+        margin-left: 43px;
+    }
 }
