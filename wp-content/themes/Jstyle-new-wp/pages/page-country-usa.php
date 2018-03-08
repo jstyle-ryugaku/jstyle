@@ -72,36 +72,41 @@ $news_query = new WP_Query($news_args);
                     <?php endif; ?>
                     <div class="p-content03__blog-arrows">
                     </div>
+                    <a class="p-content03__blog-archive-link">体験談一覧</a>
                 </section>
-                <section class="p-content03__news"
-                         style="background: <?php echo esc_attr($value['cb_blog_and_news_news_bg']); ?>">
-                    <div class="p-content03__news-catch title-container">
-                        <span class="p-title--english">News</span>
-                        <h2 class="p-title" style="">
-                            留学ニュース
-                        </h2>
-                    </div>
-                    <?php if ($news_query->have_posts()) : ?>
-                        <div class="p-content03__news-list">
-                            <?php
-                            while ($news_query->have_posts()) :
-                                $news_query->the_post();
-                                ?>
-                                <article class="p-content03__news-list-item p-article05">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <?php if ($options['show_date_news']) : ?>
-                                            <time class="p-article05__date"
-                                                  datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-                                        <?php endif; ?>
-                                        <h3 class="p-article05__title"><?php echo wp_trim_words(get_the_title(), 30, '...'); ?></h3>
-                                    </a>
-                                </article>
-                            <?php endwhile;
-                            wp_reset_postdata(); ?>
+                <section class="banner-list-container">
+                    <div class="banner-list">
+                        <div class="banner-container">
+                            <div class="banner-bg-image"
+                                 style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/ca/gallery_1.jpg')">
+                            </div>
+                            <a class="banner">
+                                <p>
+                                    バナー
+                                </p>
+                            </a>
                         </div>
-                    <?php endif; ?>
-                    <a class="p-content03__news-archive-link"
-                       href="<?php echo esc_url(get_post_type_archive_link('news')); ?>">ニュース一覧</a>
+                        <div class="banner-container">
+                            <div class="banner-bg-image"
+                                style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/wa/gallery_1.jpg')">
+                            </div>
+                            <a class="banner">
+                                <p>
+                                    バナー
+                                </p>
+                            </a>
+                        </div>
+                        <div class="banner-container">
+                            <div class="banner-bg-image"
+                                style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/dc/gallery_1.jpg')">
+                            </div>
+                            <a class="banner">
+                                <p>
+                                    バナー
+                                </p>
+                            </a>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
