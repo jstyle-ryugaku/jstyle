@@ -202,6 +202,16 @@ function vogue_scripts() {
         wp_enqueue_style( 'vogue-new-style', get_template_directory_uri() . '/assets/css/new-style.css', false, version_num() );
         wp_enqueue_script( 'vogue-new-style', get_template_directory_uri() . '/assets/js/new-style.js', array( 'jquery' ), version_num(), true );
     }
+
+    if(is_page('point')) {
+        wp_enqueue_style( 'vogue-point', get_template_directory_uri() . '/assets/css/point.css', false, version_num() );
+        wp_enqueue_script( 'vogue-point', get_template_directory_uri() . '/assets/js/point.js', array( 'jquery' ), version_num(), true );
+    }
+
+    if(is_page('flow')) {
+        wp_enqueue_style( 'vogue-flow', get_template_directory_uri() . '/assets/css/flow.css', false, version_num() );
+        wp_enqueue_script( 'vogue-flow', get_template_directory_uri() . '/assets/js/flow.js', array( 'jquery' ), version_num(), true );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'vogue_scripts' );
 
