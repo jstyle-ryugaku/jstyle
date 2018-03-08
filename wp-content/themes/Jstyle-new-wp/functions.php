@@ -186,7 +186,7 @@ function vogue_scripts() {
     }
 
 
-    if(is_page('contact form')) {
+    if(is_page('contact')) {
         wp_enqueue_style( 'vogue-contact-form', get_template_directory_uri() . '/assets/css/contact-form.css', false, version_num() );
         wp_enqueue_script( 'vogue-contact-form', get_template_directory_uri() . '/assets/js/contact-form.js', array( 'jquery' ), version_num(), true );
     }
