@@ -133,15 +133,22 @@ if ($tcd_splash_page->is_splash_page()) {
                     </a>
                 <?php if (is_front_page()) : ?></h1><?php else : ?></div><?php endif; ?>
         <a href="#" id="js-menu-button" class="p-menu-button c-menu-button"></a>
-        <!--		--><?php //wp_nav_menu( $args ); ?>
-        <ul class="l-header__menu">
-            <li><a href="#"><span class="menu-button--ja">トップページ</span><span class="menu-button--en">Home</span></a></li>
-            <li><a href="#"><span class="menu-button--ja">Jstyleについて</span><span class="menu-button--en">About</span></a></li>
-            <li><a href="#"><span class="menu-button--ja">留学する国</span><span class="menu-button--en">Country</span></a></li>
-            <li><a href="#"><span class="menu-button--ja">留学の目的</span><span class="menu-button--en">Purpose</span></a></li>
-            <li><a href="#"><span class="menu-button--ja">留学の準備</span><span class="menu-button--en">Prepare</span></a></li>
-            <li><a href="#"><span class="menu-button--ja">留学体験記</span><span class="menu-button--en">Interview</span></a></li>
-        </ul>
+        <nav id="js-global-nav" class="p-global-nav u-clearfix">
+            <ul class="l-header__menu">
+                <li><a href="#"><span class="menu-button--ja">トップページ</span><span class="menu-button--en">Home</span></a>
+                </li>
+                <li><a href="#"><span class="menu-button--ja">Jstyleについて</span><span
+                                class="menu-button--en">About</span></a></li>
+                <li><a href="#"><span class="menu-button--ja">留学する国</span><span
+                                class="menu-button--en">Country</span></a></li>
+                <li><a href="#"><span class="menu-button--ja">留学の目的</span><span
+                                class="menu-button--en">Purpose</span></a></li>
+                <li><a href="#"><span class="menu-button--ja">留学の準備</span><span
+                                class="menu-button--en">Prepare</span></a></li>
+                <li><a href="#"><span class="menu-button--ja">留学体験記</span><span class="menu-button--en">Interview</span></a>
+                </li>
+            </ul>
+        </nav>
         <div class="l-header__tel">
             <div class="p-request__inner">
                 <p class="p-request__text">無料相談受け付け中</p>
