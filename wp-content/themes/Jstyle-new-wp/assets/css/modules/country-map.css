@@ -23,18 +23,21 @@
     cursor: pointer;
     z-index: 10;
     border-color: #e66a46;
+    padding: 20px;
 }
 
 .country-map__country-name {
     color: #003d9c;
     position: relative;
+    transition: all .18s ease-out;
 }
 
 .country-map__country-name::before,
 .country-map__country-name::before {
     content: '';
     position: absolute;
-    bottom: -6px;
+    /*bottom: -6px;*/
+    bottom: -10px;
     left: 0;
     display: inline-block;
     width: 0;
@@ -49,7 +52,8 @@
 
 .country-map__infobox.act .country-map__country-name,
 .country-map__infobox:hover .country-map__country-name {
-    margin-bottom: 12px;
+    margin-bottom: 26px;
+    font-size: 20px;
 }
 
 .country-map__infobox.act .country-map__country-name::before,
