@@ -1,11 +1,21 @@
 
-
 * {
     box-sizing: border-box;
 }
 
+.country-wrapper {
+    padding: 0 10px;
+    margin: 32px auto;
+}
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #003d9c;
+    margin-bottom: 40px;
+}
+
 .foreword {
-    width: 80%;
+    width: 100%;
     height: 50%;
     font-size: 17px;
     font-weight: normal;
@@ -15,15 +25,15 @@
     letter-spacing: 1.4px;
     text-align: left;
     color: #4a4a4a;
-    margin: 7% 15% 5% 10%;
-
+    max-width: 1032px;
+    margin: 0 auto 5%;
 }
 
-.map {
-    margin: 0 15% 0 15%;
+.map{
     height: auto;
     position: relative;
-    max-width: 1200px;
+    max-width: 980px;
+    margin: 0 auto;
 }
 
 .btn {
@@ -32,6 +42,8 @@
     background-color: #003d9c;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     display: inline-block;
+    max-width: 220px;
+    max-height: 67px;
 }
 
 .btn img {
@@ -39,8 +51,9 @@
     float: left;
     width: 35%;
     height: 3%;
-    margin: 6% 0 6% 6%;
-
+    margin-top:calc(12%/2);
+    margin-bottom: calc(12%/2);
+    margin-left: calc(12%/2);
 }
 
 .frame {
@@ -48,9 +61,10 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
+    max-height: 67px;
 }
 
-.btn h1 {
+.ca {
     font-size: 2.5vh;
     float: right;
     text-align: center;
@@ -61,10 +75,13 @@
     line-height: normal;
     letter-spacing: 1.4px;
     color: white;
-    margin: 9.1% 15% 9.1% 0;
+    margin-top: calc(16%/2);
+    margin-right: calc(28.5%/2);
+    margin-bottom: calc(16%/2);
+    margin-left: calc(28.5%/2);
 }
 
-.btn h2 {
+.us {
     font-size: 2.5vh;
     float: right;
     text-align: center;
@@ -75,10 +92,13 @@
     line-height: normal;
     letter-spacing: 1.4px;
     color: white;
-    margin: 9.1% 12% 9.1% 0;
+    margin-top: calc(16.5%/2);
+    margin-right: calc(19%/2);
+    margin-bottom: calc(16.5%/2);
+    margin-left: calc(19%/2);
 }
 
-.btn h3 {
+.gb {
     font-size: 2.5vh;
     float: right;
     text-align: center;
@@ -89,11 +109,14 @@
     line-height: normal;
     letter-spacing: 1.4px;
     color: white;
-    margin: 9.1% 12% 9.1% 0;
+    margin-top: calc(16.5%/2);
+    margin-right: calc(19%/2);
+    margin-bottom: calc(16.5%/2);
+    margin-left: calc(19%/2);
 }
 
-.btn h4 {
-    font-size: 2vh;
+.au {
+    font-size: 1.5vh;
     float: right;
     text-align: center;
     font-family: HiraginoSans-W6;
@@ -103,10 +126,13 @@
     line-height: normal;
     letter-spacing: 1.1px;
     color: white;
-    margin: 10.5% 5% 10.5% 0;
+    margin-top: calc(22.5%/2);
+    margin-right: calc(16%/2);
+    margin-bottom: calc(22.5%/2);
+    margin-left: calc(16%/2)
 }
 
-.btn h5 {
+.nz {
     font-size: 1.5vh;
     float: right;
     text-align: center;
@@ -117,26 +143,29 @@
     line-height: normal;
     letter-spacing: 1.4px;
     color: white;
-    margin: 10.5% 5% 10.5% 0;
+    margin-top: calc(22%/2);
+    margin-right: calc(9%/2);
+    margin-bottom: calc(22%/2);
+    margin-left: calc(9%/2)
 }
 
 .caplace {
     position: absolute;
-    right: -1%;
+    right: 3%;
     top: 10%;
     z-index: 1;
 }
 
 .usplace {
     position: absolute;
-    top: 37%;
-    right: -10%;
+    top: 30%;
+    right: -1%;
     z-index: 1;
 }
 
 .gbplace {
     position: absolute;
-    top: 12%;
+    top: 25%;
     left: 6%;
     z-index: 1;
 
@@ -144,20 +173,28 @@
 
 .auplace {
     position: absolute;
-    top: 50%;
+    top: 63%;
     left: 15%;
     z-index: 1;
 }
 
 .nzplace {
     position: absolute;
-    top: 65%;
-    right: 15%;
+    top: 70%;
+    right: 25%;
     z-index: 1;
 }
 
 .wplace {
 
+}
+
+.btn2 {
+    display: none;
+}
+
+.btn3 {
+    display: none;
 }
 
 .btn:hover {
@@ -169,7 +206,13 @@
     transform: scale(0.92);
 }
 
+.btn2:active {
+    transform: scale(0.92);
+}
 
+.btn3:active {
+    transform: scale(0.92);
+}
 
 /* pc */
 @media screen and (min-width: 961px) {
@@ -181,28 +224,22 @@
 }
 
 /* tablet  */
-@media only screen and (min-width: 641px) and (max-width: 960px) {
+@media only screen and (min-width: 541px) and (max-width: 960px) {
     /*ここにtablet用スタイルを記述*/
     .foreword {
-        width: 80%;
-        height: 50%;
-        font-size: 12px;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1.20;
-        letter-spacing: 1.0px;
-        text-align: left;
-        color: #4a4a4a;
-        margin: 7% 15% 5% 10%;
+        font-size: 15px;
+        line-height: 1.61;
     }
+
     svg {
         max-width: 100%;
     }
+
     .frame {
         width: 155px;
         height: 45px;
     }
+
     .btn {
         width: 155px;
         height: 45px;
@@ -210,15 +247,15 @@
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
         display: inline-block;
 
-
     }
+
     .btn img {
         width: 51.5px;
         height: 28px;
         margin: 5.2% 0 5.2% 5.2%;
     }
 
-    .btn h1{
+    .ca {
         font-size: 13px;
         float: right;
         text-align: center;
@@ -232,7 +269,7 @@
         margin: 8% 15% 8% 0;
     }
 
-    .btn h2{
+    .us {
         font-size: 12px;
         float: right;
         text-align: center;
@@ -246,8 +283,8 @@
         margin: 9% 13% 9% 0;
     }
 
-    .btn h3{
-        font-size:  12px;
+    .gb {
+        font-size: 12px;
         float: right;
         text-align: center;
         font-family: HiraginoSans-W6;
@@ -260,7 +297,7 @@
         margin: 9% 13% 9% 0;
     }
 
-    .btn h4{
+    .au {
         font-size: 8px;
         float: right;
         text-align: center;
@@ -274,7 +311,7 @@
         margin: 10.5% 3% 10.5% 0;
     }
 
-    .btn h5{
+    .nz {
         font-size: 8px;
         float: right;
         text-align: center;
@@ -289,46 +326,39 @@
     }
 }
 
-/* smartPhone */
-@media screen and (max-width: 640px) {
-    /*ここにスマホ用スタイルを記述*/
+@media only screen and (min-width: 416px) and (max-width: 540px) {
     .foreword {
-        width: 80%;
-        height: 50%;
-        font-size: 6px;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1.20;
-        letter-spacing: 1.0px;
-        text-align: left;
-        color: #4a4a4a;
-        margin: 7% 15% 5% 10%;
+        font-size: 15px;
+        line-height: 1.61;
+
     }
+
     svg {
         max-width: 100%;
     }
+
     .frame {
-        width:80px;
-        height:20px;
+        width: 110px;
+        height: 34px;
     }
+
     .btn {
-        width: 80px;
-        height: 20px;
+        width: 110px;
+        height: 34px;
         background-color: #003d9c;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
         display: inline-block;
 
-
     }
+
     .btn img {
-        width: 18px;
-        height: 10px;
-        margin: 6% 0 6% 6%;
+        width: 42px;
+        height: auto;
+        margin: 5.2% 0 5.2% 5.2%;
     }
 
-    .btn h1{
-        font-size: 3px;
+    .ca {
+        font-size: 13px;
         float: right;
         text-align: center;
         font-family: HiraginoSans-W6;
@@ -336,13 +366,13 @@
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
-        letter-spacing: 0.8px;
+        letter-spacing: 1.1px;
         color: white;
-        margin: 3% 8% 3% 0;
+        margin:7px 9.5px;
     }
 
-    .btn h2{
-        font-size: 3px;
+    .us {
+        font-size: 12px;
         float: right;
         text-align: center;
         font-family: HiraginoSans-W6;
@@ -350,13 +380,13 @@
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
-        letter-spacing: 0.8px;
+        letter-spacing: 1.1px;
         color: white;
-        margin: 3% 8% 3% 0;
+        margin:8px 4.5px;
     }
 
-    .btn h3{
-        font-size:  3px;
+    .gb {
+        font-size: 12px;
         float: right;
         text-align: center;
         font-family: HiraginoSans-W6;
@@ -364,37 +394,252 @@
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
-        letter-spacing: 0.8px;
+        letter-spacing: 1.1px;
         color: white;
-        margin: 3% 8% 3% 0;
+        margin:8px 4.5px;
     }
 
-    .btn h4{
-        font-size: 4px;
-        float: right;
-        text-align: center;
-        font-family: HiraginoSans-W6;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: 0.1px;
-        color: white;
-        margin: 4% 3% 4% 0;
-    }
-
-    .btn h5{
+    .au {
         font-size: 10px;
         float: right;
+        width: 45px;
         text-align: center;
         font-family: HiraginoSans-W6;
         font-weight: normal;
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
-        letter-spacing: 0.1px;
+        letter-spacing: 0.8px;
         color: white;
-        margin: 1% 1% 1% 0;
+        margin:2px 8px;
+
     }
+
+    .nz {
+        font-size: 10px;
+        float: right;
+        width: 58px;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        color:white;
+        margin:2px 2px;
+    }
+
+}
+
+/* smartPhone */
+@media screen and (max-width: 415px) {
+
+    /*ここにスマホ用スタイルを記述*/
+    .title {
+        font-size: 26px;
+    }
+    .foreword {
+        font-size: 15px;
+        line-height: 1.61;
+
+    }
+
+    svg {
+        max-width: 100%;
+    }
+
+    .frame {
+        width: 32px;
+        height: 20px;
+    }
+
+    .btn {
+        width: 32px;
+        height: 20px;
+
+    }
+
+    .btn img {
+        width: 28px;
+        height: 16px;
+        margin: 2px;
+    }
+
+    .ca {
+        display: none;
+    }
+
+    .us {
+        display: none;
+    }
+
+    .gb {
+        display: none;
+    }
+
+    .au {
+        display: none;
+    }
+
+    .nz {
+        display: none;
+    }
+
+    .caplace {
+        right: 10%;
+    }
+
+    .usplace {
+        top: 35%;
+        right: 5%;
+    }
+
+    .gbplace {
+        top: 20%;
+    }
+
+    .auplace {
+        top: 70%;
+        left: 30%;
+    }
+
+    .nzplace {
+        top: 80%;
+        right: 30%;
+    }
+
+    .frame2 {
+
+        display: block;
+        overflow: hidden;
+    }
+
+    .container {
+        max-width: calc(100% - 12px);
+        margin: 0 6px;
+
+    }
+
+    .btn2 {
+        width: calc(50% - 8px);
+        height: auto;
+        background-color: #003d9c;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        display: inline-block;
+        margin: 0 8px 16px 0;
+    }
+
+    .btn3 {
+        width: calc(50% - 8px);
+        height: auto;
+        background-color: #003d9c;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        display: inline-block;
+        float: right;
+        margin: 0 0 16px 8px;
+    }
+
+    .btn2 img {
+        border: 2px solid white;
+        width: 37%;
+        height: 19%;
+        margin-top: calc(9% / 2);
+        margin-left: calc(9% / 2);
+        margin-bottom: calc(9% / 2);
+    }
+
+    .btn3 img {
+        border: 2px solid white;
+        width: 37%;
+        height: 19%;
+        margin-top: calc(9% / 2);
+        margin-left: calc(9% / 2);
+        margin-bottom: calc(9% / 2);
+    }
+
+    .ca2 {
+        font-size: 16px;
+        margin-top: 7.5%;
+        margin-right: calc(29% - 48px / 2);
+        margin-bottom: 7.5%;
+        margin-left: calc(29% - 48px / 2);
+        float: right;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        color: white;
+    }
+
+    .us2 {
+        font-size: 16px;
+        margin-top: 7.5%;
+        margin-right: calc(29% - 64px / 2);
+        margin-left: calc(29% - 64px / 2);
+        margin-bottom: 7.5%;
+        float: right;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        color: white;
+    }
+
+    .gb2 {
+        font-size: 16px;
+        margin-top: 7.5%;
+        margin-right: calc(29% - 64px / 2);
+        margin-left: calc(29% - 64px / 2);
+        margin-bottom: 7.5%;
+        float: right;
+        text-align: center;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        color: white;
+    }
+
+    .au2 {
+        font-size: 12px;
+        text-align: center;
+        width: 58px;
+        float: right;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        color: white;
+        margin-top: 3.5%;
+        margin-right: calc(29% - 58px / 2);
+        margin-bottom: 3.5%;
+        margin-left: calc(29% - 58px / 2);
+    }
+
+    .nz2 {
+        font-size: 12px;
+        text-align: center;
+        float: right;
+        text-align: center;
+        width: 60px;
+        font-family: HiraginoSans-W6;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        color: white;
+        margin-top: 3.5%;
+        margin-right: calc(29% - 60px / 2);
+        margin-bottom: 3.5%;
+        margin-left: calc(29% - 60px / 2);
+    }
+
 }
 

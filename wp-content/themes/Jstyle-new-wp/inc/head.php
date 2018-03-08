@@ -31,13 +31,7 @@ body { font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体",
 
 /* headline font type */
 .p-page-header__title, .p-archive-header__title, .p-article01__title, .p-article02__title, .p-entry__title, .p-main-image__title, .c-nav01__item, .p-article03__title, .p-widget-post-list__item-title, .p-content02__item-title, .p-content01__catch, .p-content04__catch, .p-article04__title, .p-content03__blog-catch, .p-content03__news-catch, .p-hero-header__nav-item-title, .p-hero-header__slider-item-title {
-<?php if ( 'type1' == $options['headline_font_type'] ) : ?>
-font-family: "Segoe UI", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif; 
-<?php elseif ( 'type2' == $options['headline_font_type'] ) : ?>
 font-family: "Segoe UI", Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-<?php else : ?>
-font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif; font-weight: 500;
-<?php endif; ?>
 }
 
 /* sidebar */
@@ -162,10 +156,11 @@ endforeach;
 
 /* plan */
 .p-content02__item { width: <?php echo esc_html( 100 / $options['plan_list_num'] ); ?>%; } 
-.p-content02__item a:hover .p-content02__item-img { opacity: <?php echo esc_html( $options['plan_list_overlay_opacity'] ); ?>; }
+/*.p-content02__item a:hover .p-content02__item-img { opacity: */<?php //echo esc_html( $options['plan_list_overlay_opacity'] ); ?>/*; }*/
+.p-content02__item a:hover .p-content02__item-img { opacity: 1; }
 
 /* header */
-.l-header { background: rgba(<?php echo esc_html( implode( ', ', hex2rgb( $options['header_bg'] ) ) ); ?>, <?php echo esc_html( $options['header_opacity'] ); ?>); }
+/*.l-header { background: rgba(*/<?php //echo esc_html( implode( ', ', hex2rgb( $options['header_bg'] ) ) ); ?>/*, */<?php //echo esc_html( $options['header_opacity'] ); ?>/*); }*/
 .l-header__logo a, .p-global-nav > li > a, .c-menu-button { color: <?php echo esc_html( $options['header_font_color'] ); ?>; }
 .l-header__logo a:hover, .p-global-nav > li > a:hover { color: <?php echo esc_html( $options['header_font_color_hover'] ); ?>; }
 <?php

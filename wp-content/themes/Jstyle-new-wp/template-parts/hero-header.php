@@ -5,10 +5,10 @@
 
 		<div id="js-hero-header" class="p-hero-header">
 				<ul class="p-hero-header__nav u-clearfix">
-						<li class="p-hero-header__nav-item is-active"><a href="" data-target="#js-hero-header__content1"><span class="p-hero-header__nav-item-title" style="font-size: 34px;">留学</span></a></li>
-						<li class="p-hero-header__nav-item"><a href="" data-target="#js-hero-header__content2"><span class="p-hero-header__nav-item-title" style="font-size: 34px;">MODERN</span></a></li>
-						<li class="p-hero-header__nav-item"><a href="" data-target="#js-hero-header__content3"><span class="p-hero-header__nav-item-title" style="font-size: 34px;">SUPERIOR</span></a></li>
-						<li class="p-hero-header__nav-item"><a href="" data-target="#js-hero-header__content4"><span class="p-hero-header__nav-item-title" style="font-size: 34px;">INFINITY</span></a></li>
+<!--						<li class="p-hero-header__nav-item is-active"><a href="" data-target="#js-hero-header__content1"><span class="p-hero-header__nav-item-title" style="font-size: 34px;">留学</span></a></li>-->
+<!--						<li class="p-hero-header__nav-item"><a href="" data-target="#js-hero-header__content2"><span class="p-hero-header__nav-item-title" style="font-size: 34px;">MODERN</span></a></li>-->
+<!--						<li class="p-hero-header__nav-item"><a href="" data-target="#js-hero-header__content3"><span class="p-hero-header__nav-item-title" style="font-size: 34px;">SUPERIOR</span></a></li>-->
+<!--						<li class="p-hero-header__nav-item"><a href="" data-target="#js-hero-header__content4"><span class="p-hero-header__nav-item-title" style="font-size: 34px;">INFINITY</span></a></li>-->
 					</ul>
 
 <!------- 留学相談とか資料請求のボタン ------>
@@ -24,7 +24,7 @@
 
 <!------- 留学相談とか資料請求のボタンここまで ------>
 
-				<div id="js-hero-header__content1" class="p-hero-header__content is-active" style="background-image: url(http://tcdwp.info/tcd051/wp-content/uploads/2017/09/01.jpg);">
+				<div id="js-hero-header__content1" class="p-hero-header__content is-active" style="background-image: url(<?php echo get_template_directory_uri();?>/assets/images/top/header.png);">
 					</div>
 				<div id="js-hero-header__content2" class="p-hero-header__content" style="background-image: url(http://tcdwp.info/tcd051/wp-content/uploads/2017/08/story.jpg); display: none;">
 						<div class="p-hero-header__content-video">
@@ -53,7 +53,7 @@
 	position: absolute;
 }
 .js-hero-header__button{
-	top: 30vh;
+	top: 40vh;
 	position: relative;
 	z-index: 100;
 	width: 100%;
