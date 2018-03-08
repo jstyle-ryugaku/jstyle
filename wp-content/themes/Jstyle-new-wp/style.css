@@ -2500,7 +2500,6 @@ ul {
     /*padding: 0 15px;*/
 
     background: #fff !important;
-    border: 2px solid rgb(230, 106, 70) !important;
     margin-top: 36px;
     box-sizing: border-box;
     color: rgb(230, 106, 70) !important;
@@ -2508,10 +2507,13 @@ ul {
     font-size: 14px;
     text-align: center;
     min-width: 180px;
+    font-weight: bold;
+    letter-spacing: 1px;
     height: auto;
     padding: 20px 15px;
     margin-right: 20px;
 }
+
 
 .p-button:hover {
     background: rgb(230, 106, 70) !important;
@@ -3814,8 +3816,8 @@ a.p-content03__news-archive-link:hover {
 }
 
 .js-hero-header__button {
-    top: 40vh;
-    position: relative;
+    position: absolute;
+    bottom: 100px;
     z-index: 100;
     width: 100%;
     margin: auto;
@@ -3824,9 +3826,9 @@ a.p-content03__news-archive-link:hover {
 .js-hero-header__leftbutton, .js-hero-header__rightbutton {
     display: inline-block;
     cursor: pointer;
-    border: 1px solid black;
+    border: 3px solid;
     border-radius: 5px;
-    background: rgba(77, 77, 77, 0.8);
+    background: #fff;
     /*height: 50px;*/
     line-height: 60px;
     width: 200px;
@@ -3842,12 +3844,14 @@ a.p-content03__news-archive-link:hover {
     float: left;
     color: rgb(230, 165, 40);
     margin-left: 400px;
+    border-color: rgb(230, 165, 40);
 }
 
 .js-hero-header__rightbutton {
     float: right;
     color: rgb(230, 135, 145);
     margin-right: 400px;
+    border-color: rgb(230, 135, 145);
 }
 
 /*hoveraction*/
@@ -4028,6 +4032,37 @@ a.p-content03__news-archive-link:hover {
     bottom: 40px;
     width: 100%;
     text-align: center;
+}
+
+.p-hero-header__content--desktop {
+    display: block;
+}
+
+.p-hero-header__content--middle,
+.p-hero-header__content--sp {
+    display: none;
+}
+
+}
+
+@media (max-width: 1144px) {
+    .p-hero-header__content--desktop {
+        display: none
+    }
+
+    .p-hero-header__content--middle {
+        display: block;
+    }
+}
+
+@media (max-width: 747px) {
+    .p-hero-header__content--middle {
+        display: none;
+    }
+
+    .p-hero-header__content--sp {
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 991px) {
@@ -4288,7 +4323,7 @@ a.p-content03__news-archive-link:hover {
 }
 
 .title-container {
-    border-bottom: solid 1px #003d9c;
+    border-bottom: solid 1px #fff;
 }
 
 .title-container .p-title--english {
@@ -4356,13 +4391,13 @@ a.p-content03__news-archive-link:hover {
     right: 0;
 }
 
+@media (min-width: 1300px) {
+    .p-main-image__content {
+        width: 600px;
+    }
+}
+
 .title-container .p-title {
-    /*font-size: 30px;*/
-    /*margin-bottom: 16px;*/
-    /*line-height: 1.5;*/
-    /*text-align: center;*/
-    /*display: inline-block;*/
-    /*position: relative;*/
     margin-top: 10px;
     font-family: "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
     font-size: 24px;

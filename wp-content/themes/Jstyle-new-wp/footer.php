@@ -129,9 +129,7 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
         <div class="p-company-nav">
             <p class="p-address">提携先</p>
             <ul class="p-social-nav">
-                <li class="p-social-nav__item">
-                    <img src="" alt="">
-                </li>
+                <li class="p-social-nav__item"></li>
             </ul>
         </div>
 
