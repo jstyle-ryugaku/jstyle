@@ -20,6 +20,7 @@
 .country-map__infobox:hover {
     cursor: pointer;
     z-index: 10;
+    border-color: #e66a46;
 }
 
 .country-map__country-name {
@@ -47,12 +48,14 @@
 .country-map__infobox.act .country-map__country-name,
 .country-map__infobox:hover .country-map__country-name {
     margin-bottom: 12px;
+    /*color: #e66a46;*/
 }
 
 .country-map__infobox.act .country-map__country-name::before,
 .country-map__infobox:hover .country-map__country-name::before {
     width: 80%;
     left: 40%;
+    /*background-color: #e66a46;*/
 }
 
 .country-map__infobox.act img,
@@ -69,6 +72,7 @@
     fill: #CCCCCC;
     stroke: #FFFFFF;
     stroke-width: 0.5;
+    transition: all .3s;
 }
 
 .country-map__available-land {
@@ -91,4 +95,11 @@
     stroke: #003d9c;
     stroke-linecap: square;
     stroke-width: 3;
+    transition: all .3s;
+}
+
+.country-map__land.focus,
+.country-map__spot-pointer-bg.focus {
+    fill: #e66a46;
+    stroke: #e66a46;
 }

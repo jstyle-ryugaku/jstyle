@@ -1,5 +1,6 @@
 <div class="country-map__container">
-    <div class="country-map__infobox act" id="US-WA__info">
+<!--    <div class="country-map__infobox act" id="US-WA__info">-->
+    <div class="country-map__infobox" id="US-WA__info">
         <p class="country-map__country-name">シアトル</p>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/wa/gallery_1.jpg">
     </div>
@@ -55,6 +56,50 @@
                     bottom: 40%;
                 }
             </style>
+
+            <script>
+                jQuery(function() {
+                    jQuery('#US-WA__info').hover(function() {
+                        jQuery('.US-WA-bg-draw').addClass('focus');
+                        jQuery('#US-WA').addClass('focus');
+                    }, function() {
+                        jQuery('.US-WA-bg-draw').removeClass('focus');
+                        jQuery('#US-WA').removeClass('focus');
+                    });
+
+                    jQuery('#US-OR__info').hover(function() {
+                        jQuery('.US-OR-bg-draw').addClass('focus');
+                        jQuery('#US-OR').addClass('focus');
+                    }, function() {
+                        jQuery('.US-OR-bg-draw').removeClass('focus');
+                        jQuery('#US-OR').removeClass('focus');
+                    });
+
+                    jQuery('#US-CA__info').hover(function() {
+                        jQuery('.US-CA-bg-draw').addClass('focus');
+                        jQuery('#US-CA').addClass('focus');
+                    }, function() {
+                        jQuery('.US-CA-bg-draw').removeClass('focus');
+                        jQuery('#US-CA').removeClass('focus');
+                    });
+
+                    jQuery('#US-NY__info').hover(function() {
+                        jQuery('.US-NY-bg-draw').addClass('focus');
+                        jQuery('#US-NY').addClass('focus');
+                    }, function() {
+                        jQuery('.US-NY-bg-draw').removeClass('focus');
+                        jQuery('#US-NY').removeClass('focus');
+                    });
+
+                    jQuery('#US-DC__info').hover(function() {
+                        jQuery('.US-DC-bg-draw').addClass('focus');
+                        jQuery('#US-DC').addClass('focus');
+                    }, function() {
+                        jQuery('.US-DC-bg-draw').removeClass('focus');
+                        jQuery('#US-DC').removeClass('focus');
+                    });
+                });
+            </script>
         </amcharts:ammap>
     </defs>
         <g>
@@ -223,33 +268,32 @@
         </g>
 
         <!-- ワシントンDC -->
-        <line class="country-map__spot-pointer-bg" x1="444.6" y1="137.1" x2="342.7" y2="161.6"/>
-        <circle class="country-map__spot-pointer-bg" cx="444.6" cy="137.1" r="2.8"/>
+        <line class="country-map__spot-pointer-bg US-DC-bg-draw" x1="444.6" y1="137.1" x2="342.7" y2="161.6"/>
+        <circle class="country-map__spot-pointer-bg US-DC-bg-draw" cx="444.6" cy="137.1" r="2.8"/>
         <line class="country-map__spot-pointer" x1="444.6" y1="137.1" x2="342.7" y2="161.6"/>
         <circle class="country-map__spot-pointer" cx="444.6" cy="137.1" r="2.8"/>
 
         <!-- ロサンゼルス -->
-        <line class="country-map__spot-pointer-bg" x1="156" y1="212" x2="57.1" y2="188.8"/>
-        <circle class="country-map__spot-pointer-bg" cx="57.1" cy="188.8" r="2.8"/>
+        <line class="country-map__spot-pointer-bg US-CA-bg-draw" x1="156" y1="212" x2="57.1" y2="188.8"/>
+        <circle class="country-map__spot-pointer-bg US-CA-bg-draw" cx="57.1" cy="188.8" r="2.8"/>
         <line class="country-map__spot-pointer" x1="156" y1="212" x2="57.1" y2="188.8"/>
         <circle class="country-map__spot-pointer" cx="57.1" cy="188.8" r="2.8"/>
 
         <!-- シアトル -->
-        <line class="country-map__spot-pointer-bg" x1="158.2" y1="30" x2="28.1" y2="39.9"/>
-        <circle class="country-map__spot-pointer-bg" cx="28.1" cy="39.9" r="2.8"/>
+        <line class="country-map__spot-pointer-bg US-WA-bg-draw" x1="158.2" y1="30" x2="28.1" y2="39.9"/>
+        <circle class="country-map__spot-pointer-bg US-WA-bg-draw" cx="28.1" cy="39.9" r="2.8"/>
         <line class="country-map__spot-pointer" x1="158.2" y1="30" x2="28.1" y2="39.9"/>
         <circle class="country-map__spot-pointer" cx="28.1" cy="39.9" r="2.8"/>
 
         <!-- オレゴン -->
-        <line class="country-map__spot-pointer-bg" x1="100" y1="105" x2="19.7" y2="84.9"/>
-        <circle class="country-map__spot-pointer-bg" cx="19.7" cy="84.9" r="2.8"/>
+        <line class="country-map__spot-pointer-bg US-OR-bg-draw" x1="100" y1="105" x2="19.7" y2="84.9"/>
+        <circle class="country-map__spot-pointer-bg US-OR-bg-draw" cx="19.7" cy="84.9" r="2.8"/>
         <line class="country-map__spot-pointer" x1="100" y1="105" x2="19.7" y2="84.9"/>
         <circle class="country-map__spot-pointer" cx="19.7" cy="84.9" r="2.8"/>
 
         <!-- ニューヨーク -->
-        <line class="country-map__spot-pointer-bg" x1="475.5" y1="116.1" x2="333.3" y2="77.1"/>
-        <circle class="country-map__spot-pointer-bg" cx="475.5" cy="116.1" r="2.8"/>
+        <line class="country-map__spot-pointer-bg US-NY-bg-draw" x1="475.5" y1="116.1" x2="333.3" y2="77.1"/>
+        <circle class="country-map__spot-pointer-bg US-NY-bg-draw" cx="475.5" cy="116.1" r="2.8"/>
         <line class="country-map__spot-pointer" x1="475.5" y1="116.1" x2="333.3" y2="77.1"/>
         <circle class="country-map__spot-pointer" cx="475.5" cy="116.1" r="2.8"/>
 </svg>
-</div>
