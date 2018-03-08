@@ -115,7 +115,7 @@ $args['order'] = $sort;
                 setup_postdata( $post );
             ?>
 
-                <div class="interview__article">
+                <a class="interview__article">
                     <div class="interview__article-image">
                         <?php
                         if (has_post_thumbnail()) {
@@ -127,11 +127,19 @@ $args['order'] = $sort;
                     </div>
 
                     <div class="interview__article-info">
-                        <?php the_date(); ?>
-                        <?php the_title(); ?>
-                        <?php the_excerpt(); ?>
+                        <div class="interview__article-date">
+                            <?php the_date(); ?>
+                        </div>
+
+                        <div class="interview__article-title">
+                            <?php the_title(); ?>
+                        </div>
+
+                        <div class="interview__article-excerpt">
+                            <?php the_excerpt(); ?>
+                        </div>
                     </div>
-                </div>
+                </a>
             <br>
 
             <?php

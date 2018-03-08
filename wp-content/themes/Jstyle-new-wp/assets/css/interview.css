@@ -9,6 +9,62 @@
 #side_col { width:300px; float:right; }
 #left_col > :last-child, #side_col > :last-child { margin-bottom:0; }
 
+/* ------------------------------
+ インタビューページ
+------------------------------- */
+.interview__article {
+    display: block;
+    padding: 3%;
+    border: 2px solid #969696;
+    border-radius: 3px;
+}
+
+.interview__article:hover {
+    cursor: pointer;
+}
+
+.interview__article-image {
+    display: inline-block;
+    width: 35%;
+    height: 215px;
+    overflow: hidden;
+}
+
+.interview__article-image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.interview__article-info {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 35% - 25px);
+    margin-left: 18px;
+}
+
+.interview__article-date {
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 1.5px;
+    color: #4a494a;
+}
+
+.interview__article-title {
+    font-size: 20px;
+    line-height: 1.33;
+    letter-spacing: 2.3px;
+    font-weight: bold;
+    text-align: left;
+    color: #4a494a;
+}
+
+.interview__article-excerpt {
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: 2.1px;
+    text-align: left;
+    color: #4a494a;
+}
 
 /* ----------------------------------------------------------------------
  レイアウト
