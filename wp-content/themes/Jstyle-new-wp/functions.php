@@ -72,12 +72,42 @@ function vogue_init() {
         'labels' => $interview_labels,
         'menu_position' => 5,
         'public' => true,
-        'supports' => array( 'editor', 'revisions', 'title' )
+        'supports' => array( 'editor', 'revisions', 'thumbnail', 'title' )
     );
     if ( $options['interview_slug'] ) {
         $interview_args['rewrite'] = array( 'slug' => $options['interview_slug'] );
     }
     register_post_type( 'interview', $interview_args );
+
+    register_taxonomy(
+        'kind',
+        'interview',
+        array(
+            'label' => __( '体験記の種類' ),
+            'rewrite' => array( 'slug' => 'kind' ),
+            'hierarchical' => true,
+        )
+    );
+
+    register_taxonomy(
+        'term',
+        'interview',
+        array(
+            'label' => __( '留学期間' ),
+            'rewrite' => array( 'slug' => 'term' ),
+            'hierarchical' => true,
+        )
+    );
+
+    register_taxonomy(
+        'country',
+        'interview',
+        array(
+            'label' => __( '国' ),
+            'rewrite' => array( 'slug' => 'coutnry' ),
+            'hierarchical' => true,
+        )
+    );
 
     register_post_type(
         '目的から探す',
