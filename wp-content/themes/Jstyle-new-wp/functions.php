@@ -48,36 +48,36 @@ function vogue_init() {
 	}
 
 	// News
-//	$news_labels = array(
-//		'name' => get_custom_post_label( 'news' )
-//	);
-//	$news_args = array(
-//		'has_archive' => true,
-//		'labels' => $news_labels,
-//		'menu_position' => 5,
-//		'public' => true,
-//		'supports' => array( 'editor', 'revisions', 'thumbnail', 'title' )
-//	);
-//	if ( $options['news_slug'] ) {
-//		$news_args['rewrite'] = array( 'slug' => $options['news_slug'] );
-//	}
-//	register_post_type( 'news', $news_args );
-
-//	 Plan
-	$plan_labels = array(
-		'name' => get_custom_post_label( 'interview' )
+	$news_labels = array(
+		'name' => get_custom_post_label( 'news' )
 	);
-	$plan_args = array(
+	$news_args = array(
 		'has_archive' => true,
-		'labels' => $plan_labels,
+		'labels' => $news_labels,
 		'menu_position' => 5,
 		'public' => true,
-		'supports' => array( 'editor', 'revisions', 'title' )
+		'supports' => array( 'editor', 'revisions', 'thumbnail', 'title' )
 	);
-	if ( $options['plan_slug'] ) {
-		$plan_args['rewrite'] = array( 'slug' => 'interview' );
+	if ( $options['news_slug'] ) {
+		$news_args['rewrite'] = array( 'slug' => $options['news_slug'] );
 	}
-	register_post_type( 'interview', $plan_args );
+	register_post_type( 'news', $news_args );
+
+    // Intervew
+    $interview_labels = array(
+        'name' => get_custom_post_label( 'interview' )
+    );
+    $interview_args = array(
+        'has_archive' => true,
+        'labels' => $interview_labels,
+        'menu_position' => 5,
+        'public' => true,
+        'supports' => array( 'editor', 'revisions', 'title' )
+    );
+    if ( $options['interview_slug'] ) {
+        $interview_args['rewrite'] = array( 'slug' => $options['interview_slug'] );
+    }
+    register_post_type( 'interview', $interview_args );
 
     register_post_type(
         '目的から探す',
@@ -164,18 +164,19 @@ function format_init()
         $args);
 }
 add_action('init', 'format_init');
+
 /**
  * カスタム投稿タイプのラベルを取得する
  *
- * @param  string $slug 取得したいカスタム投稿のスラッグ（news or plan） 
+ * @param  string $slug 取得したいカスタム投稿のスラッグ（news or interview）
  * @return string       テーマオプションで設定されたカスタム投稿のラベルを返す
- *                      渡されたパラメータがnews or plan でない場合は空の文字列を返す
+ *                      渡されたパラメータがnews or interview)でない場合は空の文字列を返す
  */
 function get_custom_post_label( $slug ) {
 
 	$options = get_design_plus_option();
 
-	if ( 'news' === $slug || 'plan' === $slug ) {
+	if ( 'news' === $slug || 'interview' === $slug ) {
 		
 		if ( $options[$slug . '_breadcrumb'] ) {
 			return esc_html( $options[$slug . '_breadcrumb'] );
