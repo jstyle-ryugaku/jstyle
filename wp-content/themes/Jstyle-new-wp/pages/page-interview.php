@@ -5,7 +5,7 @@ template name: interview
 
 get_header();
 $dp_options = get_desing_plus_option();
-$args =  array('order' => 'DESC');
+$args = array('order' => 'DESC');
 
 // タグフィルター用ターム配列
 $tags = false;
@@ -20,6 +20,12 @@ if ($custom_search_vars) {
     }
 }
 
+// keyword
+if (isset($_GET['search_keywords'])) {
+    $search_keyword = $_GET['search_keywords'];
+    $args['s'] = $search_keyword;
+}
+
 // category
 if (isset($_GET['search_cat1'])) {
     $search_category1 = $_GET['search_cat1'];
@@ -29,7 +35,6 @@ if (isset($_GET['search_cat2'])) {
 }
 
 if ( $search_category1 == 1 && $search_category2 == 1) {
-
 } else {
     $args['category__in'] = array($search_category1, $search_category2);
 }
