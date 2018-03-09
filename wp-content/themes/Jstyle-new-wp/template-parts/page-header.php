@@ -51,8 +51,8 @@ if ( is_404() ) {
 		<div class="p-page-header__inner l-inner">
 			<?php if ( $is_h1 ) : ?>
 			<h1 class="p-page-header__title" style="background: rgba(<?php echo implode( ', ', $bg_color ); ?>, <?php echo esc_attr( $bg_opacity ); ?>); color: <?php echo esc_attr( $color ); ?>; font-size: <?php echo esc_attr( $font_size ); ?>px;">
-                <span><?php echo nl2br( esc_html( $sub_catchphrase ) ); ?></span>
-                <?php echo nl2br( esc_html( $catchphrase ) ); ?>
+                <span class="p-page-header__title--jp"><?php echo nl2br( esc_html( $sub_catchphrase ) ); ?></span>
+                <span class="p-page-header__title--en"><?php echo nl2br( esc_html( $catchphrase ) ); ?></span>
             </h1>
 			<?php else : ?>
 			<div class="p-page-header__title" style="background: rgba(<?php echo implode( ', ', $bg_color ); ?>, <?php echo esc_attr( $bg_opacity ); ?>); color: <?php echo esc_attr( $color ); ?>; font-size: <?php echo esc_attr( $font_size ); ?>px;">
