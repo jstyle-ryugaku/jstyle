@@ -4,7 +4,12 @@ if (!$dp_options) $dp_options = get_desing_plus_option();
 
 $search_forms = array('columns' => 0);
 
-if ($dp_options['searcn_post_type'] == 'post') {
+echo '<div style="color:#FFF">';
+echo 'かはfjぇかjf；あdslfj';
+var_dump($dp_options['search_post_type']);
+echo '</div>';
+
+if ($dp_options['search_post_type'] == 'interview') {
     // keywords
     if ($dp_options['show_search_form_keywords'] && $dp_options['searcn_keywords_target']) {
         $search_forms['search_keywords']['placeholder'] = $dp_options['search_form_keywords_placeholder'];
@@ -14,15 +19,17 @@ if ($dp_options['searcn_post_type'] == 'post') {
     // category
     for ($i = 1; $i <= 3; $i++) {
         if (!empty($dp_options['show_search_form_category' . $i])) {
-            $tax_slug = '';
+            $tax_slug = 'term';
             $placeholder = '';
-            if ($dp_options['show_search_form_category' . $i] == 'category') {
-                $tax_slug = 'category';
+
+            if ($dp_options['show_search_form_category' . $i] == 'country') {
+                $tax_slug = 'country';
                 $placeholder = str_replace('%category_label%', $dp_options['category_label'], $dp_options['search_form_category' . $i . '_placeholder']);
             } elseif (!empty($dp_options['use_' . $dp_options['show_search_form_category' . $i]])) {
                 $tax_slug = $dp_options[$dp_options['show_search_form_category' . $i] . '_slug'];
                 $placeholder = str_replace('%category_label%', $dp_options[$dp_options['show_search_form_category' . $i] . '_label'], $dp_options['search_form_category' . $i . '_placeholder']);
             }
+
             if ($tax_slug && get_taxonomy($tax_slug)) {
                 $search_forms['search_cat' . $i]['slug'] = $tax_slug;
                 $search_forms['search_cat' . $i]['placeholder'] = $placeholder;
@@ -53,7 +60,7 @@ if ($dp_options['searcn_post_type'] == 'post') {
     // category
     for ($i = 1; $i <= 2; $i++) {
         if (!empty($dp_options['show_search_form_category' . $i . '_introduce'])) {
-            $tax_slug = '';
+            $tax_slug = 'term';
             $placeholder = '';
             if (!empty($dp_options['use_' . $dp_options['show_search_form_category' . $i . '_introduce']])) {
                 $tax_slug = $dp_options[$dp_options['show_search_form_category' . $i . '_introduce'] . '_slug'];
@@ -80,8 +87,10 @@ if ($dp_options['searcn_post_type'] == 'post') {
     }
 }
 
-//if (!empty($search_forms['form_action']) && !empty($search_forms['columns'])) :
-//?>
+if (!empty($search_forms['form_action']) && !empty($search_forms['columns'])) :
+?>
+
+
 <form action="<?php echo esc_attr($search_forms['form_action']); ?>" method="get"
       class="columns-<?php echo esc_attr($search_forms['columns'] + 1); ?>">
     <?php
@@ -95,7 +104,7 @@ if ($dp_options['searcn_post_type'] == 'post') {
         }
     }
 
-    //	if (!empty($search_forms['search_keywords'])) :
+    	if (!empty($search_forms['search_keywords'])) :
     ?>
     <div class="header_search_inputs header_search_keywords">
         <input type="text" id="header_search_keywords" name="search_keywords"
@@ -117,10 +126,10 @@ if ($dp_options['searcn_post_type'] == 'post') {
         </ul>
     </div>
     <?php
-    //	endif;
+    	endif;
 
     for ($i = 1; $i <= 2; $i++) :
-//		if (!empty($search_forms['search_cat'.$i]['slug'])) :
+		if (!empty($search_forms['search_cat'.$i]['slug'])) :
         ?>
         <div class="header_search_inputs">
             <?php
@@ -138,7 +147,7 @@ if ($dp_options['searcn_post_type'] == 'post') {
             ?>
         </div>
     <?php
-//		endif;
+		endif;
     endfor;
     ?>
     <div class="header_search_inputs header_search_button">
@@ -147,5 +156,5 @@ if ($dp_options['searcn_post_type'] == 'post') {
     </div>
 </form>
 <?php
-//endif;
-//?>
+endif;
+?>

@@ -5,7 +5,10 @@ template name: interview
 
 get_header();
 $dp_options = get_desing_plus_option();
-$args = array('order' => 'DESC');
+$args = array(
+    'post_type' => 'interview',
+    'order' => 'DESC'
+);
 
 // タグフィルター用ターム配列
 $tags = false;

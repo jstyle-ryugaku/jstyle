@@ -423,7 +423,7 @@ $dp_default_options = array(
 	'recent_news_num' => 5,
 	'recent_news_link_text' => __('News archive', 'tcd-w'),
 // search
-	'searcn_post_type' => 'post',
+	'searcn_post_type' => 'interview',
 	'searcn_keywords_target' => array('title'),
 	'show_search_form_keywords' => 1,
 	'search_form_keywords_placeholder' => __('Keyword', 'tcd-w'),
