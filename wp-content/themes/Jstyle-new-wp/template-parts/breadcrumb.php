@@ -39,16 +39,19 @@ global $author, $post;
                 <?php if ( is_singular( 'news' ) ) : ?>
                     <li class="p-breadcrumb__item c-breadcrumb__item"><?php echo strip_tags( get_the_title( $post->ID ) ); ?></li>
                 <?php endif; ?>
-			<?php elseif ( is_post_type_archive( 'plan' ) || is_singular( 'plan' ) ) : ?>
+
+			<?php elseif ( is_post_type_archive( 'interview' ) || is_singular( 'interview' ) ) : ?>
                 <li class="p-breadcrumb__item c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                    <a href="<?php echo esc_url( get_post_type_archive_link( 'plan' ) ); ?>" itemscope itemtype="http://schema.org/Thing" itemprop="item">
-                        <span itemprop="name"><?php echo esc_html( get_custom_post_label( 'plan' ) ); ?></span>
+                    <a href="<?php echo esc_url( get_post_type_archive_link( 'interview' ) ); ?>" itemscope itemtype="http://schema.org/Thing" itemprop="item">
+                        <span itemprop="name"><?php echo esc_html( get_custom_post_label( 'interview' ) ); ?></span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <?php if ( is_singular( 'plan' ) ) : ?>
+
+                <?php if ( is_singular( 'interview' ) ) : ?>
                     <li class="p-breadcrumb__item c-breadcrumb__item"><?php echo strip_tags( get_the_title( $post->ID )); ?></li>
                 <?php endif; ?>
+
                 <?php if ( is_page() ) : ?>
                     <li class="p-breadcrumb__item c-breadcrumb__item">
                         <?php
@@ -58,6 +61,7 @@ global $author, $post;
                         ?>
                     </li>
                 <?php endif; ?>
+
 			<?php elseif ( is_page() ) : ?>
                 <?php $parent_id = $post->post_parent; ?>
                 <?php if ($parent_id > 0) : ?>
