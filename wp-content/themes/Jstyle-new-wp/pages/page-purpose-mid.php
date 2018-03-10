@@ -89,36 +89,37 @@ get_header();
                         <span class="question">
                             <p class="text">語学力はどれくらい必要？</p>
                         </span>
-                            <span class="answer">
-                            <p class="text">語学力があるにこしたことはないですが、なくても大丈夫です。積極的に会話をし、短期間でできる最大限の努力をしましょう。語学力があるにこしたことはないですが、なくても大丈夫です。積極的に会話をし、短期間でできる最大限の努力をしましょう。
+                        <span class="answer">
+                            <p class="text">語学力があるにこしたことはないですが、なくても大丈夫です。積極的に会話をし、短期間でできる最大限の努力をしましょう。語学力があるにこしたことはないですが、なくても大丈夫です。積極的に会話をし、短期間でできる最大限の努力をしましょう。</p>
                         </span>
                     </div>
                 </li>
                 <li class="qa-02 qa-anime">
                     <div class="inner">
                         <span class="question">
-                            <p class="text">語学力はどれくらい必要？っていうのが2行になったらこうなります</p>
+                            <p class="text">滞在先の種類は？
+                            </p>
                         </span>
                         <span class="answer">
-                            <p class="text">語学力があるにこしたことはないですが、なくても大丈夫です。積極的に会話をし、短期間でできる最大限の努力をしましょう。</p>
+                            <p class="text">ホームステイ、または学校の寮滞在が一般的です。現地の生活を楽しむなら、会話力を磨くこともできるホームステイがおすすめ。</p>
                         </span>
                 </li>
                 <li class="qa-03 qa-anime">
                     <div class="inner">
                         <span class="question">
-                            <p class="text">語学力はどれくらい必要？</p>
+                            <p class="text">どこで学ぶ？</p>
                         </span>
                         <span class="answer">
-                            <p class="text">語学力があるにこしたことはないですが、なくても大丈夫です。積極的に会話をし、短期間でできる最大限の努力をしましょう。</p>
+                            <p class="text">私立の語学学校で学ぶのが一般的です。ビルに入っている校舎のほか、大学のキャンパスで行われるコースもあります。</p>
                         </span>
                 </li>
                 <li class="qa-04 qa-anime">
                     <div class="inner">
                         <span class="question">
-                            <p class="text">語学力はどれくらい必要？</p>
+                            <p class="text">ビザは必要？</p>
                         </span>
                         <span class="answer">
-                            <p class="text">語学力があるにこしたことはないですが、なくても大丈夫です。積極的に会話をし、短期間でできる最大限の努力をしましょう。</p>
+                            <p class="text">ほとんどの国の場合は必要ないですが、アメリカにおいては、たとえ1週間だけでもビザが必要になります。</p>
                         </span>
                     </div>
                 </li>
