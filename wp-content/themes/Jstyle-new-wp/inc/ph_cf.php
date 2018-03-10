@@ -22,7 +22,16 @@ $ph_fields = array(
 		'before_title' => '<dt class="label">',
 		'after_title' => '</dt><dd class="content">'
 	),
-	array( 
+    array(
+        'id' => 'ph_sub_catch',
+        'title' => __( 'Sub Catchphrase', 'tcd-w' ),
+        'type' => 'textarea',
+        'before_field' => '<dl class="ml_custom_fields">',
+        'after_field' => '</dd></dl>',
+        'before_title' => '<dt class="label">',
+        'after_title' => '</dt><dd class="content">'
+    ),
+	array(
 		'id' => 'ph_catch_font_size',
 		'title' => __( 'Font size of catchphrase', 'tcd-w' ),
 		'type' => 'number',

@@ -331,6 +331,11 @@ function vogue_scripts() {
         wp_enqueue_style( 'vogue-flow', get_template_directory_uri() . '/assets/css/flow.css', false, version_num() );
         wp_enqueue_script( 'vogue-flow', get_template_directory_uri() . '/assets/js/flow.js', array( 'jquery' ), version_num(), true );
     }
+
+    if(is_page('president')) {
+        wp_enqueue_style( 'vogue-president', get_template_directory_uri() . '/assets/css/president.css', false, version_num() );
+        wp_enqueue_script( 'vogue-president', get_template_directory_uri() . '/assets/js/president.js', array( 'jquery' ), version_num(), true );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'vogue_scripts' );
 
