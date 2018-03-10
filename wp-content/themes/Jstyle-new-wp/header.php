@@ -101,7 +101,8 @@ if ($tcd_splash_page->is_splash_page()) {
                     </a>
                     <ul class="sub-menu">
                         <li class="menu-item menu-item-type-post_type menu-item-object-plan"><a
-                                    href="<?php echo home_url('/about/new-style'); ?>">Jstyleの留学スタイル<span></span></a></li>
+                                    href="<?php echo home_url('/about/new-style'); ?>">Jstyleの留学スタイル<span></span></a>
+                        </li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-plan"><a
                                     href="<?php echo home_url('/about/point'); ?>">Jstyleのここがすごい<span></span></a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-plan"><a
@@ -204,6 +205,7 @@ if ($tcd_splash_page->is_splash_page()) {
                 </li>
             </ul>
         </nav>
+
         <div class="l-header__tel">
             <div class="p-request__inner">
                 <p class="p-request__text">無料相談受け付け中</p>

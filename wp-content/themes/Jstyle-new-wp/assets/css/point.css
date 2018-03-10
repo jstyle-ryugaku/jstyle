@@ -70,6 +70,7 @@
 .point-great svg.graph {
     width: 100%;
     max-width: 900px;
+    height: 600px;
     margin: 0px auto;
     display: block;
 }

@@ -100,13 +100,14 @@
     letter-spacing: 0.06em;
 }
 .purpose-wrapper .images ul li a .wrap .title {
-    font-family: HiraginoSans-W7;
+    font-family: -apple-system, "Hiragino Kaku Gothic ProN", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
     font-size: 3.6em;
     font-weight: bold;
     margin-bottom: 24px;
 }
 .purpose-wrapper .images ul li a .wrap .text {
-    font-family: HiraginoSans-W6;
+    font-family: Hiragino Sans, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
+    font-weight: bold;
     font-size: 2.0em;
 }
 .purpose-wrapper .images ul li a .bg-image {

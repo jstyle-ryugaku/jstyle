@@ -84,7 +84,7 @@ $args['order'] = $sort;
     </div>
 </div>
 
-<div id="main_col" class="clearfix">
+<main id="main_col" class="clearfix">
     <?php
     if (have_posts() || !empty($_REQUEST['filter_tag'])) {
         // タグ絞り込み検索表示
@@ -213,7 +213,7 @@ $args['order'] = $sort;
     <?php else: ?>
         <p class="no_post"><?php _e('There is no registered post.', 'tcd-w'); ?></p>
     <?php endif; ?>
-</div>
+</main>
 
 <?php get_footer(); ?>
 
