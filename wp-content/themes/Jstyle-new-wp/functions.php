@@ -97,11 +97,11 @@ function vogue_init() {
     );
 
     register_taxonomy(
-        'country',
+        'country-kind',
         'interview',
         array(
             'label' => __( '国' ),
-            'rewrite' => array( 'slug' => 'country' ),
+            'rewrite' => array( 'slug' => 'country-kind' ),
             'hierarchical' => true,
         )
     );
@@ -170,25 +170,25 @@ add_action( 'init', 'vogue_init' );
 
 function format_init()
 {
-    // 新規分類を作成
+//    // 新規分類を作成
+//
+//    $labels = array(
+//        'name' => _x('国', 'country'),
+//    );
+//
+//    $args = array(
+//        'hierarchical' => true,
+//        'labels' => $labels,
+//        'show_ui' => true,
+//        'show_admin_column' => true,
+//        'query_var' => true,
+//        'rewrite' => array('slug' => 'country'),
+//    );
 
-    $labels = array(
-        'name' => _x('国', 'country'),
-    );
-
-    $args = array(
-        'hierarchical' => true,
-        'labels' => $labels,
-        'show_ui' => true,
-        'show_admin_column' => true,
-        'query_var' => true,
-        'rewrite' => array('slug' => 'country'),
-    );
-
-    register_taxonomy(
-        'format',
-        'Studying_Abroad_Interview',
-        $args);
+//    register_taxonomy(
+//        'format',
+//        'Studying_Abroad_Interview',
+//        $args);
 }
 add_action('init', 'format_init');
 

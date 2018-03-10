@@ -1,11 +1,11 @@
 * {
-    font-family: HiraginoSans, YuGothic, "游ゴシック", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-family: Hiragino Sans, YuGothic, "游ゴシック", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
 .main-content-container {
     max-width: 1140px;
     margin: 0 auto;
-    padding: 60px 30px;
+    padding: 30px 30px;
 }
 
 /* 一番大きな見出し */

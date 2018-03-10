@@ -274,6 +274,22 @@ form.columns-5 .header_search_button {
     left: -1px;
 }
 
+@media only screen and (max-width: 650px) {
+    #header_search form, #index_header_search form {
+        flex-direction: column;
+    }
+
+    .header_search_inputs {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .header_search_button {
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+}
+
 
 
 /* ----------------------------------------------------------------------

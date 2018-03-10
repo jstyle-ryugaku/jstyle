@@ -141,6 +141,8 @@ audio:not([controls]) {
 /** Remove the border on images inside links in IE 10-. */
 img {
     border-style: none;
+    width: auto;
+    height: auto;
 }
 
 /** Hide the overflow in IE. */
@@ -523,7 +525,7 @@ ul {
     line-height: 70px;
     width: 100%;
     position: fixed !important;
-    z-index: 999;
+    z-index: 1000;
     padding: 0 30px 0 50px;
     box-sizing: border-box;
 }
@@ -591,7 +593,8 @@ ul {
 }
 
 .l-header__logo img {
-    height: 45%;
+    width: 120px;
+    height: auto;
 }
 
 .l-header__inner ul.l-header__menu {
@@ -607,10 +610,11 @@ ul {
     height: 70px;
 }
 
-.l-header__inner ul.l-header__menu li {
+.l-header__inner ul.l-header__menu > li {
     list-style-type: none;
     text-align: center;
     margin-right: 40px;
+    height: 70px;
 }
 
 .l-header__inner ul.l-header__menu li:last-child {
@@ -626,11 +630,12 @@ ul {
 
     .l-header__inner ul.l-header__menu li {
         margin-right: 20px;
+        height: auto;
     }
 }
 
 .l-header__inner ul.l-header__menu li div.menu-button--ja {
-    font-family: HiraginoSans;
+    font-family: Hiragino Sans, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-size: 10px;
     color: #999999;
     letter-spacing: 1px;
@@ -741,7 +746,22 @@ ul {
     .l-header__inner ul.l-header__menu {
         display: block;
         background: #fff;
-        margin-top: 9px;
+        padding-top: 9px;
+        height: calc( 100vh - 70px );
+        overflow-y: scroll;
+    }
+
+    .footer-bar-container--sp-header .footer-btn a {
+        color: #003d9c;
+        height: auto;
+    }
+
+    .footer-bar-container--sp-header .footer-btn a:hover {
+        color: #003d9c;
+    }
+
+    .footer-bar-container--sp-header .footer-btn {
+        border-color: #003d9c;
     }
 }
 
@@ -2371,22 +2391,12 @@ ul {
 }
 
 .p-article04__category a:hover {
-    color: #4a4a4a;
-    background: #fff;
-    border: 1px solid #4a4a4a;
-    box-sizing: border-box;
+    color: white!important;
+    /*color: #4a4a4a;*/
+    /*background: #fff;*/
+    /*border: 1px solid #4a4a4a;*/
+    /*box-sizing: border-box;*/
 }
-
-/*.p-article04__category a {*/
-/*font-size: 10px;*/
-/*width: 61px;*/
-/*height: 21px;*/
-/*border-radius: 47px;*/
-/*padding: 3px 10px;*/
-/*color: #fff;*/
-/*font-weight: bold;*/
-/*background-color: #4d4d4d;*/
-/*}*/
 
 @media only screen and (max-width: 767px) {
     .p-article04__excerpt {
@@ -2597,7 +2607,7 @@ ul {
     font-size: 30px;
     line-height: 1.5;
     margin-bottom: 16px;
-    font-family: HiraginoSans;
+    font-family: Hiragino Sans, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-weight: bold;
     letter-spacing: 1.4px;
 }
@@ -2818,7 +2828,7 @@ ul.content01_builder_container li i:hover::after {
     cursor: pointer;
     border: none !important;
     border-radius: 20px;
-    color: black !important;
+    color: #111 !important;
     height: 50px;
     width: 250px;
     text-align: center;
@@ -2846,11 +2856,11 @@ ul.content01_builder_container li i:hover::after {
     transform: scale(0.1, 1);
 }
 
-.p-content02__item-title:hover {
+.p-hover-effect--type1:hover .p-content02__item-title {
     letter-spacing: 2px;
 }
 
-.p-content02__item-title:hover::before {
+.p-hover-effect--type1:hover .p-content02__item-title::before {
     opacity: 1;
     transform: scale(1, 1);
 }
@@ -2867,7 +2877,7 @@ ul.content01_builder_container li i:hover::after {
     background-color: rgba(255, 255, 255, 0.6) !important;
 }
 
-.p-content02__item-title:hover::after {
+.p-hover-effect--type1:hover .p-content02__item-title::after {
     opacity: 0;
     transform: scale(0.1, 1);
 }
@@ -2923,7 +2933,7 @@ ul.content01_builder_container li i:hover::after {
 
     .p-content02__item-img--vertical {
         width: 100%;
-        height: auto;
+        height: auto !important;
     }
 }
 
@@ -3531,7 +3541,7 @@ a.p-content03__news-archive-link:hover {
     margin-bottom: 26px;
     font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: #222;
 }
 
@@ -3779,7 +3789,7 @@ li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
     }
 
     .p-global-nav a {
-        color: #fff !important;
+        color: #fff;
         box-sizing: border-box;
         font-size: 13px;
         height: 50px;
@@ -3885,6 +3895,7 @@ li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
     z-index: 100;
     width: 100%;
     margin: auto;
+    margin-left: 150px;
 }
 
 .js-hero-header__leftbutton, .js-hero-header__rightbutton {
@@ -3908,6 +3919,7 @@ li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
     float: left;
     color: rgb(230, 165, 40);
     margin-left: 400px;
+    margin-left: 25%;
     border-color: rgb(230, 165, 40);
 }
 
@@ -3915,6 +3927,7 @@ li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
     float: right;
     color: rgb(230, 135, 145);
     margin-right: 400px;
+    margin-right: 25%;
     border-color: rgb(230, 135, 145);
 }
 
@@ -3958,19 +3971,13 @@ li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
     background-color: rgb(230, 135, 145);
 }
 
-@media only screen and (max-width: 1024px) {
-    .js-hero-header__leftbutton {
-        margin-left: 100px;
-        width: 30%;
-    }
-
-    .js-hero-header__rightbutton {
-        margin-right: 100px;
-        width: 30%;
+@media only screen and (max-width: 1145px) {
+    .js-hero-header__button {
+        margin: 0;
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 810px) {
     .js-hero-header__leftbutton, .js-hero-header__rightbutton {
         margin: 0px 30px 0px;
         width: 30%;
@@ -4380,7 +4387,7 @@ li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
     margin-bottom: 16px;
     line-height: 1.5;
     font-weight: 500;
-    font-family: HiraginoSans-W6;
+    font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
     font-size: 20px;
     letter-spacing: 3.1px;
     text-align: center;
@@ -4647,6 +4654,7 @@ li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
 }
 
 .p-page-header__title {
+    position: relative;
     background: #003d9c;
     color: #fff;
     display: -webkit-box;
@@ -4669,6 +4677,8 @@ li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
 .p-page-header__title .p-page-header__title--en {
     position: absolute;
     bottom: 35%;
+    left: 0;
+    right: 0;
     font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-size: 26px;
     font-weight: 900;
@@ -4679,7 +4689,9 @@ li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
 .p-page-header__title .p-page-header__title--jp {
     position: absolute;
     top: 35%;
-    font-family: HiraginoSans;
+    left: 0;
+    right: 0;
+    font-family: Hiragino Sans, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-weight: bold;
     font-size: 12px;
     letter-spacing: 2px;
@@ -4714,12 +4726,12 @@ li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
     }
 
     .p-page-header__title .p-page-header__title--en {
-        bottom: 38.5%;
+        bottom: 26.5%;
         font-size: 16px;
     }
 
     .p-page-header__title .p-page-header__title--jp {
-        top: 40%;
+        top: 25px;
         font-size: 10px;
         display: block;
         width: 110px;
@@ -4961,7 +4973,7 @@ li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
     width: inherit;
 }
 
-@media (max-width: 374px) {
+@media (max-width: 380px) {
     .footer-bar-container {
         margin: 0 auto;
     }

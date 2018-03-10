@@ -129,9 +129,10 @@
 <?php
 $blog_args = array(
     'post_status' => 'publish',
-    'post_type' => 'post',
+    'post_type' => 'interview',
 );
 $blog_query = new WP_Query($blog_args);
+
 $news_args = array(
     'posts_per_page' => 3,
     'post_status' => 'publish',
@@ -179,7 +180,23 @@ $news_query = new WP_Query($news_args);
                                 <p class="p-article04__meta"><?php if ($options['show_date']) : ?>
                                         <time class="p-article04__date"
                                               datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time><?php endif; ?><?php if ($options['show_category']) : ?>
-                                        <span class="p-article04__category"><?php the_category(' '); ?></span><?php endif; ?>
+                                        <span class="p-article04__category">
+                                            <?php
+                                            $term_terms = get_the_terms($post->ID, 'term');
+                                            $country_terms = get_the_terms($post->ID, 'country-kind');
+                                            ?>
+                                            <a>
+                                                <?php
+                                                echo $term_terms[0]->name;
+                                                ?>
+                                            </a>
+                                            <a>
+                                                <?php
+                                                echo $country_terms[0]->name;
+                                                ?>
+                                            </a>
+                                        </span>
+                                    <?php endif; ?>
                                 </p>
                             <?php endif; ?>
                         </article>
