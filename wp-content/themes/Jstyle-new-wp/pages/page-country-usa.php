@@ -135,34 +135,34 @@ $news_query = new WP_Query($news_args);
                             <h1 class="title">短期留学</h1>
                             <span class="text">テキストテキストテキストテキストテキス</span>
                         </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-image.jpg')"></div>
+                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-short.jpg')"></div>
                     </a>
                 </li>
                 <li class="image-link-list__listed-link">
                     <a href="javascript:void(0);">
                         <div class="image-link-list__text-container">
-                            <h1 class="title">短期留学</h1>
+                            <h1 class="title">中期留学</h1>
                             <span class="text">テキストテキストテキストテキストテキス</span>
                         </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-image.jpg')"></div>
+                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-mid.jpg')"></div>
                     </a>
                 </li>
                 <li class="image-link-list__listed-link">
                     <a href="javascript:void(0);">
                         <div class="image-link-list__text-container">
-                            <h1 class="title">短期留学</h1>
+                            <h1 class="title">長期留学</h1>
                             <span class="text">テキストテキストテキストテキストテキス</span>
                         </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-image.jpg')"></div>
+                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-long.jpg')"></div>
                     </a>
                 </li>
                 <li class="image-link-list__listed-link">
                     <a href="javascript:void(0);">
                         <div class="image-link-list__text-container">
-                            <h1 class="title">短期留学</h1>
+                            <h1 class="title">ワーキングホリデー</h1>
                             <span class="text">テキストテキストテキストテキストテキス</span>
                         </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-image.jpg')"></div>
+                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-holiday.jpg')"></div>
                     </a>
                 </li>
             </ul>
