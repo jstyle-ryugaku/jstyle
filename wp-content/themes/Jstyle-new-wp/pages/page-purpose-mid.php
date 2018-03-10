@@ -84,7 +84,7 @@ get_header();
         <section class="pd-qa">
             <h2 class="title">中期留学Q&A</h2>
             <ul class="pa-wrapper">
-                <li class="qa-01">
+                <li class="qa-01 qa-anime">
                     <div class="inner">
                         <span class="question">
                             <p class="text">語学力はどれくらい必要？</p>
@@ -94,7 +94,16 @@ get_header();
                         </span>
                     </div>
                 </li>
-                <li class="qa-02">
+                <li class="qa-02 qa-anime">
+                    <div class="inner">
+                        <span class="question">
+                            <p class="text">語学力はどれくらい必要？っていうのが2行になったらこうなります</p>
+                        </span>
+                        <span class="answer">
+                            <p class="text">語学力があるにこしたことはないですが、なくても大丈夫です。積極的に会話をし、短期間でできる最大限の努力をしましょう。</p>
+                        </span>
+                </li>
+                <li class="qa-03 qa-anime">
                     <div class="inner">
                         <span class="question">
                             <p class="text">語学力はどれくらい必要？</p>
@@ -103,16 +112,7 @@ get_header();
                             <p class="text">語学力があるにこしたことはないですが、なくても大丈夫です。積極的に会話をし、短期間でできる最大限の努力をしましょう。</p>
                         </span>
                 </li>
-                <li class="qa-03">
-                    <div class="inner">
-                        <span class="question">
-                            <p class="text">語学力はどれくらい必要？</p>
-                        </span>
-                        <span class="answer">
-                            <p class="text">語学力があるにこしたことはないですが、なくても大丈夫です。積極的に会話をし、短期間でできる最大限の努力をしましょう。</p>
-                        </span>
-                </li>
-                <li class="qa-04">
+                <li class="qa-04 qa-anime">
                     <div class="inner">
                         <span class="question">
                             <p class="text">語学力はどれくらい必要？</p>
@@ -128,7 +128,69 @@ get_header();
         <!-- Jstyleで中期留学しました！ -->
         <section class="pd-experience">
             <h2 class="title">Jstyleで中期留学しました！</h2>
-            あああああ
+            <div class="ep-wrapper">
+
+                <!-- 左側・体験談 -->
+                <div class="ep-left">
+                    <ul>
+                        <li class="i-01">
+                            <a class="inner-link" href="javascript:void(0);">
+                                <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose-mid/experience-01.jpg')"></div>
+                                <h3 class="title">1年間で身についた英語力をもっと上達させたい</h3>
+                                <p class="text">
+                                    私は高校1年生の時に1年間アメリカのオハイオ州に留学していました。帰国後、進路を考えた際に海外進学という…
+                                </p>
+                                <span class="sub-data">
+                                    <time>2017.1.2</time>
+                                    <span class="tag">中期留学</span>
+                                    <span class="tag">アメリカ</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="i-02">
+                            <a class="inner-link" href="javascript:void(0);">
+                                <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose-mid/experience-02.jpg')"></div>
+                                <h3 class="title">1年間で身についた英語力をもっと上達させたい</h3>
+                                <p class="text">
+                                    私は高校1年生の時に1年間アメリカのオハイオ州に留学していました。帰国後、進路を考えた際に海外進学という…
+                                </p>
+                                <span class="sub-data">
+                                    <time>2017.1.2</time>
+                                    <span class="tag">中期留学</span>
+                                    <span class="tag">アメリカ</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="i-03">
+                            <a class="inner-link" href="javascript:void(0);">
+                                <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose-mid/experience-03.jpg')"></div>
+                                <h3 class="title">1年間で身についた英語力をもっと上達させたい</h3>
+                                <p class="text">
+                                    私は高校1年生の時に1年間アメリカのオハイオ州に留学していました。帰国後、進路を考えた際に海外進学という…
+                                </p>
+                                <span class="sub-data">
+                                    <time>2017.1.2</time>
+                                    <span class="tag">中期留学</span>
+                                    <span class="tag">アメリカ</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 右側・バナー -->
+                <div class="ep-right">
+                    <a href="javascript:void(0);">
+                        <img class="image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-mid/banner-01.jpg')">
+                    </a>
+                    <a href="javascript:void(0);">
+                        <img class="image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-mid/banner-01.jpg')">
+                    </a>
+                    <a href="javascript:void(0);">
+                        <img class="image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-mid/banner-01.jpg')">
+                    </a>
+                </div>
+            </div>
         </section>
     </div>
 </main>
