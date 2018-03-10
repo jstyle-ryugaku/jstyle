@@ -67,7 +67,7 @@ global $author, $post;
                         $parent_slug = get_post($parent_id)->post_name;
                         ?>
                         <a href="<?php echo get_permalink($parent_id); ?>" itemscope itemtype="http://schema.org/Thing" itemprop="item">
-                            <span itemprop="name"><?php echo get_post($parent_id)->post_name; ?></span>
+                            <span itemprop="name"><?php echo strip_tags( get_post($parent_id)-> post_title ) ;?></span>
                         </a>
                     </li>
                 <?php endif; ?>
