@@ -43,7 +43,7 @@ if ($dp_options['search_post_type'] == 'interview') {
         if (get_option('show_on_front') == 'page' && get_option('page_for_posts') && get_option('permalink_structure')) {
             $search_forms['form_action'] = get_permalink(get_option('page_for_posts'));
         } else {
-            $search_forms['form_action'] = home_url('/interview');
+            $search_forms['form_action'] = home_url('/interview-search');
         }
         if (get_option('show_on_front') == 'page' && get_option('page_for_posts') && !get_option('permalink_structure')) {
             $search_forms['form_action_hidden']['page_id'] = get_option('page_for_posts');
