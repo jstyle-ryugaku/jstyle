@@ -144,7 +144,7 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
             </div>
         </div>
     </section>
-    <div class="l-inner nav-footer-container">
+    <div class="l-inner nav-footer-bar-container">
         <div class="p-company-nav__container">
             <p class="p-address">提携先</p>
             <p class="p-university">慶應義塾大学</p>
@@ -189,8 +189,8 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
         </p>
     </div>
     <div id="js-request" class="p-request">
-        <div class="footer-container">
-            <div class="footer-btn-container">
+        <div class="footer-bar-container">
+            <div class="footer-bar__btn">
                 <div class="call footer-btn">
                     <a class="tbtn" href="tel:03-5848-5432">
                         <i class="fas fa-phone"></i>
@@ -204,10 +204,10 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
                     </a>
                 </div>
             </div>
-            <div class="p-request__inner">
+            <div class="footer-bar__message p-request__inner">
                 <p class="p-request__text" style="color: #ffffff;">相談無料！元留学経験者が親身に相談に乗ります！</p>
             </div>
-            <button id="js-request__close" class="p-request__close"></button>
+<!--            <button id="js-request__close" class="p-request__close"></button>-->
         </div>
 </footer>
 

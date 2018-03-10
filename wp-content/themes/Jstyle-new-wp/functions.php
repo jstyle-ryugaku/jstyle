@@ -63,36 +63,147 @@ function vogue_init() {
 	}
 	register_post_type( 'news', $news_args );
 
-	// Plan
-	$plan_labels = array(
-		'name' => get_custom_post_label( 'plan' )
-	);
-	$plan_args = array(
-		'has_archive' => true,
-		'labels' => $plan_labels,
-		'menu_position' => 5,
-		'public' => true,
-		'supports' => array( 'editor', 'revisions', 'title' )
-	);
-	if ( $options['plan_slug'] ) {
-		$plan_args['rewrite'] = array( 'slug' => $options['plan_slug'] );
-	}
-	register_post_type( 'plan', $plan_args );
+    // Intervew
+    $interview_args = array(
+        'has_archive' => true,
+        'label' => 'Interview',
+        'menu_position' => 5,
+        'public' => true,
+        'supports' => array( 'editor', 'revisions', 'thumbnail', 'title' )
+    );
+    if ( $options['interview_slug'] ) {
+        $interview_args['rewrite'] = array( 'slug' => $options['interview_slug'] );
+    }
+    register_post_type( 'interview', $interview_args );
+
+    register_taxonomy(
+        'kind',
+        'interview',
+        array(
+            'label' => __( '体験記の種類' ),
+            'rewrite' => array( 'slug' => 'kind' ),
+            'hierarchical' => true,
+        )
+    );
+
+    register_taxonomy(
+        'term',
+        'interview',
+        array(
+            'label' => __( '留学期間' ),
+            'rewrite' => array( 'slug' => 'term' ),
+            'hierarchical' => true,
+        )
+    );
+
+    register_taxonomy(
+        'country',
+        'interview',
+        array(
+            'label' => __( '国' ),
+            'rewrite' => array( 'slug' => 'country' ),
+            'hierarchical' => true,
+        )
+    );
+
+    register_post_type(
+        '目的から探す',
+        array(
+            'label' => 'Purpose',
+            'public' => true,
+            'hierarchical' => false,
+            'has_archive' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                'thumbnail'),
+            'menu_position' => 5
+        )
+    );
+
+    register_post_type(
+        '国から探す',
+        array(
+            'label' => 'Country',
+            'public' => true,
+            'hierarchical' => false,
+            'has_archive' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                'thumbnail'),
+            'menu_position' => 5
+        )
+    );
+
+    register_post_type(
+        '留学の準備',
+        array(
+            'label' => 'Prepare',
+            'public' => true,
+            'hierarchical' => false,
+            'has_archive' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                'thumbnail'),
+            'menu_position' => 5
+        )
+    );
+
+    register_post_type(
+        '留学体験記',
+        array(
+            'label' => 'Studying_Abroad_Interview',
+            'public' => true,
+            'hierarchical' => false,
+            'has_archive' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                'thumbnail'),
+            'menu_position' => 5
+        )
+    );
 }
 add_action( 'init', 'vogue_init' );
+
+function format_init()
+{
+    // 新規分類を作成
+
+    $labels = array(
+        'name' => _x('国', 'country'),
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'country'),
+    );
+
+    register_taxonomy(
+        'format',
+        'Studying_Abroad_Interview',
+        $args);
+}
+add_action('init', 'format_init');
 
 /**
  * カスタム投稿タイプのラベルを取得する
  *
- * @param  string $slug 取得したいカスタム投稿のスラッグ（news or plan） 
+ * @param  string $slug 取得したいカスタム投稿のスラッグ（news or interview）
  * @return string       テーマオプションで設定されたカスタム投稿のラベルを返す
- *                      渡されたパラメータがnews or plan でない場合は空の文字列を返す
+ *                      渡されたパラメータがnews or interview)でない場合は空の文字列を返す
  */
 function get_custom_post_label( $slug ) {
 
 	$options = get_design_plus_option();
 
-	if ( 'news' === $slug || 'plan' === $slug ) {
+	if ( 'news' === $slug || 'interview' === $slug ) {
 		
 		if ( $options[$slug . '_breadcrumb'] ) {
 			return esc_html( $options[$slug . '_breadcrumb'] );
@@ -165,7 +276,7 @@ function vogue_scripts() {
 	// 共通CSS
     wp_enqueue_style( 'vogue-common', get_template_directory_uri() . '/assets/css/common.css', false, version_num() );
 
-	if(is_page('interview')) {
+	if(is_page('interview-search')) {
 	    wp_enqueue_style( 'vogue-interview', get_template_directory_uri() . '/assets/css/interview.css', false, version_num() );
         wp_enqueue_script( 'vogue-interview', get_template_directory_uri() . '/assets/js/interview.js', array( 'jquery' ), version_num(), true );
     }
@@ -669,3 +780,51 @@ require get_template_directory() . '/inc/widget/archive_list.php';
 require get_template_directory() . '/inc/widget/category_list.php';
 require get_template_directory() . '/inc/widget/google_search.php';
 require get_template_directory() . '/inc/widget/styled_post_list.php';
+
+/**
+ * Interview Page func
+ */
+// 更新通知 --------------------------------------------------------------------------------
+require get_template_directory() . '/functions/init.php';
+require get_template_directory() . '/functions/custom_search.php';
+
+// テンプレートファイル差し替え
+function custom_post_type_template_include( $template ) {
+    // カスタム検索用グローバル変数
+    global $custom_search_vars;
+
+    global $dp_options;
+    if ( ! $dp_options ) $dp_options = get_desing_plus_option();
+
+    $template_name = null;
+
+    if ( is_singular( $dp_options['news_slug'] ) ) {
+        $template_name = 'single-news.php';
+    } elseif ( is_singular( $dp_options['introduce_slug'] ) ) {
+        $template_name = 'single-introduce.php';
+    } elseif ( $custom_search_vars ) {
+        // カスタム検索の場合はcustom_search.phpで処理されるため何もしない
+    } elseif ( is_post_type_archive( $dp_options['news_slug'] ) ) {
+        $template_name = 'archive-news.php';
+    } elseif (
+        is_post_type_archive( $dp_options['introduce_slug'] ) ||
+        ( is_tax( $dp_options['introduce_category1_slug'] ) && $dp_options['use_introduce_category1'] && $dp_options['use_introduce_category1_introduce_archive'] ) ||
+        ( is_tax( $dp_options['introduce_category2_slug'] ) && $dp_options['use_introduce_category2'] && $dp_options['use_introduce_category2_introduce_archive'] ) ||
+        ( is_tax( $dp_options['introduce_category3_slug'] ) && $dp_options['use_introduce_category3'] && $dp_options['use_introduce_category3_introduce_archive'] )
+    ) {
+        $template_name = 'archive-introduce.php';
+    } elseif ( is_category() || is_tax( array( $dp_options['category2_slug'], $dp_options['category3_slug'], $dp_options['introduce_category1_slug'], $dp_options['introduce_category2_slug'], $dp_options['introduce_category3_slug'] ) ) ) {
+        $template_name = 'custom_search_results.php';
+    }
+
+    if ( $template_name ) {
+        if ( file_exists( STYLESHEETPATH . '/' . $template_name ) ) {
+            return STYLESHEETPATH . '/' . $template_name;
+        } elseif ( file_exists( TEMPLATEPATH . '/' . $template_name ) ) {
+            return TEMPLATEPATH . '/' . $template_name;
+        }
+    }
+
+    return $template;
+}
+add_filter( 'template_include', 'custom_post_type_template_include' );
