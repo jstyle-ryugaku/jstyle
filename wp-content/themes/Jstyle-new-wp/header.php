@@ -93,7 +93,7 @@ if ($tcd_splash_page->is_splash_page()) {
                                class="menu-button--en">Purpose</span></a></li>
                 <li><a href="<?php echo home_url('/preparation') ;?>"><span class="menu-button--ja">留学の準備</span><span
                                class="menu-button--en">Prepare</span></a></li>
-                <li><a href="<?php echo home_url('/interview') ;?>"><span class="menu-button--ja">留学体験記</span><span class="menu-button--en">Interview</span></a>
+                <li><a href="<?php echo home_url('/interview-search') ;?>"><span class="menu-button--ja">留学体験記</span><span class="menu-button--en">Interview</span></a>
                 </li>
             </ul>
         </nav>

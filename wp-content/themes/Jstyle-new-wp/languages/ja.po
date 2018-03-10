@@ -1184,8 +1184,8 @@ msgid "Align bottom"
 msgstr "下寄せ"
 
 #: admin/inc/plan.php:54 admin/inc/plan.php:62
-msgid "Plan"
-msgstr "プラン"
+msgid "Interview"
+msgstr "インタビュー"
 
 #: admin/inc/plan.php:73
 msgid "(Archive page)"
