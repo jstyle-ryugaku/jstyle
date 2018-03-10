@@ -72,7 +72,7 @@ $blog_query = new WP_Query($blog_args);
                                                     <span class="p-article04__category">
                                                         <?php
                                                         $term_terms = get_the_terms($post->ID, 'term');
-                                                        $country_terms = get_the_terms($post->ID, 'country-kind');
+                                                        $kind_terms = get_the_terms($post->ID, 'kind');
                                                         ?>
                                                         <a>
                                                             <?php
@@ -81,7 +81,7 @@ $blog_query = new WP_Query($blog_args);
                                                         </a>
                                                         <a>
                                                             <?php
-                                                            echo $country_terms[0]->name;
+                                                            echo $kind_terms[0]->name;
                                                             ?>
                                                         </a>
                                                     </span>

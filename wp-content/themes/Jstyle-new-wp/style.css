@@ -2818,7 +2818,7 @@ ul.content01_builder_container li i:hover::after {
     cursor: pointer;
     border: none !important;
     border-radius: 20px;
-    color: black !important;
+    color: #111 !important;
     height: 50px;
     width: 250px;
     text-align: center;
