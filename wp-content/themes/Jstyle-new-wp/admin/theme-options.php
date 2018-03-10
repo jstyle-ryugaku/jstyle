@@ -446,7 +446,7 @@ $dp_default_options = array(
     'show_search_form_keywords' => 1,
     'search_form_keywords_placeholder' => __('Keyword', 'tcd-w'),
 
-    'show_search_form_category1' => 'country',
+    'show_search_form_category1' => 'country-kind',
     'search_form_category1_placeholder' => __('国を選択', 'tcd-w'),
 
     'show_search_form_category2' => 'term',

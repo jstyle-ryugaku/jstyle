@@ -2818,7 +2818,7 @@ ul.content01_builder_container li i:hover::after {
     cursor: pointer;
     border: none !important;
     border-radius: 20px;
-    color: black !important;
+    color: #111 !important;
     height: 50px;
     width: 250px;
     text-align: center;
@@ -2846,11 +2846,11 @@ ul.content01_builder_container li i:hover::after {
     transform: scale(0.1, 1);
 }
 
-.p-content02__item-title:hover {
+.p-hover-effect--type1:hover .p-content02__item-title {
     letter-spacing: 2px;
 }
 
-.p-content02__item-title:hover::before {
+.p-hover-effect--type1:hover .p-content02__item-title::before {
     opacity: 1;
     transform: scale(1, 1);
 }
@@ -2867,7 +2867,7 @@ ul.content01_builder_container li i:hover::after {
     background-color: rgba(255, 255, 255, 0.6) !important;
 }
 
-.p-content02__item-title:hover::after {
+.p-hover-effect--type1:hover .p-content02__item-title::after {
     opacity: 0;
     transform: scale(0.1, 1);
 }
@@ -3885,6 +3885,7 @@ li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
     z-index: 100;
     width: 100%;
     margin: auto;
+    margin-left: 150px;
 }
 
 .js-hero-header__leftbutton, .js-hero-header__rightbutton {
@@ -3908,6 +3909,7 @@ li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
     float: left;
     color: rgb(230, 165, 40);
     margin-left: 400px;
+    margin-left: 25%;
     border-color: rgb(230, 165, 40);
 }
 
@@ -3915,6 +3917,7 @@ li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
     float: right;
     color: rgb(230, 135, 145);
     margin-right: 400px;
+    margin-right: 25%;
     border-color: rgb(230, 135, 145);
 }
 
@@ -3958,19 +3961,13 @@ li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
     background-color: rgb(230, 135, 145);
 }
 
-@media only screen and (max-width: 1024px) {
-    .js-hero-header__leftbutton {
-        margin-left: 100px;
-        width: 30%;
-    }
-
-    .js-hero-header__rightbutton {
-        margin-right: 100px;
-        width: 30%;
+@media only screen and (max-width: 1145px) {
+    .js-hero-header__button {
+        margin: 0;
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 810px) {
     .js-hero-header__leftbutton, .js-hero-header__rightbutton {
         margin: 0px 30px 0px;
         width: 30%;

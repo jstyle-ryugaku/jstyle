@@ -34,11 +34,11 @@ $tax_query = array();
 if (isset($_GET['search_cat1'])) {
     $search_category1 = intval($_GET['search_cat1']);
     if ($search_category1 > 0) {
-        $tax_query[] =  array(
-            'taxonomy' => 'country',
+        $tax_query[] = array(
+            'taxonomy' => 'country-kind',
             'field' => 'term_id',
             'terms' => $search_category1,
-            'operator'=>'IN'
+            'operator'=>'in'
         );
     }
 }
@@ -171,7 +171,7 @@ $args['order'] = $sort;
                         <div class="interview__article-category-container">
                             <?php
                             $term_terms = get_the_terms($post->ID, 'term');
-                            $country_terms = get_the_terms($post->ID, 'country');
+                            $country_terms = get_the_terms($post->ID, 'country-kind');
                             ?>
                             <a>
                                 <?php

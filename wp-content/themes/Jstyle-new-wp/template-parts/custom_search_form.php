@@ -17,8 +17,8 @@ if ($dp_options['search_post_type'] == 'interview') {
             $tax_slug = '';
             $placeholder = '';
 
-            if ($dp_options['show_search_form_category' . $i] == 'country') {
-                $tax_slug = 'country';
+            if ($dp_options['show_search_form_category' . $i] == 'country-kind') {
+                $tax_slug = 'country-kind';
                 $placeholder = str_replace('%category_label%', $dp_options['category_label'], $dp_options['search_form_category' . $i . '_placeholder']);
 
             } elseif ($dp_options['show_search_form_category' . $i] == 'term') {

@@ -184,7 +184,7 @@ if ($tcd_splash_page->is_splash_page()) {
                     <?php //echo home_url('/'); ?><!--">持ち物リスト<span></span></a></li>-->
                     <!--                    </ul>-->
                 </li>
-                <li class="menu-item-has-children"><a href="<?php echo home_url('/interview'); ?>">
+                <li class="menu-item-has-children"><a href="<?php echo home_url('/interview-search'); ?>">
                         <div
                                 class="menu-button--ja">留学体験記
                         </div>

@@ -7,15 +7,17 @@ get_header();
 
 $blog_args = array(
     'post_status' => 'publish',
-    'post_type' => 'post',
+    'post_type' => 'interview',
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'country-kind',
+            'field' => 'slug',
+            'terms' => 'アメリカ',
+            'operator'=>'IN'
+        ),
+    ),
 );
 $blog_query = new WP_Query($blog_args);
-$news_args = array(
-    'posts_per_page' => 3,
-    'post_status' => 'publish',
-    'post_type' => 'news'
-);
-$news_query = new WP_Query($news_args);
 ?>
 <main class="l-main">
     <?php get_template_part( 'template-parts/page-header' ); ?>
@@ -68,7 +70,20 @@ $news_query = new WP_Query($news_args);
 
                                                 <?php if ($options['show_category']) : ?>
                                                     <span class="p-article04__category">
-                                                        <?php the_category(', '); ?>
+                                                        <?php
+                                                        $term_terms = get_the_terms($post->ID, 'term');
+                                                        $kind_terms = get_the_terms($post->ID, 'kind');
+                                                        ?>
+                                                        <a>
+                                                            <?php
+                                                            echo $term_terms[0]->name;
+                                                            ?>
+                                                        </a>
+                                                        <a>
+                                                            <?php
+                                                            echo $kind_terms[0]->name;
+                                                            ?>
+                                                        </a>
                                                     </span>
                                                 <?php endif; ?>
                                             </p>
@@ -135,34 +150,34 @@ $news_query = new WP_Query($news_args);
                             <h1 class="title">短期留学</h1>
                             <span class="text">テキストテキストテキストテキストテキス</span>
                         </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-image.jpg')"></div>
+                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-short.jpg')"></div>
                     </a>
                 </li>
                 <li class="image-link-list__listed-link">
                     <a href="javascript:void(0);">
                         <div class="image-link-list__text-container">
-                            <h1 class="title">短期留学</h1>
+                            <h1 class="title">中期留学</h1>
                             <span class="text">テキストテキストテキストテキストテキス</span>
                         </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-image.jpg')"></div>
+                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-mid.jpg')"></div>
                     </a>
                 </li>
                 <li class="image-link-list__listed-link">
                     <a href="javascript:void(0);">
                         <div class="image-link-list__text-container">
-                            <h1 class="title">短期留学</h1>
+                            <h1 class="title">長期留学</h1>
                             <span class="text">テキストテキストテキストテキストテキス</span>
                         </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-image.jpg')"></div>
+                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-long.jpg')"></div>
                     </a>
                 </li>
                 <li class="image-link-list__listed-link">
                     <a href="javascript:void(0);">
                         <div class="image-link-list__text-container">
-                            <h1 class="title">短期留学</h1>
+                            <h1 class="title">ワーキングホリデー</h1>
                             <span class="text">テキストテキストテキストテキストテキス</span>
                         </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-image.jpg')"></div>
+                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-holiday.jpg')"></div>
                     </a>
                 </li>
             </ul>
