@@ -104,7 +104,7 @@ function vogue_init() {
         'interview',
         array(
             'label' => __( '国' ),
-            'rewrite' => array( 'slug' => 'coutnry' ),
+            'rewrite' => array( 'slug' => 'country' ),
             'hierarchical' => true,
         )
     );

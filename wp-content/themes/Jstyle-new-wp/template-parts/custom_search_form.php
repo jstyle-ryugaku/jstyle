@@ -4,11 +4,6 @@ if (!$dp_options) $dp_options = get_desing_plus_option();
 
 $search_forms = array('columns' => 0);
 
-echo '<div style="color:#FFF">';
-echo 'かはfjぇかjf；あdslfj';
-var_dump($dp_options['search_post_type']);
-echo '</div>';
-
 if ($dp_options['search_post_type'] == 'interview') {
     // keywords
     if ($dp_options['show_search_form_keywords'] && $dp_options['searcn_keywords_target']) {
@@ -19,12 +14,17 @@ if ($dp_options['search_post_type'] == 'interview') {
     // category
     for ($i = 1; $i <= 3; $i++) {
         if (!empty($dp_options['show_search_form_category' . $i])) {
-            $tax_slug = 'term';
+            $tax_slug = '';
             $placeholder = '';
 
             if ($dp_options['show_search_form_category' . $i] == 'country') {
                 $tax_slug = 'country';
                 $placeholder = str_replace('%category_label%', $dp_options['category_label'], $dp_options['search_form_category' . $i . '_placeholder']);
+
+            } elseif ($dp_options['show_search_form_category' . $i] == 'term') {
+                $tax_slug = 'term';
+                $placeholder = str_replace('%category_label%', $dp_options['category_label'], $dp_options['search_form_category' . $i . '_placeholder']);
+
             } elseif (!empty($dp_options['use_' . $dp_options['show_search_form_category' . $i]])) {
                 $tax_slug = $dp_options[$dp_options['show_search_form_category' . $i] . '_slug'];
                 $placeholder = str_replace('%category_label%', $dp_options[$dp_options['show_search_form_category' . $i] . '_label'], $dp_options['search_form_category' . $i . '_placeholder']);
@@ -43,46 +43,10 @@ if ($dp_options['search_post_type'] == 'interview') {
         if (get_option('show_on_front') == 'page' && get_option('page_for_posts') && get_option('permalink_structure')) {
             $search_forms['form_action'] = get_permalink(get_option('page_for_posts'));
         } else {
-            $search_forms['form_action'] = home_url('/');
+            $search_forms['form_action'] = home_url('/interview');
         }
         if (get_option('show_on_front') == 'page' && get_option('page_for_posts') && !get_option('permalink_structure')) {
             $search_forms['form_action_hidden']['page_id'] = get_option('page_for_posts');
-        }
-    }
-
-} elseif ($dp_options['searcn_post_type'] == 'introduce') {
-    // keywords
-    if ($dp_options['show_search_form_keywords_introduce'] && $dp_options['searcn_keywords_target']) {
-        $search_forms['search_keywords']['placeholder'] = $dp_options['search_form_keywords_placeholder_introduce'];
-        $search_forms['columns']++;
-    }
-
-    // category
-    for ($i = 1; $i <= 2; $i++) {
-        if (!empty($dp_options['show_search_form_category' . $i . '_introduce'])) {
-            $tax_slug = 'term';
-            $placeholder = '';
-            if (!empty($dp_options['use_' . $dp_options['show_search_form_category' . $i . '_introduce']])) {
-                $tax_slug = $dp_options[$dp_options['show_search_form_category' . $i . '_introduce'] . '_slug'];
-                $placeholder = str_replace('%category_label%', $dp_options[$dp_options['show_search_form_category' . $i . '_introduce'] . '_label'], $dp_options['search_form_category' . $i . '_placeholder_introduce']);
-            }
-            if ($tax_slug && get_taxonomy($tax_slug)) {
-                $search_forms['search_cat' . $i]['slug'] = $tax_slug;
-                $search_forms['search_cat' . $i]['placeholder'] = $placeholder;
-                $search_forms['columns']++;
-            }
-        }
-    }
-
-    // form action
-    if (!empty($search_forms['columns'])) {
-        if (get_option('permalink_structure')) {
-            $search_forms['form_action'] = get_post_type_archive_link($dp_options['introduce_slug']);
-        } else {
-            $search_forms['form_action'] = home_url('/');
-        }
-        if (!get_option('permalink_structure')) {
-            $search_forms['form_action_hidden']['post_type'] = $dp_options['introduce_slug'];
         }
     }
 }
@@ -104,7 +68,7 @@ if (!empty($search_forms['form_action']) && !empty($search_forms['columns'])) :
         }
     }
 
-    	if (!empty($search_forms['search_keywords'])) :
+//    	if (!empty($search_forms['search_keywords'])) :
     ?>
     <div class="header_search_inputs header_search_keywords">
         <input type="text" id="header_search_keywords" name="search_keywords"
@@ -126,7 +90,7 @@ if (!empty($search_forms['form_action']) && !empty($search_forms['columns'])) :
         </ul>
     </div>
     <?php
-    	endif;
+//    	endif;
 
     for ($i = 1; $i <= 2; $i++) :
 		if (!empty($search_forms['search_cat'.$i]['slug'])) :

@@ -23,23 +23,40 @@ if ($custom_search_vars) {
     }
 }
 
-// keyword
-if (isset($_GET['search_keywords'])) {
-    $search_keyword = $_GET['search_keywords'];
-    $args['s'] = $search_keyword;
-}
+//// keyword
+//if (isset($_GET['search_keywords'])) {
+//    $search_keyword = $_GET['search_keywords'];
+//    $args['s'] = $search_keyword;
+//}
 
 // category
+$tax_query = array();
 if (isset($_GET['search_cat1'])) {
-    $search_category1 = $_GET['search_cat1'];
-}
-if (isset($_GET['search_cat2'])) {
-    $search_category2 = $_GET['search_cat2'];
+    $search_category1 = intval($_GET['search_cat1']);
+    if ($search_category1 > 0) {
+        $tax_query[] =  array(
+            'taxonomy' => 'country',
+            'field' => 'term_id',
+            'terms' => $search_category1,
+            'operator'=>'IN'
+        );
+    }
 }
 
-if ( $search_category1 == 1 && $search_category2 == 1) {
-} else {
-    $args['category__in'] = array($search_category1, $search_category2);
+if (isset($_GET['search_cat2'])) {
+    $search_category2 = intval($_GET['search_cat2']);
+    if ($search_category2 > 0) {
+        $tax_query[] =  array(
+            'taxonomy' => 'term',
+            'field' => 'term_id',
+            'terms' => $search_category2,
+            'operator'=>'IN'
+        );
+    }
+}
+
+if (count($tax_query) > 0) {
+    $args['tax_query'] = $tax_query;
 }
 
 // sort
@@ -48,7 +65,6 @@ if (isset($_GET['sort'])) {
 } else {
     $sort = 'desc';
 }
-
 $args['order'] = $sort;
 
 ?>
@@ -154,18 +170,19 @@ $args['order'] = $sort;
 
                         <div class="interview__article-category-container">
                             <?php
-                            $categories = get_the_category();
-                            $separator = ' ';
-                            $output = '';
-                            if ( $categories ) {
-                                foreach( $categories as $category ) {
-                                    $output .= '<a href="' . get_category_link( $category->term_id ) . '" title="'
-                                        . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) )
-                                        . '">' . $category->cat_name . '</a>' . $separator;
-                                }
-                                echo trim( $output, $separator );
-                            }
+                            $term_terms = get_the_terms($post->ID, 'term');
+                            $country_terms = get_the_terms($post->ID, 'country');
                             ?>
+                            <a>
+                                <?php
+                                echo $term_terms[0]->name;
+                                ?>
+                            </a>
+                            <a>
+                                <?php
+                                echo $country_terms[0]->name;
+                                ?>
+                            </a>
                         </div>
 
                         <div class="interview__article-date">

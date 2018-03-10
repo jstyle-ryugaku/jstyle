@@ -445,10 +445,13 @@ $dp_default_options = array(
     'search_keywords_target' => array('title'),
     'show_search_form_keywords' => 1,
     'search_form_keywords_placeholder' => __('Keyword', 'tcd-w'),
+
     'show_search_form_category1' => 'country',
     'search_form_category1_placeholder' => __('国を選択', 'tcd-w'),
-    'show_search_form_category2' => 'category2',
-    'search_form_category2_placeholder' => __('Select from %category_label%', 'tcd-w'),
+
+    'show_search_form_category2' => 'term',
+    'search_form_category2_placeholder' => __('期間を選択', 'tcd-w'),
+
     'show_search_form_category3' => 'category3',
     'search_form_category3_placeholder' => __('Select from %category_label%', 'tcd-w'),
     'show_search_form_keywords_introduce' => 1,
