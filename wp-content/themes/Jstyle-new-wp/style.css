@@ -141,6 +141,8 @@ audio:not([controls]) {
 /** Remove the border on images inside links in IE 10-. */
 img {
     border-style: none;
+    width: auto;
+    height: auto;
 }
 
 /** Hide the overflow in IE. */
@@ -436,13 +438,13 @@ ul {
     max-width: 1150px;
 }
 
-@media only screen and (max-width: 767px) {
-    .l-inner {
-        box-sizing: border-box;
-        width: 100%;
-        padding: 0 20px;
-    }
-}
+/*@media only screen and (max-width: 767px) {*/
+/*.l-inner {*/
+/*box-sizing: border-box;*/
+/*width: 100%;*/
+/*padding: 20px 0 50px;*/
+/*}*/
+/*}*/
 
 /* Contents ----------------------------------------------------------------- */
 .l-contents {
@@ -497,6 +499,10 @@ ul {
     margin-bottom: 25px;
 }
 
+.nav-footer-bar-container {
+    padding-bottom: 50px;
+}
+
 @media only screen and (max-width: 767px) {
     .l-footer {
         background: #f6f6f6;
@@ -519,12 +525,30 @@ ul {
     line-height: 70px;
     width: 100%;
     position: fixed !important;
-    top: -70px;
-    z-index: 999;
-    -webkit-animation: slideDown 1.5s ease-in-out 0s forwards;
-    animation: slideDown 1.5s ease-in-out 0s forwards;
+    z-index: 1000;
     padding: 0 30px 0 50px;
     box-sizing: border-box;
+}
+
+@media (max-width: 1090px) {
+    .l-header {
+        padding: 0 10px 0 20px;
+    }
+
+    h1.l-header__logo {
+        padding-left: 0;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .l-header {
+        padding: 0;
+    }
+
+    h1.l-header__logo {
+        padding-left: 20px;
+    }
 }
 
 .l-header--fixed {
@@ -569,7 +593,8 @@ ul {
 }
 
 .l-header__logo img {
-    height: 45%;
+    width: 120px;
+    height: auto;
 }
 
 .l-header__inner ul.l-header__menu {
@@ -585,14 +610,32 @@ ul {
     height: 70px;
 }
 
-.l-header__inner ul.l-header__menu li {
+.l-header__inner ul.l-header__menu > li {
     list-style-type: none;
     text-align: center;
     margin-right: 40px;
+    height: 70px;
 }
 
-.l-header__inner ul.l-header__menu li span.menu-button--ja {
-    font-family: HiraginoSans;
+.l-header__inner ul.l-header__menu li:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 1090px) {
+    .l-header__inner ul.l-header__menu {
+        padding: 0 20px;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+    }
+
+    .l-header__inner ul.l-header__menu li {
+        margin-right: 20px;
+        height: auto;
+    }
+}
+
+.l-header__inner ul.l-header__menu li div.menu-button--ja {
+    font-family: Hiragino Sans, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-size: 10px;
     color: #999999;
     letter-spacing: 1px;
@@ -601,10 +644,11 @@ ul {
     margin-top: -9px;
     margin-bottom: 5px;
     height: 20%;
+    transition: 0.2s;
 }
 
-.l-header__inner ul.l-header__menu li span.menu-button--en {
-    font-family: Avenir;
+.l-header__inner ul.l-header__menu li div.menu-button--en {
+    font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     list-style-type: none;
     font-size: 16px;
     font-weight: 900;
@@ -613,6 +657,13 @@ ul {
     color: #003D9C;
     display: block;
     height: 90%;
+    transition: 0.2s;
+}
+
+.l-header__inner ul.l-header__menu li:hover div.menu-button--ja,
+.l-header__inner ul.l-header__menu li:hover div.menu-button--en {
+    opacity: 0.7;
+    transition: 0.2s;
 }
 
 .l-header__inner .p-request__inner {
@@ -658,26 +709,26 @@ ul {
     width: inherit;
 }
 
-@media only screen and (max-width: 1024px) {
-    .l-header {
-        height: 60px;
-        line-height: 60px;
+.tel-btn-container .tel-btn a:hover {
+    background: #003D9C;
+    color: #fff !important;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    border-radius: 20px;
+    width: inherit;
+}
+
+@media only screen and (max-width: 979px) {
+    .l-header__inner ul.l-header__menu {
+        padding: 0 5%;
     }
 
-    .l-header__inner {
-        display: block;
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        max-width: none;
-    }
-
-    .l-header__logo {
-        padding-left: 5.55556%;
+    .l-header__tel {
+        display: none;
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 800px) {
     .l-header {
         top: 0;
         -webkit-animation: none;
@@ -690,6 +741,27 @@ ul {
 
     .l-header__logo {
         padding-left: 20px;
+    }
+
+    .l-header__inner ul.l-header__menu {
+        display: block;
+        background: #fff;
+        padding-top: 9px;
+        height: calc( 100vh - 70px );
+        overflow-y: scroll;
+    }
+
+    .footer-bar-container--sp-header .footer-btn a {
+        color: #003d9c;
+        height: auto;
+    }
+
+    .footer-bar-container--sp-header .footer-btn a:hover {
+        color: #003d9c;
+    }
+
+    .footer-bar-container--sp-header .footer-btn {
+        border-color: #003d9c;
     }
 }
 
@@ -1349,7 +1421,7 @@ ul {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    height: 100%;
+    /*height: 100%;*/
 }
 
 .c-logo a {
@@ -1423,7 +1495,7 @@ ul {
 }
 
 .c-menu-button {
-    color: #fff;
+    color: #003D9C;
     display: none;
     position: absolute;
     top: 0;
@@ -1980,7 +2052,8 @@ ul {
 	*/
 .p-address {
     color: #666;
-    font-size: 14px;
+    font-size: 22px;
+    font-weight: bold;
     line-height: 1.8;
     margin-bottom: 25px;
     text-align: center;
@@ -2270,14 +2343,25 @@ ul {
 
 .p-article04__excerpt {
     font-size: 14px;
-    line-height: 1.3;
+    line-height: 1.4;
+    letter-spacing: 1px;
     margin-bottom: 10px;
+    font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
 }
 
 .p-article04__meta {
     color: #999;
     font-size: 12px;
     line-height: 1.9;
+}
+
+.p-article04__date {
+    display: block;
+    float: left;
+    color: #000;
+    font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    line-height: 1.5;
+    letter-spacing: 2.1px;
 }
 
 .p-article04__date + .p-article04__category::before {
@@ -2290,19 +2374,29 @@ ul {
 }
 
 .p-article04__category a {
-    color: inherit;
+    word-break: break-all;
+    padding: 0px 8px;
+    border-radius: 10px;
+    /*margin-left: 5px;*/
+    margin-right: -5px;
+    background: #4a4a4a;
+    color: #fff;
+    font-size: 10px;
+    display: block;
+    float: left;
+    font-weight: bold;
+    transform: scale(0.8);
+    border: 1px solid transparent;
+    box-sizing: border-box;
 }
 
-/*.p-article04__category a {*/
-/*font-size: 10px;*/
-/*width: 61px;*/
-/*height: 21px;*/
-/*border-radius: 47px;*/
-/*padding: 3px 10px;*/
-/*color: #fff;*/
-/*font-weight: bold;*/
-/*background-color: #4d4d4d;*/
-/*}*/
+.p-article04__category a:hover {
+    color: white!important;
+    /*color: #4a4a4a;*/
+    /*background: #fff;*/
+    /*border: 1px solid #4a4a4a;*/
+    /*box-sizing: border-box;*/
+}
 
 @media only screen and (max-width: 767px) {
     .p-article04__excerpt {
@@ -2451,7 +2545,6 @@ ul {
     /*padding: 0 15px;*/
 
     background: #fff !important;
-    border: 2px solid rgb(230, 106, 70) !important;
     margin-top: 36px;
     box-sizing: border-box;
     color: rgb(230, 106, 70) !important;
@@ -2459,6 +2552,8 @@ ul {
     font-size: 14px;
     text-align: center;
     min-width: 180px;
+    font-weight: bold;
+    letter-spacing: 1px;
     height: auto;
     padding: 20px 15px;
     margin-right: 20px;
@@ -2476,7 +2571,7 @@ ul {
 
 @media only screen and (max-width: 767px) {
     .p-button {
-        min-width: 150px;
+        min-width: 130px;
         height: auto;
     }
 }
@@ -2512,7 +2607,7 @@ ul {
     font-size: 30px;
     line-height: 1.5;
     margin-bottom: 16px;
-    font-family: HiraginoSans;
+    font-family: Hiragino Sans, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-weight: bold;
     letter-spacing: 1.4px;
 }
@@ -2733,7 +2828,7 @@ ul.content01_builder_container li i:hover::after {
     cursor: pointer;
     border: none !important;
     border-radius: 20px;
-    color: black !important;
+    color: #111 !important;
     height: 50px;
     width: 250px;
     text-align: center;
@@ -2761,11 +2856,11 @@ ul.content01_builder_container li i:hover::after {
     transform: scale(0.1, 1);
 }
 
-.p-content02__item-title:hover {
+.p-hover-effect--type1:hover .p-content02__item-title {
     letter-spacing: 2px;
 }
 
-.p-content02__item-title:hover::before {
+.p-hover-effect--type1:hover .p-content02__item-title::before {
     opacity: 1;
     transform: scale(1, 1);
 }
@@ -2782,7 +2877,7 @@ ul.content01_builder_container li i:hover::after {
     background-color: rgba(255, 255, 255, 0.6) !important;
 }
 
-.p-content02__item-title:hover::after {
+.p-hover-effect--type1:hover .p-content02__item-title::after {
     opacity: 0;
     transform: scale(0.1, 1);
 }
@@ -2838,7 +2933,7 @@ ul.content01_builder_container li i:hover::after {
 
     .p-content02__item-img--vertical {
         width: 100%;
-        height: auto;
+        height: auto !important;
     }
 }
 
@@ -3018,8 +3113,15 @@ a.p-content03__news-archive-link:hover {
         padding-top: 40px;
     }
 
-    .p-content03__news-list-item a:hover {
-        background: transparent !important;
+    .p-content03__news-list-item a:hover,
+    a.p-content03__news-archive-link:hover {
+        color: #fff !important;
+        background: inherit;
+    }
+
+    .p-content03__news-list-item a:hover time,
+    .p-content03__news-list-item a:hover h3 {
+        color: #fff;
     }
 }
 
@@ -3077,6 +3179,13 @@ a.p-content03__news-archive-link:hover {
         position: absolute;
         top: 48px;
         right: 20px;
+        text-align: right;
+        width: auto;
+    }
+
+    a.p-content03__news-archive-link:hover {
+        background-color: #f67d23;
+        color: #fff !important;
     }
 
     .p-content03__news-list {
@@ -3099,10 +3208,6 @@ a.p-content03__news-archive-link:hover {
     .p-content03__news-list-item a {
         padding: 17px 0 12.2px;
         border-bottom: 1px solid #444;
-    }
-
-    .p-content03__news-list-item a:hover {
-        background: transparent;
     }
 
     .p-content03__blog-list {
@@ -3434,6 +3539,10 @@ a.p-content03__news-archive-link:hover {
 .p-footer-widget__title {
     font-size: 14px;
     margin-bottom: 26px;
+    font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #222;
 }
 
 @media only screen and (max-width: 767px) {
@@ -3489,6 +3598,15 @@ a.p-content03__news-archive-link:hover {
     font-size: 14px;
     margin: 0;
     padding: 0;
+    flex-grow: 2;
+    display: flex;
+}
+
+@media ( min-width: 801px) {
+
+    .p-global-nav {
+        display: flex !important;
+    }
 }
 
 .p-global-nav li {
@@ -3524,7 +3642,7 @@ a.p-content03__news-archive-link:hover {
 
 .p-global-nav .menu-item-has-children:hover > .sub-menu {
     opacity: 1;
-    top: 0;
+    top: 100%;
     visibility: visible;
 }
 
@@ -3533,11 +3651,11 @@ a.p-content03__news-archive-link:hover {
     opacity: 0;
     padding: 0;
     position: absolute;
-    top: 25%;
-    left: 100%;
+    top: 125%;
+    left: 0;
     transition: 0.3s;
     visibility: hidden;
-    z-index: 99;
+    z-index: 0;
 }
 
 .p-global-nav .sub-menu .menu-item-has-children > a {
@@ -3552,25 +3670,36 @@ a.p-content03__news-archive-link:hover {
 }
 
 .p-global-nav .sub-menu a {
-    background: #222222;
     box-sizing: border-box;
     padding: 16px 22px;
     width: 210px;
 }
 
 .p-global-nav .sub-menu a:hover {
-    background: #004353;
 }
 
-@media only screen and (max-width: 1024px) {
+li.menu-item.menu-item-type-post_type.menu-item-object-plan a {
+    height: auto;
+    font-size: 12px;
+    padding: 15px;
+    background: #003D9C;
+    color: #fff;
+}
+
+li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
+    background: #fff;
+    color: #003D9C;
+}
+
+@media only screen and (max-width: 800px) {
     .p-global-nav {
         background: #222;
-        display: none;
         position: absolute;
-        top: 60px;
+        top: 69px;
         left: 0;
         z-index: 99;
         width: 100%;
+        display: none;
     }
 
     .l-header--fixed .p-global-nav {
@@ -3600,14 +3729,14 @@ a.p-content03__news-archive-link:hover {
         color: #fff;
     }
 
-    .p-global-nav .menu-item-has-children > a > span.is-active::before {
+    .p-global-nav .menu-item-has-children.is-active > a > span.is-active::before {
         content: "-";
     }
 
     .p-global-nav .menu-item-has-children > a > span::before {
         border: 1px solid #555;
         border-radius: 100%;
-        color: #aaa;
+        color: #222;
         content: "+";
         line-height: 24px;
         display: block;
@@ -3619,6 +3748,7 @@ a.p-content03__news-archive-link:hover {
         text-align: center;
         width: 24px;
         height: 24px;
+        font-size: 13px;
     }
 
     .p-global-nav .sub-menu {
@@ -3659,12 +3789,20 @@ a.p-content03__news-archive-link:hover {
     }
 
     .p-global-nav a {
-        color: #fff !important;
+        color: #fff;
         box-sizing: border-box;
         font-size: 13px;
         height: 50px;
         line-height: 50px;
         position: relative;
+    }
+
+    a.p-menu-button {
+        display: block;
+    }
+
+    li.menu-item.menu-item-type-post_type.menu-item-object-plan a {
+        padding: 3px;
     }
 }
 
@@ -3752,19 +3890,20 @@ a.p-content03__news-archive-link:hover {
 }
 
 .js-hero-header__button {
-    top: 40vh;
-    position: relative;
+    position: absolute;
+    bottom: 100px;
     z-index: 100;
     width: 100%;
     margin: auto;
+    margin-left: 150px;
 }
 
 .js-hero-header__leftbutton, .js-hero-header__rightbutton {
     display: inline-block;
     cursor: pointer;
-    border: 1px solid black;
+    border: 3px solid;
     border-radius: 5px;
-    background: rgba(77, 77, 77, 0.8);
+    background: #fff;
     /*height: 50px;*/
     line-height: 60px;
     width: 200px;
@@ -3780,12 +3919,16 @@ a.p-content03__news-archive-link:hover {
     float: left;
     color: rgb(230, 165, 40);
     margin-left: 400px;
+    margin-left: 25%;
+    border-color: rgb(230, 165, 40);
 }
 
 .js-hero-header__rightbutton {
     float: right;
     color: rgb(230, 135, 145);
     margin-right: 400px;
+    margin-right: 25%;
+    border-color: rgb(230, 135, 145);
 }
 
 /*hoveraction*/
@@ -3828,19 +3971,13 @@ a.p-content03__news-archive-link:hover {
     background-color: rgb(230, 135, 145);
 }
 
-@media only screen and (max-width: 1024px) {
-    .js-hero-header__leftbutton {
-        margin-left: 100px;
-        width: 30%;
-    }
-
-    .js-hero-header__rightbutton {
-        margin-right: 100px;
-        width: 30%;
+@media only screen and (max-width: 1145px) {
+    .js-hero-header__button {
+        margin: 0;
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 810px) {
     .js-hero-header__leftbutton, .js-hero-header__rightbutton {
         margin: 0px 30px 0px;
         width: 30%;
@@ -3966,6 +4103,37 @@ a.p-content03__news-archive-link:hover {
     bottom: 40px;
     width: 100%;
     text-align: center;
+}
+
+.p-hero-header__content--desktop {
+    display: block;
+}
+
+.p-hero-header__content--middle,
+.p-hero-header__content--sp {
+    display: none;
+}
+
+}
+
+@media (max-width: 1144px) {
+    .p-hero-header__content--desktop {
+        display: none
+    }
+
+    .p-hero-header__content--middle {
+        display: block;
+    }
+}
+
+@media (max-width: 747px) {
+    .p-hero-header__content--middle {
+        display: none;
+    }
+
+    .p-hero-header__content--sp {
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 991px) {
@@ -4219,21 +4387,21 @@ a.p-content03__news-archive-link:hover {
     margin-bottom: 16px;
     line-height: 1.5;
     font-weight: 500;
-    font-family: HiraginoSans-W6;
-    font-size: 24px;
+    font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
+    font-size: 20px;
     letter-spacing: 3.1px;
     text-align: center;
 }
 
 .title-container {
-    border-bottom: solid 1px #003d9c;
+    border-bottom: solid 1px #fff;
 }
 
 .title-container .p-title--english {
     text-align: left;
     display: block;
-    font-family: Avenir;
-    font-size: 45px;
+    font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 30px;
     font-weight: bold;
     letter-spacing: 3.1px;
 }
@@ -4294,16 +4462,16 @@ a.p-content03__news-archive-link:hover {
     right: 0;
 }
 
+@media (min-width: 1300px) {
+    .p-main-image__content {
+        width: 650px;
+    }
+}
+
 .title-container .p-title {
-    /*font-size: 30px;*/
-    /*margin-bottom: 16px;*/
-    /*line-height: 1.5;*/
-    /*text-align: center;*/
-    /*display: inline-block;*/
-    /*position: relative;*/
     margin-top: 10px;
     font-family: "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold !important;
     letter-spacing: 3.1px;
     text-align: left;
@@ -4340,6 +4508,11 @@ a.p-content03__news-archive-link:hover {
 
     .p-main-image__btn {
         margin-right: 8px;
+        font-size: 12px;
+        min-width: 118px;
+        height: auto;
+        margin-top: 20px;
+
     }
 
     .p-main-image--rev .p-main-image__img--narrow {
@@ -4382,13 +4555,15 @@ a.p-content03__news-archive-link:hover {
 	* menu button
 	*/
 .p-menu-button {
-    line-height: 60px;
-    width: 60px;
-    height: 60px;
+    line-height: 70px;
+    width: 70px;
+    height: 70px;
+    display: none;
 }
 
 .p-menu-button.is-active {
-    background: #222;
+    background: #003D9C;
+    color: #fff;
 }
 
 /**
@@ -4479,7 +4654,8 @@ a.p-content03__news-archive-link:hover {
 }
 
 .p-page-header__title {
-    background: #222;
+    position: relative;
+    background: #003d9c;
     color: #fff;
     display: -webkit-box;
     display: -webkit-flex;
@@ -4496,6 +4672,31 @@ a.p-content03__news-archive-link:hover {
     height: 200px;
     margin-bottom: 0;
     font-weight: 700;
+}
+
+.p-page-header__title .p-page-header__title--en {
+    position: absolute;
+    bottom: 35%;
+    left: 0;
+    right: 0;
+    font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.p-page-header__title .p-page-header__title--jp {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+    font-family: Hiragino Sans, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #ffffff;
 }
 
 @media only screen and (max-width: 1449px) {
@@ -4522,6 +4723,21 @@ a.p-content03__news-archive-link:hover {
         font-size: 16px !important;
         width: 110px;
         height: 110px;
+    }
+
+    .p-page-header__title .p-page-header__title--en {
+        bottom: 26.5%;
+        font-size: 16px;
+    }
+
+    .p-page-header__title .p-page-header__title--jp {
+        top: 25px;
+        font-size: 10px;
+        display: block;
+        width: 110px;
+        height: 24px;
+        vertical-align: bottom;
+        transform: scale(0.8);
     }
 }
 
@@ -4693,17 +4909,29 @@ a.p-content03__news-archive-link:hover {
     z-index: 999;
 }
 
-.p-request i.fas {
-    font-size: 15px;
-    margin-right: 5px;
-}
-
-.frame {
+.footer-bar-container {
     display: flex;
     justify-content: space-between;
     height: 60px;
     align-items: center;
     margin-left: 20px;
+    margin-right: 20px;
+}
+
+.footer-bar-container .footer-bar__btn {
+    order: 2;
+}
+
+.footer-bar-container .footer-bar__message {
+    order: 1;
+    padding-right: 0;
+}
+
+.footer-bar__message i.fas {
+    font-size: 15px;
+    height: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
 .call,
@@ -4721,7 +4949,7 @@ a.p-content03__news-archive-link:hover {
 .contact a.mbtn p {
     display: inline;
     font-size: 13px;
-    font-family: Avenir;
+    font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-weight: 900;
     letter-spacing: 1.7px;
     text-align: center;
@@ -4736,7 +4964,7 @@ a.p-content03__news-archive-link:hover {
     width: inherit;
 }
 
-.footer-btn-container .footer-btn a:hover {
+.footer-bar__btn .footer-btn a:hover {
     background: #fff;
     color: #e66a46 !important;
     -webkit-transition: all .3s;
@@ -4745,10 +4973,32 @@ a.p-content03__news-archive-link:hover {
     width: inherit;
 }
 
-/*.footer-btn-container .footer-btn i:hover,*/
-/*.footer-btn-container .footer-btn p:hover {*/
-/*color: #e66a46;*/
-/*}*/
+@media (max-width: 380px) {
+    .footer-bar-container {
+        margin: 0 auto;
+    }
+
+    .footer-bar__btn {
+        margin: 0 auto;
+    }
+
+    .call,
+    .contact {
+        line-height: 15px;
+        margin-right: 0;
+    }
+
+    .call:first-child,
+    .contact:first-child {
+        margin-right: 10px;
+    }
+
+    .call a.tbtn p,
+    .contact a.mbtn p {
+        font-size: 10px;
+        line-height: 15px;
+    }
+}
 
 .p-request.is-active {
     -webkit-transform: translate3d(0, 0, 0);
@@ -4773,7 +5023,7 @@ a.p-content03__news-archive-link:hover {
     font-weight: bold;
 }
 
-@media (max-width: 844px) {
+@media (max-width: 709px) {
     .p-request__inner {
         display: none;
     }
@@ -4842,8 +5092,8 @@ a.p-content03__news-archive-link:hover {
 
 @media only screen and (max-width: 767px) {
     .p-request {
-        height: 80px;
-        line-height: 80px;
+        height: 60px;
+        line-height: 60px;
     }
 
     .p-request .frame {
@@ -4900,9 +5150,31 @@ a.p-content03__news-archive-link:hover {
 }
 
 /**
+    company nav
+ */
+
+p.p-university {
+    text-align: center;
+    color: #4A4A4A;
+}
+
+.p-company-nav {
+    margin-top: 30px;
+    text-align: center;
+}
+
+li.p-company-nav__item {
+    color: # #4A4A4A;
+    list-style-type: none;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+/**
 	* social nav
 	*/
 .p-social-nav {
+    margin-top: 40px;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -5398,7 +5670,7 @@ a.p-content03__news-archive-link:hover {
 	* widget area
 	*/
 .p-widget-area {
-    background: #f6f6f6;
+    background: #fff;
     margin-bottom: 80px;
     padding: 78px 0 61px;
 }

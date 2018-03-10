@@ -161,8 +161,8 @@ endforeach;
 
 /* header */
 /*.l-header { background: rgba(*/<?php //echo esc_html( implode( ', ', hex2rgb( $options['header_bg'] ) ) ); ?>/*, */<?php //echo esc_html( $options['header_opacity'] ); ?>/*); }*/
-.l-header__logo a, .p-global-nav > li > a, .c-menu-button { color: <?php echo esc_html( $options['header_font_color'] ); ?>; }
-.l-header__logo a:hover, .p-global-nav > li > a:hover { color: <?php echo esc_html( $options['header_font_color_hover'] ); ?>; }
+/*.l-header__logo a, .p-global-nav > li > a, .c-menu-button { color: */<?php //echo esc_html( $options['header_font_color'] ); ?>/*; }*/
+/*.l-header__logo a:hover, .p-global-nav > li > a:hover { color: */<?php //echo esc_html( $options['header_font_color_hover'] ); ?>/*; }*/
 <?php
 if ( is_front_page() && $options['display_splash'] ) {
 	// スプラッシュページを表示するフロントページの場合
@@ -175,7 +175,7 @@ if ( is_front_page() && $options['display_splash'] ) {
 	$animation_delay = 0;
 }
 ?>
-.l-header { -webkit-animation: slideDown 1.5s ease-in-out <?php echo esc_html( $animation_delay ); ?>s forwards; animation: slideDown 1.5s ease-in-out <?php echo esc_html( $animation_delay ); ?>s forwards;
+/*.l-header { -webkit-animation: slideDown 1.5s ease-in-out */<?php //echo esc_html( $animation_delay ); ?>/*s forwards; animation: slideDown 1.5s ease-in-out */<?php //echo esc_html( $animation_delay ); ?>/*s forwards;*/
 }
 .p-hero-header__link { -webkit-animation: slideUp 1.5s ease-in-out <?php echo esc_html( $animation_delay ); ?>s forwards; animation: slideUp 1.5s ease-in-out <?php echo esc_html( $animation_delay ); ?>s forwards; }
 
@@ -193,7 +193,7 @@ if ( is_front_page() && $options['display_splash'] ) {
 .p-pagetop a { background: <?php echo esc_html( $secondary_color ); ?> }
 }
 @media only screen and (max-width: 767px) {
-.l-header { background: <?php echo esc_html( $options['header_bg'] ) ?>; animation: none; -webkit-animation: none; }
+/*.l-header { background: */<?php //echo esc_html( $options['header_bg'] ) ?>/*; animation: none; -webkit-animation: none; }*/
 .p-request > a::after { color: <?php echo esc_html( $options['request_catch_color'] ); ?>; }
 .p-content02__item { width: 100%; }
 .p-tab .slick-arrow:hover, .p-content04 .slick-arrow:hover { background: <?php echo esc_html( $secondary_color ); ?>; }

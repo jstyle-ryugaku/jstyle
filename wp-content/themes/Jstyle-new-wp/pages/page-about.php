@@ -15,11 +15,8 @@ get_header();
             <h1>企業理念</h1>
             <h2>留学を通して<br>「自分の夢を、自由なやり方で、自分で切り開く “若者”」<br>を増やしたい</h2>
             <p class="text">
-                株式会社Jstyle代表取締役社長の安藤和隆と申します。<br>
-                弊社は、世界中全ての”若者”に夢を与えられる会社でありたいと考えております。<br>
-                ここでいう”若者”とは、決して「年齢が若い」という意味ではありません。夢を持ち、かつそれを実現したいという強い意思を持っている人であれば、彼らは全員“若者”です。彼らの夢を叶えられる留学を届ける、それこそが私たちJstyleです。<br>
-                <br>
-                私は、自分自身の留学経験によって留学エージェントの実態を知り、もっと学生に寄り添った学生主体の留学のあり方があるべきだと考え、「学生一人ひとりの要望に合わせたオーダーメイドの留学プラン」を考案しました。
+                株式会社Jstyleの企業理念は、留学を通して、世界中全ての”若者”に夢を与えることです。ここでいう”若者”とは、決して「年齢が若い」という意味ではありません。夢を持ち、かつそれを実現 したいという強い意思を持っている人であれば、彼らは全員“若者”です。彼らの夢を叶えられる留学を届ける、それこそが私たちJstyleです。<br>
+                住み慣れた日本を飛び出し、留学という選択を選んだあなたは、今、夢への第一歩を踏み出しました。この一歩は、あなたの未来にとって非常に重要な一歩です。きっと、あなたの人生はこれまでと大きく違ったものになるでしょう。Jstyleは、あなたが夢を叶えるための支援は惜しみません。
             </p>
         </section>
 
@@ -27,7 +24,7 @@ get_header();
         <section class="image-link">
             <ul>
                 <li class="pc-2c sp-1c i-01">
-                    <a href="javascript:void(0);">
+                    <a href="<?php echo home_url('/about/president'); ?>">
                         <div class="wrap">
                             <h1 class="title">代表挨拶</h1>
                             <span class="text">テキストテキストテキストテキストテキスト</span>
@@ -36,39 +33,39 @@ get_header();
                     </a>
                 </li>
                 <li class="pc-2c sp-2c i-02">
-                    <a href="javascript:void(0);">
+                    <a href="<?php echo home_url('/about/new-style'); ?>">
                         <div class="wrap">
-                            <h1 class="title">事業紹介</h1>
+                            <h1 class="title">Jstyleの留学スタイル</h1>
                             <span class="text">テキストテキストテキストテキストテキスト</span>
                         </div>
                         <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-02.jpg')"></div>
                     </a>
                 </li>
                 <li class="pc-3c sp-2c i-03">
-                    <a href="javascript:void(0);">
+                    <a href="<?php echo home_url('/about/point'); ?>">
                         <div class="wrap">
-                            <h1 class="title">タイトル</h1>
+                            <h1 class="title">Jstyleの<br>ここがすごい</h1>
                             <span class="text">テキストテキストテキストテキストテキスト</span>
                         </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-02.jpg')"></div>
+                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-03.jpg')"></div>
                     </a>
                 </li>
                 <li class="pc-3c sp-2c i-04">
-                    <a href="javascript:void(0);">
+                    <a href="<?php echo home_url('/about/reason'); ?>">
                         <div class="wrap">
-                            <h1 class="title">タイトル</h1>
+                            <h1 class="title">Jstyleが選ばれる<br>5つの理由</h1>
                             <span class="text">テキストテキストテキストテキストテキスト</span>
                         </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-02.jpg')"></div>
+                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-04.jpg')"></div>
                     </a>
                 </li>
                 <li class="pc-3c sp-2c i-05">
-                    <a href="javascript:void(0);">
+                    <a href="<?php echo home_url('/about/flow'); ?>">
                         <div class="wrap">
-                            <h1 class="title">タイトル</h1>
+                            <h1 class="title">留学の流れ</h1>
                             <span class="text">テキストテキストテキストテキストテキスト</span>
                         </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-02.jpg')"></div>
+                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-05.jpg')"></div>
                     </a>
                 </li>
             </ul>
@@ -78,7 +75,6 @@ get_header();
         <section class="five-reason">
             <h1>
                 Jstyleが選ばれる<span class="blue">5</span>つの理由
-                <!--<img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/reason-title.svg">-->
             </h1>
             <ul>
                 <li class="r-01">
@@ -102,7 +98,7 @@ get_header();
                     <p class="text">Jstyleのみが持つ海外学校の最新情報をご提供</p>
                 </li>
             </ul>
-            <a class="button" href="javascript:void(0);">詳細 <span>&gt;</span></a>
+            <a class="button" href="<?php echo home_url('/about/reason'); ?>">詳細 <span>&gt;</span></a>
         </section>
 
         <!-- 企業概要 -->

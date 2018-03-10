@@ -1,0 +1,119 @@
+.country-map__container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.country-map__infobox {
+    position: absolute;
+    background-color: white;
+    padding: 8px;
+    border: solid 2px #003d9c;
+    transition: .18s ease-out;
+}
+
+.country-map__infobox img {
+    width: 0;
+    height: 0;
+    display: inherit;
+    transition: all .18s ease-out;
+}
+
+.country-map__infobox:hover {
+    cursor: pointer;
+    z-index: 10;
+    border-color: #e66a46;
+    padding: 20px;
+}
+
+.country-map__country-name {
+    color: #003d9c;
+    position: relative;
+    transition: all .18s ease-out;
+}
+
+.country-map__country-name::before,
+.country-map__country-name::before {
+    content: '';
+    position: absolute;
+    /*bottom: -6px;*/
+    bottom: -10px;
+    left: 0;
+    display: inline-block;
+    width: 0;
+    height: 1.2px;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #003d9c;
+    transition: all .3s ease-out;
+}
+
+.country-map__infobox.act .country-map__country-name,
+.country-map__infobox:hover .country-map__country-name {
+    margin-bottom: 26px;
+    font-size: 20px;
+}
+
+.country-map__infobox.act .country-map__country-name::before,
+.country-map__infobox:hover .country-map__country-name::before {
+    width: 80%;
+    left: 40%;
+}
+
+.country-map__infobox.act img,
+.country-map__infobox:hover img {
+    display: block;
+    width: 30vh;
+    height: auto;
+}
+
+@media screen and (max-width: 650px) {
+    .country-map__infobox {
+        padding: 3px;
+    }
+
+    .country-map__country-name {
+        font-size: 14px;
+    }
+
+    .country-map__infobox.act img,
+    .country-map__infobox:hover img {
+        width: 20vh;
+    }
+}
+
+/* -------------
+  以下 svg描画用
+--------------- */
+.country-map__land{
+    fill: #CCCCCC;
+    stroke: #FFFFFF;
+    stroke-width: 0.5;
+    transition: all .3s;
+}
+
+.country-map__available-land {
+    fill: #003d9c;
+}
+
+.country-map__spot-pointer {
+    fill: white;
+    stroke: white;
+    stroke-width: 0.5;
+}
+
+.country-map__spot-pointer-bg {
+    fill: #003d9c;
+    stroke: #003d9c;
+    stroke-linecap: square;
+    stroke-width: 3;
+    transition: all .3s;
+}
+
+.country-map__land.focus,
+.country-map__spot-pointer-bg.focus {
+    fill: #e66a46;
+    stroke: #e66a46;
+}

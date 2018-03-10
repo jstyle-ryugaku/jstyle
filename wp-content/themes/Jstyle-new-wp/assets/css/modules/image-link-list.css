@@ -1,0 +1,92 @@
+.image-link-list__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-link-list__listed-link {
+    list-style: none;
+}
+
+.image-link-list__listed-link {
+    width: calc((100% - 20px) / 2);
+    height: 339px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.image-link-list__listed-link:nth-child(odd) {
+    margin-right: 20px;
+}
+
+.image-link-list__listed-link a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.image-link-list__listed-link:hover a {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.image-link-list__text-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 38px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #FFFFFF;
+}
+
+.image-link-list__text-container .title {
+    font-family: Hiragino Sans;
+    font-size: 36px;
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.image-link-list__text-container .text {
+    font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
+    font-size: 20px;
+    letter-spacing: 1.4px;
+}
+
+.image-link-list__listed-link a .bg-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    z-index: -100;
+    transition: .3s;
+}
+
+.image-link-list__listed-link:hover a .bg-image {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:1106px) {
+    .image-link-list__listed-link {
+        width: calc((100% - 10px) / 2);
+        margin-bottom: 10px;
+    }
+    .image-link-list__listed-link:nth-child(odd) {
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width:650px) {
+    .image-link-list__container {
+        display: block;
+    }
+    .image-link-list__listed-link {
+        width: 100%;
+    }
+}

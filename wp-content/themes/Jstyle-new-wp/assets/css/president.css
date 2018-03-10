@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------------------
+ 全体
+---------------------------------------------------------------------- */
+.president-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 120px auto;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+.president-wrapper * {
+    box-sizing: inherit;
+}
+.president-wrapper h1,
+.president-wrapper h2 {
+    margin: 0;
+    padding: 0;
+}
+.president-wrapper ul,
+.president-wrapper li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media screen and (max-width:1110px) {
+    .president-wrapper {
+        padding: 0px 10px;
+    }
+}
+@media screen and (max-width:600px) {
+    .president-wrapper {
+        font-size: 9px;
+    }
+}
+
+
+/* ----------------------------------------------------------------------
+ 代表挨拶
+---------------------------------------------------------------------- */
+.president-wrapper h1.title {
+    margin-bottom: 60px;
+    font-size: 3.0em;
+    font-weight: bold;
+    letter-spacing: 2.3px;
+    color: #00399f;
+}
+.president-wrapper .photo-message {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 100px;
+    position: relative;
+}
+.president-wrapper .photo-message .photo {
+    width: 92%;
+    height: 86%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-size: cover;
+    background-position: top center;
+}
+.president-wrapper .photo-message h2.top-message {
+    max-width: 80%;
+    padding: 32px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    background-color: #00399f;
+    font-size: 2.6em;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+    color: #FFFFFF;
+}
+.president-wrapper .message-text {
+    width: 100%;
+    max-width: 900px;
+    margin: 0px auto;
+}
+.president-wrapper .message-text p{
+    margin-bottom: 40px;
+    font-size: 1.8em;
+    line-height: 2.0;
+    letter-spacing: 0.06em;
+    text-align: justify;
+    text-indent: 1em;
+    color: #4a4a4a;
+}
+.president-wrapper .message-text p.text-right {
+    line-height: 1.6;
+    text-align: right;
+}
+
+@media screen and (max-width:980px) {
+    .president-wrapper .photo-message h2.top-message br {
+        display: none;
+    }
+}

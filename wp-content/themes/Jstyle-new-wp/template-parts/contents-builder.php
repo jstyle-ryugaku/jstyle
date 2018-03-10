@@ -3,38 +3,37 @@
 <!------- phpのタグを外したもの ------>
 <div id="js-contents-builder">
     <!------- Jstyle5つの理由 ------>
-
-    <section id="cb_1" class="p-content01 l-inner">
-        <div class="p-content01-title">
-            <h2 class="p-content01__catch">Jstyleが選ばれる<span
-                        style="font-size: 60px; color: #014099;">5</span>つの理由</h2>
-        </div>
-        <div class="p-content01__desc" style="font-size: ">
-            <ul class="content01_builder_container">
-                <li>
+    <div class="about-wrapper">
+        <section class="five-reason">
+            <h1>
+                Jstyleが選ばれる<span class="blue">5</span>つの理由
+                <!--<img src="http://jstyleweb.local/wp-content/themes/Jstyle-new-wp/assets/images/about/reason-title.svg">-->
+            </h1>
+            <ul>
+                <li class="r-01">
                     <i class="fas fa-heart"></i>
-                    <p>あなたの夢をスタッフ一同が<br>全力で応援</p>
+                    <p class="text">あなたの夢をスタッフ一同が全力で応援</p>
                 </li>
-                <li>
+                <li class="r-02">
                     <i class="fas fa-adjust"></i>
-                    <p>あなただけのオリジナルオーダーメイドプラン</p>
+                    <p class="text">あなただけのオリジナルオーダーメイドプラン</p>
                 </li>
-                <li>
+                <li class="r-03">
                     <i class="fas fa-life-ring"></i>
-                    <p>留学前から留学後まで<br>お客様個々人に寄り添った<br>丁寧なアフターケア</p>
+                    <p class="text">留学前から留学後までお客様個々人に寄り添った丁寧なアフターケア</p>
                 </li>
-                <li>
+                <li class="r-04">
                     <i class="fas fa-bullhorn"></i>
-                    <p>24時間365日サポート体制で<br>゙安心・安全</p>
+                    <p class="text">24時間365日サポート体制で安心・安全</p>
                 </li>
-                <li>
+                <li class="r-05">
                     <i class="fas fa-graduation-cap"></i>
-                    <p>Jstyleのみが持つ海外学校の<br>最新情報をご提供</p>
+                    <p class="text">Jstyleのみが持つ海外学校の最新情報をご提供</p>
                 </li>
             </ul>
-        </div>
-        <a class="p-main-image__btn p-button" href="">詳細 ></a>
-    </section>
+            <a class="button" href="<?php echo home_url('/about/reason');?>">詳細 <span>&gt;</span></a>
+        </section>
+    </div>
     <!------- Jstyle5つの理由ここまで ------>
 
     <!------- 検索する三つのフォーム ------>
@@ -43,34 +42,34 @@
         <div class="p-content02" style="background-color: #004353;">
 
             <article class="p-content02__item">
-                <a href="http://tcdwp.info/tcd051/plan/modern/" class="p-hover-effect--type1">
+                <a href="<?php echo home_url('/country');?>" class="p-hover-effect--type1">
                     <img class="p-content02__item-img p-content02__item-img--vertical"
                          src="<?php bloginfo('template_url'); ?>/assets/images/top/country.png" alt="">
                     <div class="p-content02__item-content p-content02__item-content--t">
                         <h2 class="p-content02__item-title">国で探す</h2>
-                        <p class="p-content02__item-sub">Country</p>
+<!--                        <p class="p-content02__item-sub">Country</p>-->
                     </div>
                 </a>
             </article>
 
             <article class="p-content02__item">
-                <a href="http://tcdwp.info/tcd051/plan/superior/" class="p-hover-effect--type1">
+                <a href="<?php echo  home_url('/purpose');?>" class="p-hover-effect--type1">
                     <img class="p-content02__item-img p-content02__item-img--vertical"
                          src="<?php bloginfo('template_url'); ?>/assets/images/top/type_upper.png" alt="">
                     <div class="p-content02__item-content p-content02__item-content--t">
                         <h2 class="p-content02__item-title">目的で探す</h2>
-                        <p class="p-content02__item-sub">Purpose</p>
+<!--                        <p class="p-content02__item-sub">Purpose</p>-->
                     </div>
                 </a>
             </article>
 
             <article class="p-content02__item">
-                <a href="http://tcdwp.info/tcd051/plan/infinity/" class="p-hover-effect--type1">
+                <a href='#' class="p-hover-effect--type1">
                     <img class="p-content02__item-img p-content02__item-img--vertical"
                          src="<?php bloginfo('template_url'); ?>/assets/images/top/age.png" alt="">
                     <div class="p-content02__item-content p-content02__item-content--t">
                         <h2 class="p-content02__item-title">年代で探す</h2>
-                        <p class="p-content02__item-sub">Age</p>
+<!--                        <p class="p-content02__item-sub">Age</p>-->
                     </div>
                 </a>
             </article>
@@ -97,7 +96,6 @@
             z-index: -1;
             background-size: 150px;
         }
-
     </style>
     <!------- 検索する三つのフォーム ------>
 
@@ -105,201 +103,219 @@
 
     <div id="cb_2" class="p-main-image"
          style="background-image: url('<?php bloginfo("template_directory"); ?>/assets/images/top/prepare@1920*1080.jpg');">
-        <div class="p-main-image__content"">
-            <div class="title-container">
-                <span class="p-title--english">Preparation</span>
-                <h2 class="p-title" style="">
-                    留学の準備
-                </h2>
-            </div>
-            <div>
-                <a class="p-main-image__btn p-button" href="">滞在先の種類</a>
-                <a class="p-main-image__btn p-button" href="">語学留学試験</a>
-                <a class="p-main-image__btn p-button" href="">クレジットカード</a>
-                <a class="p-main-image__btn p-button" href="">海外保険</a>
-                <a class="p-main-image__btn p-button" href="">注意点</a>
-                <a class="p-main-image__btn p-button" href="">持ち物リスト</a>
-            </div>
+        <div class="p-main-image__content"
+        ">
+        <div class="title-container">
+            <span class="p-title--english">Preparation</span>
+            <h2 class="p-title" style="">
+                留学の準備
+            </h2>
+        </div>
+        <div>
+            <a class="p-main-image__btn p-button" href="">滞在先の種類</a>
+            <a class="p-main-image__btn p-button" href="">語学留学試験</a>
+            <a class="p-main-image__btn p-button" href="">クレジットカード</a>
+            <a class="p-main-image__btn p-button" href="">海外保険</a>
+            <a class="p-main-image__btn p-button" href="">注意点</a>
+            <a class="p-main-image__btn p-button" href="">持ち物リスト</a>
         </div>
     </div>
+</div>
 
-    <!------- 留学の準備 ------>
+<!------- 留学の準備 ------>
 
-    <!------- 留学生の日記とニュース ------>
+<!------- 留学生の日記とニュース ------>
 
-    <?php
-    $blog_args = array(
-        'post_status' => 'publish',
-        'post_type' => 'post',
-    );
-    $blog_query = new WP_Query($blog_args);
-    $news_args = array(
-        'posts_per_page' => 3,
-        'post_status' => 'publish',
-        'post_type' => 'news'
-    );
-    $news_query = new WP_Query($news_args);
-    ?>
-    <div id="cb_3" class="p-content03<?php if ($value['cb_blog_and_news_layout']) {
-        echo ' p-content03--rev';
-    } ?>">
-        <section class="p-content03__blog u-clearfix">
-            <div class="p-content03__blog-header">
-                <div class="title-container">
-                    <span class="p-title--english p-content03__title--english">Interview</span>
-                    <h2 class="p-title p-content03__title">
-                        留学体験記
-                    </h2>
-                </div>
-                <a class="p-content03__blog-archive-link"
-                   href="<?php echo esc_url(get_post_type_archive_link('interview')); ?>">体験記一覧</a>
-            </div>
-            <?php if ($blog_query->have_posts()) : ?>
-                <div class="p-content03__blog-list">
-                    <div class="p-content03__blog-list-inner">
-                        <?php
-                        while ($blog_query->have_posts()) :
-                            $blog_query->the_post();
-                            ?>
-                            <article class="p-content03__blog-list-item p-article04">
-                                <a class="p-article04__thumbnail p-hover-effect--<?php echo esc_attr($options['hover_type']); ?>"
-                                   href="<?php the_permalink(); ?>">
-                                    <?php
-                                    if (has_post_thumbnail()) {
-                                        the_post_thumbnail('size1');
-                                    } else {
-                                        echo '<img src="' . get_template_directory_uri() . '/assets/images/no-image-480x320.gif" alt="">';
-                                    }
-                                    ?>
-                                </a>
-                                <h3 class="p-article04__title"><a
-                                            href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 25, '...'); ?></a>
-                                </h3>
-                                <p class="p-article04__excerpt"><?php echo is_mobile() ? wp_trim_words(get_the_excerpt(), 40, '...') : wp_trim_words(get_the_excerpt(), 40, '...'); ?></p>
-                                <?php if ($options['show_date'] || $options['show_category']) : ?>
-                                    <p class="p-article04__meta"><?php if ($options['show_date']) : ?>
-                                            <time class="p-article04__date"
-                                                  datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time><?php endif; ?><?php if ($options['show_category']) : ?>
-                                            <span class="p-article04__category"><?php the_category(', '); ?></span><?php endif; ?>
-                                    </p>
-                                <?php endif; ?>
-                            </article>
-                        <?php endwhile;
-                        wp_reset_postdata(); ?>
-                    </div>
-                </div>
-            <?php endif; ?>
-            <div class="p-content03__blog-arrows">
-            </div>
-        </section>
-        <section class="p-content03__news"
-                 style="background: <?php echo esc_attr($value['cb_blog_and_news_news_bg']); ?>">
-            <div class="p-content03__news-catch title-container">
-                <span class="p-title--english">News</span>
-                <h2 class="p-title" style="">
-                    留学ニュース
+<?php
+$blog_args = array(
+    'post_status' => 'publish',
+    'post_type' => 'interview',
+);
+$blog_query = new WP_Query($blog_args);
+
+$news_args = array(
+    'posts_per_page' => 3,
+    'post_status' => 'publish',
+    'post_type' => 'news'
+);
+$news_query = new WP_Query($news_args);
+?>
+<div id="cb_3" class="p-content03<?php if ($value['cb_blog_and_news_layout']) {
+    echo ' p-content03--rev';
+} ?>">
+    <section class="p-content03__blog u-clearfix">
+        <div class="p-content03__blog-header">
+            <div class="title-container">
+                <span class="p-title--english p-content03__title--english">Interview</span>
+                <h2 class="p-title p-content03__title">
+                    留学体験記
                 </h2>
             </div>
-            <?php if ($news_query->have_posts()) : ?>
-                <div class="p-content03__news-list">
+            <a class="p-content03__blog-archive-link"
+               href="<?php echo esc_url(get_post_type_archive_link('interview')); ?>">体験記一覧</a>
+        </div>
+        <?php if ($blog_query->have_posts()) : ?>
+            <div class="p-content03__blog-list">
+                <div class="p-content03__blog-list-inner">
                     <?php
-                    while ($news_query->have_posts()) :
-                        $news_query->the_post();
+                    while ($blog_query->have_posts()) :
+                        $blog_query->the_post();
                         ?>
-                        <article class="p-content03__news-list-item p-article05">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php if ($options['show_date_news']) : ?>
-                                    <time class="p-article05__date"
-                                          datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-                                <?php endif; ?>
-                                <h3 class="p-article05__title"><?php echo wp_trim_words(get_the_title(), 30, '...'); ?></h3>
+                        <article class="p-content03__blog-list-item p-article04">
+                            <a class="p-article04__thumbnail p-hover-effect--<?php echo esc_attr($options['hover_type']); ?>"
+                               href="<?php the_permalink(); ?>">
+                                <?php
+                                if (has_post_thumbnail()) {
+                                    the_post_thumbnail('size1');
+                                } else {
+                                    echo '<img src="' . get_template_directory_uri() . '/assets/images/no-image-480x320.gif" alt="">';
+                                }
+                                ?>
                             </a>
+                            <h3 class="p-article04__title"><a
+                                        href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 25, '...'); ?></a>
+                            </h3>
+                            <p class="p-article04__excerpt"><?php echo is_mobile() ? wp_trim_words(get_the_excerpt(), 40, '...') : wp_trim_words(get_the_excerpt(), 40, '...'); ?></p>
+                            <?php if ($options['show_date'] || $options['show_category']) : ?>
+                                <p class="p-article04__meta"><?php if ($options['show_date']) : ?>
+                                        <time class="p-article04__date"
+                                              datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time><?php endif; ?><?php if ($options['show_category']) : ?>
+                                        <span class="p-article04__category">
+                                            <?php
+                                            $term_terms = get_the_terms($post->ID, 'term');
+                                            $country_terms = get_the_terms($post->ID, 'country-kind');
+                                            ?>
+                                            <a>
+                                                <?php
+                                                echo $term_terms[0]->name;
+                                                ?>
+                                            </a>
+                                            <a>
+                                                <?php
+                                                echo $country_terms[0]->name;
+                                                ?>
+                                            </a>
+                                        </span>
+                                    <?php endif; ?>
+                                </p>
+                            <?php endif; ?>
                         </article>
                     <?php endwhile;
                     wp_reset_postdata(); ?>
                 </div>
-            <?php endif; ?>
-            <a class="p-content03__news-archive-link"
-               href="<?php echo esc_url(get_post_type_archive_link('news')); ?>">ニュース一覧</a>
-        </section>
-    </div>
+            </div>
+        <?php endif; ?>
+        <div class="p-content03__blog-arrows">
+        </div>
+    </section>
+    <section class="p-content03__news"
+             style="background: <?php echo esc_attr($value['cb_blog_and_news_news_bg']); ?>">
+        <div class="p-content03__news-catch title-container">
+            <span class="p-title--english">News</span>
+            <h2 class="p-title" style="">
+                留学ニュース
+            </h2>
+        </div>
+        <?php if ($news_query->have_posts()) : ?>
+            <div class="p-content03__news-list">
+                <?php
+                while ($news_query->have_posts()) :
+                    $news_query->the_post();
+                    ?>
+                    <article class="p-content03__news-list-item p-article05">
+                        <a href="<?php the_permalink(); ?>">
+                            <?php if ($options['show_date_news']) : ?>
+                                <time class="p-article05__date"
+                                      datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+                            <?php endif; ?>
+                            <h3 class="p-article05__title"><?php echo wp_trim_words(get_the_title(), 30, '...'); ?></h3>
+                        </a>
+                    </article>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
+            </div>
+        <?php endif; ?>
+        <a class="p-content03__news-archive-link"
+           href="<?php echo esc_url(get_post_type_archive_link('news')); ?>">ニュース一覧</a>
+    </section>
+</div>
 
 
-    <!--    <div id="cb_3" class="p-content03">-->
-    <!--        <section class="p-content03__blog u-clearfix">-->
-    <!--            <div class="p-content03__blog-header">-->
-    <!--                <h2 class="p-content03__blog-catch" style="font-size:40px ">-->
-    <!--                    留学体験談-->
-    <!--                </h2>-->
-    <!--                <a class="p-content03__blog-archive-link" href="">-->
-    <!--                    体験談一覧-->
-    <!--                </a>-->
-    <!--            </div>-->
-    <!---->
-    <!--            <div class="p-content03__blog-list">-->
-    <!--                <div class="p-content03__blog-list-inner slick-initialized slick-slider">-->
-    <!--                    <div aria-live="polite" class="slick-list draggable">-->
-    <!--                        <article class="p-content03__blog-list-item p-article04">-->
-    <!--                            <a class="p-article04__thumbnail p-hover-effect--" href="">-->
-    <!--                                テキスト-->
-    <!--                            </a>-->
-    <!--                            <a href="">-->
-    <!--                                <img width="480" height="320"-->
-    <!--                                     src="http://tcdwp.info/tcd051/wp-content/uploads/2017/09/7-480x320.jpg"-->
-    <!--                                     class="attachment-size1 size-size1 wp-post-image" alt=""/>-->
-    <!--                            </a>-->
-    <!--                            <h3 class="p-article04__title"><a href="">テキスト</a></h3>-->
-    <!--                            <p class="p-article04__excerpt">テキスト</p>-->
-    <!--                            <p class="p-article04__meta">-->
-    <!--                                <time class="p-article04__date" datetime="">日付</time>-->
-    <!--                                <span class="p-article04__category"></span>-->
-    <!--                            </p>-->
-    <!--                        </article>-->
-    <!---->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!---->
-    <!--            <div class="p-content03__blog-arrows">-->
-    <!--            </div>-->
-    <!--        </section>-->
-    <!---->
-    <!--        <!------- ここからニュース ------ -->
-    <!--        <section class="p-content03__news" style="background: rgba(0,0,0,0.6);">-->
-    <!--            <h2 class="p-content03__news-catch" style="font-size: ">-->
-    <!--                News-->
-    <!--            </h2>-->
-    <!--            <div class="p-content03__news-list">-->
-    <!--                <article class="p-content03__news-list-item p-article05">-->
-    <!--                    <a href="">-->
-    <!--                        <time class="p-article05__date" datetime="">日付</time>-->
-    <!--                        <h3 class="p-article05__title">テキスト</h3>-->
-    <!--                    </a>-->
-    <!--                </article>-->
-    <!--            </div>-->
-    <!--            <a class="p-content03__news-archive-link" href="">テキスト</a>-->
-    <!--        </section>-->
-    <!--    </div>-->
+<!--    <div id="cb_3" class="p-content03">-->
+<!--        <section class="p-content03__blog u-clearfix">-->
+<!--            <div class="p-content03__blog-header">-->
+<!--                <h2 class="p-content03__blog-catch" style="font-size:40px ">-->
+<!--                    留学体験談-->
+<!--                </h2>-->
+<!--                <a class="p-content03__blog-archive-link" href="">-->
+<!--                    体験談一覧-->
+<!--                </a>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="p-content03__blog-list">-->
+<!--                <div class="p-content03__blog-list-inner slick-initialized slick-slider">-->
+<!--                    <div aria-live="polite" class="slick-list draggable">-->
+<!--                        <article class="p-content03__blog-list-item p-article04">-->
+<!--                            <a class="p-article04__thumbnail p-hover-effect--" href="">-->
+<!--                                テキスト-->
+<!--                            </a>-->
+<!--                            <a href="">-->
+<!--                                <img width="480" height="320"-->
+<!--                                     src="http://tcdwp.info/tcd051/wp-content/uploads/2017/09/7-480x320.jpg"-->
+<!--                                     class="attachment-size1 size-size1 wp-post-image" alt=""/>-->
+<!--                            </a>-->
+<!--                            <h3 class="p-article04__title"><a href="">テキスト</a></h3>-->
+<!--                            <p class="p-article04__excerpt">テキスト</p>-->
+<!--                            <p class="p-article04__meta">-->
+<!--                                <time class="p-article04__date" datetime="">日付</time>-->
+<!--                                <span class="p-article04__category"></span>-->
+<!--                            </p>-->
+<!--                        </article>-->
+<!---->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="p-content03__blog-arrows">-->
+<!--            </div>-->
+<!--        </section>-->
+<!---->
+<!--        <!------- ここからニュース ------ -->
+<!--        <section class="p-content03__news" style="background: rgba(0,0,0,0.6);">-->
+<!--            <h2 class="p-content03__news-catch" style="font-size: ">-->
+<!--                News-->
+<!--            </h2>-->
+<!--            <div class="p-content03__news-list">-->
+<!--                <article class="p-content03__news-list-item p-article05">-->
+<!--                    <a href="">-->
+<!--                        <time class="p-article05__date" datetime="">日付</time>-->
+<!--                        <h3 class="p-article05__title">テキスト</h3>-->
+<!--                    </a>-->
+<!--                </article>-->
+<!--            </div>-->
+<!--            <a class="p-content03__news-archive-link" href="">テキスト</a>-->
+<!--        </section>-->
+<!--    </div>-->
 
-    <!------- 留学生の日記とニュース ------>
+<!------- 留学生の日記とニュース ------>
 
-    <!------- 留学体験インタビュー ------>
+<!------- 留学体験インタビュー ------>
 
-    <!--    <div id="cb_4" class="p-main-image">-->
-    <!--        <div class="p-main-image__img"-->
-    <!--             style="background-image: url(http://jstylenewwp.local/wp-content/themes/Jstyle-new-wp/images/interview.jpg);"></div>-->
-    <!--        <div class="p-main-image__content" style="background: rgba();  color: ; ">-->
-    <!--            <h2 class="p-main-image__title">-->
-    <!--                留学日記などその他のコンテンツ（？）-->
-    <!--            </h2>-->
-    <!--            <p class="p-main-image__desc" style="font-size: px;">-->
-    <!--                私は高校1年生の時に1年間アメリカのオハイオ州に留学していました。帰国後、進路を考えた際に海外進学という選択肢が一番に上がりました。1年間で身についた英語力をもっと上達させたい、将来に役立てたいと思ったのと同時に、アメリカ人の学習に対する姿勢に惹かれことが大きな理由だと思います。...-->
-    <!--            </p>-->
-    <!--            <a class="p-main-image__btn p-button" href="" style="color: #fff;">-->
-    <!--                詳細　>-->
-    <!--            </a>-->
-    <!--        </div>-->
-    <!--    </div>-->
+<!--    <div id="cb_4" class="p-main-image">-->
+<!--        <div class="p-main-image__img"-->
+<!--             style="background-image: url(http://jstylenewwp.local/wp-content/themes/Jstyle-new-wp/images/interview.jpg);"></div>-->
+<!--        <div class="p-main-image__content" style="background: rgba();  color: ; ">-->
+<!--            <h2 class="p-main-image__title">-->
+<!--                留学日記などその他のコンテンツ（？）-->
+<!--            </h2>-->
+<!--            <p class="p-main-image__desc" style="font-size: px;">-->
+<!--                私は高校1年生の時に1年間アメリカのオハイオ州に留学していました。帰国後、進路を考えた際に海外進学という選択肢が一番に上がりました。1年間で身についた英語力をもっと上達させたい、将来に役立てたいと思ったのと同時に、アメリカ人の学習に対する姿勢に惹かれことが大きな理由だと思います。...-->
+<!--            </p>-->
+<!--            <a class="p-main-image__btn p-button" href="" style="color: #fff;">-->
+<!--                詳細　>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
 
 </div>
 
