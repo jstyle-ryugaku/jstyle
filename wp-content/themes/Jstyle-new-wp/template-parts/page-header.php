@@ -20,14 +20,18 @@ if ( is_404() ) {
 	$font_size = $options['news_ph_catchphrase_font_size'];
 	$catchphrase = $options['news_ph_catchphrase'];
 	$is_h1 = is_post_type_archive( 'news' ) ? true : false;
-} elseif ( is_post_type_archive( 'plan' ) ) {
-	$image = wp_get_attachment_url( $options['plan_ph_image'], 'full' );
+
+} elseif ( is_post_type_archive( 'interview' ) ) {
+
+	$image = get_template_directory_uri().'/assets/images/interview/header.jpg';
 	$bg_color = hex2rgb( $options['plan_ph_bg_color'] ); 
 	$bg_opacity = $options['plan_ph_bg_opacity'];
 	$color = $options['plan_ph_color'];
 	$font_size = $options['plan_ph_catchphrase_font_size'];
-	$catchphrase = $options['plan_ph_catchphrase'];
+	$catchphrase = 'Interview';
+	$sub_catchphrase = '留学体験記';
 	$is_h1 = true;
+
 } elseif ( is_page() || is_singular( 'plan' ) ) {
 	$image = wp_get_attachment_url( $post->ph_image, 'full' );
 	$bg_color = hex2rgb( $post->ph_bg_color ); 

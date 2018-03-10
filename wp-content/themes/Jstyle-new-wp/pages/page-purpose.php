@@ -17,7 +17,7 @@ get_header();
         <div class="images">
             <ul>
                 <li class="image i-01">
-                    <a href="javascript:void(0);">
+                    <a href="<?php echo home_url('/purpose/short'); ?>">
                         <div class="wrap">
                             <h1 class="title">短期留学</h1>
                             <span class="text">テキストテキストテキストテキストテキス</span>
@@ -26,16 +26,7 @@ get_header();
                     </a>
                 </li>
                 <li class="image i-02">
-                    <a href="javascript:void(0);">
-                        <div class="wrap">
-                            <h1 class="title">中期留学</h1>
-                            <span class="text">テキストテキストテキストテキストテキス</span>
-                        </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-mid.jpg')"></div>
-                    </a>
-                </li>
-                <li class="image i-03">
-                    <a href="javascript:void(0);">
+                    <a href="<?php echo home_url('/purpose/long'); ?>">
                         <div class="wrap">
                             <h1 class="title">長期留学</h1>
                             <span class="text">テキストテキストテキストテキストテキス</span>
@@ -43,8 +34,17 @@ get_header();
                         <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-long.jpg')"></div>
                     </a>
                 </li>
+                <li class="image i-03">
+                    <a href="<?php echo home_url('/purpose/language'); ?>">
+                        <div class="wrap">
+                            <h1 class="title">語学留学</h1>
+                            <span class="text">テキストテキストテキストテキストテキス</span>
+                        </div>
+                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-language.jpg')"></div>
+                    </a>
+                </li>
                 <li class="image i-04">
-                    <a href="javascript:void(0);">
+                    <a href="<?php echo home_url('/purpose/working'); ?>">
                         <div class="wrap">
                             <h1 class="title">ワーキングホリデー</h1>
                             <span class="text">テキストテキストテキストテキストテキス</span>
