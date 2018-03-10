@@ -7,15 +7,17 @@ get_header();
 
 $blog_args = array(
     'post_status' => 'publish',
-    'post_type' => 'post',
+    'post_type' => 'interview',
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'country-kind',
+            'field' => 'slug',
+            'terms' => 'アメリカ',
+            'operator'=>'IN'
+        ),
+    ),
 );
 $blog_query = new WP_Query($blog_args);
-$news_args = array(
-    'posts_per_page' => 3,
-    'post_status' => 'publish',
-    'post_type' => 'news'
-);
-$news_query = new WP_Query($news_args);
 ?>
 <main class="l-main">
     <?php get_template_part( 'template-parts/page-header' ); ?>
@@ -68,7 +70,20 @@ $news_query = new WP_Query($news_args);
 
                                                 <?php if ($options['show_category']) : ?>
                                                     <span class="p-article04__category">
-                                                        <?php the_category(', '); ?>
+                                                        <?php
+                                                        $term_terms = get_the_terms($post->ID, 'term');
+                                                        $country_terms = get_the_terms($post->ID, 'country-kind');
+                                                        ?>
+                                                        <a>
+                                                            <?php
+                                                            echo $term_terms[0]->name;
+                                                            ?>
+                                                        </a>
+                                                        <a>
+                                                            <?php
+                                                            echo $country_terms[0]->name;
+                                                            ?>
+                                                        </a>
                                                     </span>
                                                 <?php endif; ?>
                                             </p>

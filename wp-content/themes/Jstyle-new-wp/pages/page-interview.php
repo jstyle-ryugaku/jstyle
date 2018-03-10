@@ -34,11 +34,11 @@ $tax_query = array();
 if (isset($_GET['search_cat1'])) {
     $search_category1 = intval($_GET['search_cat1']);
     if ($search_category1 > 0) {
-        $tax_query[] =  array(
+        $tax_query[] = array(
             'taxonomy' => 'country-kind',
             'field' => 'term_id',
             'terms' => $search_category1,
-            'operator'=>'IN'
+            'operator'=>'in'
         );
     }
 }
