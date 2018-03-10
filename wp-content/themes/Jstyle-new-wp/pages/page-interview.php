@@ -23,11 +23,11 @@ if ($custom_search_vars) {
     }
 }
 
-//// keyword
-//if (isset($_GET['search_keywords'])) {
-//    $search_keyword = $_GET['search_keywords'];
-//    $args['s'] = $search_keyword;
-//}
+// keyword
+if (isset($_GET['search_keywords'])) {
+    $search_keyword = $_GET['search_keywords'];
+    $args['s'] = $search_keyword;
+}
 
 // category
 $tax_query = array();
@@ -155,7 +155,7 @@ $args['order'] = $sort;
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 
-                <div class="interview__article">
+                <div class="interview__article" onclick="location.href='<?php the_permalink() ?>'">
                     <div class="interview__article-image">
                         <?php
                         if (has_post_thumbnail()) {

@@ -64,12 +64,9 @@ function vogue_init() {
 	register_post_type( 'news', $news_args );
 
     // Intervew
-    $interview_labels = array(
-        'name' => get_custom_post_label( 'interview' )
-    );
     $interview_args = array(
         'has_archive' => true,
-        'labels' => $interview_labels,
+        'label' => 'Interview',
         'menu_position' => 5,
         'public' => true,
         'supports' => array( 'editor', 'revisions', 'thumbnail', 'title' )
@@ -279,7 +276,7 @@ function vogue_scripts() {
 	// 共通CSS
     wp_enqueue_style( 'vogue-common', get_template_directory_uri() . '/assets/css/common.css', false, version_num() );
 
-	if(is_page('interview')) {
+	if(is_page('interview-search')) {
 	    wp_enqueue_style( 'vogue-interview', get_template_directory_uri() . '/assets/css/interview.css', false, version_num() );
         wp_enqueue_script( 'vogue-interview', get_template_directory_uri() . '/assets/js/interview.js', array( 'jquery' ), version_num(), true );
     }
