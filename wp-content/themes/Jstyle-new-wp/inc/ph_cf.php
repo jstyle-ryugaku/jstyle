@@ -32,37 +32,6 @@ $ph_fields = array(
         'after_title' => '</dt><dd class="content">'
     ),
 	array(
-		'id' => 'ph_catch_font_size',
-		'title' => __( 'Font size of catchphrase', 'tcd-w' ),
-		'type' => 'number',
-		'unit' => 'px',
-		'default' => 40,
-		'before_field' => '<dl class="ml_custom_fields">',
-		'after_field' => '</dd></dl>',
-		'before_title' => '<dt class="label">',
-		'after_title' => '</dt><dd class="content">'
-	),
-	array( 
-		'id' => 'ph_color',
-		'title' => __( 'Font color of catchphrase', 'tcd-w' ),
-		'type' => 'color',
-		'default' => '#ffffff',
-		'before_field' => '<dl class="ml_custom_fields">',
-		'after_field' => '</dd></dl>',
-		'before_title' => '<dt class="label">',
-		'after_title' => '</dt><dd class="content">'
-	),
-	array( 
-		'id' => 'ph_bg_color',
-		'title' => __( 'Background color of catchphrase', 'tcd-w' ),
-		'type' => 'color',
-		'default' => '#003d9c',
-		'before_field' => '<dl class="ml_custom_fields">',
-		'after_field' => '</dd></dl>',
-		'before_title' => '<dt class="label">',
-		'after_title' => '</dt><dd class="content">'
-	),
-	array( 
 		'id' => 'ph_bg_opacity',
 		'title' => __( 'Opacity of background color', 'tcd-w' ),
 		'type' => 'number',

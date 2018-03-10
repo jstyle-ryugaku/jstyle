@@ -334,6 +334,12 @@ p.hope, p.time {
     padding-bottom: 3px;
 }
 
+.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors {
+    border: 0;
+    text-align: center;
+    color: #ff5555;
+}
+
 @media screen and (max-width: 856px) {
     h6 {
         width: 280px;

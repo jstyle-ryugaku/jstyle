@@ -33,7 +33,7 @@ get_header();
                     </a>
                 </li>
                 <li class="pc-2c sp-2c i-02">
-                    <a href="<?php echo home_url('/about/style'); ?>">
+                    <a href="<?php echo home_url('/about/new-style'); ?>">
                         <div class="wrap">
                             <h1 class="title">Jstyleの留学スタイル</h1>
                             <span class="text">テキストテキストテキストテキストテキスト</span>
