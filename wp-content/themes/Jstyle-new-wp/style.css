@@ -437,11 +437,11 @@ ul {
 }
 
 /*@media only screen and (max-width: 767px) {*/
-    /*.l-inner {*/
-        /*box-sizing: border-box;*/
-        /*width: 100%;*/
-        /*padding: 20px 0 50px;*/
-    /*}*/
+/*.l-inner {*/
+/*box-sizing: border-box;*/
+/*width: 100%;*/
+/*padding: 20px 0 50px;*/
+/*}*/
 /*}*/
 
 /* Contents ----------------------------------------------------------------- */
@@ -497,7 +497,7 @@ ul {
     margin-bottom: 25px;
 }
 
-.nav-footer-container {
+.nav-footer-bar-container {
     padding-bottom: 50px;
 }
 
@@ -626,11 +626,10 @@ ul {
 
     .l-header__inner ul.l-header__menu li {
         margin-right: 20px;
-
     }
 }
 
-.l-header__inner ul.l-header__menu li span.menu-button--ja {
+.l-header__inner ul.l-header__menu li div.menu-button--ja {
     font-family: HiraginoSans;
     font-size: 10px;
     color: #999999;
@@ -640,10 +639,11 @@ ul {
     margin-top: -9px;
     margin-bottom: 5px;
     height: 20%;
+    transition: 0.2s;
 }
 
-.l-header__inner ul.l-header__menu li span.menu-button--en {
-    font-family: Avenir;
+.l-header__inner ul.l-header__menu li div.menu-button--en {
+    font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     list-style-type: none;
     font-size: 16px;
     font-weight: 900;
@@ -652,10 +652,12 @@ ul {
     color: #003D9C;
     display: block;
     height: 90%;
+    transition: 0.2s;
 }
 
-.l-header__inner ul.l-header__menu a:hover span.menu-button--en {
-    color: #334;
+.l-header__inner ul.l-header__menu li:hover div.menu-button--ja,
+.l-header__inner ul.l-header__menu li:hover div.menu-button--en {
+    opacity: 0.7;
     transition: 0.2s;
 }
 
@@ -712,20 +714,6 @@ ul {
 }
 
 @media only screen and (max-width: 979px) {
-    /*.l-header {*/
-    /*height: 60px;*/
-    /*line-height: 60px;*/
-    /*}*/
-    /*.l-header__inner {*/
-    /*display: block;*/
-    /*margin: 0;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*max-width: none;*/
-    /*}*/
-    /*.l-header__logo {*/
-    /*padding-left: 5.55556%;*/
-    /*}*/
     .l-header__inner ul.l-header__menu {
         padding: 0 5%;
     }
@@ -2335,8 +2323,10 @@ ul {
 
 .p-article04__excerpt {
     font-size: 14px;
-    line-height: 1.3;
+    line-height: 1.4;
+    letter-spacing: 1px;
     margin-bottom: 10px;
+    font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
 }
 
 .p-article04__meta {
@@ -2348,6 +2338,10 @@ ul {
 .p-article04__date {
     display: block;
     float: left;
+    color: #000;
+    font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    line-height: 1.5;
+    letter-spacing: 2.1px;
 }
 
 .p-article04__date + .p-article04__category::before {
@@ -3535,7 +3529,7 @@ a.p-content03__news-archive-link:hover {
 .p-footer-widget__title {
     font-size: 14px;
     margin-bottom: 26px;
-    font-family: Avenir;
+    font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-weight: bold;
     letter-spacing: 2px;
     color: #222;
@@ -3638,7 +3632,7 @@ a.p-content03__news-archive-link:hover {
 
 .p-global-nav .menu-item-has-children:hover > .sub-menu {
     opacity: 1;
-    top: 0;
+    top: 100%;
     visibility: visible;
 }
 
@@ -3647,11 +3641,11 @@ a.p-content03__news-archive-link:hover {
     opacity: 0;
     padding: 0;
     position: absolute;
-    top: 25%;
-    left: 100%;
+    top: 125%;
+    left: 0;
     transition: 0.3s;
     visibility: hidden;
-    z-index: 99;
+    z-index: 0;
 }
 
 .p-global-nav .sub-menu .menu-item-has-children > a {
@@ -3666,14 +3660,25 @@ a.p-content03__news-archive-link:hover {
 }
 
 .p-global-nav .sub-menu a {
-    background: #222222;
     box-sizing: border-box;
     padding: 16px 22px;
     width: 210px;
 }
 
 .p-global-nav .sub-menu a:hover {
-    background: #004353;
+}
+
+li.menu-item.menu-item-type-post_type.menu-item-object-plan a {
+    height: auto;
+    font-size: 12px;
+    padding: 15px;
+    background: #003D9C;
+    color: #fff;
+}
+
+li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
+    background: #fff;
+    color: #003D9C;
 }
 
 @media only screen and (max-width: 800px) {
@@ -3714,14 +3719,14 @@ a.p-content03__news-archive-link:hover {
         color: #fff;
     }
 
-    .p-global-nav .menu-item-has-children > a > span.is-active::before {
+    .p-global-nav .menu-item-has-children.is-active > a > span.is-active::before {
         content: "-";
     }
 
     .p-global-nav .menu-item-has-children > a > span::before {
         border: 1px solid #555;
         border-radius: 100%;
-        color: #aaa;
+        color: #222;
         content: "+";
         line-height: 24px;
         display: block;
@@ -3733,6 +3738,7 @@ a.p-content03__news-archive-link:hover {
         text-align: center;
         width: 24px;
         height: 24px;
+        font-size: 13px;
     }
 
     .p-global-nav .sub-menu {
@@ -3783,6 +3789,10 @@ a.p-content03__news-archive-link:hover {
 
     a.p-menu-button {
         display: block;
+    }
+
+    li.menu-item.menu-item-type-post_type.menu-item-object-plan a {
+        padding: 3px;
     }
 }
 
@@ -4383,7 +4393,7 @@ a.p-content03__news-archive-link:hover {
 .title-container .p-title--english {
     text-align: left;
     display: block;
-    font-family: Avenir;
+    font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 3.1px;
@@ -4637,7 +4647,7 @@ a.p-content03__news-archive-link:hover {
 }
 
 .p-page-header__title {
-    background: #222;
+    background: #003d9c;
     color: #fff;
     display: -webkit-box;
     display: -webkit-flex;
@@ -4654,6 +4664,27 @@ a.p-content03__news-archive-link:hover {
     height: 200px;
     margin-bottom: 0;
     font-weight: 700;
+}
+
+.p-page-header__title .p-page-header__title--en {
+    position: absolute;
+    bottom: 35%;
+    font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.p-page-header__title .p-page-header__title--jp {
+    position: absolute;
+    top: 35%;
+    font-family: HiraginoSans;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #ffffff;
 }
 
 @media only screen and (max-width: 1449px) {
@@ -4680,6 +4711,21 @@ a.p-content03__news-archive-link:hover {
         font-size: 16px !important;
         width: 110px;
         height: 110px;
+    }
+
+    .p-page-header__title .p-page-header__title--en {
+        bottom: 38.5%;
+        font-size: 16px;
+    }
+
+    .p-page-header__title .p-page-header__title--jp {
+        top: 40%;
+        font-size: 10px;
+        display: block;
+        width: 110px;
+        height: 24px;
+        vertical-align: bottom;
+        transform: scale(0.8);
     }
 }
 
@@ -4851,21 +4897,30 @@ a.p-content03__news-archive-link:hover {
     z-index: 999;
 }
 
-.p-request i.fas {
-    font-size: 15px;
-    height: 15px;
-    margin-right: 5px;
-    vertical-align: middle;
-}
-
-.footer-container {
+.footer-bar-container {
     display: flex;
     justify-content: space-between;
     height: 60px;
     align-items: center;
     margin-left: 20px;
+    margin-right: 20px;
 }
 
+.footer-bar-container .footer-bar__btn {
+    order: 2;
+}
+
+.footer-bar-container .footer-bar__message {
+    order: 1;
+    padding-right: 0;
+}
+
+.footer-bar__message i.fas {
+    font-size: 15px;
+    height: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
 
 .call,
 .contact {
@@ -4882,7 +4937,7 @@ a.p-content03__news-archive-link:hover {
 .contact a.mbtn p {
     display: inline;
     font-size: 13px;
-    font-family: Avenir;
+    font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-weight: 900;
     letter-spacing: 1.7px;
     text-align: center;
@@ -4897,7 +4952,7 @@ a.p-content03__news-archive-link:hover {
     width: inherit;
 }
 
-.footer-btn-container .footer-btn a:hover {
+.footer-bar__btn .footer-btn a:hover {
     background: #fff;
     color: #e66a46 !important;
     -webkit-transition: all .3s;
@@ -4907,11 +4962,11 @@ a.p-content03__news-archive-link:hover {
 }
 
 @media (max-width: 374px) {
-    .footer-container {
+    .footer-bar-container {
         margin: 0 auto;
     }
 
-    .footer-btn-container {
+    .footer-bar__btn {
         margin: 0 auto;
     }
 
@@ -4932,12 +4987,6 @@ a.p-content03__news-archive-link:hover {
         line-height: 15px;
     }
 }
-
-
-/*.footer-btn-container .footer-btn i:hover,*/
-/*.footer-btn-container .footer-btn p:hover {*/
-/*color: #e66a46;*/
-/*}*/
 
 .p-request.is-active {
     -webkit-transform: translate3d(0, 0, 0);
@@ -4962,7 +5011,7 @@ a.p-content03__news-archive-link:hover {
     font-weight: bold;
 }
 
-@media (max-width: 844px) {
+@media (max-width: 709px) {
     .p-request__inner {
         display: none;
     }

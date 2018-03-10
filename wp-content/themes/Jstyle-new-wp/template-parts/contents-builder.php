@@ -31,7 +31,7 @@
                     <p class="text">Jstyleのみが持つ海外学校の最新情報をご提供</p>
                 </li>
             </ul>
-            <a class="button" href="javascript:void(0);">詳細 <span>&gt;</span></a>
+            <a class="button" href="<?php echo home_url('/about/reason');?>">詳細 <span>&gt;</span></a>
         </section>
     </div>
     <!------- Jstyle5つの理由ここまで ------>
@@ -42,34 +42,34 @@
         <div class="p-content02" style="background-color: #004353;">
 
             <article class="p-content02__item">
-                <a href="http://tcdwp.info/tcd051/plan/modern/" class="p-hover-effect--type1">
+                <a href="<?php echo home_url('/country');?>" class="p-hover-effect--type1">
                     <img class="p-content02__item-img p-content02__item-img--vertical"
                          src="<?php bloginfo('template_url'); ?>/assets/images/top/country.png" alt="">
                     <div class="p-content02__item-content p-content02__item-content--t">
                         <h2 class="p-content02__item-title">国で探す</h2>
-                        <p class="p-content02__item-sub">Country</p>
+<!--                        <p class="p-content02__item-sub">Country</p>-->
                     </div>
                 </a>
             </article>
 
             <article class="p-content02__item">
-                <a href="http://tcdwp.info/tcd051/plan/superior/" class="p-hover-effect--type1">
+                <a href="<?php echo  home_url('/purpose');?>" class="p-hover-effect--type1">
                     <img class="p-content02__item-img p-content02__item-img--vertical"
                          src="<?php bloginfo('template_url'); ?>/assets/images/top/type_upper.png" alt="">
                     <div class="p-content02__item-content p-content02__item-content--t">
                         <h2 class="p-content02__item-title">目的で探す</h2>
-                        <p class="p-content02__item-sub">Purpose</p>
+<!--                        <p class="p-content02__item-sub">Purpose</p>-->
                     </div>
                 </a>
             </article>
 
             <article class="p-content02__item">
-                <a href="http://tcdwp.info/tcd051/plan/infinity/" class="p-hover-effect--type1">
+                <a href='#' class="p-hover-effect--type1">
                     <img class="p-content02__item-img p-content02__item-img--vertical"
                          src="<?php bloginfo('template_url'); ?>/assets/images/top/age.png" alt="">
                     <div class="p-content02__item-content p-content02__item-content--t">
                         <h2 class="p-content02__item-title">年代で探す</h2>
-                        <p class="p-content02__item-sub">Age</p>
+<!--                        <p class="p-content02__item-sub">Age</p>-->
                     </div>
                 </a>
             </article>
