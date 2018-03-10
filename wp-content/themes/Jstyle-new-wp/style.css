@@ -2846,11 +2846,11 @@ ul.content01_builder_container li i:hover::after {
     transform: scale(0.1, 1);
 }
 
-.p-content02__item-title:hover {
+.p-hover-effect--type1:hover .p-content02__item-title {
     letter-spacing: 2px;
 }
 
-.p-content02__item-title:hover::before {
+.p-hover-effect--type1:hover .p-content02__item-title::before {
     opacity: 1;
     transform: scale(1, 1);
 }
@@ -2867,7 +2867,7 @@ ul.content01_builder_container li i:hover::after {
     background-color: rgba(255, 255, 255, 0.6) !important;
 }
 
-.p-content02__item-title:hover::after {
+.p-hover-effect--type1:hover .p-content02__item-title::after {
     opacity: 0;
     transform: scale(0.1, 1);
 }
