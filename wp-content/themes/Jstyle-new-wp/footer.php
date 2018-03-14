@@ -16,7 +16,6 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
 <!------- phpタグ抜いたもの ------>
 
 <footer class="l-footer" style="background: #eee;">
-    <div id="js-pagetop" class="p-pagetop"><a href="#"></a></div>
     <section class="p-widget-area">
         <div class="p-widget-area__inner l-inner u-clearfix">
             <div class="p-footer-widget widget_nav_menu">
@@ -188,27 +187,58 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
             <small>Copyright © 2017 Jstyle. All rights reserved.</small>
         </p>
     </div>
-    <div id="js-request" class="p-request">
-        <div class="footer-bar-container">
-            <div class="footer-bar__btn">
-                <div class="call footer-btn">
-                    <a class="tbtn" href="tel:03-5848-5432">
-                        <i class="fas fa-phone"></i>
-                        <p class="number">03-5848-5432</p>
-                    </a>
+
+
+    <!--
+    ==================================================
+     固定フッター 改変版 / 作成：堀
+    ==================================================
+    -->
+    <div class="fixed-footer">
+        <div class="option">
+            <div class="button">
+                <div class="line-button">
+                    <i class="fab fa-line"></i>
+                    <p class="text"><span class="line-text">LINE</span>で<br>留学相談</p>
                 </div>
-                <div class="contact footer-btn">
-                    <a class="mbtn" href="<?php echo home_url('/contact'); ?>">
-                        <i class="fas fa-envelope"></i>
-                        <p class="massage">お問い合わせ</p>
-                    </a>
+                <div class="close-button">
+                    <i class="close-icon"></i>
                 </div>
             </div>
-            <div class="footer-bar__message p-request__inner">
-                <p class="p-request__text" style="color: #ffffff;">相談無料！元留学経験者が親身に相談に乗ります！</p>
-            </div>
-<!--            <button id="js-request__close" class="p-request__close"></button>-->
+            <ul>
+                <li class="o-01 o-line">
+                    <a href="javascript:void(0);">
+                        <i class="fab fa-line"></i>
+                        <p class="text bold">LINEで相談する</p>
+                    </a>
+                </li>
+                <span class="sub">
+                    <li class="o-02 o-tel">
+                        <a href="javascript:void(0);">
+                            <i class="fas fa-phone"></i>
+                            <p class="text">電話で相談する</p>
+                        </a>
+                    </li>
+                    <li class="o-03 o-mail">
+                        <a href="javascript:void(0);">
+                            <i class="fas fa-user"></i>
+                            <p class="text">面談を予約する</p>
+                        </a>
+                    </li>
+                    <li class="o-04 o-paper">
+                        <a href="javascript:void(0);">
+                            <i class="fas fa-file-alt"></i>
+                            <p class="text">まずは資料請求</p>
+                        </a>
+                    </li>
+                </span>
+            </ul>
         </div>
+    </div>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/footer-bar.js"></script>
+    <!--
+    ==================================================
+    -->
 </footer>
 
 <!------- phpタグ抜いたもの ------>
