@@ -272,4 +272,16 @@ jQuery(function($){
 		});
 	}
 
-});	
+    /**************************************************
+	 * フロントページ トップスライド / 作成：堀
+     **************************************************/
+    // 参考：https://qiita.com/katsunory/items/25b385aae0f07b41e611
+	// 参考：http://ithat.me/2016/10/17/how-to-use-slick-jquery-plugin
+    $('#ts-slick').slick({
+        autoplay: true,        // 自動再生
+		autoplaySpeed: 4000,   // 切替時間
+        arrows: true,         // 左右ボタン
+		dots: true,            // ドットの表示
+        dotsClass: 'dot'       // ドットのクラス名
+	});
+});
