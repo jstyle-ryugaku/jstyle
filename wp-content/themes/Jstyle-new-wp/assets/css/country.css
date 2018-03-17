@@ -46,6 +46,7 @@
     max-height: 67px;
 }
 
+
 .btn img {
     border: 1px solid white;
     float: left;
@@ -56,6 +57,8 @@
     margin-left: calc(12%/2);
 }
 
+
+
 .frame {
     display: block;
     overflow: hidden;
@@ -64,17 +67,19 @@
     max-height: 67px;
 }
 
-.ca {
-    font-size: 2.5vh;
+.font {
     float: right;
     text-align: center;
-    font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-    font-weight: normal;
+    font-family: Hiragino Sans, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
+    font-weight: bold;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
-    letter-spacing: 1.4px;
     color: white;
+}
+.ca {
+    font-size: 2.5vh;
+    letter-spacing: 1.4px;
     margin-top: calc(16%/2);
     margin-right: calc(28.5%/2);
     margin-bottom: calc(16%/2);
@@ -83,15 +88,7 @@
 
 .us {
     font-size: 2.5vh;
-    float: right;
-    text-align: center;
-    font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
     letter-spacing: 1.4px;
-    color: white;
     margin-top: calc(16.5%/2);
     margin-right: calc(19%/2);
     margin-bottom: calc(16.5%/2);
@@ -100,15 +97,7 @@
 
 .gb {
     font-size: 2.5vh;
-    float: right;
-    text-align: center;
-    font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
     letter-spacing: 1.4px;
-    color: white;
     margin-top: calc(16.5%/2);
     margin-right: calc(19%/2);
     margin-bottom: calc(16.5%/2);
@@ -117,15 +106,7 @@
 
 .au {
     font-size: 1.5vh;
-    float: right;
-    text-align: center;
-    font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
     letter-spacing: 1.1px;
-    color: white;
     margin-top: calc(22.5%/2);
     margin-right: calc(16%/2);
     margin-bottom: calc(22.5%/2);
@@ -134,15 +115,7 @@
 
 .nz {
     font-size: 1.5vh;
-    float: right;
-    text-align: center;
-    font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
     letter-spacing: 1.4px;
-    color: white;
     margin-top: calc(22%/2);
     margin-right: calc(9%/2);
     margin-bottom: calc(22%/2);
@@ -213,6 +186,16 @@
 .btn3:active {
     transform: scale(0.92);
 }
+.default {
+    fill: #ffb7b7;
+    transition: all 0.2s;
+
+}
+
+.default.click {
+    fill: #ff7777;
+    transition: all 0.2s;
+}
 
 /* pc */
 @media screen and (min-width: 961px) {
@@ -249,79 +232,41 @@
 
     }
 
+
     .btn img {
         width: 51.5px;
         height: 28px;
         margin: 5.2% 0 5.2% 5.2%;
     }
 
+
     .ca {
         font-size: 13px;
-        float: right;
-        text-align: center;
-        font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
         letter-spacing: 1.1px;
-        color: white;
         margin: 8% 15% 8% 0;
     }
 
     .us {
         font-size: 12px;
-        float: right;
-        text-align: center;
-        font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
         letter-spacing: 1.1px;
-        color: white;
         margin: 9% 13% 9% 0;
     }
 
     .gb {
         font-size: 12px;
-        float: right;
-        text-align: center;
-        font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
         letter-spacing: 1.1px;
-        color: white;
         margin: 9% 13% 9% 0;
     }
 
     .au {
         font-size: 8px;
-        float: right;
-        text-align: center;
-        font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
         letter-spacing: 0.8px;
-        color: white;
         margin: 10.5% 3% 10.5% 0;
     }
 
     .nz {
         font-size: 8px;
-        float: right;
-        text-align: center;
-        font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
         letter-spacing: 0.8px;
-        color: white;
         margin: 10.5% 1% 10.5% 0;
     }
 }
@@ -357,76 +302,35 @@
         margin: 5.2% 0 5.2% 5.2%;
     }
 
+
     .ca {
         font-size: 13px;
-        float: right;
-        text-align: center;
-        font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
         letter-spacing: 1.1px;
-        color: white;
         margin:7px 9.5px;
     }
 
     .us {
         font-size: 12px;
-        float: right;
-        text-align: center;
-        font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
         letter-spacing: 1.1px;
-        color: white;
         margin:8px 4.5px;
     }
 
     .gb {
         font-size: 12px;
-        float: right;
-        text-align: center;
-        font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
         letter-spacing: 1.1px;
-        color: white;
         margin:8px 4.5px;
     }
 
     .au {
         font-size: 10px;
-        float: right;
-        width: 45px;
-        text-align: center;
-        font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
         letter-spacing: 0.8px;
-        color: white;
         margin:2px 8px;
 
     }
 
     .nz {
         font-size: 10px;
-        float: right;
-        width: 58px;
-        text-align: center;
-        font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
         letter-spacing: 0.8px;
-        color:white;
         margin:2px 2px;
     }
 
@@ -455,16 +359,18 @@
     }
 
     .btn {
-        width: 32px;
-        height: 20px;
+        display: none;
 
     }
+
+
 
     .btn img {
         width: 28px;
         height: 16px;
         margin: 2px;
     }
+
 
     .ca {
         display: none;
@@ -564,14 +470,6 @@
         margin-right: calc(29% - 48px / 2);
         margin-bottom: 7.5%;
         margin-left: calc(29% - 48px / 2);
-        float: right;
-        text-align: center;
-        font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        color: white;
     }
 
     .us2 {
@@ -580,14 +478,6 @@
         margin-right: calc(29% - 64px / 2);
         margin-left: calc(29% - 64px / 2);
         margin-bottom: 7.5%;
-        float: right;
-        text-align: center;
-        font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        color: white;
     }
 
     .gb2 {
@@ -596,27 +486,11 @@
         margin-right: calc(29% - 64px / 2);
         margin-left: calc(29% - 64px / 2);
         margin-bottom: 7.5%;
-        float: right;
-        text-align: center;
-        font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        color: white;
     }
 
     .au2 {
         font-size: 12px;
-        text-align: center;
         width: 58px;
-        float: right;
-        font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        color: white;
         margin-top: 3.5%;
         margin-right: calc(29% - 58px / 2);
         margin-bottom: 3.5%;
@@ -625,16 +499,7 @@
 
     .nz2 {
         font-size: 12px;
-        text-align: center;
-        float: right;
-        text-align: center;
         width: 60px;
-        font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        color: white;
         margin-top: 3.5%;
         margin-right: calc(29% - 60px / 2);
         margin-bottom: 3.5%;
