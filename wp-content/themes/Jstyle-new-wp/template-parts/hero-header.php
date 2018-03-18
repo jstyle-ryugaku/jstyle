@@ -41,16 +41,4 @@
         </div>
     </div>
 
-    <!-- カスタマイズページへのリンクボタン -->
-    <div class="customize-link">
-        <div class="cl-inner">
-            <p class="text">
-                <i class="far fa-check-square"></i>
-                あなただけのオリジナル留学プランをつくれる！みたいな文章
-            </p>
-            <a class="button" href="javascript:void(0);">
-                無料でカスタマイズしてみる
-            </a>
-        </div>
-    </div>
 </section>

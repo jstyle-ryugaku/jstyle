@@ -267,6 +267,7 @@ function vogue_scripts() {
 	wp_localize_script( 'vogue-script', 'plan', array( 'listNum' => $options['plan_list_num'] ) );
 	wp_enqueue_script( 'vogue-load', get_template_directory_uri() . '/assets/js/load.min.js', array( 'jquery' ), version_num(), true );
 	wp_localize_script( 'vogue-load', 'load', array( 'loadTime' => $options['load_time'] * 1000 ) ); // ミリ秒で渡す
+    wp_enqueue_script('vogue-script', get_template_directory_uri() . '/assets/js/customize-modal.js', array( 'jquery' ), version_num(), true);
 
 	if ( is_mobile() && 'type3' !== $options['footer_bar_display'] && ! $options['display_request'] ) {
 		wp_enqueue_style( 'vogue-footer-bar', get_template_directory_uri() . '/assets/css/footer-bar.css', false, version_num() );

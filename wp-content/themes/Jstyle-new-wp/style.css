@@ -7687,14 +7687,14 @@ a:hover img.fade {
     width: 100%;
     padding: 20px;
     background-color: #e66a46;
-    font-size: 1.6em;
+    font-size: 1em;
     font-weight: bold;
     color: #FFFFFF;
 }
 .customize-link .cl-inner {
     width: 100%;
     max-width: 860px;
-    margin: 0px auto;
+    margin: 0 auto;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
