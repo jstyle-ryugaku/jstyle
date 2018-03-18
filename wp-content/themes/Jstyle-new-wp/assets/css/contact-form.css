@@ -1,12 +1,12 @@
-.contact-form-editor-box-mail {
+.wpcf7-form .contact-form-editor-box-mail {
     font-family: Hiragino Sans-W3;
 }
 
-h1.p-entry__title {
+.wpcf7-form h1.p-entry__title {
     display: none;
 }
 
-h2.contact-form__heading {
+.wpcf7-form h2.contact-form__heading {
     width: 900px;
     height: 18px;
     font-size: 14px;
@@ -17,7 +17,7 @@ h2.contact-form__heading {
     border-bottom: 56px;
 }
 
-.l-primary {
+.wpcf7-form .l-primary {
     background: #fff;
     box-sizing: border-box;
     padding-bottom: 115px;
@@ -26,47 +26,47 @@ h2.contact-form__heading {
     padding-top: 92px;
 }
 
-.contact-form .body {
+.wpcf7-form .contact-form .body {
     width: 100%;
 }
 
-.p-entry__body h6 {
+.wpcf7-form .p-entry__body h6 {
     font-size: 17px;
     padding-bottom: 10px;
     margin-bottom: 50px;
 }
 
-.p-entry__body,
-.p-entry__body .wpcf7 p {
+.wpcf7-form .p-entry__body,
+.wpcf7-form .p-entry__body .wpcf7 p {
     margin-bottom: 38px;
     font-size: 14px;
     line-height: 25px;
 }
 
-input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
+.wpcf7-form input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
     height: 40px;
 }
 
-.form-label p:first-child {
+.wpcf7-form .form-label p:first-child {
     width: 40%;
     margin: 0;
 }
 
-.form-label {
+.wpcf7-form .form-label {
     width: 100%;
     overflow: hidden;
     margin-bottom: 15px;
 }
 
-.form-label input {
+.wpcf7-form .form-label input {
     width: 55%;
 }
 
-.form-label br {
+.wpcf7-form .form-label br {
     display: none;
 }
 
-.require {
+.wpcf7-form .require {
     float: left;
     width: 60px;
     height: 25px;
@@ -81,7 +81,7 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
     margin-right: 60px;
 }
 
-.option {
+.wpcf7-form .option {
     float: left;
     width: 60px;
     height: 25px;
@@ -98,29 +98,29 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
     box-sizing: border-box;
 }
 
-.name2 {
+.wpcf7-form .name2 {
     float: left;
     margin-right: 162px;
     letter-spacing: 2.1px;
     color: #4d4d4d;
 }
 
-.sex2 {
+.wpcf7-form .sex2 {
     margin-bottom: 50px;
 }
 
-.sex {
+.wpcf7-form .sex {
     float: left;
     margin-right: 210px;
     letter-spacing: 2.1px;
     color: #4d4d4d;
 }
 
-.age {
+.wpcf7-form .age {
     clear: left;
 }
 
-.age2 {
+.wpcf7-form .age2 {
     float: left;
     margin-right: 180px;
     letter-spacing: 2.1px;
@@ -128,68 +128,68 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
 
 }
 
-.age p:nth-child(2) {
+.wpcf7-form .age p:nth-child(2) {
     overflow: hidden;
     margin-right: 0;
     float: left;
     width: 60%;
 }
 
-.age p:last-child {
+.wpcf7-form .age p:last-child {
     line-height: 40px;
 }
 
-input.wpcf7-form-control.wpcf7-number.wpcf7-validates-as-required.wpcf7-validates-as-number {
+.wpcf7-form input.wpcf7-form-control.wpcf7-number.wpcf7-validates-as-required.wpcf7-validates-as-number {
     width: 70px;
     height: 40px;
     margin-right: 10px;
     float: left;
 }
 
-.mail {
+.wpcf7-form .mail {
     clear: left;
 }
 
-.mail2 {
+.wpcf7-form .mail2 {
     margin-right: 85px;
     float: left;
     letter-spacing: 2.1px;
     color: #4d4d4d;
 }
 
-.tell2 {
+.wpcf7-form .tell2 {
     margin-right: 142px;
     float: left;
     letter-spacing: 2.1px;
     color: #4d4d4d;
 }
 
-.date {
+.wpcf7-form .date {
     width: 40%;
     float: left;
     margin-right: 0;
 }
 
-.date p:first-child {
+.wpcf7-form .date p:first-child {
     width: 100%;
 }
 
-p.date3 {
+.wpcf7-form p.date3 {
     margin-top: 40px;
     width: 80%;
     box-sizing: border-box;
 }
 
-p.date3 br {
+.wpcf7-form p.date3 br {
     display: block;
 }
 
-.date2 {
+.wpcf7-form .date2 {
     width: 350px;
     float: left;
 }
 
-.date3 {
+.wpcf7-form .date3 {
     letter-spacing: 2.1px;
     text-align: center;
     color: #e66a46;
@@ -197,64 +197,64 @@ p.date3 br {
     border: solid 1px #e66a46;
 }
 
-.date4 {
+.wpcf7-form .date4 {
     margin-right: 20px;
     letter-spacing: 2.1px;
     color: #4d4d4d;
 }
 
-.time {
+.wpcf7-form .time {
     margin-bottom: 0px !important;
 }
 
-.hope {
+.wpcf7-form .hope {
     color: #e66a46;
     margin-bottom: 0px !important;
 }
 
-select.wpcf7-form-control.wpcf7-select.time {
+.wpcf7-form select.wpcf7-form-control.wpcf7-select.time {
     height: 40px;
     width: 150px;
 }
 
-span.wpcf7-list-item {
+.wpcf7-form span.wpcf7-list-item {
     float: left;
     margin-right: 60px;
     margin-left: 0px;
 }
 
-.place {
+.wpcf7-form .place {
     width: 40%;
     clear: left;
     float: left;
     margin-bottom: 100px;
 }
 
-.place p:first-child {
+.wpcf7-form .place p:first-child {
     width: 100%;
 }
 
-.place2 {
+.wpcf7-form .place2 {
     width: 750px;
 }
 
-.place3 {
+.wpcf7-form .place3 {
     margin-right: 100px;
     float: left;
     letter-spacing: 2.1px;
     color: #4d4d4d;
 }
 
-span.wpcf7-list-item.last {
+.wpcf7-form span.wpcf7-list-item.last {
     margin-right: 40px;
 }
 
-.period {
+.wpcf7-form .period {
     clear: left;
 
 }
 
-.period2 {
+.wpcf7-form .period2 {
     margin-right: 175px;
     margin-bottom: 200px;
     float: left;
@@ -262,41 +262,41 @@ span.wpcf7-list-item.last {
     color: #4d4d4d;
 }
 
-.period3 {
+.wpcf7-form .period3 {
     width: 890px;
 }
 
-.wpcf7 .wpcf7-list-item {
+.wpcf7-form .wpcf7 .wpcf7-list-item {
     display: block;
     height: 35px;
 }
 
-select.wpcf7-form-control.wpcf7-select.period4 {
+.wpcf7-form select.wpcf7-form-control.wpcf7-select.period4 {
     height: 40px;
     width: 150px;
 }
 
-.content {
+.wpcf7-form .content {
     clear: left;
 }
 
-.content2 {
+.wpcf7-form .content2 {
     margin-right: 117px;
     float: left;
     letter-spacing: 2.1px;
     color: #4d4d4d;
 }
 
-textarea.wpcf7-form-control.wpcf7-textarea.text {
+.wpcf7-form textarea.wpcf7-form-control.wpcf7-textarea.text {
     width: 380px;
     height: 200px;
 }
 
-span.wpcf7-list-item.first.last {
+.wpcf7-form span.wpcf7-list-item.first.last {
     margin-left: 280px;
 }
 
-input.wpcf7-form-control.wpcf7-submit {
+.wpcf7-form input.wpcf7-form-control.wpcf7-submit {
     width: 150px;
     height: auto;
     padding: 12px;
@@ -312,13 +312,13 @@ input.wpcf7-form-control.wpcf7-submit {
     margin: 20px auto 0;
 }
 
-.wpcf7 .wpcf7-submit:hover {
+.wpcf7-form .wpcf7 .wpcf7-submit:hover {
     background-color: #fff;
     color: #e66a46;
     border: 1px solid #e66a46 !important;
 }
 
-.wpcf7 {
+.wpcf7-form .wpcf7 {
     background: #fff;
     border: 0;
     margin: 0 0 2.5em !important;
@@ -326,81 +326,81 @@ input.wpcf7-form-control.wpcf7-submit {
     width: 100%;
 }
 
-select.wpcf7-form-control.wpcf7-select {
+.wpcf7-form select.wpcf7-form-control.wpcf7-select {
     background: #fff;
 }
 
-p.hope, p.time {
+.wpcf7-form p.hope, p.time {
     padding-bottom: 3px;
 }
 
-.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors {
+.wpcf7-form .wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors {
     border: 0;
     text-align: center;
     color: #ff5555;
 }
 
 @media screen and (max-width: 856px) {
-    h6 {
+    .wpcf7-form h6 {
         width: 280px;
         height: 65px;
     }
 
-    .body {
+    .wpcf7-form .body {
         margin-left: 0px;
     }
 
-    .l-primary {
+    .wpcf7-form .l-primary {
         margin: 0 auto;
         width: 95%;
         padding: 0 !important;
     }
 
-    h2.contact-form__heading {
+    .wpcf7-form h2.contact-form__heading {
         width: 100%;
         height: auto;
     }
 
-    .name2 {
+    .wpcf7-form .name2 {
         float: none;
     }
 
-    .form-label {
+    .wpcf7-form .form-label {
         width: 100%;
     }
 
-    .form-label p:first-child {
+    .wpcf7-form .form-label p:first-child {
         width: 100%;
     }
 
-    .form-label input {
+    .wpcf7-form .form-label input {
         width: 100%;
     }
 
-    .form-label p:last-child {
+    .wpcf7-form .form-label p:last-child {
         width: 100%;
     }
 
-    span.require,
-    span.option {
+    .wpcf7-form span.require,
+    .wpcf7-form span.option {
         margin-right: 20px;
     }
 
-    .form-label.place {
+    .wpcf7-form .form-label.place {
         margin-bottom: 30px;
     }
 
-    input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
+    .wpcf7-form input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
         width: 100%;
         margin-top: 20px;
     }
 
-    .sex {
+    .wpcf7-form .sex {
         float: none;
         padding-bottom: 20px;
     }
 
-    .wpcf7 .wpcf7-list-item {
+    .wpcf7-form .wpcf7 .wpcf7-list-item {
         display: block;
         height: 35px;
         margin-bottom: 10px;
@@ -408,65 +408,65 @@ p.hope, p.time {
         margin-right: 30px;
     }
 
-    .age2 {
+    .wpcf7-form .age2 {
         float: none;
         margin-right: 50px;
         margin-top: 60px;
         padding-bottom: 30px;
     }
 
-    .mail2 {
+    .wpcf7-form .mail2 {
         float: none;
     }
 
-    .tell2 {
+    .wpcf7-form .tell2 {
         float: none;
     }
 
-    .date {
+    .wpcf7-form .date {
         float: none;
     }
 
-    .wpcf7-form-control.wpcf7-date.date.hasDatepicker {
+    .wpcf7-form .wpcf7-form-control.wpcf7-date.date.hasDatepicker {
         width: 280px;
     }
 
-    input.wpcf7-form-control.wpcf7-text {
+    .wpcf7-form input.wpcf7-form-control.wpcf7-text {
         margin-bottom: 41px;
         width: 280px;
     }
 
-    .place {
+    .wpcf7-form .place {
         float: none;
     }
 
-    .place2 {
+    .wpcf7-form .place2 {
         width: 350px;
     }
 
-    .period2 {
+    .wpcf7-form .period2 {
         float: none;
     }
 
-    .content2 {
+    .wpcf7-form .content2 {
         float: none;
     }
 
-    p.period2,
-    p.content2 {
+    .wpcf7-form p.period2,
+    .wpcf7-form p.content2 {
         padding-bottom: 20px;
     }
 
-    textarea.wpcf7-form-control.wpcf7-textarea.text {
+    .wpcf7-form textarea.wpcf7-form-control.wpcf7-textarea.text {
         width: 100%;
         height: 300px;
     }
 
-    span.wpcf7-list-item.first.last {
+    .wpcf7-form span.wpcf7-list-item.first.last {
         margin-left: 55px;
     }
 
-    input.wpcf7-form-control.wpcf7-submit {
+    .wpcf7-form input.wpcf7-form-control.wpcf7-submit {
         width: 150px;
         height: auto;
         padding: 10px;
@@ -483,10 +483,10 @@ p.hope, p.time {
     }
 }
 
-.l-secondary {
+.wpcf7-form .l-secondary {
     display: none;
 }
 
-.l-contents {
+.wpcf7-form .l-contents {
     background: #fff !important;
 }
