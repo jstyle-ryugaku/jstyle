@@ -71,17 +71,17 @@ $blog_query = new WP_Query($blog_args);
                                                 <?php if ($options['show_category']) : ?>
                                                     <span class="p-article04__category">
                                                         <?php
+                                                        $country_terms = get_the_terms($post->ID, 'country-kind');
                                                         $term_terms = get_the_terms($post->ID, 'term');
-                                                        $kind_terms = get_the_terms($post->ID, 'kind');
                                                         ?>
-                                                        <a>
+                                                        <a href="interview-search/?search_cat1=<?php echo $country_terms[0]->term_id; ?>&search_cat2=0">
                                                             <?php
-                                                            echo $term_terms[0]->name;
+                                                            echo $country_terms[0]->name;
                                                             ?>
                                                         </a>
-                                                        <a>
+                                                        <a href="interview-search/?search_cat1=0&search_cat2=<?php echo $term_terms[0]->term_id; ?>">
                                                             <?php
-                                                            echo $kind_terms[0]->name;
+                                                            echo $term_terms[0]->name;
                                                             ?>
                                                         </a>
                                                     </span>
