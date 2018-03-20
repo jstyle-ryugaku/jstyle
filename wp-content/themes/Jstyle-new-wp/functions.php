@@ -346,6 +346,11 @@ function vogue_scripts() {
         wp_enqueue_style( 'vogue-purpose-short', get_template_directory_uri() . '/assets/css/purpose-detail.css', false, version_num() );
         wp_enqueue_script( 'vogue-purpose-short', get_template_directory_uri() . '/assets/js/purpose-detail.js', array( 'jquery' ), version_num(), true );
     }
+
+    if(is_page('california')) {
+        wp_enqueue_style( 'vogue-country-usa-california', get_template_directory_uri() . '/assets/css/country-region-common.css', false, version_num() );
+        wp_enqueue_script( 'vogue-country-usa-california', get_template_directory_uri() . '/assets/js/country-region-common.js', array( 'jquery' ), version_num(), true );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'vogue_scripts' );
 
