@@ -63,6 +63,22 @@ function vogue_init() {
 	}
 	register_post_type( 'news', $news_args );
 
+    // LifeInfo
+    $life_info_args = array(
+        'has_archive' => true,
+        'labels' => array(
+            'name' => __( '生活情報' ),
+            'singular_name' => __( '生活情報' )
+        ),
+        'menu_position' => 5,
+        'public' => true,
+        'supports' => array( 'editor', 'revisions', 'thumbnail', 'title' )
+    );
+    if ( $options['life_info_slug'] ) {
+        $life_info_args['rewrite'] = array( 'slug' => $options['life_info_slug'] );
+    }
+    register_post_type( 'lifeinfo', $life_info_args);
+
     // Intervew
     $interview_args = array(
         'has_archive' => true,
@@ -168,30 +184,6 @@ function vogue_init() {
 }
 add_action( 'init', 'vogue_init' );
 
-function format_init()
-{
-//    // 新規分類を作成
-//
-//    $labels = array(
-//        'name' => _x('国', 'country'),
-//    );
-//
-//    $args = array(
-//        'hierarchical' => true,
-//        'labels' => $labels,
-//        'show_ui' => true,
-//        'show_admin_column' => true,
-//        'query_var' => true,
-//        'rewrite' => array('slug' => 'country'),
-//    );
-
-//    register_taxonomy(
-//        'format',
-//        'Studying_Abroad_Interview',
-//        $args);
-}
-add_action('init', 'format_init');
-
 /**
  * カスタム投稿タイプのラベルを取得する
  *
@@ -296,7 +288,6 @@ function vogue_scripts() {
         wp_enqueue_script( 'vogue-slick', get_template_directory_uri() . '/assets/js/slick.min.js', array( 'jquery' ), version_num(), true );
     }
 
-
     if(is_page('contact')) {
         wp_enqueue_style( 'vogue-contact-form', get_template_directory_uri() . '/assets/css/contact-form.css', false, version_num() );
         wp_enqueue_script( 'vogue-contact-form', get_template_directory_uri() . '/assets/js/contact-form.js', array( 'jquery' ), version_num(), true );
@@ -310,6 +301,10 @@ function vogue_scripts() {
     if(is_page('about') || is_front_page()) {
         wp_enqueue_style( 'vogue-about', get_template_directory_uri() . '/assets/css/about.css', false, version_num() );
         wp_enqueue_script( 'vogue-about', get_template_directory_uri() . '/assets/js/about.js', array( 'jquery' ), version_num(), true );
+    }
+
+    if(is_page('life-info') || is_front_page()) {
+        wp_enqueue_style( 'vogue-life-info', get_template_directory_uri() . '/assets/css/life-info.css', false, version_num() );
     }
 
     if(is_page('reason')) {
