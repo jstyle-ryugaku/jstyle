@@ -6269,110 +6269,110 @@ li.p-company-nav__item {
 }
 
 /** Contactform - お問い合わせフォーム */
-.wpcf7 {
-    background: #fafafa;
-    border: 1px solid #ddd;
-    font-size: 14px;
-    margin: 0 0 2.5em !important;
-    padding: 0;
-    width: 100%;
-}
+/*.wpcf7 {*/
+    /*background: #fafafa;*/
+    /*border: 1px solid #ddd;*/
+    /*font-size: 14px;*/
+    /*margin: 0 0 2.5em !important;*/
+    /*padding: 0;*/
+    /*width: 100%;*/
+/*}*/
 
-.wpcf7 form {
-    margin: 1.5em 1.5em 0;
-}
+/*.wpcf7 form {*/
+    /*margin: 1.5em 1.5em 0;*/
+/*}*/
 
-.wpcf7 p {
-    margin-bottom: 1em;
-    font-size: 12px;
-}
+/*.wpcf7 p {*/
+    /*margin-bottom: 1em;*/
+    /*font-size: 12px;*/
+/*}*/
 
-.wpcf7 input, .wpcf7 textarea {
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    line-height: 1.2;
-    padding: 8px;
-    width: 100%;
-    width: auto;
-}
+/*.wpcf7 input, .wpcf7 textarea {*/
+    /*border: 1px solid #ccc;*/
+    /*box-sizing: border-box;*/
+    /*line-height: 1.2;*/
+    /*padding: 8px;*/
+    /*width: 100%;*/
+    /*width: auto;*/
+/*}*/
 
-.wpcf7 select, .wpcf7 input[type=checkbox], .wpcf7 input[type=radio] {
-    border: 1px solid #ccc;
-    max-width: 97%;
-    padding: 8px;
-    width: auto;
-}
+/*.wpcf7 select, .wpcf7 input[type=checkbox], .wpcf7 input[type=radio] {*/
+    /*border: 1px solid #ccc;*/
+    /*max-width: 97%;*/
+    /*padding: 8px;*/
+    /*width: auto;*/
+/*}*/
 
-.wpcf7 select, .wpcf7 .wpcf7-list-item-label {
-    font-size: 14px;
-    line-height: 1.2;
-}
+/*.wpcf7 select, .wpcf7 .wpcf7-list-item-label {*/
+    /*font-size: 14px;*/
+    /*line-height: 1.2;*/
+/*}*/
 
-.wpcf7 .wpcf7-list-item {
-    display: block;
-}
+/*.wpcf7 .wpcf7-list-item {*/
+    /*display: block;*/
+/*}*/
 
-.wpcf7 textarea {
-    height: 300px;
-}
+/*.wpcf7 textarea {*/
+    /*height: 300px;*/
+/*}*/
 
-.wpcf7 input:focus, .wpcf7 textarea:focus {
-    border: 1px solid #bbb;
-    box-shadow: inner 0 0 5px rgba(0, 0, 0, 0.5);
-    outline: none;
-}
+/*.wpcf7 input:focus, .wpcf7 textarea:focus {*/
+    /*border: 1px solid #bbb;*/
+    /*box-shadow: inner 0 0 5px rgba(0, 0, 0, 0.5);*/
+    /*outline: none;*/
+/*}*/
 
-.wpcf7 .wpcf7-submit {
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    width: 225px;
-    height: 48px;
-    margin: 30px auto 0;
-    background-color: #333333;
-    cursor: pointer;
-    border: none !important;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 1.5;
-    outline: none;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
+/*.wpcf7 .wpcf7-submit {*/
+    /*box-sizing: border-box;*/
+    /*position: relative;*/
+    /*display: block;*/
+    /*width: 225px;*/
+    /*height: 48px;*/
+    /*margin: 30px auto 0;*/
+    /*background-color: #333333;*/
+    /*cursor: pointer;*/
+    /*border: none !important;*/
+    /*color: #fff;*/
+    /*text-align: center;*/
+    /*text-decoration: none;*/
+    /*font-size: 14px;*/
+    /*line-height: 1.5;*/
+    /*outline: none;*/
+    /*-webkit-transition: all .3s;*/
+    /*transition: all .3s;*/
+/*}*/
 
-.wpcf7 .wpcf7-submit:before, .wpcf7 .wpcf7-submit:after {
-    box-sizing: border-box;
-}
+/*.wpcf7 .wpcf7-submit:before, .wpcf7 .wpcf7-submit:after {*/
+    /*box-sizing: border-box;*/
+/*}*/
 
-.wpcf7 .wpcf7-submit:hover {
-    background-color: #666666;
-}
+/*.wpcf7 .wpcf7-submit:hover {*/
+    /*background-color: #666666;*/
+/*}*/
 
-.wpcf7 .wpcf7-submit .wpcf7-not-valid {
-    background: pink;
-}
+/*.wpcf7 .wpcf7-submit .wpcf7-not-valid {*/
+    /*background: pink;*/
+/*}*/
 
-.wpcf7 .wpcf7-submit .wpcf7-response-output {
-    margin: 10px 0 0;
-    padding: 8px 35px 8px 14px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-}
+/*.wpcf7 .wpcf7-submit .wpcf7-response-output {*/
+    /*margin: 10px 0 0;*/
+    /*padding: 8px 35px 8px 14px;*/
+    /*-webkit-border-radius: 4px;*/
+    /*-moz-border-radius: 4px;*/
+    /*border-radius: 4px;*/
+/*}*/
 
-.wpcf7 .wpcf7-submit .wpcf7-validation-errors {
-    color: #B94A48;
-    background-color: #F2DEDE;
-    border: 1px solid #EED3D7;
-}
+/*.wpcf7 .wpcf7-submit .wpcf7-validation-errors {*/
+    /*color: #B94A48;*/
+    /*background-color: #F2DEDE;*/
+    /*border: 1px solid #EED3D7;*/
+/*}*/
 
-.wpcf7 .wpcf7-submit .wpcf7-mail-sent-ok {
-    color: #3A87AD;
-    background-color: #D9EDF7;
-    border: 1px solid #BCE8F1;
-}
+/*.wpcf7 .wpcf7-submit .wpcf7-mail-sent-ok {*/
+    /*color: #3A87AD;*/
+    /*background-color: #D9EDF7;*/
+    /*border: 1px solid #BCE8F1;*/
+/*}*/
 
 /** font-size - フォントサイズ */
 .text70 {
