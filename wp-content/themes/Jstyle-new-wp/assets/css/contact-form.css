@@ -1,6 +1,6 @@
 .contact-form {
     max-width: 900px;
-    margin: 90px auto;
+    margin: 40px auto;
     color: #4a494a;
 }
 
@@ -58,7 +58,7 @@
 .contact-form__input-unit {
     flex-grow: 100;
     font-size: 16px;
-    margin-left: 10px;
+    margin: 0 10px;
 }
 
 .contact-form__input-container .wpcf7-text,
@@ -205,6 +205,11 @@
 .contact-form__country-input-block {
     width: 310px;
     margin-top: 10px;
+}
+
+.contact-form__departure-time-input-block {
+    display: flex;
+    align-items: baseline;
 }
 
 .contact-form__submit-container .wpcf7-submit {
