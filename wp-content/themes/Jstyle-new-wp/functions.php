@@ -365,6 +365,11 @@ function vogue_scripts() {
         wp_enqueue_style( 'vogue-country-usa-california', get_template_directory_uri() . '/assets/css/country-region-common.css', false, version_num() );
         wp_enqueue_script( 'vogue-country-usa-california', get_template_directory_uri() . '/assets/js/country-region-common.js', array( 'jquery' ), version_num(), true );
     }
+
+    if(is_page('knowledge')) {
+        wp_enqueue_style( 'vogue-knowledge', get_template_directory_uri() . '/assets/css/knowledge.css', false, version_num() );
+        wp_enqueue_script( 'vogue-knowledge', get_template_directory_uri() . '/assets/js/knowledge.js', array( 'jquery' ), version_num(), true );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'vogue_scripts' );
 
