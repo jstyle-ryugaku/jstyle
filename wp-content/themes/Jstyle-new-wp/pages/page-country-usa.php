@@ -102,11 +102,11 @@ $blog_query = new WP_Query($blog_args);
                     <div class="banner-list">
                         <div class="banner-container">
                             <div class="banner-bg-image"
-                                 style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/ca/gallery_1.jpg')">
+                                 style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/life-info/header.jpg')">
                             </div>
-                            <a class="banner">
+                            <a class="banner" href="/life-info/?country=アメリカ">
                                 <p>
-                                    バナー
+                                   生活情報
                                 </p>
                             </a>
                         </div>

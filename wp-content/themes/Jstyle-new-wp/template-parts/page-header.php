@@ -32,6 +32,17 @@ if ( is_404() ) {
 	$sub_catchphrase = '留学体験記';
 	$is_h1 = true;
 
+} elseif ( is_post_type_archive( 'life-info' ) ) {
+
+	$image = get_template_directory_uri().'/assets/images/life-info/header.jpg';
+	$bg_color = hex2rgb( $options['plan_ph_bg_color'] );
+	$bg_opacity = $options['plan_ph_bg_opacity'];
+	$color = $options['plan_ph_color'];
+	$font_size = $options['plan_ph_catchphrase_font_size'];
+	$catchphrase = 'Life Info';
+	$sub_catchphrase = '生活情報';
+	$is_h1 = true;
+
 } elseif ( is_page() || is_singular( 'plan' ) ) {
 	$image = wp_get_attachment_url( $post->ph_image, 'full' );
 	$bg_color = hex2rgb( $post->ph_bg_color ); 
