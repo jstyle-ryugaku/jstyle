@@ -1,8 +1,4 @@
 <?php
-/*
-template name: life-info
-*/
-
 get_header();
 $args = array(
     'post_type' => 'life-info',
@@ -31,9 +27,9 @@ $args = array(
                     <div class="life-info" onclick="location.href='<?php the_permalink() ?>'">
                         <div class="life-info__article">
 
-<!--                            <div class="life-info__article-date">-->
-<!--                                --><?php //the_time('y.m.d'); ?>
-<!--                            </div>-->
+                            <!--                            <div class="life-info__article-date">-->
+                            <!--                                --><?php //the_time('y.m.d'); ?>
+                            <!--                            </div>-->
 
                             <div class="life-info__article-title">
                                 <?php the_title(); ?>

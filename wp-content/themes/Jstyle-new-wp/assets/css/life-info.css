@@ -1,6 +1,15 @@
 .life-info__article-list{
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.life-info {
+    max-width: calc(33% - 10px);
+    margin: 5px;
+    cursor: pointer;
+}
+
 
 .life-info__article {
     box-sizing: border-box;
@@ -8,6 +17,11 @@
     background-color: #ffffff;
     box-shadow: 0 1px 2px 0 rgba(97, 97, 97, 0.5);
     padding: 17px;
+    transition: .24s;
+}
+
+.life-info__article:hover {
+    box-shadow: 0 3px 6px 0 rgba(97, 97, 97, 0.5);
 }
 
 .life-info__article-title {
@@ -40,4 +54,16 @@
     padding: 5px 8px;
     display: inline-block;
     margin-top: 5px;
+}
+
+@media screen and (max-width: 1106px) {
+    .life-info {
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .life-info {
+        max-width: none;
+    }
 }

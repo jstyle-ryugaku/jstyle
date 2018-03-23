@@ -316,7 +316,7 @@ function vogue_scripts() {
         wp_enqueue_script( 'vogue-about', get_template_directory_uri() . '/assets/js/about.js', array( 'jquery' ), version_num(), true );
     }
 
-    if(is_page('life-info') || is_front_page()) {
+    if(is_archive('life-info')) {
         wp_enqueue_style( 'vogue-life-info', get_template_directory_uri() . '/assets/css/life-info.css', false, version_num() );
     }
 
