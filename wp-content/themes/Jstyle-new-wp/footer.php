@@ -214,19 +214,19 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
                 </li>
                 <span class="sub">
                     <li class="o-02 o-tel">
-                        <a href="javascript:void(0);">
+                        <a href="tel:0358485432">
                             <i class="fas fa-phone"></i>
                             <p class="text">電話で相談する</p>
                         </a>
                     </li>
                     <li class="o-03 o-mail">
-                        <a href="javascript:void(0);">
+                        <a href="/contact">
                             <i class="fas fa-user"></i>
                             <p class="text">面談を予約する</p>
                         </a>
                     </li>
                     <li class="o-04 o-paper">
-                        <a href="javascript:void(0);">
+                        <a href="/brochure-request-form/">
                             <i class="fas fa-file-alt"></i>
                             <p class="text">まずは資料請求</p>
                         </a>
