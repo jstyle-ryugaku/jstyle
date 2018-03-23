@@ -4,15 +4,47 @@ $args = array(
     'post_type' => 'life-info',
     'order' => 'desc'
 );
+
+// country
+$tax_query = array();
+if (isset($_GET['country'])) {
+    $search_country = $_GET['country'];
+    if ($search_country != '') {
+        $tax_query[] = array(
+            'taxonomy' => 'life-info-tag',
+            'field' => 'name',
+            'terms' => $search_country,
+            'operator'=>'in'
+        );
+    }
+}
+
+if (count($tax_query) > 0) {
+    $args['tax_query'] = $tax_query;
+}
+
+
 ?>
 
 <?php get_template_part('template-parts/page-header'); ?>
 <?php get_template_part('template-parts/breadcrumb'); ?>
 
 <main class="main-content-container">
-    <h1 class="main-content-title">生活情報タイトル</h1>
+<h1 class="main-content-title">
+    生活情報
+    <?php
+    if ($search_country == 'アメリカ') {
+        echo '- アメリカ';
+    }
+    ?>
+    </h1>
+
     <p class="main-content-description">
-        　ここに、導入分が入ります。これ以降はダミーテキストです。アメリカ合衆国の州のうちでも最大の人口を誇り、多種多様な民族、人種、出身国を持った人々で構成されているカリフォルニア州。北アメリカの西側に位置している。ハリウッド、ビバリーヒルズ、サンタモニカ、ディズニーランドなどなど、観光地としても有名。留学生の受け入れが断トツで多い州です。
+        <?php
+        if ($search_country == 'アメリカ') {
+            echo 'ここに、導入分が入ります(アメリカ)。これ以降はダミーテキストです。アメリカ合衆国の州のうちでも最大の人口を誇り、多種多様な民族、人種、出身国を持った人々で構成されているカリフォルニア州。北アメリカの西側に位置している。ハリウッド、ビバリーヒルズ、サンタモニカ、ディズニーランドなどなど、観光地としても有名。留学生の受け入れが断トツで多い州です。';
+        }
+        ?>
     </p>
 
     <?php if (have_posts()) : ?>
