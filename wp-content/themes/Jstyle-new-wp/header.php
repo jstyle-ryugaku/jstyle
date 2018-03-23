@@ -34,8 +34,6 @@ setcookie('tcd_referrer', $current_url, 0, '/');
     <meta name="description" content="<?php seo_description(); ?>">
     <meta name="viewport" content="width=device-width">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url');
-    echo '?' . filemtime(get_stylesheet_directory() . '/style.css'); ?>" type="text/css"/>
     <?php if ($options['use_ogp']) {
         ogp();
     } ?>
