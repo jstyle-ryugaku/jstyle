@@ -5,7 +5,7 @@ template name: life-info
 
 get_header();
 $args = array(
-    'post_type' => 'lifeinfo',
+    'post_type' => 'life-info',
     'order' => 'DESC'
 );
 ?>
@@ -13,12 +13,14 @@ $args = array(
 <?php get_template_part('template-parts/page-header'); ?>
 <?php get_template_part('template-parts/breadcrumb'); ?>
 
-<main class="life-info">
+<main class="main-content-container">
+    <h1 class="main-content-title">生活情報タイトル</h1>
+    <p class="main-content-description">
+        　ここに、導入分が入ります。これ以降はダミーテキストです。アメリカ合衆国の州のうちでも最大の人口を誇り、多種多様な民族、人種、出身国を持った人々で構成されているカリフォルニア州。北アメリカの西側に位置している。ハリウッド、ビバリーヒルズ、サンタモニカ、ディズニーランドなどなど、観光地としても有名。留学生の受け入れが断トツで多い州です。
+    </p>
+
     <?php if (have_posts()) : ?>
-
-        <?php get_template_part('template-parts/navigation2'); ?>
-
-        <ol id="post_list2">
+        <ol class="life-info__article-list">
             <?php
             $the_query = new wp_query( $args ); ?>
 
@@ -26,47 +28,33 @@ $args = array(
 
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
+                    <div class="life-info" onclick="location.href='<?php the_permalink() ?>'">
+                        <div class="life-info__article">
 
-                    <div class="interview__article" onclick="location.href='<?php the_permalink() ?>'">
-                        <div class="interview__article-image">
-                            <?php
-                            if (has_post_thumbnail()) {
-                                the_post_thumbnail('size1');
-                            } else {
-                                echo '<img src="' . get_template_directory_uri() . '/assets/images/no-image-480x320.gif" alt="">';
-                            }
-                            ?>
-                        </div>
+<!--                            <div class="life-info__article-date">-->
+<!--                                --><?php //the_time('y.m.d'); ?>
+<!--                            </div>-->
 
-                        <div class="interview__article-info">
-
-                            <div class="interview__article-category-container">
-                                <?php
-                                $term_terms = get_the_terms($post->id, 'term');
-                                $country_terms = get_the_terms($post->id, 'country-kind');
-                                ?>
-                                <a>
-                                    <?php
-                                    echo $term_terms[0]->name;
-                                    ?>
-                                </a>
-                                <a>
-                                    <?php
-                                    echo $country_terms[0]->name;
-                                    ?>
-                                </a>
-                            </div>
-
-                            <div class="interview__article-date">
-                                <?php the_time('y.m.d'); ?>
-                            </div>
-
-                            <div class="interview__article-title">
+                            <div class="life-info__article-title">
                                 <?php the_title(); ?>
                             </div>
 
-                            <div class="interview__article-excerpt">
+                            <div class="life-info__article-excerpt">
                                 <?php the_excerpt(); ?>
+                            </div>
+
+                            <div class="life-info__article-category-container">
+                                <?php
+                                $terms = get_the_terms($post->id, 'life-info-tag');
+                                ?>
+
+                                <ul>
+                                    <?php foreach($terms as $term) : ?>
+                                        <li class="life-info__article-tag">
+                                            <?php echo $term->name; ?>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
                             </div>
                         </div>
                     </div>
