@@ -207,7 +207,7 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
             </div>
             <ul>
                 <li class="o-01 o-line">
-                    <a href="javascript:void(0);">
+                    <a href="http://line.me/R/ti/p/%40cqm4815h">
                         <i class="fab fa-line"></i>
                         <p class="text bold">LINEで相談する</p>
                     </a>
