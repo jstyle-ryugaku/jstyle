@@ -77,7 +77,20 @@ function vogue_init() {
     if ( $options['life_info_slug'] ) {
         $life_info_args['rewrite'] = array( 'slug' => $options['life_info_slug'] );
     }
-    register_post_type( 'lifeinfo', $life_info_args);
+    register_post_type( 'life-info', $life_info_args);
+
+    register_taxonomy(
+        'life-info-tag',
+        'life-info',
+        array(
+            'hierarchical' => false,
+            'update_count_callback' => '_update_post_term_count',
+            'label' => '生活情報のタグ',
+            'singular_label' => '生活情報のタグ',
+            'public' => true,
+            'show_ui' => true
+        )
+    );
 
     // Intervew
     $interview_args = array(
