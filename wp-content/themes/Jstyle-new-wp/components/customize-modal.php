@@ -49,7 +49,7 @@
         <div class="select-date">
             <label></label>
             <input class="input-date" type="date" name="date">
-            <div class="">から<input class="input-period" type="number">ヶ月間</div>
+            <div class="">から<input class="input-period" type="number" name="term">ヶ月間</div>
         </div>
         <div class="prev-and-next-container">
             <div class="btn prev js-on-prev">戻る</div>
@@ -68,6 +68,7 @@
             <input type="radio" name="country" id="america"><label for="america">アメリカ</label>
             <input type="radio" name="country" id="canada"><label for="canada">カナダ</label>
             <input type="radio" name="country" id="australia"><label for="australia">オーストラリア</label>
+            <input type="radio" name="country" id="newZealand"><label for="newZealand">オーストラリア</label>
             <input type="radio" name="country" id="UK"><label for="UK">イギリス</label>
             <input type="text" name="country" id="other" placeholder="その他">
         </div>
@@ -85,10 +86,10 @@
             <span class="foreword"></span>留学の種類を選んでください
         </p>
         <div class="select-type">
-            <input type="radio" name="type" id="working-holiday"><label for="working-holiday">ワーキングホリデー</label>
-            <input type="radio" name="type" id="short"><label for="short">短期留学</label>
+            <input type="radio" name="type" id="workingHoliday"><label for="workingHoliday">ワーキングホリデー</label>
+            <input type="radio" name="type" id="language"><label for="language">語学学校</label>
             <input type="radio" name="type" id="university"><label for="university">大学</label>
-            <input type="radio" name="type" id="home-stay"><label for="home-stay">ホームステイ</label>
+            <input type="radio" name="type" id="homeStay"><label for="homeStay">ホームステイ</label>
             <input type="text" name="type" id="other" placeholder="その他">
         </div>
         <div class="prev-and-next-container">
@@ -97,34 +98,38 @@
         </div>
     </div>
     <div class="flex-item result hide">
-        <div>
+        <div class="result__content">
             <p class="customize-modal__title">
                 <i class="far fa-check-square"></i>
                 あなたの留学費用は・・・
             </p>
-            <div>
-                <p><span>約</span>100万円~200万円<span>です</span></span></p>
-            </div>
-            <p>※値段は、ヒアリング結果によって、大きく上下する場合がございます。あらかじめご了承ください。</p>
-        </div>
-        <div>
-            <p class="customize-modal__title">
-                <i class="far fa-check-square"></i>
-                もっと詳しい留学費用を知りたい方は
-            </p>
-            <div class="o-01 o-line">
-                <a href="javascript:void(0);">
-                    <i class="fab fa-line"></i>
-                    <p class="text bold">LINEで相談する</p>
-                </a>
+            <div class="result__text-container">
+                <p class="result__text"><span class="result__small-text">約</span><span
+                            class="result__cost--min">100</span>万円~<span
+                            class="result__cost--max">200</span>万円<span class="result__small-text">です</span></span></p>
+                <p class="result__caution">※値段は、ヒアリング結果によって、大きく上下する場合がございます。あらかじめご了承ください。</p>
             </div>
         </div>
-        <div>
-            <p class="customize-modal__title">
-                <i class="far fa-check-square"></i>
-                他の留学プランを知りたい方は、
-            </p>
-            <div class="js-on-to-top">初めからやりなおす</div>
+        <div class="result__footer">
+            <div class="result__line-btn-container">
+                <p class="customize-modal__title">
+                    <i class="far fa-check-square"></i>
+                    もっと詳しい留学費用を知りたい方は
+                </p>
+                <div class="o-01 o-line">
+                    <a href="javascript:void(0);">
+                        <i class="fab fa-line"></i>
+                        <p class="text bold">LINEで相談する</p>
+                    </a>
+                </div>
+            </div>
+            <div class="result__to-top-btn-container">
+                <p class="customize-modal__title">
+                    <i class="far fa-check-square"></i>
+                    他の留学プランを知りたい方は、
+                </p>
+                <div class="btn js-on-to-top">初めからやりなおす</div>
+            </div>
         </div>
     </div>
 </div>
