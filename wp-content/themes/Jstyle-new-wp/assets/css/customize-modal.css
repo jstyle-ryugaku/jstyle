@@ -49,6 +49,10 @@
     color: #e66a46;
 }
 
+
+
+
+
 @media screen and (max-width:840px) {
     .customize-link .cl-inner p.text {
         -webkit-transform: translateY(0);
@@ -195,6 +199,70 @@
 
 .customize-modal .select-and-next-container > .select-and-next:not(:last-child) {
     margin-bottom: 20px;
+}
+
+.customize-modal .hide {
+    display: none;
+}
+
+.customize-modal .show {
+    display: flex;
+}
+
+.customize-modal .prev-and-next-container {
+    display: flex;
+}
+
+.customize-modal .prev-and-next-container .btn {
+    cursor: pointer;
+    display: block;
+    color: #fff;
+    background: #e66a46;
+    padding: 1em 3.5em;
+    border-radius: 1em;
+    margin-right: 1em;
+}
+
+
+.customize-modal .prev-and-next-container .prev {
+    background: #fff;
+    color: #e66a46;
+    border: 1px solid #e66a46;
+    padding: calc(1em - 1px) calc(3.5em - 1px);
+}
+.customize-modal .prev-and-next-container .btn:hover {
+    transition: .2s;
+    background: #fff;
+    color: #e66a46;
+    border: 1px solid #e66a46;
+    padding: calc(1em - 1px) calc(3.5em - 1px);
+}
+
+.customize-modal .prev-and-next-container .prev:hover {
+    color: #fff;
+    background: #e66a46;
+}
+
+.customize-modal .input-date {
+    border: 1px solid #e66a46;
+    color: #e66a46;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 20px 10px 40px;
+    margin-bottom: 35px;
+    border-radius: 18px;
+}
+
+.customize-modal .input-period {
+    width: 58px;
+    height: 52px;
+    border-radius: 18px;
+    border: solid 1px #e66a46;
+    margin: 0 20px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e66a46;
 }
 
 @keyframes fade-in {
