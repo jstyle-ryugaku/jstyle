@@ -10,13 +10,9 @@ $('.js-on-to-top').on('click', toTopPage);
 
 
 var stepNumber = 1;
-var currentNumber = 0;
 var totalMinCost = 0;
 var totalMaxCost = 0;
 var customizeType = null;
-var isCountryPage = false;
-var isTypePage = false;
-var isPeriodPage = false;
 const $topPage = $('.top-page');
 
 
@@ -61,8 +57,8 @@ function calculateTotalCost() {
     }
 
     if (type === 'language') {
-    totalMinCost = languageCost[country] * term + minCommission[period];
-    totalMaxCost = languageCost[country] * term + maxCommission[period];
+        totalMinCost = languageCost[country] * term + minCommission[period];
+        totalMaxCost = languageCost[country] * term + maxCommission[period];
     } else if (type === 'university') {
         totalMinCost = universityCost['min'] + minCommission[period];
         totalMaxCost = universityCost['max'] + maxCommission[period]
@@ -73,17 +69,25 @@ function calculateTotalCost() {
 
     $('.result__cost--min').text(totalMinCost);
     $('.result__cost--max').text(totalMaxCost);
+
+
+    if (totalMaxCost === 0) {
+        var resultText =  $('.result__text').text();
+        $('.result__text').text('直接お問い合わせください');
+    }
+
 }
 
 function showModal(event) {
     event.preventDefault();
-    var $modalWin = $('.customize-modal');
+    var $modalWin = $('#modal-window');
     $modalWin
         .removeClass('hide')
         .addClass('show');
 }
 
-function hideModal() {
+function hideModal(event) {
+    event.preventDefault();
     $('#modal-window')
         .removeClass('show')
         .addClass('hide');
@@ -117,6 +121,7 @@ function toNextPage() {
     stepNumber++;
     $(stepNumberToPageClass(stepNumber)).find('.step__number').text('0' + stepNumber);
     $(stepNumberToPageClass(stepNumber)).find('.foreword').text(stepNumberToForeword(stepNumber));
+    removeChoices();
 
     if (stepNumber === 5) {
         calculateTotalCost();
@@ -142,7 +147,7 @@ function toTopPage() {
 function stepNumberToPageClass(stepNumber) {
     if (stepNumber === 1) {
         return $('.top-page');
-    } else if(stepNumber === 5) {
+    } else if (stepNumber === 5) {
         return $('.result');
     }
     if (customizeType === 'period') {
@@ -159,9 +164,9 @@ function stepNumberToPageClass(stepNumber) {
             case 2 :
                 return $('.select-country');
             case 3 :
-                return $('.select-period');
-            case 4 :
                 return $('.select-type');
+            case 4 :
+                return $('.select-period');
         }
     }
 }
@@ -181,3 +186,27 @@ function stepNumberToForeword(stepNumber) {
     }
 }
 
+function removeChoices() {
+    var isAmericaSelected = $("input[id='america']").prop('checked');
+    var isWorkingHolidaySelected = $("input[id='workingHoliday']").prop('checked');
+    if (isAmericaSelected) {
+        $("input[id='workingHoliday']").remove();
+        $("label[for='workingHoliday']").remove();
+    }
+    if (isWorkingHolidaySelected) {
+        $("input[id='america']").remove();
+        $("label[for='america']").remove();
+    }
+}
+
+$('.input-country').change(function () {
+    $('input[name="country"]').prop('checked', false);
+});
+
+$('.input-type').change(function () {
+    $('input[name="type"]').prop('checked', false);
+});
+
+function resetForm() {
+    $('input')
+}
