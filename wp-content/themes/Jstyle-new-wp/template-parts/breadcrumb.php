@@ -62,6 +62,31 @@ global $author, $post;
                     </li>
                 <?php endif; ?>
 
+            <?php elseif ( is_post_type_archive( 'life-info' ) || is_singular( 'life-info' ) ) : ?>
+                <li class="p-breadcrumb__item c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a href="<?php echo esc_url( get_post_type_archive_link( 'life-info' ) ); ?>" itemscope itemtype="http://schema.org/Thing" itemprop="item">
+                        <span itemprop="name">
+                            生活情報
+                            <?php echo esc_html( get_custom_post_label( 'life-info' ) ); ?>
+                        </span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                </li>
+
+                <?php if ( is_singular( 'life-info' ) ) : ?>
+                    <li class="p-breadcrumb__item c-breadcrumb__item"><?php echo strip_tags( get_the_title( $post->ID )); ?></li>
+                <?php endif; ?>
+
+                <?php if ( is_page() ) : ?>
+                    <li class="p-breadcrumb__item c-breadcrumb__item">
+                        <?php
+                        $parent_id = $post->post_parent;
+                        $parent_slug = get_post($parent_id)->post_name;
+                        echo $parent_slug;
+                        ?>
+                    </li>
+                <?php endif; ?>
+
 			<?php elseif ( is_page() ) : ?>
                 <?php $parent_id = $post->post_parent; ?>
                 <?php if ($parent_id > 0) : ?>

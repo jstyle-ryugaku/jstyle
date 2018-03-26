@@ -148,7 +148,7 @@ $args['order'] = $sort;
 
         <ol id="post_list2">
             <?php
-            $the_query = new WP_Query( $args ); ?>
+            $the_query = new wp_query( $args ); ?>
 
             <?php if ( $the_query->have_posts() ) : ?>
 
@@ -170,8 +170,8 @@ $args['order'] = $sort;
 
                         <div class="interview__article-category-container">
                             <?php
-                            $term_terms = get_the_terms($post->ID, 'term');
-                            $country_terms = get_the_terms($post->ID, 'country-kind');
+                            $term_terms = get_the_terms($post->id, 'term');
+                            $country_terms = get_the_terms($post->id, 'country-kind');
                             ?>
                             <a>
                                 <?php
@@ -186,7 +186,7 @@ $args['order'] = $sort;
                         </div>
 
                         <div class="interview__article-date">
-                            <?php the_time('Y.m.d'); ?>
+                            <?php the_time('y.m.d'); ?>
                         </div>
 
                         <div class="interview__article-title">
@@ -211,7 +211,7 @@ $args['order'] = $sort;
 
         <?php get_template_part('navigation2'); ?>
     <?php else: ?>
-        <p class="no_post"><?php _e('There is no registered post.', 'tcd-w'); ?></p>
+        <p class="no_post"><?php _e('there is no registered post.', 'tcd-w'); ?></p>
     <?php endif; ?>
 </main>
 
