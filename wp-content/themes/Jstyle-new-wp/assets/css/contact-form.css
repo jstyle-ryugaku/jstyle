@@ -212,6 +212,16 @@
     align-items: baseline;
 }
 
+.contact-form__privacy-policy-container {
+    text-align: center;
+}
+
+.contact-form__privacy-policy-frame {
+    width: 100%;
+    border: solid 1px #969696;
+    border-radius: 3px;
+}
+
 .contact-form__submit-container .wpcf7-submit {
     cursor: pointer;
     width: 150px;
