@@ -4422,7 +4422,7 @@ li.menu-item.menu-item-type-post_type.menu-item-object-plan a:hover {
 @media only screen and (max-width: 1449px) {
     .p-page-header {
         height: auto;
-        padding-bottom: 41.37931%;
+        padding-bottom: 30.37931%;
     }
 }
 
@@ -7708,57 +7708,6 @@ a:hover img.fade {
     .top-slider .ts-slick .slick-arrow {
         display: none !important;
     }
-}
-
-
-/* ----------------------------------------------------------------------
- フロントページ カスタマイズリンクボタン / 作成：堀
----------------------------------------------------------------------- */
-.customize-link {
-    width: 100%;
-    padding: 20px;
-    background-color: #e66a46;
-    font-size: 1.6em;
-    font-weight: bold;
-    color: #FFFFFF;
-}
-.customize-link .cl-inner {
-    width: 100%;
-    max-width: 860px;
-    margin: 0px auto;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -ms-flex-pack: justify;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-}
-.customize-link .cl-inner p.text {
-    line-height: 1.4;
-    letter-spacing: 0.06em;
-    -webkit-transform: translateY(-0.28em);
-    transform: translateY(-0.28em);
-}
-.customize-link .cl-inner p.text i {
-    font-size: 1.6em;
-    -webkit-transform: translateY(0.13em);
-    transform: translateY(0.13em);
-}
-.customize-link .cl-inner a.button {
-    padding: 14px 24px;
-    border: 2px solid #FFFFFF;
-    border-radius: 26px;
-    display: inline-block;
-    color: #FFFFFF;
-    -webkit-transition: .3s;
-    transition: .3s;
-}
-.customize-link .cl-inner a.button:hover {
-    background-color: #FFFFFF;
-    color: #e66a46;
 }
 
 @media screen and (max-width:840px) {
