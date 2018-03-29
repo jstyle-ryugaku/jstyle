@@ -223,6 +223,7 @@
 }
 
 .contact-form__submit-container .wpcf7-submit {
+    cursor: pointer;
     width: 150px;
     padding: 12px;
     background-color: #e66a46;

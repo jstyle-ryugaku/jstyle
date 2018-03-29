@@ -234,6 +234,7 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
                 </span>
             </ul>
         </div>
+        <div class="body-cover"></div>
     </div>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/footer-bar.js"></script>
     <!--

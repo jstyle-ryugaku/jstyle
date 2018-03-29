@@ -99,30 +99,64 @@
     </style>
     <!------- 検索する三つのフォーム ------>
 
-    <!------- 留学の準備 ------>
-
-    <div id="cb_2" class="p-main-image"
-         style="background-image: url('<?php bloginfo("template_directory"); ?>/assets/images/top/prepare@1920*1080.jpg');">
-        <div class="p-main-image__content"
-        ">
-        <div class="title-container">
-            <span class="p-title--english">Preparation</span>
-            <h2 class="p-title" style="">
-                留学の準備
-            </h2>
-        </div>
-        <div>
-            <a class="p-main-image__btn p-button" href="">滞在先の種類</a>
-            <a class="p-main-image__btn p-button" href="">語学留学試験</a>
-            <a class="p-main-image__btn p-button" href="">クレジットカード</a>
-            <a class="p-main-image__btn p-button" href="">海外保険</a>
-            <a class="p-main-image__btn p-button" href="">注意点</a>
-            <a class="p-main-image__btn p-button" href="">持ち物リスト</a>
+    <!------- 留学の基礎知識 ------>
+    <!-- 改変前のCSSは残ったままです -->
+    <div class="knowledge-wrapper" id="cb_2">
+        <div class="kn-inner">
+            <div class="title-container">
+                <span class="p-title--english">Preparation</span>
+                <h2 class="p-title">
+                    留学の基礎知識
+                </h2>
+            </div>
+            <ul class="main-container">
+                <li class="item i-01">
+                    <a href="javascript:void(0);">
+                        <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/top/knowledge-01.jpg')"></div>
+                        <div class="title-wrapper">
+                            <h3 class="title">ここに基礎知識のタイトル</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="item i-02">
+                    <a href="javascript:void(0);">
+                        <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/top/knowledge-02.jpg')"></div>
+                        <div class="title-wrapper">
+                            <h3 class="title">ここに基礎知識のタイトル</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="item i-03">
+                    <a href="javascript:void(0);">
+                        <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/top/knowledge-03.jpg')"></div>
+                        <div class="title-wrapper">
+                            <h3 class="title">ここに基礎知識のタイトル</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="item i-04">
+                    <a href="javascript:void(0);">
+                        <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/top/knowledge-04.jpg')"></div>
+                        <div class="title-wrapper">
+                            <h3 class="title">ここに基礎知識のタイトル</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="item i-05">
+                    <a href="javascript:void(0);">
+                        <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/top/knowledge-05.jpg')"></div>
+                        <div class="title-wrapper">
+                            <h3 class="title">ここに基礎知識のタイトル</h3>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <a class="button" href="<?php echo home_url('/preparation'); ?>">
+                <span class="text">MORE <span class="symbol">&gt;</span></span>
+            </a>
         </div>
     </div>
-</div>
-
-<!------- 留学の準備 ------>
+    <!------- 留学の基礎知識 ------>
 
 <!------- 留学生の日記とニュース ------>
 
