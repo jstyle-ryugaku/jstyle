@@ -272,6 +272,8 @@ function vogue_scripts() {
 	wp_localize_script( 'vogue-script', 'plan', array( 'listNum' => $options['plan_list_num'] ) );
 	wp_enqueue_script( 'vogue-load', get_template_directory_uri() . '/assets/js/load.min.js', array( 'jquery' ), version_num(), true );
 	wp_localize_script( 'vogue-load', 'load', array( 'loadTime' => $options['load_time'] * 1000 ) ); // ミリ秒で渡す
+    wp_enqueue_script('vogue-customize-modal', get_template_directory_uri() . '/assets/js/customize-modal.js', array( 'jquery' ), version_num(), true);
+    wp_enqueue_style( 'vogue-customize-modal', get_template_directory_uri() . '/assets/css/customize-modal.css' , false, version_num() );
 
 	if ( is_mobile() && 'type3' !== $options['footer_bar_display'] && ! $options['display_request'] ) {
 		wp_enqueue_style( 'vogue-footer-bar', get_template_directory_uri() . '/assets/css/footer-bar.css', false, version_num() );
@@ -291,7 +293,7 @@ function vogue_scripts() {
         wp_enqueue_script( 'vogue-country', get_template_directory_uri() . '/assets/js/country.js', array( 'jquery' ), version_num(), true );
     }
 
-    if(is_page('USA')) {
+    if(is_page('usa')) {
         wp_enqueue_style( 'vogue-image-link-list', get_template_directory_uri() . '/assets/css/modules/image-link-list.css', false, version_num() );
         wp_enqueue_style( 'vogue-country-map', get_template_directory_uri() . '/assets/css/modules/country-map.css', false, version_num() );
         wp_enqueue_style( 'vogue-country-usa', get_template_directory_uri() . '/assets/css/country-page-common.css', false, version_num() );
@@ -319,7 +321,7 @@ function vogue_scripts() {
 
     if(is_page('about') || is_front_page()) {
         wp_enqueue_style( 'vogue-about', get_template_directory_uri() . '/assets/css/about.css', false, version_num() );
-        wp_enqueue_script( 'vogue-about', get_template_directory_uri() . '/assets/js/about.js', array( 'jquery' ), version_num(), true );
+//        wp_enqueue_script( 'vogue-about', get_template_directory_uri() . '/assets/js/about.js', array( 'jquery' ), version_num(), true );
     }
 
     if(is_archive('life-info')) {
@@ -361,6 +363,10 @@ function vogue_scripts() {
         wp_enqueue_script( 'vogue-purpose-short', get_template_directory_uri() . '/assets/js/purpose-detail.js', array( 'jquery' ), version_num(), true );
     }
 
+    if(is_page('privacy-policy')) {
+        wp_enqueue_style( 'vogue-privacy-policy', get_template_directory_uri() . '/assets/css/privacy-policy.css', false, version_num() );
+    }
+  
     if(is_page('california')) {
         wp_enqueue_style( 'vogue-country-usa-california', get_template_directory_uri() . '/assets/css/country-region-common.css', false, version_num() );
         wp_enqueue_script( 'vogue-country-usa-california', get_template_directory_uri() . '/assets/js/country-region-common.js', array( 'jquery' ), version_num(), true );
