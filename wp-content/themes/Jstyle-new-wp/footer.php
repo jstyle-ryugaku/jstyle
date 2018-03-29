@@ -126,7 +126,7 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
                     </div>
             </div>
             <div class="p-footer-widget widget_nav_menu">
-                <a href="<?php echo home_url('/preparation'); ?>"><h2 class="p-footer-widget__title">Preparation</h2>
+                <a href="<?php echo home_url('/preparation'); ?>"><h2 class="p-footer-widget__title">Interview</h2>
                     <div>
                         <ul class="menu">
                             <li id="menu-item-1080"
