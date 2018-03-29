@@ -272,6 +272,7 @@
     padding: 10px 20px 10px 40px;
     margin-bottom: 35px;
     border-radius: 18px;
+    background: #fff;
 }
 
 .customize-modal .input-period {
@@ -427,7 +428,7 @@
     font-size: 1.3em;
 }
 
-@media (max-width: 751px) {
+@media (max-width: 908px) {
 
     .customize-modal {
         font-size: 0.8em;
@@ -446,7 +447,8 @@
         top: 26%;
     }
 
-    .customize-modal .step__number {
+    .customize-modal .input-date {
+        width: 100%;
     }
 
     .customize-modal .select-and-next {
@@ -468,6 +470,31 @@
     .customize-modal .result__caution {
         text-align: left;
         line-height: 1.4;
+    }
+
+    .customize-modal .result__footer {
+        flex-flow: column nowrap;
+        justify-content: space-around;
+    }
+
+    .customize-modal .result__footer .customize-modal__title {
+        margin-bottom: 20px;
+    }
+
+    .customize-modal .result__line-btn-container,
+    .customize-modal .result__to-top-btn-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .customize-modal .result__to-top-btn-container .btn {
+        padding: 1.2em;
+        width: auto;
+        height: auto;
+    }
+
+    .customize-modal .flex-item.result {
+        padding: 6% 9%;
     }
 
 }
