@@ -293,7 +293,7 @@ function vogue_scripts() {
         wp_enqueue_script( 'vogue-country', get_template_directory_uri() . '/assets/js/country.js', array( 'jquery' ), version_num(), true );
     }
 
-    if(is_page('USA')) {
+    if(is_page('usa')) {
         wp_enqueue_style( 'vogue-image-link-list', get_template_directory_uri() . '/assets/css/modules/image-link-list.css', false, version_num() );
         wp_enqueue_style( 'vogue-country-map', get_template_directory_uri() . '/assets/css/modules/country-map.css', false, version_num() );
         wp_enqueue_style( 'vogue-country-usa', get_template_directory_uri() . '/assets/css/country-page-common.css', false, version_num() );
@@ -368,7 +368,7 @@ function vogue_scripts() {
         wp_enqueue_script( 'vogue-country-usa-california', get_template_directory_uri() . '/assets/js/country-region-common.js', array( 'jquery' ), version_num(), true );
     }
 
-    if(is_page('knowledge')) {
+    if(is_page('preparation')) {
         wp_enqueue_style( 'vogue-knowledge', get_template_directory_uri() . '/assets/css/knowledge.css', false, version_num() );
         wp_enqueue_script( 'vogue-knowledge', get_template_directory_uri() . '/assets/js/knowledge.js', array( 'jquery' ), version_num(), true );
     }

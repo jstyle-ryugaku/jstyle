@@ -9,12 +9,21 @@ $('.js-on-next').on('click', toNextPage);
 $('.js-on-to-top').on('click', toTopPage);
 
 
+var $modalWin = $('#modal-window');
 var stepNumber = 1;
 var totalMinCost = 0;
 var totalMaxCost = 0;
 var customizeType = null;
 const $topPage = $('.top-page');
+var $resultText = $('.result__text');
+var $resultTextHtml = $('.result__text').html();
+var isAmericaSelected = false;
+var isWorkingHolidaySelected = false;
 
+var $inputIdWorkingHoliday = $("input[id='workingHoliday']");
+var $labelForWorkingHoliday = $("label[for='workingHoliday']");
+var $inputIdAmerica = $("input[id='america']");
+var $labelForAmerica = $("label[for='america']");
 
 var languageCost = {
     america: 18,
@@ -72,15 +81,13 @@ function calculateTotalCost() {
 
 
     if (totalMaxCost === 0) {
-        var resultText =  $('.result__text').text();
-        $('.result__text').text('直接お問い合わせください');
+        $resultText.text('直接お問い合わせください');
     }
 
 }
 
 function showModal(event) {
     event.preventDefault();
-    var $modalWin = $('#modal-window');
     $modalWin
         .removeClass('hide')
         .addClass('show');
@@ -135,6 +142,7 @@ function toPrevPage() {
     stepNumber--;
     $(stepNumberToPageClass(stepNumber)).find('.step__number').text('0' + stepNumber);
     $(stepNumberToPageClass(stepNumber)).find('.foreword').text(stepNumberToForeword(stepNumber));
+    removeChoices();
 }
 
 function toTopPage() {
@@ -142,6 +150,8 @@ function toTopPage() {
     showPage($topPage);
     stepNumber = 1;
     $(stepNumberToPageClass(stepNumber)).find('.step__number').text('0' + stepNumber);
+    removeChoices();
+    resetForm();
 }
 
 function stepNumberToPageClass(stepNumber) {
@@ -187,15 +197,23 @@ function stepNumberToForeword(stepNumber) {
 }
 
 function removeChoices() {
-    var isAmericaSelected = $("input[id='america']").prop('checked');
-    var isWorkingHolidaySelected = $("input[id='workingHoliday']").prop('checked');
+    isWorkingHolidaySelected = $("input[id='workingHoliday']").prop('checked');
+    isAmericaSelected = $("input[id='america']").prop('checked');
+
+
     if (isAmericaSelected) {
-        $("input[id='workingHoliday']").remove();
-        $("label[for='workingHoliday']").remove();
+        hidePage($inputIdWorkingHoliday);
+        hidePage($labelForWorkingHoliday);
+    } else {
+        showPage($inputIdWorkingHoliday);
+        showPage($labelForWorkingHoliday);
     }
     if (isWorkingHolidaySelected) {
-        $("input[id='america']").remove();
-        $("label[for='america']").remove();
+        hidePage($inputIdAmerica);
+        hidePage($labelForAmerica);
+    } else {
+        showPage($inputIdAmerica);
+        showPage($labelForAmerica);
     }
 }
 
@@ -208,5 +226,11 @@ $('.input-type').change(function () {
 });
 
 function resetForm() {
-    $('input')
+    $modalWin.find('input').prop('checked', false);
+    $modalWin.find('input').val('');
+    stepNumber = 1;
+    totalMinCost = 0;
+    totalMaxCost = 0;
+    customizeType = null;
+    $resultText.html($resultTextHtml);
 }
