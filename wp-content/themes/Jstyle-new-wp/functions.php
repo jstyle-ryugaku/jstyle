@@ -353,12 +353,7 @@ function vogue_scripts() {
         wp_enqueue_script( 'vogue-president', get_template_directory_uri() . '/assets/js/president.js', array( 'jquery' ), version_num(), true );
     }
 
-    if(is_page('mid')) {
-        wp_enqueue_style( 'vogue-purpose-mid', get_template_directory_uri() . '/assets/css/purpose-detail.css', false, version_num() );
-        wp_enqueue_script( 'vogue-purpose-mid', get_template_directory_uri() . '/assets/js/purpose-detail.js', array( 'jquery' ), version_num(), true );
-    }
-
-    if(is_page('short')) {
+    if(is_parent_slug() === 'purpose') {
         wp_enqueue_style( 'vogue-purpose-short', get_template_directory_uri() . '/assets/css/purpose-detail.css', false, version_num() );
         wp_enqueue_script( 'vogue-purpose-short', get_template_directory_uri() . '/assets/js/purpose-detail.js', array( 'jquery' ), version_num(), true );
     }
@@ -367,7 +362,7 @@ function vogue_scripts() {
         wp_enqueue_style( 'vogue-privacy-policy', get_template_directory_uri() . '/assets/css/privacy-policy.css', false, version_num() );
     }
   
-    if(is_page('california')) {
+    if(is_parent_slug() === 'usa') {
         wp_enqueue_style( 'vogue-country-usa-california', get_template_directory_uri() . '/assets/css/country-region-common.css', false, version_num() );
         wp_enqueue_script( 'vogue-country-usa-california', get_template_directory_uri() . '/assets/js/country-region-common.js', array( 'jquery' ), version_num(), true );
     }
@@ -863,3 +858,12 @@ function custom_post_type_template_include( $template ) {
     return $template;
 }
 add_filter( 'template_include', 'custom_post_type_template_include' );
+
+/** 固定ページの親ページを判別して条件分岐 ex.Aページを親に持つ子ページすべてに同じものを表示させたい **/
+function is_parent_slug() {
+    global $post;
+    if ($post->post_parent) {
+        $post_data = get_post($post->post_parent);
+        return $post_data->post_name;
+    }
+}

@@ -143,44 +143,36 @@ $blog_query = new WP_Query($blog_args);
         <div class="content-block">
             <h2 class="bottom-line-heading">アメリカ留学の種類</h2>
 
-            <ul class="image-link-list__container">
-                <li class="image-link-list__listed-link">
-                    <a href="javascript:void(0);">
-                        <div class="image-link-list__text-container">
-                            <h1 class="title">短期留学</h1>
-                            <span class="text">テキストテキストテキストテキストテキス</span>
-                        </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-short.jpg')"></div>
-                    </a>
-                </li>
-                <li class="image-link-list__listed-link">
-                    <a href="javascript:void(0);">
-                        <div class="image-link-list__text-container">
-                            <h1 class="title">中期留学</h1>
-                            <span class="text">テキストテキストテキストテキストテキス</span>
-                        </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-mid.jpg')"></div>
-                    </a>
-                </li>
-                <li class="image-link-list__listed-link">
-                    <a href="javascript:void(0);">
-                        <div class="image-link-list__text-container">
-                            <h1 class="title">長期留学</h1>
-                            <span class="text">テキストテキストテキストテキストテキス</span>
-                        </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-long.jpg')"></div>
-                    </a>
-                </li>
-                <li class="image-link-list__listed-link">
-                    <a href="javascript:void(0);">
-                        <div class="image-link-list__text-container">
-                            <h1 class="title">ワーキングホリデー</h1>
-                            <span class="text">テキストテキストテキストテキストテキス</span>
-                        </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-holiday.jpg')"></div>
-                    </a>
-                </li>
-            </ul>
+            <section class="image-link">
+                <ul>
+                    <li class="pc-3c sp-2c i-03">
+                        <a href="<?php echo home_url('/purpose/short'); ?>">
+                            <div class="wrap">
+                                <h1 class="title">短期留学</h1>
+                            </div>
+                            <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-03.jpg')"></div>
+                        </a>
+                    </li>
+                    <li class="pc-3c sp-2c i-04">
+                        <a href="<?php echo home_url('/purpose/long'); ?>">
+                            <div class="wrap">
+                                <h1 class="title">長期留学</h1>
+                            </div>
+                            <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-04.jpg')"></div>
+                        </a>
+                    </li>
+                    <li class="pc-3c sp-2c i-05">
+                        <a href="<?php echo home_url('/purpose/language'); ?>">
+                            <div class="wrap">
+                                <h1 class="title">語学留学</h1>
+                            </div>
+                            <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-05.jpg')"></div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+
         </div>
     </main>
 </main>

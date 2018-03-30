@@ -11,7 +11,7 @@
     <div class="cl-inner">
         <p class="text">
             <i class="far fa-check-square"></i>
-            あなただけのオリジナル留学プランをつくれる！みたいな文章
+            留学っていくらかかるの？ あなただけの留学をカスタマイズしよう！
         </p>
         <a class="button js-show-modal" href="javascript:void(0);">
             無料でカスタマイズしてみる
