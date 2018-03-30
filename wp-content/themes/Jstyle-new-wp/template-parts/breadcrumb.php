@@ -1,7 +1,7 @@
 <?php
 global $author, $post;
 
-$kindname = 'きしえきしゅうへん';
+$kindname = '体験記';
 if (isset($_GET['kind'])) {
     $kindname = $_GET['kind'];
 }
