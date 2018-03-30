@@ -29,6 +29,9 @@
     .president-wrapper {
         padding: 0px 10px;
     }
+    .president-wrapper {
+        margin: 80px 0px;
+    }
 }
 @media screen and (max-width:600px) {
     .president-wrapper {
@@ -41,61 +44,113 @@
  代表挨拶
 ---------------------------------------------------------------------- */
 .president-wrapper h1.title {
-    margin-bottom: 60px;
     font-size: 3.0em;
     font-weight: bold;
     letter-spacing: 2.3px;
     color: #00399f;
 }
-.president-wrapper .photo-message {
+
+.president-wrapper .content {
     width: 100%;
-    height: 500px;
-    margin-bottom: 100px;
+    padding-left: 40px;
     position: relative;
 }
-.president-wrapper .photo-message .photo {
-    width: 92%;
-    height: 86%;
+.president-wrapper .content .photo {
+    width: 44%;
+    height: auto;
     position: absolute;
     top: 0;
     right: 0;
-    background-size: cover;
-    background-position: top center;
+    display: block;
+    z-index: -10;
 }
-.president-wrapper .photo-message h2.top-message {
-    max-width: 80%;
-    padding: 32px;
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    background-color: #00399f;
-    font-size: 2.6em;
-    font-weight: bold;
+.president-wrapper .content h2.top-message {
+    padding-top: 120px;
+    font-size: 2.8em;
+    font-weight: normal;
     line-height: 1.4;
-    text-align: center;
-    color: #FFFFFF;
+    letter-spacing: 0.08em;
+    color: #00399f;
 }
-.president-wrapper .message-text {
-    width: 100%;
-    max-width: 900px;
-    margin: 0px auto;
+.president-wrapper .content h2.top-message br.tb-br {
+    display: none;
 }
-.president-wrapper .message-text p{
+.president-wrapper .content .message-text {
+    width: 70%;
+    margin-top: 80px;
+    padding: 50px 50px 0 0;
+    background-color: rgba(255, 255, 255, 0.94);
+}
+.president-wrapper .content .message-text p {
     margin-bottom: 40px;
-    font-size: 1.8em;
+    font-size: 1.6em;
     line-height: 2.0;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     text-align: justify;
     text-indent: 1em;
     color: #4a4a4a;
 }
-.president-wrapper .message-text p.text-right {
+.president-wrapper .content .message-text p.text-right {
     line-height: 1.6;
     text-align: right;
 }
 
-@media screen and (max-width:980px) {
-    .president-wrapper .photo-message h2.top-message br {
+@media screen and (max-width:960px) {
+    .president-wrapper .content h2.top-message br.tb-br {
+        display: inline;
+    }
+    .president-wrapper .content h2.top-message br.pc-br {
         display: none;
+    }
+}
+@media screen and (max-width:860px) {
+    .president-wrapper .content .message-text {
+        width: 82%;
+    }
+}
+@media screen and (max-width:800px) {
+    .president-wrapper .content h2.top-message {
+        padding-top: 90px;
+    }
+    .president-wrapper .content .message-text {
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width:700px) {
+    .president-wrapper .content h2.top-message {
+        width: 56%;
+        text-align: justify;
+    }
+    .president-wrapper .content h2.top-message br.pc-br,
+    .president-wrapper .content h2.top-message br.tb-br {
+        display: none;
+    }
+}
+@media screen and (max-width:560px) {
+    .president-wrapper .content {
+        padding-left: 0px;
+    }
+    .president-wrapper .content .photo {
+        width: 86%;
+        margin-top: 20px;
+        margin-left: 14%;
+        position: relative;
+    }
+    .president-wrapper .content h2.top-message {
+        width: 86%;
+        margin-top: -110px;
+        padding: 24px;
+        background-color: #00399f;
+        font-weight: bold;
+        line-height: 1.2;
+        letter-spacing: 0.07em;
+        color: #FFFFFF;
+    }
+    .president-wrapper .content .message-text {
+        width: 100%;
+        padding: 0;
+    }
+    .president-wrapper .content .message-text p {
+        margin-bottom: 26px;
     }
 }
