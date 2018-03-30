@@ -29,6 +29,11 @@ body {
     margin: 0;
 }
 
+/** Remove outline */
+* {
+    outline: none;
+}
+
 /** Add the correct display in IE 9-. */
 article, aside, footer, header, nav, section {
     display: block;
@@ -448,7 +453,7 @@ ul {
 
 /* Contents ----------------------------------------------------------------- */
 .l-contents {
-    background: linear-gradient(to right, #fff 0%, #fff 50%, #f6f6f6 50%, #f6f6f6 100%);
+    background: transparent !important;
 }
 
 .l-contents--rev {
@@ -476,10 +481,6 @@ ul {
 }
 
 @media only screen and (max-width: 1279px) {
-    .l-contents {
-        background: transparent !important;
-    }
-
     .l-contents__inner {
         display: block;
         width: 100%;
@@ -821,17 +822,10 @@ ul {
     background: #fff;
     box-sizing: border-box;
     padding-bottom: 115px;
-    padding-right: 5.21739%;
-    width: 68.69565%;
+    margin: 0 auto;
+    padding-right: 0;
+    width: 89.84375%;
     padding-top: 92px;
-}
-
-@media only screen and (max-width: 1279px) {
-    .l-primary {
-        margin: 0 auto;
-        padding-right: 0;
-        width: 89.84375%;
-    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -5478,6 +5472,8 @@ li.p-company-nav__item {
 
 .p-entry__body h2 {
     font-size: 140%;
+    border-left: 10px solid #003D9C;
+    padding: 1em;
 }
 
 .p-entry__body h3 {

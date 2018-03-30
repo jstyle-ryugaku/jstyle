@@ -95,7 +95,10 @@ function vogue_init() {
     // Intervew
     $interview_args = array(
         'has_archive' => true,
-        'label' => 'Interview',
+        'labels' => array(
+            'name' => __( '体験記' ),
+            'singular_name' => __( '体験記' )
+        ),
         'menu_position' => 5,
         'public' => true,
         'supports' => array( 'editor', 'revisions', 'thumbnail', 'title' )
