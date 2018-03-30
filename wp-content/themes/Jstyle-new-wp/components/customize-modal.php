@@ -119,7 +119,7 @@
                         もっと詳しい留学費用を知りたい方は
                     </p>
                     <div class="o-01 o-line">
-                        <a href="javascript:void(0);">
+                        <a href="http://line.me/R/ti/p/%40cqm4815h">
                             <i class="fab fa-line"></i>
                             <p class="text bold">LINEで相談する</p>
                         </a>
