@@ -156,10 +156,10 @@ if ($tcd_splash_page->is_splash_page()) {
                 </li>
                 <li><a href="<?php echo home_url('/preparation'); ?>">
                         <div
-                                class="menu-button--ja">留学の準備
+                                class="menu-button--ja">留学の基礎知識
                         </div>
                         <div
-                                class="menu-button--en">Prepare
+                                class="menu-button--en">Preparation
                         </div>
                     </a>
                     <!--                    <ul class="sub-menu">-->

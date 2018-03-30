@@ -6,10 +6,10 @@
         var windowHeight = $(window).height(),
             topWindow = $(window).scrollTop();
 
-        $('.knowledge-page-wrapper .kp-section').each(function () {
+        $('.preparation-page-wrapper .pp-section').each(function () {
             var targetPosition = $(this).offset().top;
             if (topWindow > targetPosition - windowHeight + 260) {
-                $(this).addClass("kp-fadein");
+                $(this).addClass("pp-fadein");
             }
         });
     });
