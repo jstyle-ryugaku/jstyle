@@ -9,10 +9,10 @@ $args = array(
     'type' => 'array'
 );
 
-// country
+// kind
 $tax_query = array();
-if (isset($_GET['kind'])) {
-    $search_country = $_GET['kind'];
+if (isset($_get['kind'])) {
+    $search_country = $_get['kind'];
     if ($search_country != '') {
         $tax_query[] = array(
             'taxonomy' => 'kind',
