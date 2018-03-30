@@ -23,7 +23,6 @@ if (count($tax_query) > 0) {
     $args['tax_query'] = $tax_query;
 }
 
-
 ?>
 
 <?php get_template_part('template-parts/page-header'); ?>
