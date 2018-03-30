@@ -145,7 +145,7 @@ $blog_query = new WP_Query($blog_args);
 
             <section class="image-link">
                 <ul>
-                    <li class="pc-3c sp-2c i-03">
+                    <li class="pc-3c sp-1c i-03">
                         <a href="<?php echo home_url('/purpose/short'); ?>">
                             <div class="wrap">
                                 <h1 class="title">短期留学</h1>

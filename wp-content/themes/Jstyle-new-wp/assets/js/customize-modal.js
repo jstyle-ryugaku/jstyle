@@ -200,7 +200,6 @@ function removeChoices() {
     isWorkingHolidaySelected = $("input[id='workingHoliday']").prop('checked');
     isAmericaSelected = $("input[id='america']").prop('checked');
 
-
     if (isAmericaSelected) {
         hidePage($inputIdWorkingHoliday);
         hidePage($labelForWorkingHoliday);

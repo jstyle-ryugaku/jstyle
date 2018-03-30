@@ -2,196 +2,107 @@
 /*
 template name: purpose-working-holiday
 */
-__( 'purpose-short', 'tcd-w' );
+__('purpose-short', 'tcd-w');
 get_header();
 ?>
 <main class="l-main">
-    <?php get_template_part( 'template-parts/page-header' ); ?>
-    <?php get_template_part( 'template-parts/breadcrumb' ); ?>
+    <?php get_template_part('template-parts/page-header'); ?>
+    <?php get_template_part('template-parts/breadcrumb'); ?>
 
     <div class="purpose-detail-wrapper">
 
         <!-- 概要 -->
+
         <section class="pd-about">
-            <h1 class="title">短期留学</h1>
+            <h1 class="title">ワーキングホリデー</h1>
             <p class="text">
-                短期留学とは、１週間から3か月までの期間で行う留学です。学生なら、春休み、夏休みを使って、社会人なら有給休暇を使って行くのがおすすめです。
+                ワーキングホリデー制度とは、仕事をすることで滞在資金を補いながら、最長1年間（イギリスは2年間）の海外生活を体験できる制度です。国際交流を目的に政府間協定として結ばれました。海外で生活したり、学んだり、働いたり、旅行したり、などさまざまな体験が1度にでき、「海外で自分を試したい」「今までとは違う環境で自分を成長させたい」という方にとって、嬉しい制度です。また、国によって制度の内容が異なるので、しっかり調べて自分に合った国を選びましょう。
             </p>
         </section>
 
-        <!-- 短期留学でも学べることはたくさん！ -->
-        <section class="pd-point">
-            <h2 class="title">短期留学でも学べることはたくさん！</h2>
-            <ul class="point-wrapper">
-                <li class="p-01">
-                    <img class="p-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-01.jpg">
-                    <div class="p-wrapper">
-                        <h3 class="title">語学力の向上！</h3>
-                        <p class="text">
-                            短期間でも努力次第でいくらでも語学力は向上させることができます。できるだけ現地の人といる時間を増やし、習得したい言語を人一倍に話すようにしましょう。
-                        </p>
-                    </div>
-                </li>
-                <li class="p-02">
-                    <img class="p-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-02.jpg">
-                    <div class="p-wrapper">
-                        <h3 class="title">異文化交流ができる！</h3>
-                        <p class="text">
-                            語学学校では世界各国からの留学生と共に学びます。また、アクティビティ等を通してより多くの国籍の方と交流することができます。
-                        </p>
-                    </div>
-                </li>
-                <li class="p-03">
-                    <img class="p-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-03.jpg">
-                    <div class="p-wrapper">
-                        <h3 class="title">憧れの海外生活を体験！</h3>
-                        <p class="text">
-                            映画に出てくるような都市で外国人と暮らせば、旅行では味わえない体験ができます。新しくてワクワクする日々が待っているでしょう。
-                        </p>
-                    </div>
-                </li>
-                <li class="p-04">
-                    <img class="p-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-04.jpg">
-                    <div class="p-wrapper">
-                        <h3 class="title">留学先の観光地を楽しむ！</h3>
-                        <p class="text">
-                            留学は時間がたくさんあります。空いている時間で憧れの有名スポットへ気軽に行くことができます。
-                        </p>
-                    </div>
-                </li>
-                <li class="p-05">
-                    <img class="p-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-05.jpg">
-                    <div class="p-wrapper">
-                        <h3 class="title">ボランティアに挑戦！</h3>
-                        <p class="text">
-                            語学の他にも、ダイビングやラグビー、ダンスやミュージカルなどその土地本場のものを体験できます。
-                        </p>
-                    </div>
-                </li>
-                <li class="p-06">
-                    <img class="p-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-06.jpg">
-                    <div class="p-wrapper">
-                        <h3 class="title">本場で趣味を楽しむ！</h3>
-                        <p class="text">
-                            語学の他にも、ダイビングやラグビー、ダンスやミュージカルなど様々なものを体験できます。自分の趣味を本場で試してみましょう。
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <!-- 短期留学Q&A -->
-        <section class="pd-qa">
-            <h2 class="title">短期留学Q&A</h2>
-            <ul class="pa-wrapper">
-                <li class="qa-01 qa-anime">
-                    <div class="inner">
-                        <span class="question">
-                            <p class="text">語学力はどれくらい必要？</p>
-                        </span>
-                        <span class="answer">
-                            <p class="text">語学力があるにこしたことはないですが、なくても大丈夫です。積極的に会話をし、短期間でできる最大限の努力をしましょう。</p>
-                        </span>
-                    </div>
-                </li>
-                <li class="qa-02 qa-anime">
-                    <div class="inner">
-                        <span class="question">
-                            <p class="text">滞在先の種類は？</p>
-                        </span>
-                        <span class="answer">
-                            <p class="text">ホームステイ、または学校の寮滞在が一般的です。現地の生活を楽しむなら、会話力を磨くこともできるホームステイがおすすめ。</p>
-                        </span>
-                </li>
-                <li class="qa-03 qa-anime">
-                    <div class="inner">
-                        <span class="question">
-                            <p class="text">どこで学ぶ？</p>
-                        </span>
-                        <span class="answer">
-                            <p class="text">私立の語学学校で学ぶのが一般的です。ビルに入っている校舎のほか、大学のキャンパスで行われるコースもあります。</p>
-                        </span>
-                </li>
-                <li class="qa-04 qa-anime">
-                    <div class="inner">
-                        <span class="question">
-                            <p class="text">ビザは必要？</p>
-                        </span>
-                        <span class="answer">
-                            <p class="text">ほとんどの国の場合は必要ないですが、アメリカにおいては、たとえ1週間だけでもビザが必要になります。</p>
-                        </span>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Jstyleで短期留学しました！ -->
-        <section class="pd-experience">
-            <h2 class="title">Jstyleで短期留学しました！</h2>
-            <div class="ep-wrapper">
-
-                <!-- 左側・体験談 -->
-                <div class="ep-left">
-                    <ul>
-                        <li class="i-01">
-                            <a class="inner-link" href="javascript:void(0);">
-                                <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/experience-01.jpg')"></div>
-                                <h3 class="title">1年間で身についた英語力をもっと上達させたい</h3>
-                                <p class="text">
-                                    私は高校1年生の時に1年間アメリカのオハイオ州に留学していました。帰国後、進路を考えた際に海外進学という…
-                                </p>
-                                <span class="sub-data">
-                                    <time>2017.1.2</time>
-                                    <span class="tag">短期留学</span>
-                                    <span class="tag">アメリカ</span>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="i-02">
-                            <a class="inner-link" href="javascript:void(0);">
-                                <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/experience-02.jpg')"></div>
-                                <h3 class="title">1年間で身についた英語力をもっと上達させたい</h3>
-                                <p class="text">
-                                    私は高校1年生の時に1年間アメリカのオハイオ州に留学していました。帰国後、進路を考えた際に海外進学という…
-                                </p>
-                                <span class="sub-data">
-                                    <time>2017.1.2</time>
-                                    <span class="tag">短期留学</span>
-                                    <span class="tag">アメリカ</span>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="i-03">
-                            <a class="inner-link" href="javascript:void(0);">
-                                <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/experience-03.jpg')"></div>
-                                <h3 class="title">1年間で身についた英語力をもっと上達させたい</h3>
-                                <p class="text">
-                                    私は高校1年生の時に1年間アメリカのオハイオ州に留学していました。帰国後、進路を考えた際に海外進学という…
-                                </p>
-                                <span class="sub-data">
-                                    <time>2017.1.2</time>
-                                    <span class="tag">短期留学</span>
-                                    <span class="tag">アメリカ</span>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
+        <!-- 国ごとの説明 -->
+        <section class="country-description">
+            <h2 class="country-description__title">ワーホリ対象国は20か国<span class="small">*2018年3月現在</span></h2>
+            <div class="wrap">
+                <div class="country-description__left-box">
+                    <h3 class="country-name"><img
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/country/au.svg">オーストラリア
+                    </h3>
+                    <p>
+                        ワーキングホリデーで最も人気の国です。オーストラリアは日本が初めてワーキングホリデーの協定を結んだ国で、1980年以降、多くの日本人がワーキングホリデーを体験しており、受け入れ態勢が非常に整っています。条件付きながら2度目のワーキングホリデーが可能であるが特徴的です。</p>
+                    <p>
+                        就労に関しては、最低賃金が高いです。レストランやツアーガイド、ホテルや旅行関係などのホスピタリティ系の仕事が人気です。また、田舎の果樹園でのフルーツピッキングや農場での仕事などオーストラリアらしい仕事もあります。同一の雇用主の下での就労は6ヵ月以内です。</p>
+                    <p>
+                        オーストラリアは親日家が多いため、初めての海外でも安心。自然が豊かで、気候も良く、生活水準も高く暮らしやすい国で、移民も多く多彩な文化を持ち、人々は大らかでフレンドリーです。サーフィンやダイビングなど趣味も充実できます。 </p>
                 </div>
-
-                <!-- 右側・バナー -->
-                <div class="ep-right">
-                    <a href="javascript:void(0);">
-                        <img class="image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/banner-01.jpg')">
-                    </a>
-                    <a href="javascript:void(0);">
-                        <img class="image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/banner-01.jpg')">
-                    </a>
-                    <a href="javascript:void(0);">
-                        <img class="image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/banner-01.jpg')">
-                    </a>
+                <div class="country-description__right-box">
+                    <h3 class="country-name"><img
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/country/nz.svg">ニュージーランド
+                    </h3>
+                    <p>制度のスタートは1885年で、ビザの発給数に制限が無く、毎年約4,000名前後にワーキングホリデービザを発給しています。</p>
+                    <p>
+                        就学期間は6ヵ月まで、就労期間の制限はなくフレキシビリティが高いので働きやすいです。最初に入国した日から12ヵ月間の就労が可能です。農場での仕事を3ヵ月以上行った証明がされると、滞在を3ヵ月延長することも可能。10月～3月の観光シーズンは観光客向けの求人が増え、冬場はスキー場近くのホテルやゲレンデでのアルバイトもあります。</p>
+                    <p>自然あふれる環境で、ゆったり滞在できるのがニュージーランド。国土の約3分の1を国立公園や自然保護地区に指定されているほど、自然あふれる国ニュージーランド。</p>
+                    <p>マリンスポーツだけでなく、トレッキングやハイキングなども楽しめます。活火山があるので温泉があるのも嬉しい！</p>
                 </div>
             </div>
+
+            <div class="wrap">
+                <div class="country-description__left-box">
+                    <h3 class="country-name"><img
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/country/ca.svg">カナダ
+                    </h3>
+                    <p>
+                        制度のスタートは1985年で、ワーキングホリデーでの渡航先としてはオーストラリアに次いで人気の国です。毎年募集人数の枠に制限があり、秋～年末にかけて発表され、通った者のみが滞在/就労することができます。</p>
+                    　<p>
+                        ワーキングホリデー就労許可証の有効期限内で就労が可能です。学校には最長半年まで通うことができます。日本人観光客向け土産物店や日本食レストランなどは英語力が低くても仕事に就けるので人気ですが、競争率が高いです。モントリオールやケベックではフランス語ができると仕事のチャンスが広がります。　</p>
+                    <p>
+                        カナダは自然と都市の便利さが共存し、暮らしやすさに定評があります。英語は誰にでも聞き取りやすく比較的なまりが少ないため、英語習得を目的として選ぶ人も多いです。英語だけでなくフランス語も多く使われているため、2ヵ国語学ぶことができます。</p>
+                </div>
+                <div class="country-description__right-box">
+                    <h3 class="country-name"><img
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/country/gb.svg">イギリス
+                    </h3>
+                    <p>
+                        イギリスのワーキングホリデーは「Youth Mobility
+                        Scheme」と呼ばれ、2001年からスタートしました。最長2年間滞在でき、就労期間にも就学期間にも制限がないなど自由度が高いですが、発給数1000名のみで非常に競争率が高いです。</p>
+                    <p>最長2年間フルタイムでの就労が可能です。日本人観光客の多いロンドンでは、土産物店や日本食レストランなど比較的仕事はありますが、英語力がないと仕事をみつけるのが難しいです。</p>
+                    　<p>
+                        イギリスは、歴史と伝統を重んじる一方で、現代文化の流行の発信地として、アート・音楽・ファッションなどの分野でも世界をリードしています。あらゆる分野の教育・研究水準が高く、理想的な学ぶ環境が整っています。英語の発音やスペルでアメリカ英語との違いを見つけるなどおもしろい発見もあります。
+                    </p>
+                </div>
+            </div>
+
+            <div class="wrap">
+                <div class="country-description__left-box">
+                    <h3 class="country-name"><img
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/country/fr.svg">フランス
+                    </h3>
+                    <p>制度のスタートは1999年でまだ歴史は浅いが、毎年約400名を募集している。</p>
+                    <p>
+                        就学期間に制限はなく、就労期間もほぼフルタイムで勤務できて、自由度の高さが特徴的です。日本人観光客の多いパリでは、日本人観光客向けツアーガイドや土産物店、また日本食のレストランなどの仕事があります。ただし、地方では状況が異なるため、やはりフランス語が必要になります。</p>
+                    <p>
+                        フランスといえば、数多くの歴史遺産と食通をうならせる料理とワインの国ですね。芸術家たちを虜にしたパリや、多彩な魅力にあふれた地方の街は、アウトドア派・アート派・グルメ派、どれもすべて楽しめます。語学や就労だけではなく、フランスの文化や歴史に触れられる素敵な海外生活になること間違いなしです。</p>
+                </div>
+                <div class="country-description__right-box">
+                    <h3 class="country-name"><img
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/country/ie.svg">アイルランド
+                    </h3>
+                    <p>
+                        制度のスタートは2007年スタートでまだまだ歴史は浅いが毎年約400名を募集しています。ワーキングホリデー制度を持つ英語圏の国の中では穴場的な存在です。日本人が少ないところでワーホリをしたいという人にもおすすめです。</p>
+                    <p>
+                        就学期間に制限はなく、就労期間は1週間に最大39時間までと制限があるが、ほぼフルタイムでの労働が可能で、自由度の高さが特徴的です。日本からの観光客がそれほど多くないので、英語でコミュニケーションができないと仕事に就くのは難しいですが、日本でホテルや旅行会社など実務経験があると、関連した仕事では有利になります。</p>
+                    <p>豊かな自然を持つアイルランドでは数々の詩人や芸術家が生まれています。競馬や乗馬、ゴルフ、釣り、サイクリングなど様々なスポーツも楽しめるのも魅力です。</p>
+                    </p>
+                </div>
+            </div>
+            <div class="country-description">
+                <p class="sub-description">
+                    その他、ワーキングホリデーが可能な国は、アルゼンチン、チリ、オーストリア、スペイン、スロバキア、デンマーク、ドイツ、ノルウェー、ハンガリー、ポーランド、ポルトガル、韓国、台湾、香港です。</p>
+            </div>
         </section>
+
+
     </div>
 </main>
 <?php get_footer(); ?>

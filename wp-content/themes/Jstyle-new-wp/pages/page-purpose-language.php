@@ -2,196 +2,45 @@
 /*
 template name: purpose-language
 */
-__( 'purpose-short', 'tcd-w' );
+__('purpose-short', 'tcd-w');
 get_header();
 ?>
 <main class="l-main">
-    <?php get_template_part( 'template-parts/page-header' ); ?>
-    <?php get_template_part( 'template-parts/breadcrumb' ); ?>
+    <?php get_template_part('template-parts/page-header'); ?>
+    <?php get_template_part('template-parts/breadcrumb'); ?>
 
     <div class="purpose-detail-wrapper">
 
         <!-- 概要 -->
         <section class="pd-about">
-            <h1 class="title">短期留学</h1>
+            <h1 class="title">語学留学</h1>
             <p class="text">
-                短期留学とは、１週間から3か月までの期間で行う留学です。学生なら、春休み、夏休みを使って、社会人なら有給休暇を使って行くのがおすすめです。
+                語学留学とは、「語学力の向上」を主目的とした留学タイプのことを指し、「語学学校（Language
+                School）」と呼ばれる語学を教える専門の学校に通学をします。世界中には膨大な数の語学学校があり、Jstyleは世界各国どこの語学学校でも語学を学ぶことができます。語学留学では、その国の話されている言語を学ぶのが一般的で、英語を学びたい場合は、英語圏の国、フランス語を学びたい場合は、フランス語圏、スペイン語を学びたい場合は、スペイン語圏に語学留学をするのが通常です。期間は、1週間から1年間まで、好きなときに受講を開始できて好きな時に終了できます。開始日、期間の自由とともに、入門レベルから大学留学前の上級レベルまで幅広く、多彩なコースがあります。英語力の基礎力の養成から、検定対策やビジネス英語でキャリアアップといった様々なニーズに対応しています。また、年齢層は、小学生から定年後の大人まで、幅広い層を受け入れています。世界各地に語学学校があるので、好きな国、都市で好きな言語を学ぶことができます。また、Jstyleはオーダーメイド留学ですので、スポーツなどのアクティビティやワーキングホリデーと組み合わせて、自分のイメージに合わせた留学を皆様のご要望に沿ってデザインできます。
             </p>
         </section>
 
-        <!-- 短期留学でも学べることはたくさん！ -->
-        <section class="pd-point">
-            <h2 class="title">短期留学でも学べることはたくさん！</h2>
-            <ul class="point-wrapper">
-                <li class="p-01">
-                    <img class="p-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-01.jpg">
-                    <div class="p-wrapper">
-                        <h3 class="title">語学力の向上！</h3>
-                        <p class="text">
-                            短期間でも努力次第でいくらでも語学力は向上させることができます。できるだけ現地の人といる時間を増やし、習得したい言語を人一倍に話すようにしましょう。
-                        </p>
-                    </div>
-                </li>
-                <li class="p-02">
-                    <img class="p-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-02.jpg">
-                    <div class="p-wrapper">
-                        <h3 class="title">異文化交流ができる！</h3>
-                        <p class="text">
-                            語学学校では世界各国からの留学生と共に学びます。また、アクティビティ等を通してより多くの国籍の方と交流することができます。
-                        </p>
-                    </div>
-                </li>
-                <li class="p-03">
-                    <img class="p-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-03.jpg">
-                    <div class="p-wrapper">
-                        <h3 class="title">憧れの海外生活を体験！</h3>
-                        <p class="text">
-                            映画に出てくるような都市で外国人と暮らせば、旅行では味わえない体験ができます。新しくてワクワクする日々が待っているでしょう。
-                        </p>
-                    </div>
-                </li>
-                <li class="p-04">
-                    <img class="p-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-04.jpg">
-                    <div class="p-wrapper">
-                        <h3 class="title">留学先の観光地を楽しむ！</h3>
-                        <p class="text">
-                            留学は時間がたくさんあります。空いている時間で憧れの有名スポットへ気軽に行くことができます。
-                        </p>
-                    </div>
-                </li>
-                <li class="p-05">
-                    <img class="p-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-05.jpg">
-                    <div class="p-wrapper">
-                        <h3 class="title">ボランティアに挑戦！</h3>
-                        <p class="text">
-                            語学の他にも、ダイビングやラグビー、ダンスやミュージカルなどその土地本場のものを体験できます。
-                        </p>
-                    </div>
-                </li>
-                <li class="p-06">
-                    <img class="p-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-06.jpg">
-                    <div class="p-wrapper">
-                        <h3 class="title">本場で趣味を楽しむ！</h3>
-                        <p class="text">
-                            語学の他にも、ダイビングやラグビー、ダンスやミュージカルなど様々なものを体験できます。自分の趣味を本場で試してみましょう。
-                        </p>
-                    </div>
-                </li>
-            </ul>
+        <section class="language-description">
+            <h2 class="bottom-line-heading">ワンポイントアドバイス</h2>
+            <p>
+                正直なところ、英語の勉強は日本国内でもできます。学校での授業や英会話スクール等で勉強ができるだけではなく、外国人の方と簡単に知り合って話すことができるSNSやサイト等のツールも登場しています。日本国内は以前よりも比較的簡単に英語が勉強ができる環境に変わりつつあると言えます。では、そんな日本にいるにも関わらず、なぜ海外へ行き語学を勉強しに行くのでしょうか。それは、海外では、語学を生で学びながらそれと同時に実践することができるという点で語学力が飛躍的に伸びやすいからです。海外へ行くと、いやがおうでも英語を話さなければならない環境に陥ります。話して通じないと生きてはいけません。日本においてはとてもじゃない限りそのような状況に置かれることはないでしょう。従って、なんとかして生きてゆかなければならないという危機感によって語学力を向上させることができるのです。しかし、ただ単に留学をしたからといって語学力が伸びるというわけではもちろんありません。留学へ行っても日本人とばかり話をしたり、ずっと家にひきこもっていたり、外に出ようとしたりしなければ、一向に語学力は伸びません。留学へ行ったら、なるべく日本人とは話さずに、できるだけ多くのネイティブの方とコミュニケーションをとるようにしましょう。そして、わからないことが出てきたら何度も何度も貪欲に質問し、理解して使えるようになるまで繰り返し練習しましょう。現地へ行けばある程度までは上達します。話せるようにもなります。しかし、「語学力を向上させるんだ」という強い熱意を持たなければ飛躍的な向上はしません。是非、自ら進んで積極的に恥ずかしがらずに英語でコミュニケーションをとりましょう。</p>
+            <p>
+                留学へ行く前からもできることはたくさんあります。是非、行く前にできるだけたくさん英語の勉強をしていってください。してから行くのと全くせずに行くのとでは、現地での飛躍率が大幅に異なります。留学に行くと決めた日から毎日欠かさず勉強をします。</p>
+            <p>また、せっかく留学をして語学力を伸ばしたのなら、帰ってきた後も、継続的に学習し維持させることをおすすめします。</p>
+            <p>人一倍努力をして、語学力を向上させてきてください。</p>
         </section>
 
-        <!-- 短期留学Q&A -->
-        <section class="pd-qa">
-            <h2 class="title">短期留学Q&A</h2>
-            <ul class="pa-wrapper">
-                <li class="qa-01 qa-anime">
-                    <div class="inner">
-                        <span class="question">
-                            <p class="text">語学力はどれくらい必要？</p>
-                        </span>
-                        <span class="answer">
-                            <p class="text">語学力があるにこしたことはないですが、なくても大丈夫です。積極的に会話をし、短期間でできる最大限の努力をしましょう。</p>
-                        </span>
-                    </div>
-                </li>
-                <li class="qa-02 qa-anime">
-                    <div class="inner">
-                        <span class="question">
-                            <p class="text">滞在先の種類は？</p>
-                        </span>
-                        <span class="answer">
-                            <p class="text">ホームステイ、または学校の寮滞在が一般的です。現地の生活を楽しむなら、会話力を磨くこともできるホームステイがおすすめ。</p>
-                        </span>
-                </li>
-                <li class="qa-03 qa-anime">
-                    <div class="inner">
-                        <span class="question">
-                            <p class="text">どこで学ぶ？</p>
-                        </span>
-                        <span class="answer">
-                            <p class="text">私立の語学学校で学ぶのが一般的です。ビルに入っている校舎のほか、大学のキャンパスで行われるコースもあります。</p>
-                        </span>
-                </li>
-                <li class="qa-04 qa-anime">
-                    <div class="inner">
-                        <span class="question">
-                            <p class="text">ビザは必要？</p>
-                        </span>
-                        <span class="answer">
-                            <p class="text">ほとんどの国の場合は必要ないですが、アメリカにおいては、たとえ1週間だけでもビザが必要になります。</p>
-                        </span>
-                    </div>
-                </li>
-            </ul>
+        <section class="language-description">
+            <h2 class="bottom-line-heading">Jstyleでしかできない語学留学を</h2>
+            <h3 class="language-description__sub-heading">Jstyleのみのお得留学情報をお届け！</h3>
+            <p>
+                Jstyleは、語学留学をするからには、みなさんに必ず語学を習得してきてほしいと考えております。そうなって頂くためにも、Jstyleはみなさんに様々な留学お得情報をお届けします。複数回行う面談時では、その国での過ごし方や語学学校の生かし方など留学経験者にしかわからない情報をお伝えします。</p>
+            <h3 class="language-description__sub-heading">自由な　「語学留学＋α」</h3>
+            <p>
+                Jstyleはオーダーメイドですので、語学留学にプラスしてどのような活動も加えることができます。他のエージェントであれば、もともと用意されたプログラムから選ぶのが大半ですが、Jstyleでは、お客様のご要望に沿ってプランを組むことが可能です。<br>
+                具体的には、「語学＋ダンス」「語学＋ボランティア」「語学＋ビジネス」「語学＋ワーホリ」などなど、プラン例は無限にあります。</p>
         </section>
 
-        <!-- Jstyleで短期留学しました！ -->
-        <section class="pd-experience">
-            <h2 class="title">Jstyleで短期留学しました！</h2>
-            <div class="ep-wrapper">
-
-                <!-- 左側・体験談 -->
-                <div class="ep-left">
-                    <ul>
-                        <li class="i-01">
-                            <a class="inner-link" href="javascript:void(0);">
-                                <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/experience-01.jpg')"></div>
-                                <h3 class="title">1年間で身についた英語力をもっと上達させたい</h3>
-                                <p class="text">
-                                    私は高校1年生の時に1年間アメリカのオハイオ州に留学していました。帰国後、進路を考えた際に海外進学という…
-                                </p>
-                                <span class="sub-data">
-                                    <time>2017.1.2</time>
-                                    <span class="tag">短期留学</span>
-                                    <span class="tag">アメリカ</span>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="i-02">
-                            <a class="inner-link" href="javascript:void(0);">
-                                <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/experience-02.jpg')"></div>
-                                <h3 class="title">1年間で身についた英語力をもっと上達させたい</h3>
-                                <p class="text">
-                                    私は高校1年生の時に1年間アメリカのオハイオ州に留学していました。帰国後、進路を考えた際に海外進学という…
-                                </p>
-                                <span class="sub-data">
-                                    <time>2017.1.2</time>
-                                    <span class="tag">短期留学</span>
-                                    <span class="tag">アメリカ</span>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="i-03">
-                            <a class="inner-link" href="javascript:void(0);">
-                                <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/experience-03.jpg')"></div>
-                                <h3 class="title">1年間で身についた英語力をもっと上達させたい</h3>
-                                <p class="text">
-                                    私は高校1年生の時に1年間アメリカのオハイオ州に留学していました。帰国後、進路を考えた際に海外進学という…
-                                </p>
-                                <span class="sub-data">
-                                    <time>2017.1.2</time>
-                                    <span class="tag">短期留学</span>
-                                    <span class="tag">アメリカ</span>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- 右側・バナー -->
-                <div class="ep-right">
-                    <a href="javascript:void(0);">
-                        <img class="image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/banner-01.jpg')">
-                    </a>
-                    <a href="javascript:void(0);">
-                        <img class="image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/banner-01.jpg')">
-                    </a>
-                    <a href="javascript:void(0);">
-                        <img class="image" src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/banner-01.jpg')">
-                    </a>
-                </div>
-            </div>
-        </section>
     </div>
 </main>
 <?php get_footer(); ?>

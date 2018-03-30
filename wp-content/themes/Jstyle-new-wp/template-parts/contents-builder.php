@@ -64,7 +64,7 @@
             </article>
 
             <article class="p-content02__item">
-                <a href='#' class="p-hover-effect--type1">
+                <a href='<?php echo home_url('/age');?>' class="p-hover-effect--type1">
                     <img class="p-content02__item-img p-content02__item-img--vertical"
                          src="<?php bloginfo('template_url'); ?>/assets/images/top/age.png" alt="">
                     <div class="p-content02__item-content p-content02__item-content--t">
