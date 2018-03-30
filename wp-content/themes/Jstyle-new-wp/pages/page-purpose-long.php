@@ -2,7 +2,23 @@
 /*
 template name: purpose-long
 */
-__('purpose-short', 'tcd-w');
+
+$blog_args = array(
+    'post_status' => 'publish',
+    'post_type' => 'interview',
+    'posts_per_page' => 8,
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'term',
+            'field' => 'slug',
+            'terms' => '長期留学',
+            'operator'=>'IN'
+        ),
+    ),
+);
+$blog_query = new WP_Query($blog_args);
+
+__( 'purpose-long', 'tcd-w');
 get_header();
 ?>
 <main class="l-main">
@@ -135,78 +151,52 @@ get_header();
             </ul>
         </section>
 
-        <!-- Jstyleで短期留学しました！ -->
+        <!-- Jstyleで長期留学しました！ -->
         <section class="pd-experience">
             <h2 class="title">Jstyleで長期留学しました！</h2>
-            <div class="ep-wrapper">
+            <ul class="ep-wrapper">
+                <?php
+                $counter = 1;
 
-                <!-- 左側・体験談 -->
-                <div class="ep-left">
-                    <ul>
-                        <li class="i-01">
-                            <a class="inner-link" href="javascript:void(0);">
-                                <div class="image"
-                                     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/experience-01.jpg')"></div>
-                                <h3 class="title">1年間で身についた英語力をもっと上達させたい</h3>
-                                <p class="text">
-                                    私は高校1年生の時に1年間アメリカのオハイオ州に留学していました。帰国後、進路を考えた際に海外進学という…
-                                </p>
-                                <span class="sub-data">
-                                    <time>2017.1.2</time>
-                                    <span class="tag">短期留学</span>
-                                    <span class="tag">アメリカ</span>
+                if (!$blog_query->have_posts()) {
+                    ?>
+                    <div class="not-li">留学体験記が見つかりませんでした</div>
+                    <?php
+                }
+                while ($blog_query->have_posts())
+                {
+                    $blog_query->the_post();
+                    $country_terms = get_the_terms($post->ID, 'country-kind');
+                    $term_terms = get_the_terms($post->ID, 'term');
+                    ?>
+                    <li class="i-<?php echo sprintf("%02d",$counter); $counter += 1; ?>">
+                        <a class="inner-link" href="<?php the_permalink(); ?>">
+                            <div class="image"
+                                 style="background-image: url('<?php
+                                 if (has_post_thumbnail())
+                                 {
+                                     the_post_thumbnail_url( 'medium' );
+                                 } else {
+                                     echo get_template_directory_uri().'/assets/images/no-image-480x320.gif';
+                                 }
+                                 ?>');">
+                            </div>
+                            <h3 class="title"><?php echo wp_trim_words(get_the_title(), 30, '…'); ?></h3>
+                            <p class="text">
+                                <?php echo wp_trim_words(get_the_excerpt(), 50, '…'); ?>
+                            </p>
+                            <span class="sub-data">
+                                    <time><?php the_time('Y.m.d'); ?></time>
+                                    <span class="tag"><?php echo $country_terms[0]->name; ?></span>
+                                    <span class="tag"><?php echo $term_terms[0]->name; ?></span>
                                 </span>
-                            </a>
-                        </li>
-                        <li class="i-02">
-                            <a class="inner-link" href="javascript:void(0);">
-                                <div class="image"
-                                     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/experience-02.jpg')"></div>
-                                <h3 class="title">1年間で身についた英語力をもっと上達させたい</h3>
-                                <p class="text">
-                                    私は高校1年生の時に1年間アメリカのオハイオ州に留学していました。帰国後、進路を考えた際に海外進学という…
-                                </p>
-                                <span class="sub-data">
-                                    <time>2017.1.2</time>
-                                    <span class="tag">短期留学</span>
-                                    <span class="tag">アメリカ</span>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="i-03">
-                            <a class="inner-link" href="javascript:void(0);">
-                                <div class="image"
-                                     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/experience-03.jpg')"></div>
-                                <h3 class="title">1年間で身についた英語力をもっと上達させたい</h3>
-                                <p class="text">
-                                    私は高校1年生の時に1年間アメリカのオハイオ州に留学していました。帰国後、進路を考えた際に海外進学という…
-                                </p>
-                                <span class="sub-data">
-                                    <time>2017.1.2</time>
-                                    <span class="tag">短期留学</span>
-                                    <span class="tag">アメリカ</span>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- 右側・バナー -->
-                <div class="ep-right">
-                    <a href="javascript:void(0);">
-                        <img class="image"
-                             src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/banner-01.jpg')">
-                    </a>
-                    <a href="javascript:void(0);">
-                        <img class="image"
-                             src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/banner-01.jpg')">
-                    </a>
-                    <a href="javascript:void(0);">
-                        <img class="image"
-                             src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/banner-01.jpg')">
-                    </a>
-                </div>
-            </div>
+                        </a>
+                    </li>
+                    <?php
+                }
+                wp_reset_postdata();
+                ?>
+            </ul>
         </section>
     </div>
 </main>
