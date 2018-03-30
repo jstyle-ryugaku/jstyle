@@ -5,10 +5,10 @@
     <!------- Jstyle5つの理由 ------>
     <div class="about-wrapper">
         <section class="five-reason">
-            <h1>
+            <h2 class="five-reason__title">
                 Jstyleが選ばれる<span class="blue">5</span>つの理由
                 <!--<img src="http://jstyleweb.local/wp-content/themes/Jstyle-new-wp/assets/images/about/reason-title.svg">-->
-            </h1>
+            </h2>
             <ul>
                 <li class="r-01">
                     <i class="fas fa-heart"></i>

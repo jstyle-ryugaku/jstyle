@@ -70,3 +70,160 @@
         font-size: 20px;
     }
 }
+
+
+/*画像リンク*/
+/*---------------------------------------------------------------------- */
+/* 共通スタイル */
+.image-link ul {
+    width: 100%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    font-size: 36px;
+}
+.image-link ul li {
+    margin-right: 16px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+.image-link ul li.i-02,
+.image-link ul li.i-05 {
+    margin-right: 0px;
+}
+
+/* 上2カラム */
+.image-link ul li.pc-2c {
+    width: calc((100% - 16px) / 2);
+    margin-bottom: 16px;
+    height: 339px;
+}
+
+/* 下3カラム */
+.image-link ul li.pc-3c {
+    width: calc((100% - 16px * 2) / 3);
+    height: 220px;
+    font-size: 0.55em;
+}
+
+.image-link ul li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.image-link ul li:hover a {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.image-link ul li a .wrap {
+    width: 100%;
+    padding: 34px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #FFFFFF;
+}
+.image-link ul li a .wrap * {
+    display: block;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1.4px;
+}
+.image-link ul li a .wrap .title {
+    font-family: Hiragino Sans;
+    font-size: 1em;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+.image-link ul li.pc-3c a .wrap .title {
+    margin-bottom: 0px;
+    line-height: 1.3;
+}
+.image-link ul li a .wrap .text {
+    font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
+    font-size: 0.55em;
+}
+.image-link ul li.pc-3c a .wrap .text {
+    display: none;
+}
+
+.image-link ul li a .bg-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    z-index: -100;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.image-link ul li:hover a .bg-image {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:1065px) {
+    .image-link ul li {
+        margin-right: 10px;
+    }
+    .image-link ul li .title br {
+        display: none;
+    }
+
+    /* 上2カラム */
+    .image-link ul li.pc-2c {
+        width: calc((100% - 10px) / 2);
+        margin-bottom: 10px;
+    }
+
+    /* 下3カラム */
+    .image-link ul li.pc-3c {
+        width: calc((100% - 10px * 2) / 3);
+    }
+}
+@media screen and (max-width:750px) {
+    /* 上1カラム */
+    .image-link ul li.sp-1c {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    /* 中2カラム, 下2カラム */
+    .image-link ul li.sp-2c {
+        width: calc((100% - 10px) / 2);
+        height: 220px;
+        margin-right: 10px;
+        font-size: 0.55em;
+    }
+    .image-link ul li.sp-2c a .wrap .title {
+        margin-bottom: 0px;
+    }
+    .image-link ul li.sp-2c a .wrap .text {
+        display: none;
+    }
+
+    .image-link ul li.i-03,
+    .image-link ul li.i-05 {
+        margin-right: 0px;
+    }
+}
+@media screen and (max-width:500px) {
+    .image-link ul {
+        font-size: 32px;
+    }
+    .image-link ul li.sp-1c {
+        height: 280px;
+    }
+    .image-link ul li.sp-2c {
+        height: 190px;
+    }
+    .image-link ul li a .wrap {
+        padding: 18px;
+    }
+}

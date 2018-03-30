@@ -73,7 +73,7 @@ get_header();
 
         <!-- 5つの理由 -->
         <section class="five-reason">
-            <h1>
+            <h1 class="five-reason__title">
                 Jstyleが選ばれる<span class="blue">5</span>つの理由
             </h1>
             <ul>
