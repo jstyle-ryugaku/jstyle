@@ -22,7 +22,7 @@
 <div id="modal-window" class="modal-container iziModal">
 <!--    <div class="modal-close-windows js-close-modal"></div>-->
     <div class="customize-modal modal-content">
-        <div class="customize-modal__close-btn js-close-modal">
+        <div class="customize-modal__close-btn js-close-modal" data-izimodal-close="">
             <i class="fas fa-times"></i>
         </div>
 
