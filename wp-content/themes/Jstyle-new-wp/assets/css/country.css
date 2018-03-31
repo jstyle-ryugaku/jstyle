@@ -78,7 +78,7 @@
     color: white;
 }
 .ca {
-    font-size: 2.5vh;
+    font-size: 20px;
     letter-spacing: 1.4px;
     margin-top: calc(16%/2);
     margin-right: calc(28.5%/2);
@@ -87,7 +87,7 @@
 }
 
 .us {
-    font-size: 2.5vh;
+    font-size: 20px;
     letter-spacing: 1.4px;
     margin-top: calc(16.5%/2);
     margin-right: calc(19%/2);
@@ -96,7 +96,7 @@
 }
 
 .gb {
-    font-size: 2.5vh;
+    font-size: 20px;
     letter-spacing: 1.4px;
     margin-top: calc(16.5%/2);
     margin-right: calc(19%/2);
@@ -105,21 +105,21 @@
 }
 
 .au {
-    font-size: 1.5vh;
+    font-size: 12px;
     letter-spacing: 1.1px;
     margin-top: calc(22.5%/2);
     margin-right: calc(16%/2);
     margin-bottom: calc(22.5%/2);
-    margin-left: calc(16%/2)
+    margin-left: calc(16%/2);
 }
 
 .nz {
-    font-size: 1.5vh;
+    font-size: 12px;
     letter-spacing: 1.4px;
     margin-top: calc(22%/2);
     margin-right: calc(9%/2);
     margin-bottom: calc(22%/2);
-    margin-left: calc(9%/2)
+    margin-left: calc(9%/2);
 }
 
 .caplace {
