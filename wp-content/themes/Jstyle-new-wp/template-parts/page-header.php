@@ -21,7 +21,7 @@ if ( is_404() ) {
 	$catchphrase = $options['news_ph_catchphrase'];
 	$is_h1 = is_post_type_archive( 'news' ) ? true : false;
 
-} elseif ( is_post_type_archive( 'interview' ) ) {
+} elseif ( is_post_type_archive( 'interview' ) || is_singular('interview') ) {
 
 	$image = get_template_directory_uri().'/assets/images/interview/header.jpg';
 	$bg_color = hex2rgb( $options['plan_ph_bg_color'] ); 
@@ -32,7 +32,7 @@ if ( is_404() ) {
 	$sub_catchphrase = '留学体験記';
 	$is_h1 = true;
 
-} elseif ( is_post_type_archive( 'life-info' ) ) {
+} elseif ( is_post_type_archive( 'life-info' ) || is_singular('life-info')  ) {
 
 	$image = get_template_directory_uri().'/assets/images/life-info/header.jpg';
 	$bg_color = hex2rgb( $options['plan_ph_bg_color'] );

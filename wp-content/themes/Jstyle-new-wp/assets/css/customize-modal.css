@@ -78,6 +78,7 @@
 
 .modal-container {
     z-index: 10000;
+    max-width: 900px !important;
 }
 
 .modal-close-windows {
@@ -88,6 +89,9 @@
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .customize-modal {
@@ -105,7 +109,6 @@
     border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-    transition: 2s;
 
     color: #e66a46;
     font-weight: bold;
@@ -115,28 +118,6 @@
 
 .customize-modal * {
     box-sizing: border-box;
-}
-
-.modal-container.hide {
-    animation-duration: 0.3s;
-    animation-name: fade-out;
-    display: none;
-    height: 0;
-    overflow: hidden;
-    /*-moz-animation-duration: 0.3s;*/
-    /*-moz-animation-name: fade-out;*/
-    /*-webkit-animation-duration: 0.3s;*/
-    /*-webkit-animation-name: fade-out;*/
-}
-
-.modal-container.show {
-    display: block;
-    animation-duration: 0.3s;
-    animation-name: fade-in;
-    -moz-animation-duration: 0.3s;
-    -moz-animation-name: fade-in;
-    -webkit-animation-duration: 0.3s;
-    -webkit-animation-name: fade-in;
 }
 
 .customize-modal .flex-item {
@@ -154,6 +135,7 @@
     top: 25px;
     right: 25px;
     color: #888;
+    cursor: pointer;
 }
 
 .customize-modal__title {
@@ -201,6 +183,7 @@
     padding: 26px 20px;
     border-radius: 18px;
     background-color: #e66a46;
+    cursor: pointer;
 }
 
 .customize-modal .select-and-next::after {
@@ -220,10 +203,18 @@
 
 .customize-modal .hide {
     display: none !important;
+    pointer-events: none;
+    visibility: hidden;
+    animation: fade-out 1s;
 }
 
 .customize-modal .show {
     display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    animation-duration: 1s;
+    animation-name: fade-in;
 }
 
 .customize-modal .prev-and-next-container {
@@ -501,86 +492,51 @@
 
 @keyframes fade-in {
     0% {
-        display: none;
+        visibility: visible;
         opacity: 0;
+        z-index: 99999;
     }
 
     1% {
-        display: block;
+        visibility: visible;
         opacity: 0;
     }
 
     100% {
-        display: block;
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes fade-in {
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-    1% {
-        display: block;
-        opacity: 0;
-    }
-
-    100% {
-        display: block;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fade-in {
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-    1% {
-        display: block;
-        opacity: 0;
-    }
-
-    100% {
-        display: block;
+        visibility: visible;
         opacity: 1;
     }
 }
 
 @keyframes fade-out {
     0% {
+        visibility: visible;
         opacity: 1;
     }
-
     100% {
-        display: none;
+        visibility: hidden;
         opacity: 0;
     }
 }
 
-/*@-moz-keyframes fade-out {*/
-/*0% {*/
-/*display: block;*/
-/*opacity: 0;*/
-/*}*/
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes fadeout {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@keyframes zoomin {
+    0% {transform:scale(.9);}
+    100% {transform:scale(1);}
+}
+@keyframes zoomout {
+    0% {transform:scale(1);}
+    100% {transform:scale(.9);}
+}
+@keyframes hide {
+    0% {visibility: visible;}
+    100% {visibility: hidden;}
+}
 
-/*100% {*/
-/*display: none;*/
-/*opacity: 1;*/
-/*}*/
-/*}*/
-
-/*@-webkit-keyframes fade-out {*/
-/*0% {*/
-/*display: block;*/
-/*opacity: 0;*/
-/*}*/
-
-/*100% {*/
-/*display: none;*/
-/*opacity: 1;*/
-/*}*/
-/*}*/
