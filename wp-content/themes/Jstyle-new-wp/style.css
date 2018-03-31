@@ -7683,24 +7683,14 @@ a:hover img.fade {
 }
 
 @media screen and (max-width:800px) {
-    /*
-    スマホ,タブレット対応する場合は、ここのコメントアウトを外してください
-    HTMLファイルの方のコメントアウトも外してください > .item クラスが付いたa要素のstyle属性値
-
-    .top-slider .ts-slick {
-        height: 600px;
-        height: 70vh;
-    }
-    .top-slider .ts-slick .slick-list,
-    .top-slider .ts-slick .slick-list .slick-track {
-        height: 100%;
-    }
-    .top-slider .ts-slick a.item {
-        background-size: cover;
-    }
     .top-slider .ts-slick a.item img {
-        display: none;
-    }*/
+        width: auto;
+        height: 400px;
+        height: 100vW;
+    }
+    .top-slider .ts-slick a.item img:hover {
+        opacity: 1;
+    }
     .top-slider .ts-slick .slick-arrow {
         display: none !important;
     }
