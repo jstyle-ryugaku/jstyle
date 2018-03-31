@@ -40,7 +40,7 @@ get_header();
             <ul class="point-wrapper">
                 <li class="p-01">
                     <img class="p-image"
-                         src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-01.jpg">
+                         src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-long/point-01.jpg">
                     <div class="p-wrapper">
                         <h3 class="title">語学力の向上！</h3>
                         <p class="text">
@@ -50,7 +50,7 @@ get_header();
                 </li>
                 <li class="p-02">
                     <img class="p-image"
-                         src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-02.jpg">
+                         src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-long/point-02.jpg">
                     <div class="p-wrapper">
                         <h3 class="title">他国に友達ができる！</h3>
                         <p class="text">
@@ -60,7 +60,7 @@ get_header();
                 </li>
                 <li class="p-03">
                     <img class="p-image"
-                         src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-03.jpg">
+                         src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-long/point-03.jpg">
                     <div class="p-wrapper">
                         <h3 class="title">旅行ができる！</h3>
                         <p class="text">
@@ -70,7 +70,7 @@ get_header();
                 </li>
                 <li class="p-04">
                     <img class="p-image"
-                         src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-04.jpg">
+                         src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-long/point-04.jpg">
                     <div class="p-wrapper">
                         <h3 class="title">ボランティア・インターンシップに挑戦！</h3>
                         <p class="text">
@@ -80,7 +80,7 @@ get_header();
                 </li>
                 <li class="p-05">
                     <img class="p-image"
-                         src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-05.jpg">
+                         src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-long/point-05.jpg">
                     <div class="p-wrapper">
                         <h3 class="title">語学以外も学べる！</h3>
                         <p class="text">
@@ -92,7 +92,7 @@ get_header();
                 </li>
                 <li class="p-06">
                     <img class="p-image"
-                         src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-short/point-06.jpg">
+                         src="<?php echo get_template_directory_uri(); ?>/assets/images/purpose-long/point-06.jpg">
                     <div class="p-wrapper">
                         <h3 class="title">本場で趣味を楽しむ！</h3>
                         <p class="text">

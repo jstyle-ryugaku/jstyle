@@ -102,7 +102,7 @@ $blog_query = new WP_Query($blog_args);
                     <div class="banner-list">
                         <div class="banner-container">
                             <div class="banner-bg-image"
-                                 style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/life-info/header.jpg')">
+                                 style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/banner-01.jpg')">
                             </div>
                             <a class="banner" href="/life-info/?country=アメリカ">
                                 <p>
@@ -112,21 +112,21 @@ $blog_query = new WP_Query($blog_args);
                         </div>
                         <div class="banner-container">
                             <div class="banner-bg-image"
-                                style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/wa/gallery_1.jpg')">
+                                style="background-image: none;">
                             </div>
                             <a class="banner">
                                 <p>
-                                    バナー
+                                    準備中
                                 </p>
                             </a>
                         </div>
                         <div class="banner-container">
                             <div class="banner-bg-image"
-                                style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/dc/gallery_1.jpg')">
+                                style="background-image: none;">
                             </div>
                             <a class="banner">
                                 <p>
-                                    バナー
+                                    準備中
                                 </p>
                             </a>
                         </div>
@@ -150,7 +150,7 @@ $blog_query = new WP_Query($blog_args);
                             <div class="wrap">
                                 <h1 class="title">短期留学</h1>
                             </div>
-                            <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-03.jpg')"></div>
+                            <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/image-link-01.jpg')"></div>
                         </a>
                     </li>
                     <li class="pc-3c sp-2c i-04">
@@ -158,7 +158,7 @@ $blog_query = new WP_Query($blog_args);
                             <div class="wrap">
                                 <h1 class="title">長期留学</h1>
                             </div>
-                            <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-04.jpg')"></div>
+                            <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/image-link-02.jpg')"></div>
                         </a>
                     </li>
                     <li class="pc-3c sp-2c i-05">
@@ -166,7 +166,7 @@ $blog_query = new WP_Query($blog_args);
                             <div class="wrap">
                                 <h1 class="title">語学留学</h1>
                             </div>
-                            <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-05.jpg')"></div>
+                            <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/image-link-03.jpg')"></div>
                         </a>
                     </li>
                 </ul>
