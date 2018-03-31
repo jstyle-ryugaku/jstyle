@@ -44,7 +44,7 @@
             <article class="p-content02__item">
                 <a href="<?php echo home_url('/country');?>" class="p-hover-effect--type1">
                     <img class="p-content02__item-img p-content02__item-img--vertical"
-                         src="<?php bloginfo('template_url'); ?>/assets/images/top/country.png" alt="">
+                         src="<?php bloginfo('template_url'); ?>/assets/images/top/country.jpg" alt="">
                     <div class="p-content02__item-content p-content02__item-content--t">
                         <h2 class="p-content02__item-title">国で探す</h2>
 <!--                        <p class="p-content02__item-sub">Country</p>-->
@@ -55,7 +55,7 @@
             <article class="p-content02__item">
                 <a href="<?php echo  home_url('/purpose');?>" class="p-hover-effect--type1">
                     <img class="p-content02__item-img p-content02__item-img--vertical"
-                         src="<?php bloginfo('template_url'); ?>/assets/images/top/type_upper.png" alt="">
+                         src="<?php bloginfo('template_url'); ?>/assets/images/top/type_upper.jpg" alt="">
                     <div class="p-content02__item-content p-content02__item-content--t">
                         <h2 class="p-content02__item-title">目的で探す</h2>
 <!--                        <p class="p-content02__item-sub">Purpose</p>-->
@@ -66,7 +66,7 @@
             <article class="p-content02__item">
                 <a href='<?php echo home_url('/age');?>' class="p-hover-effect--type1">
                     <img class="p-content02__item-img p-content02__item-img--vertical"
-                         src="<?php bloginfo('template_url'); ?>/assets/images/top/age.png" alt="">
+                         src="<?php bloginfo('template_url'); ?>/assets/images/top/age.jpg" alt="">
                     <div class="p-content02__item-content p-content02__item-content--t">
                         <h2 class="p-content02__item-title">年代で探す</h2>
 <!--                        <p class="p-content02__item-sub">Age</p>-->
@@ -111,42 +111,42 @@
             </div>
             <ul class="main-container">
                 <li class="item i-01">
-                    <a href="javascript:void(0);">
+                    <a href="<?php echo home_url('/preparation'); ?>/#s-01">
                         <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/top/knowledge-01.jpg')"></div>
                         <div class="title-wrapper">
-                            <h3 class="title">ここに基礎知識のタイトル</h3>
+                            <h3 class="title">留学をするとどんないいことがあるか？</h3>
                         </div>
                     </a>
                 </li>
                 <li class="item i-02">
-                    <a href="javascript:void(0);">
+                    <a href="<?php echo home_url('/preparation'); ?>/#s-02">
                         <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/top/knowledge-02.jpg')"></div>
                         <div class="title-wrapper">
-                            <h3 class="title">ここに基礎知識のタイトル</h3>
+                            <h3 class="title">留学前で決まる！日本にいるときの英語学習の大切さ</h3>
                         </div>
                     </a>
                 </li>
                 <li class="item i-03">
-                    <a href="javascript:void(0);">
+                    <a href="<?php echo home_url('/preparation'); ?>/#s-03">
                         <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/top/knowledge-03.jpg')"></div>
                         <div class="title-wrapper">
-                            <h3 class="title">ここに基礎知識のタイトル</h3>
+                            <h3 class="title">留学形態の基礎知識</h3>
                         </div>
                     </a>
                 </li>
                 <li class="item i-04">
-                    <a href="javascript:void(0);">
+                    <a href="<?php echo home_url('/preparation'); ?>/#s-04">
                         <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/top/knowledge-04.jpg')"></div>
                         <div class="title-wrapper">
-                            <h3 class="title">ここに基礎知識のタイトル</h3>
+                            <h3 class="title">留学の持ち物　基礎知識</h3>
                         </div>
                     </a>
                 </li>
                 <li class="item i-05">
-                    <a href="javascript:void(0);">
+                    <a href="<?php echo home_url('/preparation'); ?>/#s-05">
                         <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/top/knowledge-05.jpg')"></div>
                         <div class="title-wrapper">
-                            <h3 class="title">ここに基礎知識のタイトル</h3>
+                            <h3 class="title">留学に関する　お金の知恵</h3>
                         </div>
                     </a>
                 </li>

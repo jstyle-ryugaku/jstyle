@@ -16,7 +16,7 @@ get_header();
             <header class="cr-header">
                 <h2 class="title">基本情報</h2>
                 <div class="image"
-                     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/ca/header-bg-01.jpg')"></div>
+                     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/wa/header-bg-01.jpg')"></div>
             </header>
 
             <section class="cr-section s-01">
@@ -42,7 +42,7 @@ get_header();
             <header class="cr-header">
                 <h2 class="title">歴史</h2>
                 <div class="image"
-                     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/ca/header-bg-02.jpg')"></div>
+                     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/wa/header-bg-02.jpg')"></div>
             </header>
 
             <section class="cr-section s-01">
@@ -60,7 +60,7 @@ get_header();
             <header class="cr-header">
                 <h2 class="title">ワシントン州はこんな街！</h2>
                 <div class="image"
-                     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/ca/header-bg-03.jpg')"></div>
+                     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/wa/header-bg-03.jpg')"></div>
             </header>
 
             <section class="cr-section s-01">
