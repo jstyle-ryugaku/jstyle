@@ -287,6 +287,8 @@ function vogue_scripts()
     wp_localize_script('vogue-load', 'load', array('loadTime' => $options['load_time'] * 1000)); // ミリ秒で渡す
     wp_enqueue_script('vogue-customize-modal', get_template_directory_uri() . '/assets/js/customize-modal.js', array('jquery'), version_num(), true);
     wp_enqueue_style('vogue-customize-modal', get_template_directory_uri() . '/assets/css/customize-modal.css', false, version_num());
+    wp_enqueue_script('vogue-iziModal', get_template_directory_uri() . '/assets/js/iziModal.min.js', array('jquery'), version_num(), true);
+    wp_enqueue_style('vogue-iziModal', get_template_directory_uri() . '/assets/css/iziModal.min.css', false, version_num());
 
     if (is_mobile() && 'type3' !== $options['footer_bar_display'] && !$options['display_request']) {
         wp_enqueue_style('vogue-footer-bar', get_template_directory_uri() . '/assets/css/footer-bar.css', false, version_num());

@@ -88,7 +88,7 @@ function calculateTotalCost() {
 
 function showModal(event) {
     event.preventDefault();
-    $modalWin
+    $('#modal-window')
         .removeClass('hide')
         .addClass('show');
 }

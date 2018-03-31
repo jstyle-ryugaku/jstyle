@@ -88,6 +88,9 @@
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .customize-modal {
@@ -105,7 +108,9 @@
     border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-    transition: 2s;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
 
     color: #e66a46;
     font-weight: bold;
@@ -118,25 +123,27 @@
 }
 
 .modal-container.hide {
-    animation-duration: 0.3s;
-    animation-name: fade-out;
-    display: none;
-    height: 0;
-    overflow: hidden;
-    /*-moz-animation-duration: 0.3s;*/
-    /*-moz-animation-name: fade-out;*/
-    /*-webkit-animation-duration: 0.3s;*/
-    /*-webkit-animation-name: fade-out;*/
+    pointer-events: none;
+    visibility: hidden;
+    animation: fade-out 1s;
 }
 
 .modal-container.show {
     display: block;
-    animation-duration: 0.3s;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    height: auto;
+    animation-duration: 1s;
     animation-name: fade-in;
-    -moz-animation-duration: 0.3s;
-    -moz-animation-name: fade-in;
-    -webkit-animation-duration: 0.3s;
-    -webkit-animation-name: fade-in;
+}
+
+.modal-container.show .modal-content,
+.modal-container.show .modal-close-windows
+{
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
 }
 
 .customize-modal .flex-item {
@@ -220,10 +227,18 @@
 
 .customize-modal .hide {
     display: none !important;
+    pointer-events: none;
+    visibility: hidden;
+    animation: fade-out 1s;
 }
 
 .customize-modal .show {
     display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    animation-duration: 1s;
+    animation-name: fade-in;
 }
 
 .customize-modal .prev-and-next-container {
@@ -501,65 +516,33 @@
 
 @keyframes fade-in {
     0% {
-        display: none;
+        visibility: visible;
         opacity: 0;
+        z-index: 99999;
     }
 
     1% {
-        display: block;
+        visibility: visible;
         opacity: 0;
     }
 
     100% {
-        display: block;
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes fade-in {
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-    1% {
-        display: block;
-        opacity: 0;
-    }
-
-    100% {
-        display: block;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fade-in {
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-    1% {
-        display: block;
-        opacity: 0;
-    }
-
-    100% {
-        display: block;
+        visibility: visible;
         opacity: 1;
     }
 }
 
 @keyframes fade-out {
     0% {
+        visibility: visible;
         opacity: 1;
     }
-
     100% {
-        display: none;
+        visibility: hidden;
         opacity: 0;
     }
 }
+
 
 /*@-moz-keyframes fade-out {*/
 /*0% {*/

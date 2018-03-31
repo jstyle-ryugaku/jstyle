@@ -19,7 +19,7 @@
     </div>
 </div>
 
-<div id="modal-window" class="modal-container hide">
+<div id="modal-window" class="modal-container">
     <div class="modal-close-windows js-close-modal"></div>
     <div class="customize-modal modal-content">
         <div class="customize-modal__close-btn js-close-modal">
