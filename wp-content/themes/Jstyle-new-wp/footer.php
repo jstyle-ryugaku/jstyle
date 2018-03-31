@@ -37,16 +37,16 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
                                 <a href="<?php echo home_url('/about'); ?>">Jstyleについて</a></li>
                             <li id="menu-item-1080"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/about'); ?>">Jstyleの留学スタイル</a></li>
+                                <a href="<?php echo home_url('/about/new-style'); ?>">Jstyleの留学スタイル</a></li>
                             <li id="menu-item-1080"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/about'); ?>">Jstyleのここがすごい</a></li>
+                                <a href="<?php echo home_url('/about/point'); ?>">Jstyleのここがすごい</a></li>
                             <li id="menu-item-1080"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/about'); ?>">Jstyleが選ばれる5つの理由</a></li>
+                                <a href="<?php echo home_url('/about/reason'); ?>">Jstyleが選ばれる5つの理由</a></li>
                             <li id="menu-item-1080"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/about'); ?>">留学の流れ</a></li>
+                                <a href="<?php echo home_url('/about/flow'); ?>">留学の流れ</a></li>
                         </ul>
                     </div>
             </div>
@@ -78,25 +78,13 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
                                 <a href="<?php echo home_url('/purpose/short'); ?>">短期留学</a></li>
                             <li id="menu-item-1080"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/purpose/short'); ?>">中期留学</a></li>
+                                <a href="<?php echo home_url('/purpose/long'); ?>">長期留学</a></li>
                             <li id="menu-item-1080"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/purpose/short'); ?>">長期留学</a></li>
+                                <a href="<?php echo home_url('/purpose/working-holiday'); ?>">ワーキングホリデー</a></li>
                             <li id="menu-item-1080"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/purpose/short'); ?>">ワーキングホリデー</a></li>
-                            <li id="menu-item-1080"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/purpose/short'); ?>">語学留学</a></li>
-                            <li id="menu-item-1080"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/purpose/short'); ?>">海外大学新入/扁額</a></li>
-                            <li id="menu-item-1080"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/purpose/short'); ?>">イベント留学</a></li>
-                            <li id="menu-item-1080"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/purpose/short'); ?>">お稽古留学</a></li>
+                                <a href="<?php echo home_url('/purpose/language'); ?>">語学留学</a></li>
                         </ul>
                     </div>
             </div>
@@ -106,27 +94,12 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
                         <ul class="menu">
                             <li id="menu-item-1080"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/'); ?>">滞在先の種類</a></li>
-                            <li id="menu-item-1080"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/'); ?>">語学能力試験</a></li>
-                            <li id="menu-item-1080"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/'); ?>">クレジットカード</a></li>
-                            <li id="menu-item-1080"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/'); ?>">海外保険</a></li>
-                            <li id="menu-item-1080"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/'); ?>">注意点</a></li>
-                            <li id="menu-item-1080"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/'); ?>">持ち物リスト</a></li>
+                                <a href="<?php echo home_url('/preparation'); ?>">留学の基礎知識</a></li>
                         </ul>
                     </div>
             </div>
             <div class="p-footer-widget widget_nav_menu">
-                <a href="<?php echo home_url('/preparation'); ?>"><h2 class="p-footer-widget__title">Interview</h2>
+                <a href="<?php echo home_url('/interview-search'); ?>"><h2 class="p-footer-widget__title">Interview</h2>
                     <div>
                         <ul class="menu">
                             <li id="menu-item-1080"
