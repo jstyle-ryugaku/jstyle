@@ -108,9 +108,6 @@
     border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-    pointer-events: none;
-    visibility: hidden;
-    opacity: 0;
 
     color: #e66a46;
     font-weight: bold;
@@ -120,30 +117,6 @@
 
 .customize-modal * {
     box-sizing: border-box;
-}
-
-.modal-container.hide {
-    pointer-events: none;
-    visibility: hidden;
-    animation: fade-out 1s;
-}
-
-.modal-container.show {
-    display: block;
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
-    height: auto;
-    animation-duration: 1s;
-    animation-name: fade-in;
-}
-
-.modal-container.show .modal-content,
-.modal-container.show .modal-close-windows
-{
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
 }
 
 .customize-modal .flex-item {
@@ -543,27 +516,24 @@
     }
 }
 
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes fadeout {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@keyframes zoomin {
+    0% {transform:scale(.9);}
+    100% {transform:scale(1);}
+}
+@keyframes zoomout {
+    0% {transform:scale(1);}
+    100% {transform:scale(.9);}
+}
+@keyframes hide {
+    0% {visibility: visible;}
+    100% {visibility: hidden;}
+}
 
-/*@-moz-keyframes fade-out {*/
-/*0% {*/
-/*display: block;*/
-/*opacity: 0;*/
-/*}*/
-
-/*100% {*/
-/*display: none;*/
-/*opacity: 1;*/
-/*}*/
-/*}*/
-
-/*@-webkit-keyframes fade-out {*/
-/*0% {*/
-/*display: block;*/
-/*opacity: 0;*/
-/*}*/
-
-/*100% {*/
-/*display: none;*/
-/*opacity: 1;*/
-/*}*/
-/*}*/

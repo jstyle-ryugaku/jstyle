@@ -13,14 +13,14 @@
             <i class="far fa-check-square"></i>
             留学っていくらかかるの？ あなただけの留学をカスタマイズしよう！
         </p>
-        <a class="button js-show-modal" href="javascript:void(0);">
+        <a class="button js-show-modal" href="javascript:void(0);" data-iziModal-open=".iziModal">
             無料でカスタマイズしてみる
         </a>
     </div>
 </div>
 
-<div id="modal-window" class="modal-container">
-    <div class="modal-close-windows js-close-modal"></div>
+<div id="modal-window" class="modal-container iziModal">
+<!--    <div class="modal-close-windows js-close-modal"></div>-->
     <div class="customize-modal modal-content">
         <div class="customize-modal__close-btn js-close-modal">
             <i class="fas fa-times"></i>

@@ -8,6 +8,12 @@ $('.js-on-prev').on('click', toPrevPage);
 $('.js-on-next').on('click', toNextPage);
 $('.js-on-to-top').on('click', toTopPage);
 
+$(function(){
+    $(".iziModal").iziModal({
+        closeButton : true
+    });
+});
+
 
 var $modalWin = $('#modal-window');
 var stepNumber = 1;
@@ -19,7 +25,6 @@ var $resultText = $('.result__text');
 var $resultTextHtml = $('.result__text').html();
 var isAmericaSelected = false;
 var isWorkingHolidaySelected = false;
-
 var $inputIdWorkingHoliday = $("input[id='workingHoliday']");
 var $labelForWorkingHoliday = $("label[for='workingHoliday']");
 var $inputIdAmerica = $("input[id='america']");
