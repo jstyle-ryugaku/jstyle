@@ -8,6 +8,7 @@ get_header();
 $blog_args = array(
     'post_status' => 'publish',
     'post_type' => 'interview',
+    'posts_per_page' => 3,
     'tax_query' => array(
         array(
             'taxonomy' => 'country-kind',
@@ -36,67 +37,50 @@ $blog_query = new WP_Query($blog_args);
             <div id="cb_3" class="p-content03<?php if ($value['cb_blog_and_news_layout']) {
                 echo ' p-content03--rev';
             } ?>">
-                <section class="p-content03__blog u-clearfix">
-                    <?php if ($blog_query->have_posts()) : ?>
-                        <div class="p-content03__blog-list">
-                            <div class="p-content03__blog-list-inner">
-                                <?php
-                                while ($blog_query->have_posts()) :
-                                    $blog_query->the_post();
-                                    ?>
-                                    <article class="p-content03__blog-list-item p-article04">
-                                        <a class="p-article04__thumbnail p-hover-effect--<?php echo esc_attr($options['hover_type']); ?>"
-                                           href="<?php the_permalink(); ?>">
-                                            <?php
-                                            if (has_post_thumbnail()) {
-                                                the_post_thumbnail('size1');
-                                            } else {
-                                                echo '<img src="' . get_template_directory_uri() . '/assets/images/no-image-480x320.gif" alt="">';
-                                            }
-                                            ?>
-                                        </a>
-                                        <h3 class="p-article04__title"><a
-                                                    href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 25, '...'); ?></a>
-                                        </h3>
-                                        <p class="p-article04__excerpt"><?php echo is_mobile() ? wp_trim_words(get_the_excerpt(), 40, '...') : wp_trim_words(get_the_excerpt(), 40, '...'); ?></p>
-                                        <?php if ($options['show_date'] || $options['show_category']) : ?>
-                                            <p class="p-article04__meta">
-                                                <?php if ($options['show_date']) : ?>
-                                                    <time class="p-article04__date"
-                                                          datetime="<?php the_time('Y-m-d'); ?>">
-                                                        <?php the_time('Y.m.d'); ?>
-                                                    </time>
-                                                <?php endif; ?>
+                <section class="pd-experience">
+                    <ul class="ep-wrapper">
+                        <?php
+                        $counter = 1;
 
-                                                <?php if ($options['show_category']) : ?>
-                                                    <span class="p-article04__category">
-                                                        <?php
-                                                        $country_terms = get_the_terms($post->ID, 'country-kind');
-                                                        $term_terms = get_the_terms($post->ID, 'term');
-                                                        ?>
-                                                        <a href="interview-search/?search_cat1=<?php echo $country_terms[0]->term_id; ?>&search_cat2=0">
-                                                            <?php
-                                                            echo $country_terms[0]->name;
-                                                            ?>
-                                                        </a>
-                                                        <a href="interview-search/?search_cat1=0&search_cat2=<?php echo $term_terms[0]->term_id; ?>">
-                                                            <?php
-                                                            echo $term_terms[0]->name;
-                                                            ?>
-                                                        </a>
-                                                    </span>
-                                                <?php endif; ?>
-                                            </p>
-                                        <?php endif; ?>
-                                    </article>
-                                <?php endwhile;
-                                wp_reset_postdata(); ?>
-                            </div>
-                        </div>
-                    <?php endif; ?>
-                    <div class="p-content03__blog-arrows">
-                    </div>
-                    <a class="p-content03__blog-archive-link">体験談一覧</a>
+                        if (!$blog_query->have_posts()) {
+                            ?>
+                            <div class="not-li">留学体験記が見つかりませんでした</div>
+                            <?php
+                        }
+                        while ($blog_query->have_posts())
+                        {
+                            $blog_query->the_post();
+                            $country_terms = get_the_terms($post->ID, 'country-kind');
+                            $term_terms = get_the_terms($post->ID, 'term');
+                            ?>
+                            <li class="i-<?php echo sprintf("%02d",$counter); $counter += 1; ?>">
+                                <a class="inner-link" href="<?php the_permalink(); ?>">
+                                    <div class="image"
+                                         style="background-image: url('<?php
+                                         if (has_post_thumbnail())
+                                         {
+                                             the_post_thumbnail_url( 'medium' );
+                                         } else {
+                                             echo get_template_directory_uri().'/assets/images/no-image-480x320.gif';
+                                         }
+                                         ?>');">
+                                    </div>
+                                    <h3 class="title"><?php echo wp_trim_words(get_the_title(), 30, '…'); ?></h3>
+                                    <p class="text">
+                                        <?php echo wp_trim_words(get_the_excerpt(), 50, '…'); ?>
+                                    </p>
+                                    <span class="sub-data">
+                                    <time><?php the_time('Y.m.d'); ?></time>
+                                    <span class="tag"><?php echo $country_terms[0]->name; ?></span>
+                                    <span class="tag"><?php echo $term_terms[0]->name; ?></span>
+                                </span>
+                                </a>
+                            </li>
+                            <?php
+                        }
+                        wp_reset_postdata();
+                        ?>
+                    </ul>
                 </section>
                 <section class="banner-list-container">
                     <div class="banner-list">

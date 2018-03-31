@@ -27,7 +27,7 @@ get_header();
                     <a href="<?php echo home_url('/about/president'); ?>">
                         <div class="wrap">
                             <h1 class="title">代表挨拶</h1>
-                            <span class="text">テキストテキストテキストテキストテキスト</span>
+                            <span class="text">代表の安藤より、皆さまへご挨拶させていただきます</span>
                         </div>
                         <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-01.jpg')"></div>
                     </a>
@@ -36,7 +36,7 @@ get_header();
                     <a href="<?php echo home_url('/about/new-style'); ?>">
                         <div class="wrap">
                             <h1 class="title">Jstyleの留学スタイル</h1>
-                            <span class="text">テキストテキストテキストテキストテキスト</span>
+                            <span class="text">他にはないJstyleの留学スタイルについてお伝えします</span>
                         </div>
                         <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-02.jpg')"></div>
                     </a>
@@ -45,7 +45,7 @@ get_header();
                     <a href="<?php echo home_url('/about/point'); ?>">
                         <div class="wrap">
                             <h1 class="title">Jstyleの<br>ここがすごい</h1>
-                            <span class="text">テキストテキストテキストテキストテキスト</span>
+<!--                            <span class="text">テキストテキストテキストテキストテキスト</span>-->
                         </div>
                         <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-03.jpg')"></div>
                     </a>
@@ -54,7 +54,7 @@ get_header();
                     <a href="<?php echo home_url('/about/reason'); ?>">
                         <div class="wrap">
                             <h1 class="title">Jstyleが選ばれる<br>5つの理由</h1>
-                            <span class="text">テキストテキストテキストテキストテキスト</span>
+<!--                            <span class="text">テキストテキストテキストテキストテキスト</span>-->
                         </div>
                         <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about/image-link-04.jpg')"></div>
                     </a>

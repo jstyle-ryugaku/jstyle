@@ -154,6 +154,7 @@
 .about-wrapper .image-link ul li a .wrap .text {
     font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
     font-size: 0.55em;
+    line-height: 1.3;
 }
 .about-wrapper .image-link ul li.pc-3c a .wrap .text {
     display: none;
