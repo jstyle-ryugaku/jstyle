@@ -194,11 +194,11 @@ if ($tcd_splash_page->is_splash_page()) {
                     </a>
                     <ul class="sub-menu">
                         <li class="menu-item menu-item-type-post_type menu-item-object-plan"><a
-                                    href="<?php echo home_url('/interview'); ?>">留学体験記<span></span></a></li>
+                                    href="<?php echo home_url('/interview/?kind=留学体験記'); ?>">留学体験記<span></span></a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-plan"><a
-                                    href="<?php echo home_url('/interview/jobs'); ?>">職業体験記<span></span></a></li>
+                                    href="<?php echo home_url('/interview/?kind=就活体験記'); ?>">就活体験記<span></span></a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-plan"><a
-                                    href="<?php echo home_url('/interview/after'); ?>">就活後体験記<span></span></a></li>
+                                    href="<?php echo home_url('/interview/?kind=就職後体験記'); ?>">就職後体験記<span></span></a></li>
                     </ul>
                 </li>
             </ul>

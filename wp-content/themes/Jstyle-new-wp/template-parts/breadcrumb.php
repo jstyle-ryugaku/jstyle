@@ -1,7 +1,13 @@
 <?php
 global $author, $post;
+
+$kindname = '体験記';
+if (isset($_GET['kind'])) {
+    $kindname = $_GET['kind'];
+}
+
 ?>
-	<div class="p-breadcrumb c-breadcrumb">
+<div class="p-breadcrumb c-breadcrumb">
 		<ul class="p-breadcrumb__inner l-inner" itemscope itemtype="http://schema.org/BreadcrumbList">
 			<li class="p-breadcrumb__item c-breadcrumb__item c-breadcrumb__item--home" itemprop="itemListElement" itemscope
       itemtype="http://schema.org/ListItem">
@@ -43,7 +49,11 @@ global $author, $post;
 			<?php elseif ( is_post_type_archive( 'interview' ) || is_singular( 'interview' ) ) : ?>
                 <li class="p-breadcrumb__item c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                     <a href="<?php echo esc_url( get_post_type_archive_link( 'interview' ) ); ?>" itemscope itemtype="http://schema.org/Thing" itemprop="item">
-                        <span itemprop="name">留学体験記</span>
+                        <span itemprop="name">
+                            <?php
+                                echo $kindname;
+                            ?>
+                        </span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>

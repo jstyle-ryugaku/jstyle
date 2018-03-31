@@ -131,13 +131,13 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
                         <ul class="menu">
                             <li id="menu-item-1080"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/'); ?>">留学体験記</a></li>
+                                <a href="<?php echo home_url('/interview/?kind=留学体験記'); ?>">留学体験記</a></li>
                             <li id="menu-item-1080"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/'); ?>">職業体験記</a></li>
+                                <a href="<?php echo home_url('/interview/?kind=就活体験記'); ?>">就活体験記</a></li>
                             <li id="menu-item-1080"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1025 current_page_item menu-item-1080">
-                                <a href="<?php echo home_url('/'); ?>">就活後体験記</a></li>
+                                <a href="<?php echo home_url('/interview/?kind=就職後体験記'); ?>">就職後体験記</a></li>
                         </ul>
                     </div>
             </div>
