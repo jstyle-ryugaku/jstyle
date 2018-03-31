@@ -13,7 +13,7 @@ get_header();
         <h1 class="title">代表挨拶</h1>
 
         <div class="content">
-            <img class="photo" src="<?php echo get_template_directory_uri(); ?>/assets/images/president/president.jpg')">
+            <img class="photo" src="<?php echo get_template_directory_uri(); ?>/assets/images/president/president.jpg">
 
             <h2 class="top-message">
                 留学を通して「自分の夢を、<br class="tb-br">自由なやり方で、<br class="pc-br">自分で切り開く<br class="tb-br">“若者”」を増やしたい
