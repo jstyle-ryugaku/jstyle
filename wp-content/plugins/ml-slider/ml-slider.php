@@ -1529,6 +1529,10 @@ class MetaSliderPlugin {
                                         <?php } ?>
                                     </div>
                                 </div>
+                                <div class="add-text" style="margin-top:60px;"><!-- 書き換えました -->
+                                    ※推奨画像サイズ<br>
+                                    1440 × 585 px
+                                </div>
                                 <div class="ms-postbox" style="display: none;"><!-- 非表示にしました -->
                                     <h3 class="hndle"><span><?php _e("How to Use", "ml-slider" ) ?></span></h3>
                                     <div class="inside wp-clearfix metaslider-shortcode">
