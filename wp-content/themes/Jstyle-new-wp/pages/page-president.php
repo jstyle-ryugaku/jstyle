@@ -11,18 +11,26 @@ get_header();
 
     <div class="president-wrapper">
         <h1 class="title">代表挨拶</h1>
+        <?php
+//        堀、ごめん、こんな綺麗なページをゴミ実装でよごしてしまった。 by 村脇
+        ?>
 
         <div class="content">
-            <img class="photo" src="<?php echo get_template_directory_uri(); ?>/assets/images/president/president.jpg">
+            <img class="photo only-smartphone" src="<?php echo get_template_directory_uri(); ?>/assets/images/president/president.jpg">
 
             <h2 class="top-message">
-                留学を通して「自分の夢を、<br class="tb-br">自由なやり方で、<br class="pc-br">自分で切り開く<br class="tb-br">“若者”」を増やしたい
+                <p>留学を通して</p>
+                <p style="text-align: center">「自分の夢を、自由なやり方で、<br class="tb-br">自分で切り開く“若者”」</pstyle>
+                <p style="text-align: right">を増やしたい</p>
             </h2>
 
             <div class="message-text">
                 <p>
                     この度は、株式会社Jstyleにご相談頂き、誠にありがとうございます。
                 </p>
+
+                <img class="photo only-desktop" src="<?php echo get_template_directory_uri(); ?>/assets/images/president/president.jpg">
+
                 <p>
                     私は、株式会社Jstyle代表取締役社長の安藤和隆と申します。弊社は、世界中全ての”若者”に夢を与えられる会社でありたいと考えております。ここでいう”若者”とは、決して「年齢が若い」という意味ではありません。夢を持ち、かつそれを実現したいという強い意思を持っている人であれば、彼らは全員“若者”です。彼らの夢を叶えられる留学を届ける、それこそが私たちJstyleです。
                 </p>

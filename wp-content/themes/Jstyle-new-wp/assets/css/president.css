@@ -50,20 +50,26 @@
     color: #00399f;
 }
 
+.president-wrapper .content .photo {
+    display: none;
+}
+
 .president-wrapper .content {
     width: 100%;
     padding-left: 40px;
     position: relative;
 }
-.president-wrapper .content .photo {
+.president-wrapper .content .message-text .photo {
     width: 44%;
     height: auto;
-    position: absolute;
     top: 0;
     right: 0;
     display: block;
     z-index: -10;
+    float: right;
+    margin: 20px;
 }
+
 .president-wrapper .content h2.top-message {
     padding-top: 120px;
     font-size: 2.8em;
@@ -71,12 +77,13 @@
     line-height: 1.4;
     letter-spacing: 0.08em;
     color: #00399f;
+    padding-right: 40px;
 }
 .president-wrapper .content h2.top-message br.tb-br {
     display: none;
 }
 .president-wrapper .content .message-text {
-    width: 70%;
+    /*width: 70%;*/
     margin-top: 80px;
     padding: 50px 50px 0 0;
     background-color: rgba(255, 255, 255, 0.94);
@@ -105,7 +112,7 @@
 }
 @media screen and (max-width:860px) {
     .president-wrapper .content .message-text {
-        width: 82%;
+        /*width: 82%;*/
     }
 }
 @media screen and (max-width:800px) {
@@ -118,23 +125,34 @@
 }
 @media screen and (max-width:700px) {
     .president-wrapper .content h2.top-message {
-        width: 56%;
+        /*width: 56%;*/
         text-align: justify;
     }
-    .president-wrapper .content h2.top-message br.pc-br,
-    .president-wrapper .content h2.top-message br.tb-br {
+
+    .president-wrapper .content .photo,
+    .president-wrapper .content h2.top-message br.pc-br {
         display: none;
+    }
+
+    .president-wrapper .content .message-text .photo {
+        display: block;
     }
 }
 @media screen and (max-width:560px) {
     .president-wrapper .content {
         padding-left: 0px;
     }
+    .president-wrapper .content .message-text .photo,
+    .president-wrapper .content .message-text .photo {
+        display: none;
+    }
     .president-wrapper .content .photo {
         width: 86%;
         margin-top: 20px;
         margin-left: 14%;
         position: relative;
+        display: block;
+        z-index: -10;
     }
     .president-wrapper .content h2.top-message {
         width: 86%;
