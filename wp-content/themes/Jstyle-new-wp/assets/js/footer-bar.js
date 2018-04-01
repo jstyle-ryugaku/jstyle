@@ -2,7 +2,8 @@
     "use strict";
 
     var $ = jQuery,
-        event_name = (window.ontouchstart === null) ? 'touchstart' : 'click',
+        // event_name = (window.ontouchstart === null) ? 'touchstart' : 'click',
+        event_name = 'click',
         flag_up = false,
         flag_open = false,
         timer = false,
