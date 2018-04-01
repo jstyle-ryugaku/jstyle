@@ -57,6 +57,10 @@
     border-radius: 2px;
 }
 
+.only-smartphone {
+    display: none;
+}
+
 @media screen and (max-width:650px) {
     .main-content-container {
         padding: 30px 10px;
@@ -212,6 +216,14 @@
     .image-link ul li.i-03,
     .image-link ul li.i-05 {
         margin-right: 0px;
+    }
+
+    .only-desktop {
+        display: none;
+    }
+
+    .only-smartphone {
+        display: inline;
     }
 }
 @media screen and (max-width:500px) {
