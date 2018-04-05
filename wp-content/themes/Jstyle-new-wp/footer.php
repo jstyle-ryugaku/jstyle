@@ -143,7 +143,7 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
                 <a href="https://www.instagram.com/jstyle.studyabroad/"><i class="fab fa-instagram"></i></a>
             </li>
             <li class="p-social-nav__item">
-                <a href="http://line.me/R/ti/p/%40cqm4815h"><i class="fab fa-line"></i></a>
+                <a href="https://line.me/R/ti/p/kHSTuR6fzE"><i class="fab fa-line"></i></a>
             </li>
         </ul>
         <!------ social icon ---->
@@ -180,7 +180,7 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
             </div>
             <ul>
                 <li class="o-01 o-line">
-                    <a href="http://line.me/R/ti/p/%40cqm4815h">
+                    <a href="https://line.me/R/ti/p/kHSTuR6fzE">
                         <i class="fab fa-line"></i>
                         <p class="text bold">LINEで相談する</p>
                     </a>
