@@ -964,6 +964,7 @@ function get_preparation_tags($step)
 
     $life_info_args = array(
         'post_status' => 'publish',
+        'post_par_page' => -1,
         'post_type' => 'life-info',
         'orderby' => 'post_date',
         'order' => 'DESC'
