@@ -15,9 +15,9 @@ get_header();
                     国から探す
                 </p>
             </div>
-            <p>
-                ここに、国の前書きが入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストここに、国の目的前書きが入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストここに、国の目的前書きが入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストここに、国の目的前書きが入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストここに、国の目的前書きが入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストここに、国の目的前書きが入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストここに、
-            </p>
+<!--            <p>-->
+<!--                ここに、国の前書きが入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストここに、国の目的前書きが入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストここに、国の目的前書きが入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストここに、国の目的前書きが入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストここに、国の目的前書きが入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストここに、国の目的前書きが入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストここに、-->
+<!--            </p>-->
         </div>
         <div class="map">
             <div>
@@ -424,87 +424,87 @@ get_header();
                 </svg>
             </div>
             <div class="caplace btn" id="CA-btn">
-                <a class="frame" href="#">
+                <a class="frame" href="javascript:void(0);">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/ca.svg">
-                    <h class="font ca">
+                    <h3 class="font ca">
                         カナダ
-                    </h>
+                    </h3>
                 </a>
             </div>
             <div class="usplace btn" id="US-btn">
-                <a class="frame2" href="http://jstyleweb.local/country/usa">
+                <a class="frame2" href="<?php echo home_url('/country'); ?>/usa">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/us.svg">
-                    <h class="font us">
+                    <h3 class="font us">
                         アメリカ
-                    </h>
+                    </h3>
                 </a>
             </div>
             <div class="gbplace btn" id="GB-btn">
-                <a class="frame" href="#">
+                <a class="frame" href="javascript:void(0);">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/gb.svg">
-                    <h class="font gb">
+                    <h3 class="font gb">
                         イギリス
-                    </h>
+                    </h3>
                 </a>
             </div>
             <div class="auplace btn" id="AU-btn">
-                <a class="frame" href="#">
+                <a class="frame" href="javascript:void(0);">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/au.svg">
-                    <h class="font au">
+                    <h3 class="font au">
                         オーストラリア
-                    </h>
+                    </h3>
                 </a>
             </div>
             <div class="nzplace btn" id="NZ-btn">
-                <a class="frame" href="#">
+                <a class="frame" href="javascript:void(0);">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/nz.svg">
-                    <h class="font nz">
+                    <h3 class="font nz">
                         ニュージーランド
-                    </h>
+                    </h3>
                 </a>
             </div>
         </div>
         <div class="container">
             <div class="btn2">
-                <a class="frame2" href="http://jstyleweb.local/country/usa">
+                <a class="frame2" href="<?php echo home_url('/country'); ?>/usa">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/us.svg">
-                    <h class="font us2">
+                    <h3 class="font us2">
                         アメリカ
-                    </h>
+                    </h3>
 
                 </a>
             </div>
             <div class="btn3">
-                <a class="frame2" href="#">
+                <a class="frame2" href="javascript:void(0);">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/gb.svg">
-                    <h class="font gb2">
+                    <h3 class="font gb2">
                         イギリス
-                    </h>
+                    </h3>
                 </a>
             </div>
             <div class="btn2">
-                <a class="frame2" href="#">
+                <a class="frame2" href="javascript:void(0);">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/ca.svg">
-                    <h class="font ca2">
+                    <h3 class="font ca2">
                         カナダ
-                    </h>
+                    </h3>
 
                 </a>
             </div>
             <div class="btn3">
-                <a class="frame2" href="#">
+                <a class="frame2" href="javascript:void(0);">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/au.svg">
-                    <h class="font au2">
+                    <h3 class="font au2">
                         オーストラリア
-                    </h>
+                    </h3>
                 </a>
             </div>
             <div class="btn2">
-                <a class="frame2" href="#">
+                <a class="frame2" href="javascript:void(0);">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/nz.svg">
-                    <h class="font nz2">
+                    <h3 class="font nz2">
                         ニュージーランド
-                    </h>
+                    </h3>
                 </a>
             </div>
 

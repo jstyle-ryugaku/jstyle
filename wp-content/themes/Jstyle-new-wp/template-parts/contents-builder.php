@@ -5,10 +5,10 @@
     <!------- Jstyle5つの理由 ------>
     <div class="about-wrapper">
         <section class="five-reason">
-            <h1>
+            <h2 class="five-reason__title">
                 Jstyleが選ばれる<span class="blue">5</span>つの理由
                 <!--<img src="http://jstyleweb.local/wp-content/themes/Jstyle-new-wp/assets/images/about/reason-title.svg">-->
-            </h1>
+            </h2>
             <ul>
                 <li class="r-01">
                     <i class="fas fa-heart"></i>
@@ -44,7 +44,7 @@
             <article class="p-content02__item">
                 <a href="<?php echo home_url('/country');?>" class="p-hover-effect--type1">
                     <img class="p-content02__item-img p-content02__item-img--vertical"
-                         src="<?php bloginfo('template_url'); ?>/assets/images/top/country.png" alt="">
+                         src="<?php bloginfo('template_url'); ?>/assets/images/top/country.jpg" alt="">
                     <div class="p-content02__item-content p-content02__item-content--t">
                         <h2 class="p-content02__item-title">国で探す</h2>
 <!--                        <p class="p-content02__item-sub">Country</p>-->
@@ -55,7 +55,7 @@
             <article class="p-content02__item">
                 <a href="<?php echo  home_url('/purpose');?>" class="p-hover-effect--type1">
                     <img class="p-content02__item-img p-content02__item-img--vertical"
-                         src="<?php bloginfo('template_url'); ?>/assets/images/top/type_upper.png" alt="">
+                         src="<?php bloginfo('template_url'); ?>/assets/images/top/type_upper.jpg" alt="">
                     <div class="p-content02__item-content p-content02__item-content--t">
                         <h2 class="p-content02__item-title">目的で探す</h2>
 <!--                        <p class="p-content02__item-sub">Purpose</p>-->
@@ -64,9 +64,9 @@
             </article>
 
             <article class="p-content02__item">
-                <a href='#' class="p-hover-effect--type1">
+                <a href='<?php echo home_url('/age');?>' class="p-hover-effect--type1">
                     <img class="p-content02__item-img p-content02__item-img--vertical"
-                         src="<?php bloginfo('template_url'); ?>/assets/images/top/age.png" alt="">
+                         src="<?php bloginfo('template_url'); ?>/assets/images/top/age.jpg" alt="">
                     <div class="p-content02__item-content p-content02__item-content--t">
                         <h2 class="p-content02__item-title">年代で探す</h2>
 <!--                        <p class="p-content02__item-sub">Age</p>-->
@@ -99,30 +99,64 @@
     </style>
     <!------- 検索する三つのフォーム ------>
 
-    <!------- 留学の準備 ------>
-
-    <div id="cb_2" class="p-main-image"
-         style="background-image: url('<?php bloginfo("template_directory"); ?>/assets/images/top/prepare@1920*1080.jpg');">
-        <div class="p-main-image__content"
-        ">
-        <div class="title-container">
-            <span class="p-title--english">Preparation</span>
-            <h2 class="p-title" style="">
-                留学の準備
-            </h2>
-        </div>
-        <div>
-            <a class="p-main-image__btn p-button" href="">滞在先の種類</a>
-            <a class="p-main-image__btn p-button" href="">語学留学試験</a>
-            <a class="p-main-image__btn p-button" href="">クレジットカード</a>
-            <a class="p-main-image__btn p-button" href="">海外保険</a>
-            <a class="p-main-image__btn p-button" href="">注意点</a>
-            <a class="p-main-image__btn p-button" href="">持ち物リスト</a>
+    <!------- 留学の基礎知識 ------>
+    <!-- 改変前のCSSは残ったままです -->
+    <div class="knowledge-wrapper" id="cb_2">
+        <div class="kn-inner">
+            <div class="title-container">
+                <span class="p-title--english">Preparation</span>
+                <h2 class="p-title">
+                    留学の基礎知識
+                </h2>
+            </div>
+            <ul class="main-container">
+                <li class="item i-01">
+                    <a href="<?php echo home_url('/preparation'); ?>/#s-01">
+                        <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/top/knowledge-01.jpg')"></div>
+                        <div class="title-wrapper">
+                            <h3 class="title">留学をするとどんないいことがあるか？</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="item i-02">
+                    <a href="<?php echo home_url('/preparation'); ?>/#s-02">
+                        <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/top/knowledge-02.jpg')"></div>
+                        <div class="title-wrapper">
+                            <h3 class="title">留学前で決まる！日本にいるときの英語学習の大切さ</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="item i-03">
+                    <a href="<?php echo home_url('/preparation'); ?>/#s-03">
+                        <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/top/knowledge-03.jpg')"></div>
+                        <div class="title-wrapper">
+                            <h3 class="title">留学形態の基礎知識</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="item i-04">
+                    <a href="<?php echo home_url('/preparation'); ?>/#s-04">
+                        <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/top/knowledge-04.jpg')"></div>
+                        <div class="title-wrapper">
+                            <h3 class="title">留学の持ち物　基礎知識</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="item i-05">
+                    <a href="<?php echo home_url('/preparation'); ?>/#s-05">
+                        <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/top/knowledge-05.jpg')"></div>
+                        <div class="title-wrapper">
+                            <h3 class="title">留学に関する　お金の知恵</h3>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <a class="button" href="<?php echo home_url('/preparation'); ?>">
+                <span class="text">MORE <span class="symbol">&gt;</span></span>
+            </a>
         </div>
     </div>
-</div>
-
-<!------- 留学の準備 ------>
+    <!------- 留学の基礎知識 ------>
 
 <!------- 留学生の日記とニュース ------>
 
@@ -185,12 +219,12 @@ $news_query = new WP_Query($news_args);
                                             $term_terms = get_the_terms($post->ID, 'term');
                                             $country_terms = get_the_terms($post->ID, 'country-kind');
                                             ?>
-                                            <a>
+                                            <a href="interview-search/?search_cat1=0&search_cat2=<?php echo $term_terms[0]->term_id; ?>">
                                                 <?php
                                                 echo $term_terms[0]->name;
                                                 ?>
                                             </a>
-                                            <a>
+                                            <a href="interview-search/?search_cat1=<?php echo $country_terms[0]->term_id; ?>&search_cat2=0">
                                                 <?php
                                                 echo $country_terms[0]->name;
                                                 ?>

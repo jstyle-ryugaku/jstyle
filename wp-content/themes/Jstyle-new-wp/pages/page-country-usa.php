@@ -8,6 +8,7 @@ get_header();
 $blog_args = array(
     'post_status' => 'publish',
     'post_type' => 'interview',
+    'posts_per_page' => 3,
     'tax_query' => array(
         array(
             'taxonomy' => 'country-kind',
@@ -36,97 +37,80 @@ $blog_query = new WP_Query($blog_args);
             <div id="cb_3" class="p-content03<?php if ($value['cb_blog_and_news_layout']) {
                 echo ' p-content03--rev';
             } ?>">
-                <section class="p-content03__blog u-clearfix">
-                    <?php if ($blog_query->have_posts()) : ?>
-                        <div class="p-content03__blog-list">
-                            <div class="p-content03__blog-list-inner">
-                                <?php
-                                while ($blog_query->have_posts()) :
-                                    $blog_query->the_post();
-                                    ?>
-                                    <article class="p-content03__blog-list-item p-article04">
-                                        <a class="p-article04__thumbnail p-hover-effect--<?php echo esc_attr($options['hover_type']); ?>"
-                                           href="<?php the_permalink(); ?>">
-                                            <?php
-                                            if (has_post_thumbnail()) {
-                                                the_post_thumbnail('size1');
-                                            } else {
-                                                echo '<img src="' . get_template_directory_uri() . '/assets/images/no-image-480x320.gif" alt="">';
-                                            }
-                                            ?>
-                                        </a>
-                                        <h3 class="p-article04__title"><a
-                                                    href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 25, '...'); ?></a>
-                                        </h3>
-                                        <p class="p-article04__excerpt"><?php echo is_mobile() ? wp_trim_words(get_the_excerpt(), 40, '...') : wp_trim_words(get_the_excerpt(), 40, '...'); ?></p>
-                                        <?php if ($options['show_date'] || $options['show_category']) : ?>
-                                            <p class="p-article04__meta">
-                                                <?php if ($options['show_date']) : ?>
-                                                    <time class="p-article04__date"
-                                                          datetime="<?php the_time('Y-m-d'); ?>">
-                                                        <?php the_time('Y.m.d'); ?>
-                                                    </time>
-                                                <?php endif; ?>
+                <section class="pd-experience">
+                    <ul class="ep-wrapper">
+                        <?php
+                        $counter = 1;
 
-                                                <?php if ($options['show_category']) : ?>
-                                                    <span class="p-article04__category">
-                                                        <?php
-                                                        $term_terms = get_the_terms($post->ID, 'term');
-                                                        $kind_terms = get_the_terms($post->ID, 'kind');
-                                                        ?>
-                                                        <a>
-                                                            <?php
-                                                            echo $term_terms[0]->name;
-                                                            ?>
-                                                        </a>
-                                                        <a>
-                                                            <?php
-                                                            echo $kind_terms[0]->name;
-                                                            ?>
-                                                        </a>
-                                                    </span>
-                                                <?php endif; ?>
-                                            </p>
-                                        <?php endif; ?>
-                                    </article>
-                                <?php endwhile;
-                                wp_reset_postdata(); ?>
-                            </div>
-                        </div>
-                    <?php endif; ?>
-                    <div class="p-content03__blog-arrows">
-                    </div>
-                    <a class="p-content03__blog-archive-link">体験談一覧</a>
+                        if (!$blog_query->have_posts()) {
+                            ?>
+                            <div class="not-li">留学体験記が見つかりませんでした</div>
+                            <?php
+                        }
+                        while ($blog_query->have_posts())
+                        {
+                            $blog_query->the_post();
+                            $country_terms = get_the_terms($post->ID, 'country-kind');
+                            $term_terms = get_the_terms($post->ID, 'term');
+                            ?>
+                            <li class="i-<?php echo sprintf("%02d",$counter); $counter += 1; ?>">
+                                <a class="inner-link" href="<?php the_permalink(); ?>">
+                                    <div class="image"
+                                         style="background-image: url('<?php
+                                         if (has_post_thumbnail())
+                                         {
+                                             the_post_thumbnail_url( 'medium' );
+                                         } else {
+                                             echo get_template_directory_uri().'/assets/images/no-image-480x320.gif';
+                                         }
+                                         ?>');">
+                                    </div>
+                                    <h3 class="title"><?php echo wp_trim_words(get_the_title(), 30, '…'); ?></h3>
+                                    <p class="text">
+                                        <?php echo wp_trim_words(get_the_excerpt(), 50, '…'); ?>
+                                    </p>
+                                    <span class="sub-data">
+                                    <time><?php the_time('Y.m.d'); ?></time>
+                                    <span class="tag"><?php echo $country_terms[0]->name; ?></span>
+                                    <span class="tag"><?php echo $term_terms[0]->name; ?></span>
+                                </span>
+                                </a>
+                            </li>
+                            <?php
+                        }
+                        wp_reset_postdata();
+                        ?>
+                    </ul>
                 </section>
                 <section class="banner-list-container">
                     <div class="banner-list">
                         <div class="banner-container">
                             <div class="banner-bg-image"
-                                 style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/ca/gallery_1.jpg')">
+                                 style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/banner-01.jpg')">
                             </div>
-                            <a class="banner">
+                            <a class="banner" href="/life-info/?country=アメリカ">
                                 <p>
-                                    バナー
+                                   生活情報
                                 </p>
                             </a>
                         </div>
                         <div class="banner-container">
                             <div class="banner-bg-image"
-                                style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/wa/gallery_1.jpg')">
+                                style="background-image: none;">
                             </div>
                             <a class="banner">
                                 <p>
-                                    バナー
+                                    準備中
                                 </p>
                             </a>
                         </div>
                         <div class="banner-container">
                             <div class="banner-bg-image"
-                                style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/dc/gallery_1.jpg')">
+                                style="background-image: none;">
                             </div>
                             <a class="banner">
                                 <p>
-                                    バナー
+                                    準備中
                                 </p>
                             </a>
                         </div>
@@ -143,44 +127,36 @@ $blog_query = new WP_Query($blog_args);
         <div class="content-block">
             <h2 class="bottom-line-heading">アメリカ留学の種類</h2>
 
-            <ul class="image-link-list__container">
-                <li class="image-link-list__listed-link">
-                    <a href="javascript:void(0);">
-                        <div class="image-link-list__text-container">
-                            <h1 class="title">短期留学</h1>
-                            <span class="text">テキストテキストテキストテキストテキス</span>
-                        </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-short.jpg')"></div>
-                    </a>
-                </li>
-                <li class="image-link-list__listed-link">
-                    <a href="javascript:void(0);">
-                        <div class="image-link-list__text-container">
-                            <h1 class="title">中期留学</h1>
-                            <span class="text">テキストテキストテキストテキストテキス</span>
-                        </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-mid.jpg')"></div>
-                    </a>
-                </li>
-                <li class="image-link-list__listed-link">
-                    <a href="javascript:void(0);">
-                        <div class="image-link-list__text-container">
-                            <h1 class="title">長期留学</h1>
-                            <span class="text">テキストテキストテキストテキストテキス</span>
-                        </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-long.jpg')"></div>
-                    </a>
-                </li>
-                <li class="image-link-list__listed-link">
-                    <a href="javascript:void(0);">
-                        <div class="image-link-list__text-container">
-                            <h1 class="title">ワーキングホリデー</h1>
-                            <span class="text">テキストテキストテキストテキストテキス</span>
-                        </div>
-                        <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/purpose/bg-holiday.jpg')"></div>
-                    </a>
-                </li>
-            </ul>
+            <section class="image-link">
+                <ul>
+                    <li class="pc-3c sp-1c i-03">
+                        <a href="<?php echo home_url('/purpose/short'); ?>">
+                            <div class="wrap">
+                                <h1 class="title">短期留学</h1>
+                            </div>
+                            <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/image-link-01.jpg')"></div>
+                        </a>
+                    </li>
+                    <li class="pc-3c sp-2c i-04">
+                        <a href="<?php echo home_url('/purpose/long'); ?>">
+                            <div class="wrap">
+                                <h1 class="title">長期留学</h1>
+                            </div>
+                            <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/image-link-02.jpg')"></div>
+                        </a>
+                    </li>
+                    <li class="pc-3c sp-2c i-05">
+                        <a href="<?php echo home_url('/purpose/language'); ?>">
+                            <div class="wrap">
+                                <h1 class="title">語学留学</h1>
+                            </div>
+                            <div class="bg-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/image-link-03.jpg')"></div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+
         </div>
     </main>
 </main>

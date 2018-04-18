@@ -1,7 +1,13 @@
 <?php
 global $author, $post;
+
+$kindname = '体験記';
+if (isset($_GET['kind'])) {
+    $kindname = $_GET['kind'];
+}
+
 ?>
-	<div class="p-breadcrumb c-breadcrumb">
+<div class="p-breadcrumb c-breadcrumb">
 		<ul class="p-breadcrumb__inner l-inner" itemscope itemtype="http://schema.org/BreadcrumbList">
 			<li class="p-breadcrumb__item c-breadcrumb__item c-breadcrumb__item--home" itemprop="itemListElement" itemscope
       itemtype="http://schema.org/ListItem">
@@ -43,12 +49,41 @@ global $author, $post;
 			<?php elseif ( is_post_type_archive( 'interview' ) || is_singular( 'interview' ) ) : ?>
                 <li class="p-breadcrumb__item c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                     <a href="<?php echo esc_url( get_post_type_archive_link( 'interview' ) ); ?>" itemscope itemtype="http://schema.org/Thing" itemprop="item">
-                        <span itemprop="name"><?php echo esc_html( get_custom_post_label( 'interview' ) ); ?></span>
+                        <span itemprop="name">
+                            <?php
+                                echo $kindname;
+                            ?>
+                        </span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
 
                 <?php if ( is_singular( 'interview' ) ) : ?>
+                    <li class="p-breadcrumb__item c-breadcrumb__item"><?php echo strip_tags( get_the_title( $post->ID )); ?></li>
+                <?php endif; ?>
+
+                <?php if ( is_page() ) : ?>
+                    <li class="p-breadcrumb__item c-breadcrumb__item">
+                        <?php
+                        $parent_id = $post->post_parent;
+                        $parent_slug = get_post($parent_id)->post_name;
+                        echo $parent_slug;
+                        ?>
+                    </li>
+                <?php endif; ?>
+
+            <?php elseif ( is_post_type_archive( 'life-info' ) || is_singular( 'life-info' ) ) : ?>
+                <li class="p-breadcrumb__item c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a href="<?php echo esc_url( get_post_type_archive_link( 'life-info' ) ); ?>" itemscope itemtype="http://schema.org/Thing" itemprop="item">
+                        <span itemprop="name">
+                            生活情報
+                            <?php echo esc_html( get_custom_post_label( 'life-info' ) ); ?>
+                        </span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                </li>
+
+                <?php if ( is_singular( 'life-info' ) ) : ?>
                     <li class="p-breadcrumb__item c-breadcrumb__item"><?php echo strip_tags( get_the_title( $post->ID )); ?></li>
                 <?php endif; ?>
 

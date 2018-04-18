@@ -94,7 +94,6 @@ get_header();
 				<?php endif; ?>
 			</article>
 			<?php endwhile; endif; ?>
-			<?php get_sidebar(); ?>
 		</div>
 	</div>
 </main>

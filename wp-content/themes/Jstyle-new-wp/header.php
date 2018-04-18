@@ -34,8 +34,6 @@ setcookie('tcd_referrer', $current_url, 0, '/');
     <meta name="description" content="<?php seo_description(); ?>">
     <meta name="viewport" content="width=device-width">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url');
-    echo '?' . filemtime(get_stylesheet_directory() . '/style.css'); ?>" type="text/css"/>
     <?php if ($options['use_ogp']) {
         ogp();
     } ?>
@@ -158,10 +156,10 @@ if ($tcd_splash_page->is_splash_page()) {
                 </li>
                 <li><a href="<?php echo home_url('/preparation'); ?>">
                         <div
-                                class="menu-button--ja">留学の準備
+                                class="menu-button--ja">留学の基礎知識
                         </div>
                         <div
-                                class="menu-button--en">Prepare
+                                class="menu-button--en">Preparation
                         </div>
                     </a>
                     <!--                    <ul class="sub-menu">-->
@@ -196,11 +194,11 @@ if ($tcd_splash_page->is_splash_page()) {
                     </a>
                     <ul class="sub-menu">
                         <li class="menu-item menu-item-type-post_type menu-item-object-plan"><a
-                                    href="<?php echo home_url('/interview'); ?>">留学体験記<span></span></a></li>
+                                    href="<?php echo home_url('/interview/?kind=留学体験記'); ?>">留学体験記<span></span></a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-plan"><a
-                                    href="<?php echo home_url('/interview/jobs'); ?>">職業体験記<span></span></a></li>
+                                    href="<?php echo home_url('/interview/?kind=就活体験記'); ?>">就活体験記<span></span></a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-plan"><a
-                                    href="<?php echo home_url('/interview/after'); ?>">就活後体験記<span></span></a></li>
+                                    href="<?php echo home_url('/interview/?kind=就職後体験記'); ?>">就職後体験記<span></span></a></li>
                     </ul>
                 </li>
             </ul>

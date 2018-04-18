@@ -67,8 +67,8 @@ get_header();
                             ?>
                             <section class="p-latest-news">
                                 <div class="p-latest-news__title">
-                                    <h2><?php echo esc_html( $options['recent_news_headline'] ); ?></h2>
-                                    <a class="p-latest-news__archive-link" href="<?php echo esc_url( get_post_type_archive_link( 'news' ) ); ?>"><?php echo esc_html( $options['recent_news_link_text'] ); ?></a>
+                                    <h2>最近の留学体験記</h2>
+                                    <a class="p-latest-news__archive-link" href="<?php echo home_url('/interview'); ?>">留学体験記を探す</a>
                                 </div>
                                 <?php if ( $the_query->have_posts() ) : ?>
                                     <ul>
@@ -94,7 +94,7 @@ get_header();
                         <?php endif; ?>
                     </article>
                 <?php endwhile; endif; ?>
-            <?php get_sidebar(); ?>
+<!--            --><?php //get_sidebar(); ?>
         </div>
     </div>
 </main>

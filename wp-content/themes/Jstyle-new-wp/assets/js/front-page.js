@@ -284,4 +284,19 @@ jQuery(function($){
 		dots: true,            // ドットの表示
         dotsClass: 'dot'       // ドットのクラス名
 	});
+
+    /**************************************************
+     * フロントページ 留学の基礎知識 / 作成：堀
+     **************************************************/
+    $(window).scroll(function () {
+        var windowHeight = $(window).height(),
+            topWindow = $(window).scrollTop();
+
+        $('.knowledge-wrapper .title-wrapper').each(function () {
+            var targetPosition = $(this).offset().top;
+            if (topWindow > targetPosition - windowHeight + 200) {
+                $(this).addClass("fadeInDown");
+            }
+        });
+    });
 });

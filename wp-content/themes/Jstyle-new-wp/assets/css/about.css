@@ -154,6 +154,7 @@
 .about-wrapper .image-link ul li a .wrap .text {
     font-family: Hiragino Sans-W6, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
     font-size: 0.55em;
+    line-height: 1.3;
 }
 .about-wrapper .image-link ul li.pc-3c a .wrap .text {
     display: none;
@@ -246,13 +247,13 @@
 }
 
 /* タイトル */
-.about-wrapper .five-reason h1 {
+.about-wrapper .five-reason .five-reason__title {
     margin-bottom: 36px;
     font-family: Hiragino Sans;
     font-size: 30px;
     letter-spacing: 1.4px;
 }
-.about-wrapper .five-reason h1 span {
+.about-wrapper .five-reason .five-reason__title span {
     margin: 0px 4px;
     font-size: 1.4em;
     color: #00399f;

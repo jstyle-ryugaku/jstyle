@@ -58,35 +58,35 @@ get_header();
                         <ul>
                             <li class="i-01">
                                 <h3 class="title"><span class="no">01.</span>Variety</h3>
-                                <p class="text">海外の大学の<span class="red">8,359</span>校の選択肢をご案内！</p>
+                                <p class="text">海外の大学の<span class="point">8,359</span>校の選択肢をご案内！</p>
                             </li>
                             <li class="i-02">
-                                <h3 class="title"><span class="no">02.</span>Variety</h3>
-                                <p class="text">海外の大学の<span class="red">8,359</span>校の選択肢をご案内！</p>
+                                <h3 class="title"><span class="no">02.</span>Order</h3>
+                                <p class="text">自分にぴったり合った<span class="point">オーダーメイド</span>の提案！</p>
                             </li>
                             <li class="i-03">
-                                <h3 class="title"><span class="no">03.</span>Variety</h3>
-                                <p class="text">海外の大学の<span class="red">8,359</span>校の選択肢をご案内！</p>
+                                <h3 class="title"><span class="no">03.</span>Cost</h3>
+                                <p class="text">自社完結のネットワークにより無駄な仲介マージンを削減。留学費用が<span class="point">断トツに安い</span>！</p>
                             </li>
                         </ul>
                     </li>
                     <li class="pc-center i-04">
-                        <h3 class="title"><span class="no">04.</span>Variety</h3>
-                        <p class="text">海外の大学の<span class="red">8,359</span>校の選択肢をご案内！</p>
+                        <h3 class="title"><span class="no">04.</span>Specialty</h3>
+                        <p class="text">担当者は<span class="point">元留学経験者</span>。留学先の現地に詳しい！</p>
                     </li>
                     <li class="pc-left">
                         <ul>
                             <li class="i-05">
-                                <h3 class="title"><span class="no">05.</span>Variety</h3>
-                                <p class="text">海外の大学の<span class="red">8,359</span>校の選択肢をご案内！</p>
+                                <h3 class="title"><span class="no">05.</span>Support</h3>
+                                <p class="text">専門知識が必要な<span class="point">書類手続き</span>も相談・代行サポートします！</p>
                             </li>
                             <li class="i-06">
-                                <h3 class="title"><span class="no">06.</span>Variety</h3>
-                                <p class="text">海外の大学の<span class="red">8,359</span>校の選択肢をご案内！</p>
+                                <h3 class="title"><span class="no">06.</span>Safety</h3>
+                                <p class="text">留学後も個別サポート。住まい、移動手段も手配OK！24時間365日、<span class="point">安全安心</span>な留学を実現！</p>
                             </li>
                             <li class="i-07">
-                                <h3 class="title"><span class="no">07.</span>Variety</h3>
-                                <p class="text">海外の大学の<span class="red">8,359</span>校の選択肢をご案内！</p>
+                                <h3 class="title"><span class="no">07.</span>Career</h3>
+                                <p class="text">帰国後の<span class="point">就職</span>支援！</p>
                             </li>
                         </ul>
                     </li>

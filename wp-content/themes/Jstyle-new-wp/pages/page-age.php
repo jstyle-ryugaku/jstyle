@@ -2,10 +2,10 @@
 /*
 template name: age
 */
+<<<<<<< HEAD
 __('age', 'tcd-w');
 get_header();
 ?>
-
 <main class="l-main">
     <?php get_template_part('template-parts/page-header'); ?>
     <?php get_template_part('template-parts/breadcrumb'); ?>
@@ -123,3 +123,20 @@ get_header();
 
 </main>
 <?php get_footer(); ?>
+=======
+__( 'purpose', 'tcd-w' );
+get_header();
+?>
+<main class="l-main">
+    <?php get_template_part( 'template-parts/page-header' ); ?>
+    <?php get_template_part( 'template-parts/breadcrumb' ); ?>
+
+    <div class="purpose-wrapper">
+        <p class="about">
+            準備中です。
+        </p>
+
+    </div>
+</main>
+<?php get_footer(); ?>
+>>>>>>> cb29c71d82700aad607beef366e2cda56868d2be

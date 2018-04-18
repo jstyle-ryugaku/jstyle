@@ -1,34 +1,47 @@
 <div class="country-map__container">
-    <div class="country-map__infobox" id="US-WA__info">
-        <p class="country-map__country-name">シアトル</p>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/wa/gallery_1.jpg">
-    </div>
 
-    <div class="country-map__infobox" id="US-OR__info">
-        <p class="country-map__country-name">オレゴン</p>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/or/gallery_1.jpg">
-    </div>
+    <a href="<?php echo home_url('/country/usa/seattle'); ?>">
+        <div class="country-map__infobox" id="US-WA__info">
+            <p class="country-map__country-name">シアトル</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/wa/gallery_1.jpg">
+        </div>
+    </a>
 
-    <div class="country-map__infobox" id="US-CA__info">
-        <p class="country-map__country-name">ロサンゼルス</p>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/ca/gallery_1.jpg">
-    </div>
+    <a href="<?php echo home_url('/country/usa/oregon'); ?>">
+        <div class="country-map__infobox" id="US-OR__info">
+            <p class="country-map__country-name">オレゴン</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/or/gallery_1.jpg">
+        </div>
+    </a>
 
-    <div class="country-map__infobox" id="US-NY__info">
-        <p class="country-map__country-name">ニューヨーク</p>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/ny/gallery_1.png">
-    </div>
+    <a href="<?php echo home_url('/country/usa/california'); ?>">
+        <div class="country-map__infobox" id="US-CA__info">
+            <p class="country-map__country-name">カリフォルニア</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/ca/gallery_1.jpg">
+        </div>
+    </a>
 
-    <div class="country-map__infobox" id="US-DC__info">
-        <p class="country-map__country-name">ワシントンDC</p>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/dc/gallery_1.jpg">
-    </div>
+    <a href="<?php echo home_url('/country/usa/new-york'); ?>">
+        <div class="country-map__infobox" id="US-NY__info">
+            <p class="country-map__country-name">ニューヨーク</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/ny/gallery_1.png">
+        </div>
+    </a>
+
+    <a href="<?php echo home_url('/country/usa/washington'); ?>">
+        <div class="country-map__infobox" id="US-DC__info">
+            <p class="country-map__country-name">ワシントンDC</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/country/usa/dc/gallery_1.jpg">
+        </div>
+    </a>
 
     <svg version="1.1" id="レイヤー_1" xmlns:amcharts="http://amcharts.com/ammap"
-         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 542 292.1" style="enable-background:new 0 0 542 292.1;" xml:space="preserve">
+         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 542 292.1" style="enable-background:new 0 0 542 292.1;" xml:space="preserve">
 
     <defs>
-        <amcharts:ammap  bottomLatitude="14.052495" leftLongitude="-124.541947" projection="mercator" rightLongitude="-67.118615" topLatitude="49.390806">
+        <amcharts:ammap bottomLatitude="14.052495" leftLongitude="-124.541947" projection="mercator"
+                        rightLongitude="-67.118615" topLatitude="49.390806">
             <style>
                 #US-WA__info {
                     top: 5%;
@@ -57,43 +70,43 @@
             </style>
 
             <script>
-                jQuery(function() {
-                    jQuery('#US-WA__info').hover(function() {
+                jQuery(function () {
+                    jQuery('#US-WA__info').hover(function () {
                         jQuery('.US-WA-bg-draw').addClass('focus');
                         jQuery('#US-WA').addClass('focus');
-                    }, function() {
+                    }, function () {
                         jQuery('.US-WA-bg-draw').removeClass('focus');
                         jQuery('#US-WA').removeClass('focus');
                     });
 
-                    jQuery('#US-OR__info').hover(function() {
+                    jQuery('#US-OR__info').hover(function () {
                         jQuery('.US-OR-bg-draw').addClass('focus');
                         jQuery('#US-OR').addClass('focus');
-                    }, function() {
+                    }, function () {
                         jQuery('.US-OR-bg-draw').removeClass('focus');
                         jQuery('#US-OR').removeClass('focus');
                     });
 
-                    jQuery('#US-CA__info').hover(function() {
+                    jQuery('#US-CA__info').hover(function () {
                         jQuery('.US-CA-bg-draw').addClass('focus');
                         jQuery('#US-CA').addClass('focus');
-                    }, function() {
+                    }, function () {
                         jQuery('.US-CA-bg-draw').removeClass('focus');
                         jQuery('#US-CA').removeClass('focus');
                     });
 
-                    jQuery('#US-NY__info').hover(function() {
+                    jQuery('#US-NY__info').hover(function () {
                         jQuery('.US-NY-bg-draw').addClass('focus');
                         jQuery('#US-NY').addClass('focus');
-                    }, function() {
+                    }, function () {
                         jQuery('.US-NY-bg-draw').removeClass('focus');
                         jQuery('#US-NY').removeClass('focus');
                     });
 
-                    jQuery('#US-DC__info').hover(function() {
+                    jQuery('#US-DC__info').hover(function () {
                         jQuery('.US-DC-bg-draw').addClass('focus');
                         jQuery('#US-DC').addClass('focus');
-                    }, function() {
+                    }, function () {
                         jQuery('.US-DC-bg-draw').removeClass('focus');
                         jQuery('#US-DC').removeClass('focus');
                     });
@@ -118,7 +131,8 @@
 		h18.5l0,11.6V126.2z"/>
             <path id="US-CT" class="country-map__land" d="M493.8,102l0.1,6.6l-0.6,1.8l-4.1,0.6l-5.4,0.6l-7.2,2.8l-0.3-1.5l2-1.2l-0.7-1l0.5-9.3l7.1,0.2
 		L493.8,102z"/>
-            <path id="US-DE" class="country-map__land" d="M460.4,128.7l-1.4,1.2l0.2,2.3l1.9,6.3l2.5,5.9h-6.2l-0.7-14.9l0.7-0.9l0.8-0.5L460.4,128.7z"/>
+            <path id="US-DE" class="country-map__land"
+                  d="M460.4,128.7l-1.4,1.2l0.2,2.3l1.9,6.3l2.5,5.9h-6.2l-0.7-14.9l0.7-0.9l0.8-0.5L460.4,128.7z"/>
             <path id="US-FL" class="country-map__land" d="M403.9,229.6l1.2,7.7l3.5,8.6l4.2,7.8v4l4,10.5l0.4,9.1l-1.9,8.7l-3.9,1.8l-4.6-1.2l-1.5-4.4
 		l-3.5-2.3L397,271l-4.5-7.4l-0.8-4.9l1.6-6.3l-2.1-5.8l-6-6.2l-5.3-4l-10.4,4.4l-2.1-2.9l-8.8-4.7l-10.5,1.3l0.7-1.4l0.5-2.1
 		l-2.1-2.6l0.1-0.8l5.3-0.6l18.9-0.1l1.4,2.8l9.3,0.5l15,1.6l0.7,1.8l1.2-0.9l0-3.7l1.1-0.4l1.8,0.8L403.9,229.6z"/>
@@ -222,7 +236,8 @@
             <path id="US-PA" class="country-map__land" d="M467.1,110l-1.1,0.5l-1.6,2.7l-1.5,1.1l0.5,1.6l-1.1,1.5l0,1.9l1,0.4l0.2,1.3l2.9,3.1l-1.2,1.3
 		l-2.2,1.6l-0.7,0.7l-1.9,1.1l-2-0.6l-0.8,0.5l-0.7,0.9l-8.2,0l-7.9-0.1l-6.6,0l-2.9,0l-8.6,0H413v-10.9l0-16.2h0l7-3.5l0,0v3.3
 		h14.5H448l12.6,0l2,1.9l1.1,1.1l-0.2,1.3l0.6,1.8l1.6,0.8L467.1,110z"/>
-            <path id="US-RI" class="country-map__land" d="M500.1,108.3l-6.8,2.1l0.6-1.8l-0.1-6.6l3.9-0.1l0.7,3.2l1.5,1.4L500.1,108.3z"/>
+            <path id="US-RI" class="country-map__land"
+                  d="M500.1,108.3l-6.8,2.1l0.6-1.8l-0.1-6.6l3.9-0.1l0.7,3.2l1.5,1.4L500.1,108.3z"/>
             <path id="US-SC" class="country-map__land" d="M431.2,196l-3.6,7.6l-8.1,6.7l-9.7,5.4l-1.6-0.6l-0.8-0.4l0-2l-0.9-2l-1.7-1.2l0.3-0.8l-0.6-1.2
 		l-0.7-2.5l-3-2.2l-1.1-2.6l-2.2-1.8l-0.6-1.4l-3.2-2.6l-1.1-1.9l-1.7-3.5l-1.6-0.7l-2.5-1.8l1.5-2.1l1-0.9l0.9-0.3l5-1.9l8.6,0.1
 		l4.3,0.5l0.1,1l0.9-0.7l1.4,1.9l0,1.3l10.3,0.1L431.2,196z"/>
@@ -239,7 +254,8 @@
 		l-4.8-3.1l-2.3-5.8l-3.1-5.5l-5.5-4.6l-4.7-3.4l-3.4-3.8l-1-1.7l-0.1-0.9h8.4h16.7h8.6v-20.3v-29.1h9.3h9.3h9.3v11v10.6l2.2,1.2
 		l1.5,0.9l2.4-0.7l1.4,2.3l3.1,0.8l2.8,0.6l4.3-0.3l1.2,2.6l2.8-1.1l2.6,1.7l2.5,0.7l1.4-1.6l1.4,1.8l3.1-0.6l1.4,0.5l1.6-0.5
 		l1.6-0.9l1.9,0l3.3,0.1l2.1-0.7l2.6,1.2L283.5,198.5z"/>
-            <path id="US-UT" class="country-map__land" d="M148.3,114.3l0.1,46.8l-13.5-0.1l-17.8,0l-15,0.2l0-58.9l27.7-0.1l0,11.8L148.3,114.3z"/>
+            <path id="US-UT" class="country-map__land"
+                  d="M148.3,114.3l0.1,46.8l-13.5-0.1l-17.8,0l-15,0.2l0-58.9l27.7-0.1l0,11.8L148.3,114.3z"/>
             <path id="US-VA" class="country-map__land" d="M453.4,159.1l2.7,7l-10,0.1l-9.8,0.1l-18.5-0.1l-15.6-0.5l-4.7,0.2l-13.8-0.4l2.7-0.6l1.9-0.7
 		l0.8-1.1l2.5-1.4l1-1.2l0.2-0.9l2.9-1.3l3.7-3.4l0.4,1.9l1,1l1.4,0.9l2.9-1.4l1.1,0.8l3.5-1l0.2-1l1.1,0.4l1.2-0.8l1.3,0.2l1.5-0.9
 		l0.2-1l-0.1-1.3l1.3-2l1.8-1.5l0.5-1.7l1.6-2.1l0.9-2.5l1.2,0.9l1.4,0.8l1.3-0.4l0.4-1.1l0.9-1.4l1-1.7l0.7,0.5l1.4-1.5l1.8-1.5
@@ -263,11 +279,13 @@
 		l0.8-0.5l0.3-1.1l0.4-2.1l2.1-2l1.1,0.3l1.3-0.3l1.1-0.6l2.5-2.7l0.2-1.2l0.9-2.6l1-3.1l0.4-2.7l-0.4-1.5l1.3-0.6v10.9H422.6z"/>
             <path id="US-WY" class="country-map__land" d="M194.4,64.1l0.2,25.8l0.1,24.4h-9.3l-18.6,0h-9.3h-9.3l-18.6-0.3l0-11.8l0-31l-0.3-0.2l0.2-0.5
 		l0-6.5l18.3-0.1l14.4,0.1l16.7-0.1L194.4,64.1z"/>
-            <path id="US-DC" class="country-map__land country-map__available-land" d="M443.2,144.8l0.3-4.1l-4.6-5.9l4.5-3.3l6.9,7.1L443.2,144.8z"/>
+            <path id="US-DC" class="country-map__land country-map__available-land"
+                  d="M443.2,144.8l0.3-4.1l-4.6-5.9l4.5-3.3l6.9,7.1L443.2,144.8z"/>
         </g>
 
         <!-- ワシントンDC -->
-        <line class="country-map__spot-pointer-bg US-DC-bg-draw" x1="444.6" y1="137.1" x2="342.7" y2="161.6"/>
+        <line class="country-map__spot-pointer-bg US-DC-bg-draw" x1="444.6" y1="137.1" x2="342.7"
+              y2="161.6"/>
         <circle class="country-map__spot-pointer-bg US-DC-bg-draw" cx="444.6" cy="137.1" r="2.8"/>
         <line class="country-map__spot-pointer" x1="444.6" y1="137.1" x2="342.7" y2="161.6"/>
         <circle class="country-map__spot-pointer" cx="444.6" cy="137.1" r="2.8"/>
@@ -291,7 +309,8 @@
         <circle class="country-map__spot-pointer" cx="19.7" cy="84.9" r="2.8"/>
 
         <!-- ニューヨーク -->
-        <line class="country-map__spot-pointer-bg US-NY-bg-draw" x1="475.5" y1="116.1" x2="333.3" y2="77.1"/>
+        <line class="country-map__spot-pointer-bg US-NY-bg-draw" x1="475.5" y1="116.1" x2="333.3"
+              y2="77.1"/>
         <circle class="country-map__spot-pointer-bg US-NY-bg-draw" cx="475.5" cy="116.1" r="2.8"/>
         <line class="country-map__spot-pointer" x1="475.5" y1="116.1" x2="333.3" y2="77.1"/>
         <circle class="country-map__spot-pointer" cx="475.5" cy="116.1" r="2.8"/>
