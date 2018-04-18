@@ -346,6 +346,10 @@ function vogue_scripts() {
         wp_enqueue_style( 'vogue-purpose-short', get_template_directory_uri() . '/assets/css/purpose-detail.css', false, version_num() );
         wp_enqueue_script( 'vogue-purpose-short', get_template_directory_uri() . '/assets/js/purpose-detail.js', array( 'jquery' ), version_num(), true );
     }
+    if(is_page('age')) {
+        wp_enqueue_style( 'vogue-age', get_template_directory_uri() . '/assets/css/age.css', false, version_num() );
+        wp_enqueue_script( 'vogue-age', get_template_directory_uri() . '/assets/js/age.js', array( 'jquery' ), version_num(), true );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'vogue_scripts' );
 
