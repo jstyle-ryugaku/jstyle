@@ -8,18 +8,16 @@
         flag_open = false,
         timer = false,
 
-        add_sele = '.fixed-footer', // クラス付与先
-        button_sele = '.fixed-footer .button',    // ボタンのセレクタ
-        age_page_button_sele = ".age-option .open-win",
-        age_page_button_sele_sco = ".age-option .fab",
-        cover_sele = '.fixed-footer .body-cover', // bodyを覆うカバーのセレクタ
+        add_sele = '.age-fixed-footer', // クラス付与先
+        button_sele = '.age-fixed-footer .age-button',    // ボタンのセレクタ
+        cover_sele = '.age-fixed-footer .age-body-cover', // bodyを覆うカバーのセレクタ
         open_class = 'ff-open', // 選択画面を開く場合に付与するクラス名
         up_class = 'ff-up',     // 問い合わせボタンを表示する場合に付与するクラス名
 
         interval = 500;
 
     /* 詳細表示・非表示 */
-    $(button_sele + ', ' + cover_sele + ',' + age_page_button_sele + ',' + age_page_button_sele_sco).on(event_name, function (e) {
+    $(button_sele + ', ' + cover_sele).on(event_name, function (e) {
         e.preventDefault();
         flag_open = !flag_open;
         $('.l-header').css('z-index', flag_open ? 499 : 1000);
