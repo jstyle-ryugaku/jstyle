@@ -538,7 +538,7 @@
 
     .image-link ul li.pc-3c {
         margin-left: 20px;
-        width: 177px;
+        width:calc((100% - 60px) / 2);
         height: 177px;
     }
 
@@ -584,7 +584,7 @@
     }
 
     .image-link ul li.pc-3c {
-        width: 177px;
+        width: calc((100% - 60px) / 2);
         margin-bottom: 20px;
     }
 
@@ -594,7 +594,7 @@
 
     .image-link ul li.sp-2c {
 
-        width: 177px;
+        width: calc((100% - 60px) / 2);
         margin-bottom: 20px;
         margin-left: 20px;
         height: 177px;
@@ -634,7 +634,7 @@
     }
 
     .image-link ul li.pc-3c {
-        width: calc((90% - 20px) / 2);
+        width: calc((100% - 60px) / 2);
         margin-bottom: 20px;
         height: 158px;
     }
@@ -644,7 +644,7 @@
     }
 
     .image-link ul li.sp-2c {
-        width: calc((90% - 20px) / 2);
+        width: calc((100% - 60px) / 2);
         margin-bottom: 20px;
         height: 158px;
     }
@@ -794,7 +794,7 @@
 
     .image-link-2 ul li.pc-3c {
         margin-left: 20px;
-        width: 177px;
+        width: calc((100% - 60px) / 2);
         height: 177px;
     }
 
@@ -848,7 +848,7 @@
     }
 
     .image-link-2 ul li.pc-3c {
-        width: 177px;
+        width: calc((100% - 60px) / 2);
         margin-bottom: 20px;
     }
 
@@ -858,7 +858,7 @@
 
     .image-link-2 ul li.sp-2c {
 
-        width: 177px;
+        width: calc((100% - 60px) / 2);
         margin-bottom: 20px;
         margin-left: 20px;
         height: 177px;
@@ -905,7 +905,7 @@
     }
 
     .image-link-2 ul li.pc-3c {
-        width: calc((90% - 20px) / 2);
+        width: calc((100% - 60px) / 2);
         margin-bottom: 20px;
         height: 158px;
     }
@@ -915,7 +915,7 @@
     }
 
     .image-link-2 ul li.sp-2c {
-        width: calc((90% - 20px) / 2);
+        width: calc((100% - 60px) / 2);
         margin-bottom: 20px;
         height: 158px;
     }
