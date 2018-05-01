@@ -967,6 +967,7 @@
     padding: 0;
 }
 .age-line-button i {
+    cursor: pointer;
     margin-bottom: 2px;
     font-size: 4.0em;
     float: left;
@@ -980,4 +981,5 @@
     letter-spacing: 0.08em;
     float: left;
     align-content: center;
+    cursor: pointer;
 }
