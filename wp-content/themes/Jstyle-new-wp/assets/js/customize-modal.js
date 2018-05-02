@@ -105,13 +105,13 @@ $(function () {
             .addClass('hide');
     }
 
-    function showPage(pageClass) {
+    function show(pageClass) {
         pageClass
             .removeClass('hide')
             .addClass('show');
     }
 
-    function hidePage(pageClass) {
+    function hide(pageClass) {
         pageClass
             .removeClass('show')
             .addClass('hide');
@@ -128,8 +128,8 @@ $(function () {
     }
 
     function toNextPage() {
-        hidePage(stepNumberToPageClass(stepNumber));
-        showPage(stepNumberToPageClass(stepNumber + 1));
+        hide(stepNumberToPageClass(stepNumber));
+        show(stepNumberToPageClass(stepNumber + 1));
         stepNumber++;
         $(stepNumberToPageClass(stepNumber)).find('.step__number').text('0' + stepNumber);
         $(stepNumberToPageClass(stepNumber)).find('.foreword').text(stepNumberToForeword(stepNumber));
@@ -142,17 +142,22 @@ $(function () {
     }
 
     function toPrevPage() {
-        hidePage(stepNumberToPageClass(stepNumber));
-        showPage(stepNumberToPageClass(stepNumber - 1));
+        hide(stepNumberToPageClass(stepNumber));
+        show(stepNumberToPageClass(stepNumber - 1));
         stepNumber--;
         $(stepNumberToPageClass(stepNumber)).find('.step__number').text('0' + stepNumber);
         $(stepNumberToPageClass(stepNumber)).find('.foreword').text(stepNumberToForeword(stepNumber));
         removeChoices();
+
+        if (stepNumber === 1) {
+            resetForm();
+        }
+
     }
 
     function toTopPage() {
-        hidePage(stepNumberToPageClass(stepNumber));
-        showPage($topPage);
+        hide(stepNumberToPageClass(stepNumber));
+        show($topPage);
         stepNumber = 1;
         $(stepNumberToPageClass(stepNumber)).find('.step__number').text('0' + stepNumber);
         removeChoices();
@@ -204,20 +209,28 @@ $(function () {
     function removeChoices() {
         isWorkingHolidaySelected = $("input[id='workingHoliday']").prop('checked');
         isAmericaSelected = $("input[id='america']").prop('checked');
+        var term = $("input[name='term']").val();
+        var isTermMoreThanSix = function () {
+            console.log(term);
+            return term !== "" && term < 6;
+        };
 
-        if (isAmericaSelected) {
-            hidePage($inputIdWorkingHoliday);
-            hidePage($labelForWorkingHoliday);
+        console.log(isAmericaSelected, isTermMoreThanSix());
+
+        if (isAmericaSelected || isTermMoreThanSix()) {
+            hide($inputIdWorkingHoliday);
+            hide($labelForWorkingHoliday);
         } else {
-            showPage($inputIdWorkingHoliday);
-            showPage($labelForWorkingHoliday);
+            show($inputIdWorkingHoliday);
+            show($labelForWorkingHoliday);
         }
+
         if (isWorkingHolidaySelected) {
-            hidePage($inputIdAmerica);
-            hidePage($labelForAmerica);
+            hide($inputIdAmerica);
+            hide($labelForAmerica);
         } else {
-            showPage($inputIdAmerica);
-            showPage($labelForAmerica);
+            show($inputIdAmerica);
+            show($labelForAmerica);
         }
     }
 
