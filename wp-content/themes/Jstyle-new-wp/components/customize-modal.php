@@ -109,7 +109,7 @@
                                 class="result__cost--min">100</span>万円 ~<span
                                 class="result__cost--max">200</span>万円<span class="result__small-text">です</span></span>
                     </p>
-                    <p class="result__caution">※値段は、ヒアリング結果によって、大きく上下する場合がございます。あらかじめご了承ください。</p>
+                    <p class="result__caution">※ヒアリングによって値段が多少上下する場合がございます。まずは、LINEでお気軽に相談してみてください。</p>
                 </div>
             </div>
             <div class="result__footer">
