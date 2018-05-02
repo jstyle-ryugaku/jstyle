@@ -190,7 +190,7 @@ $footer_bg_lower = is_mobile() ? $options['footer_bg_lower_mobile'] : $options['
                         <a href="tel:0358485432">
                             <i class="fas fa-phone"></i>
                             <p class="text only-smartphone">電話で相談する</p>
-                            <p class="text only-desktop">035-848-5432</p>
+                            <p class="text only-desktop">03-5848-5432</p>
                         </a>
                     </li>
                     <li class="o-03 o-mail">
