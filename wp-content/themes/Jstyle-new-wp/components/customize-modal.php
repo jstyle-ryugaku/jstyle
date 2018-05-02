@@ -90,7 +90,7 @@
                 <input type="radio" name="type" id="workingHoliday"><label for="workingHoliday">ワーキングホリデー</label>
                 <input type="radio" name="type" id="language"><label for="language">語学学校</label>
                 <input type="radio" name="type" id="university"><label for="university">大学</label>
-                <input type="radio" name="type" id="homeStay"><label for="homeStay">ホームステイ</label>
+                <input type="radio" name="type" id="homeStay"><label for="homeStay">ホームステイのみ</label>
                 <input type="text" name="type" id="other" placeholder="その他 入力してください" class="input-type">
             </div>
             <div class="prev-and-next-container">
