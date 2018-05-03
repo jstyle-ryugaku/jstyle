@@ -90,7 +90,7 @@
                 <input type="radio" name="type" id="workingHoliday"><label for="workingHoliday">ワーキングホリデー</label>
                 <input type="radio" name="type" id="language"><label for="language">語学学校</label>
                 <input type="radio" name="type" id="university"><label for="university">大学</label>
-                <input type="radio" name="type" id="homeStay"><label for="homeStay">ホームステイ</label>
+                <input type="radio" name="type" id="homeStay"><label for="homeStay">ホームステイのみ</label>
                 <input type="text" name="type" id="other" placeholder="その他 入力してください" class="input-type">
             </div>
             <div class="prev-and-next-container">
@@ -109,7 +109,7 @@
                                 class="result__cost--min">100</span>万円 ~<span
                                 class="result__cost--max">200</span>万円<span class="result__small-text">です</span></span>
                     </p>
-                    <p class="result__caution">※値段は、ヒアリング結果によって、大きく上下する場合がございます。あらかじめご了承ください。</p>
+                    <p class="result__caution">※ヒアリングによって値段が多少上下する場合がございます。まずは、LINEでお気軽に相談してみてください。</p>
                 </div>
             </div>
             <div class="result__footer">

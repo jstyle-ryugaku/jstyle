@@ -11,16 +11,13 @@ get_header();
 
     <div class="president-wrapper">
         <h1 class="title">代表挨拶</h1>
-        <?php
-//        堀、ごめん、こんな綺麗なページをゴミ実装でよごしてしまった。 by 村脇
-        ?>
 
         <div class="content">
             <img class="photo only-smartphone" src="<?php echo get_template_directory_uri(); ?>/assets/images/president/president.jpg">
 
             <h2 class="top-message">
                 <p>留学を通して</p>
-                <p style="text-align: center">「自分の夢を、自由なやり方で、<br class="tb-br">自分で切り開く“若者”」</pstyle>
+                <p style="text-align: center">「自分の夢を、自由なやり方で、<br class="tb-br">自分で切り開く“若者”」</p>
                 <p style="text-align: right">を増やしたい</p>
             </h2>
 
