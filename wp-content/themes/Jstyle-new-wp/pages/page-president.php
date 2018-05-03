@@ -17,7 +17,7 @@ get_header();
 
             <h2 class="top-message">
                 <p>留学を通して</p>
-                <p style="text-align: center">「自分の夢を、自由なやり方で、<br class="tb-br">自分で切り開く“若者”」</pstyle>
+                <p style="text-align: center">「自分の夢を、自由なやり方で、<br class="tb-br">自分で切り開く“若者”」</p>
                 <p style="text-align: right">を増やしたい</p>
             </h2>
 
